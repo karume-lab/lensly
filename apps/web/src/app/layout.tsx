@@ -12,6 +12,7 @@ const geistSans = GeistSans;
 const geistMono = GeistMono;
 
 import SEOConfig, { metadataConfig } from "@/components/shared/SEOConfig";
+import { EmailVerificationBanner } from "@/features/auth/components/EmailVerificationBanner";
 
 export const metadata: Metadata = metadataConfig;
 
@@ -32,6 +33,7 @@ const RootLayout = ({
           <QueryProvider>
             <NuqsAdapter>
               <SEOConfig />
+              <EmailVerificationBanner />
               {children}
               <Toaster richColors />
             </NuqsAdapter>

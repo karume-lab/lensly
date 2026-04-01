@@ -10,6 +10,7 @@ import { Separator } from "@repo/ui/web/components/ui/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@repo/ui/web/components/ui/sidebar";
 import { TooltipProvider } from "@repo/ui/web/components/ui/tooltip";
 import { AppSidebar } from "@/features/admin/components/AppSidebar";
+import { EmailVerificationBanner } from "@/features/auth/components/EmailVerificationBanner";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -34,7 +35,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               </Breadcrumb>
             </div>
           </header>
-          <div className="flex flex-1 flex-col gap-4 p-4 pt-0">{children}</div>
+          <div className="flex flex-1 flex-col gap-4 p-4 pt-4">
+            <EmailVerificationBanner />
+            {children}
+          </div>
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>

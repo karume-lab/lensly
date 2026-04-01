@@ -18,6 +18,23 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
+  emailVerification: {
+    sendOnSignUp: true,
+    autoSignInAfterVerification: true,
+    sendVerificationEmail: async ({ user, token }) => {
+      const baseURL =
+        process.env.BETTER_AUTH_URL ??
+        process.env.NEXT_PUBLIC_APP_URL ??
+        `http://localhost:${process.env.PORT || "3000"}`;
+      const url = `${baseURL}/verify-email?token=${token}&email=${encodeURIComponent(user.email)}`;
+
+      console.log("--------------------------------------------");
+      console.log(`[EMAIL] To: ${user.email}`);
+      console.log("[EMAIL] Subject: Verify your email address");
+      console.log(`[EMAIL] Content: \nClick ${url} to verify your email address.`);
+      console.log("--------------------------------------------");
+    },
+  },
   trustedOrigins: [
     process.env.NEXT_PUBLIC_APP_URL ?? `http://localhost:${process.env.PORT || "3000"}`,
     process.env.EXPO_PUBLIC_APP_URL ?? "",
