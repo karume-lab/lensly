@@ -1,7 +1,4 @@
-import { createMDX } from "fumadocs-mdx/next";
 import type { NextConfig } from "next";
-
-const withMDX = createMDX();
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: process.env.NEXT_PUBLIC_ALLOWED_DEV_ORIGINS?.split(",") ?? [],
@@ -19,4 +16,4 @@ const nextConfig: NextConfig = {
   ],
 };
 
-export default withMDX(nextConfig);
+export default nextConfig;

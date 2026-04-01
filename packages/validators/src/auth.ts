@@ -1,8 +1,4 @@
-import { user } from "@repo/db/schema/auth";
-import { createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
-
-export const selectUserSchema = createSelectSchema(user);
 
 export const signInSchema = z.object({
   email: z.email("Invalid email address"),

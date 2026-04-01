@@ -1,7 +1,7 @@
-# HackJS
+# Lensly
 
 <p align="center">
-  <img src="packages/assets/logo.png" alt="HackJS Logo" width="200" />
+  <img src="packages/assets/logo.png" alt="Lensly Logo" width="200" />
   <br />
   <em>This is an image of a hacksaw</em>
 </p>
@@ -15,7 +15,7 @@ A fullstack JavaScript/TypeScript monorepo template for rapidly building Web and
 
 ## Quick Start Tutorial
 
-Learn how to build with HackJS by following the <a href="https://code2tutorial.com/tutorial/926b939b-24c9-487a-a3f9-359877d46087/index.md" target="_blank" rel="noopener noreferrer">Quick Start Tutorial</a>.
+Learn how to build with Lensly by following the <a href="https://code2tutorial.com/tutorial/926b939b-24c9-487a-a3f9-359877d46087/index.md" target="_blank" rel="noopener noreferrer">Quick Start Tutorial</a>.
 
 ## Core Stack
 
@@ -27,7 +27,7 @@ Learn how to build with HackJS by following the <a href="https://code2tutorial.c
 - **Communication:** Elysia + Eden Treaty — High-performance, Bun-native RPC for seamless, end-to-end type safety between services.
 - **API Documentation:** OpenAPI & Scalar — Automatically generated API schema and a beautiful developer-friendly reference UI.
 - **State Management:** TanStack Query & nuqs — Robust server-state synchronization and type-safe URL search params.
-- **Validation:** Zod & drizzle-zod — Schema-first validation for runtime safety and database schema inference.
+- **Validation:** Zod — Schema-first validation for runtime safety and database schema inference.
 - **UI & Styling:** Tailwind CSS & shadcn/ui — Utility-first styling with high-quality, accessible component primitives.
 - **Linting & Formatting:** Biome — Ultra-fast, unified toolchain for maintaining code quality and consistent formatting.
 
@@ -60,8 +60,8 @@ Learn how to build with HackJS by following the <a href="https://code2tutorial.c
 ### 1. Installation
 
 ```bash
-git clone https://github.com/karume-lab/HackJS.git
-cd HackJS
+git clone https://github.com/karume-lab/lensly.git
+cd lensly
 bun install
 ```
 
@@ -129,28 +129,10 @@ bun doctor:mobile
 
 ### API Documentation
 
-The API documentation is automatically generated from your Elysia routes using the Swagger plugin. HackJS uses Fumadocs for a beautiful, interactive documentation experience.
+The API documentation is automatically generated from your Elysia routes using the Swagger plugin. Lensly uses Swagger UI for a beautiful, interactive documentation experience.
 
 - **OpenAPI Schema:** `http://localhost:3000/api/openapi.json`
 - **Interactive Reference:** `http://localhost:3000/docs/api/reference`
-
-## Documentation & ADRs
-
-HackJS maintains Architecture Decision Records (ADRs) to document key technical decisions. These can be found in the `/docs` directory:
-
-- [ADR 001: Elysia for Type Safety](docs/adr-001-orpc.md)
-- [ADR 002: Better Auth](docs/adr-002-better-auth.md)
-- [ADR 003: Drizzle ORM](docs/adr-003-drizzle-orm.md)
-- [ADR 004: Turborepo & Bun](docs/adr-004-turborepo-bun.md)
-- [ADR 005: Next.js App Router](docs/adr-005-nextjs.md)
-- [ADR 006: Expo Router](docs/adr-006-expo-router.md)
-- [ADR 007: Scalar & OpenAPI](docs/adr-007-scalar-openapi.md)
-- [ADR 008: State Management](docs/adr-008-state-management.md)
-- [ADR 009: Zod Validation](docs/adr-009-zod-validation.md)
-- [ADR 010: UI Architecture](docs/adr-010-tailwind-shadcn.md)
-- [ADR 011: Biome](docs/adr-011-biome.md)
-
-Explore the `/docs` folder for more detailed architectural insights.
 
 ### Adding New Features
 
@@ -247,4 +229,4 @@ Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) an
 
 ---
 
-Thank you for your interest in HackJS and remember to star the repo!
+Thank you for your interest in Lensly and remember to star the repo!

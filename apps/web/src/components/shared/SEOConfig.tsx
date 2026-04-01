@@ -3,44 +3,40 @@ import type { Metadata } from "next";
 export const metadataConfig: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
   title: {
-    default: "HackJS | The Ultimate Monorepo Stack",
-    template: "%s | HackJS",
+    default: "Lensly | Intelligent Talent Screening",
+    template: "%s | Lensly",
   },
   description:
-    "HackJS is a high-performance monorepo starter kit featuring Next.js 16, React 19, Bun, Turbo, Better Auth, and Drizzle ORM.",
+    "Lensly is an intelligent talent profile screening platform that enhances recruiter decision-making while preserving human-led final hiring choices.",
   keywords: [
-    "HackJS",
+    "Lensly",
+    "Talent Screening",
+    "HR Tech",
+    "Applicant Tracking",
+    "Recruitment",
     "Next.js",
     "React",
-    "Bun",
-    "Turbo",
-    "Drizzle ORM",
-    "Better Auth",
-    "Tailwind CSS",
-    "Monorepo",
-    "Starter Kit",
-    "Fullstack",
     "TypeScript",
   ],
-  authors: [{ name: "Daniel Karume", url: "https://github.com/karume-lab/HackJS" }],
+  authors: [{ name: "Daniel Karume", url: "https://github.com/karume-lab" }],
   creator: "Daniel Karume",
   publisher: "Daniel Karume",
 
   openGraph: {
-    title: "HackJS | The Ultimate Monorepo Stack",
+    title: "Lensly | Intelligent Talent Screening",
     description:
-      "Build faster with HackJS. A modern monorepo template for high-performance web and mobile applications.",
+      "Accelerate your hiring process with Lensly. A collaborative talent screening tool that surfaces top candidates to augment recruiter decision-making.",
     url: process.env.NEXT_PUBLIC_APP_URL,
-    siteName: "HackJS",
+    siteName: "Lensly",
     locale: "en_US",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "HackJS | The Ultimate Monorepo Stack",
-    description: "Build faster with HackJS. Next.js 16, React 19, and More.",
-    creator: "@karume-lab",
+    title: "Lensly | Intelligent Talent Screening",
+    description: "Accelerate your hiring process with Lensly, the smart talent screening platform.",
+    creator: "@karume-lab", // Update this to your project's Twitter handle if applicable
   },
 
   robots: {
@@ -61,19 +57,19 @@ export const metadataConfig: Metadata = {
     canonical: process.env.NEXT_PUBLIC_APP_URL,
   },
 
-  category: "technology",
+  category: "business",
 };
 
 const SEOConfig = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "HackJS",
-    alternateName: "HackJS Starter Kit",
+    name: "Lensly",
+    alternateName: "Lensly Talent Screening Platform",
     url: process.env.NEXT_PUBLIC_APP_URL,
-    description: "High-performance monorepo starter kit",
+    description: "Intelligent talent profile screening platform",
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: "Daniel Karume",
     },
     inLanguage: "en-US",

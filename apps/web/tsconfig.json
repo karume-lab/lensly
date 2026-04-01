@@ -10,7 +10,6 @@
     "paths": {
       "@/*": ["./apps/web/src/*"],
       "~/*": ["./apps/web/*"],
-      "fumadocs-mdx:collections/*": ["./apps/web/.source/*"],
       "@repo/api": ["./packages/api/src/index.ts"],
       "@repo/api/*": ["./packages/api/src/*"],
       "@repo/auth": ["./packages/auth/src/index.ts"],

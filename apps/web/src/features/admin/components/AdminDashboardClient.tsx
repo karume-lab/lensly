@@ -47,7 +47,7 @@ export const AdminDashboardClient = () => {
       <div className="flex flex-col gap-2">
         <h2 className="text-3xl font-bold tracking-tight">Platform Overview</h2>
         <p className="text-muted-foreground">
-          Real-time statistics and performance metrics for the HackJS application.
+          Real-time statistics and performance metrics for the Lensly application.
         </p>
       </div>
 

@@ -70,7 +70,7 @@ const WWWPage = () => {
               Build faster with
               <br className="hidden sm:block" />
               <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-                HackJS
+                Lensly
               </span>
             </h1>
 
@@ -78,15 +78,6 @@ const WWWPage = () => {
               The ultimate monorepo template for modern robust applications. Featuring Turborepo,
               Next.js, React Native, Elysia, and Drizzle.
             </p>
-
-            <div className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row justify-center items-center">
-              <Button asChild variant="outline">
-                <Link href={"/docs/architecture"}>View Architecture</Link>
-              </Button>
-              <Button asChild>
-                <Link href={"/docs/getting-started"}>Start Building</Link>
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -145,7 +136,7 @@ const WWWPage = () => {
               <div className="size-16 flex items-center justify-center">
                 <SiteLogo />
               </div>
-              <span className="font-bold text-2xl tracking-tight">HackJS</span>
+              <span className="font-bold text-2xl tracking-tight">Lensly</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
               Empowering developers to build incredible fullstack applications without the
@@ -153,7 +144,7 @@ const WWWPage = () => {
             </p>
             <div className="flex gap-4 pt-2">
               <Link
-                href="https://github.com/karume-lab/hackjs"
+                href="https://github.com/karume-lab/lensly"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -164,22 +155,6 @@ const WWWPage = () => {
                 <span className="sr-only">GitHub</span>
               </Link>
             </div>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Resources</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <Link href="/docs/getting-started" className="hover:text-primary transition-colors">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="/docs/architecture" className="hover:text-primary transition-colors">
-                  Architecture
-                </Link>
-              </li>
-            </ul>
           </div>
 
           <div className="space-y-4">
@@ -217,11 +192,10 @@ const WWWPage = () => {
         </div>
         <div className="mx-auto max-w-7xl mt-12 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground text-center">
-            &copy; {dayjs().year()} HackJS. All rights reserved.
+            &copy; {dayjs().year()} Lensly. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            Designed and Made with <span className="inline-block animate-bounce">🗿</span>, by yours
-            truly (me)*.
+            Designed and Made with <span className="inline-block animate-bounce">🗿</span>.
           </div>
         </div>
       </footer>

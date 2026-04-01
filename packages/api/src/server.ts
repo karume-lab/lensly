@@ -10,7 +10,7 @@ const routes = new Elysia()
       provider: "swagger-ui",
       documentation: {
         info: {
-          title: "HackJS API",
+          title: "Lensly API",
           version: "1.0.0",
         },
       },

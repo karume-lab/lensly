@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "HackJS",
-    "slug": "HackJS",
+    "name": "Lensly",
+    "slug": "Lensly",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "../../packages/assets/mobile/icon.png",
-    "scheme": "hackjs",
+    "scheme": "lensly",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "../../packages/assets/mobile/splash-icon.png",
@@ -15,14 +15,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.HackJS.app"
+      "bundleIdentifier": "com.lensly.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "../../packages/assets/mobile/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.HackJS.app"
+      "package": "com.lensly.app"
     },
     "plugins": ["expo-router", "expo-font"],
     "experiments": {

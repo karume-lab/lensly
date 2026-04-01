@@ -1,6 +1,6 @@
-# Contributing to HackJS
+# Contributing to Lensly
 
-Thank you for your interest in contributing to HackJS! We welcome contributions of all kinds, from bug fixes to new features and documentation improvements.
+Thank you for your interest in contributing to Lensly! We welcome contributions of all kinds, from bug fixes to new features and documentation improvements.
 
 ## How to Contribute
 

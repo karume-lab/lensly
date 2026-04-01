@@ -74,7 +74,7 @@ export const SignUpForm = () => {
           Create an account
         </CardTitle>
         <CardDescription className="text-sm text-zinc-600 dark:text-zinc-400">
-          Join HackJS to start managing your tasks today.
+          Join Lensly to start managing your tasks today.
         </CardDescription>
       </CardHeader>
 

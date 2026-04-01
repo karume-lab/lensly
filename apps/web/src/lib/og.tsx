@@ -15,12 +15,12 @@ export const generateOGImage = async (options: {
         {/* biome-ignore lint/performance/noImgElement: required for next/og */}
         <img
           src={logoBase64}
-          alt="HackJS Logo"
+          alt="Lensly Logo"
           width="200"
           height="200"
           style={{ marginBottom: "40px" }}
         />
-        <h1 tw="text-8xl font-bold mb-4">HackJS</h1>
+        <h1 tw="text-8xl font-bold mb-4">Lensly</h1>
         <p tw="text-3xl text-gray-400">The Ultimate Monorepo Stack</p>
       </div>
     </div>,

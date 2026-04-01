@@ -1,22 +1,15 @@
-import { RootProvider } from "fumadocs-ui/provider/next";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
-import "fumadocs-ui/style.css";
 import "@repo/ui/web/globals.css";
 import { Toaster } from "@repo/ui/web/components/ui/sonner";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = GeistSans;
+const geistMono = GeistMono;
 
 import SEOConfig, { metadataConfig } from "@/components/shared/SEOConfig";
 
@@ -39,7 +32,7 @@ const RootLayout = ({
           <QueryProvider>
             <NuqsAdapter>
               <SEOConfig />
-              <RootProvider>{children}</RootProvider>
+              {children}
               <Toaster richColors />
             </NuqsAdapter>
           </QueryProvider>

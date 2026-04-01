@@ -68,7 +68,7 @@ const data = {
     },
     {
       name: "GitHub",
-      url: "https://github.com/karume-lab/HackJS",
+      url: "https://github.com/karume-lab/lensly",
       icon: SiGithub,
     },
   ],
@@ -96,7 +96,7 @@ export const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) =
             className={`w-auto object-contain shrink-0 transition-all duration-200 ${isCollapsed ? "h-8" : "h-10"}`}
           />
           <span className="font-bold text-xl group-data-[collapsible=icon]:hidden whitespace-nowrap">
-            HackJS
+            Lensly
           </span>
         </div>
       </SidebarHeader>
