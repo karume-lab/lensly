@@ -1,0 +1,25 @@
+{
+  "name": "@repo/api",
+  "private": true,
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "exports": {
+    ".": "./src/server.ts",
+    "./client": "./src/client.ts"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "clean": "biome check --write --no-errors-on-unmatched .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.1",
+    "@elysiajs/swagger": "^1.3.1",
+    "@repo/auth": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/validators": "workspace:*",
+    "drizzle-orm": "0.45.1",
+    "elysia": "1.4.27"
+  }
+}

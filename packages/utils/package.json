@@ -1,0 +1,16 @@
+{
+  "name": "@repo/utils",
+  "private": true,
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./get-ip": "./src/get-ip.ts",
+    "./query-keys": "./src/query-keys.ts"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "clean": "biome check --write --no-errors-on-unmatched .",
+    "typecheck": "tsc --noEmit"
+  }
+}
