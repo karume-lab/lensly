@@ -2,7 +2,7 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Button } from "@repo/ui/web/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/web/components/ui/card";
 import dayjs from "dayjs";
-import { Globe, Layers, Rocket, ShieldCheck, Smartphone, Zap } from "lucide-react";
+import { BrainCircuit, CheckSquare, FileSearch, LineChart, ShieldCheck, Users } from "lucide-react";
 import Link from "next/link";
 import SiteLogo from "@/components/shared/SiteLogo";
 import { ThemeSwitch } from "@/components/shared/ThemeSwitch";
@@ -11,38 +11,40 @@ import TestimonialsCarousel from "@/features/www/components/TestimonialsCarousel
 
 const features = [
   {
-    title: "Blazing Fast Performance",
+    title: "AI-Assisted Screening",
     description:
-      "Powered by Next.js 16 and Turbopack for instant feedback and optimal Lighthouse scores.",
-    icon: <Zap className="size-6 text-primary" />,
+      "Evaluate hundreds of structured profiles and unstructured resumes instantly using our advanced Gemini integration.",
+    icon: <BrainCircuit className="size-6 text-primary" />,
   },
   {
-    title: "End-to-End Type Safety",
+    title: "Human-in-the-Loop",
     description:
-      "Seamless synchronization between server and client with Elysia + Eden Treaty. Say goodbye to manual types.",
+      "Maintain complete control over final hiring decisions with a transparent, explainable review interface.",
+    icon: <CheckSquare className="size-6 text-primary" />,
+  },
+  {
+    title: "Unstructured Data Parsing",
+    description:
+      "Effortlessly ingest and analyze data from external job boards, CSV spreadsheets, and raw PDF resumes.",
+    icon: <FileSearch className="size-6 text-primary" />,
+  },
+  {
+    title: "Weighted Scoring",
+    description:
+      "Customize the AI's focus by weighting skills, experience, and education to match your exact job requirements.",
+    icon: <LineChart className="size-6 text-primary" />,
+  },
+  {
+    title: "Role-Based Security",
+    description:
+      "Enterprise-grade authentication ensures sensitive candidate data and HR workflows remain completely secure.",
     icon: <ShieldCheck className="size-6 text-primary" />,
   },
   {
-    title: "Monorepo Ready",
+    title: "Seamless Talent Sync",
     description:
-      "Built on Turborepo to efficiently scale sharing code between web, mobile, and APIs.",
-    icon: <Layers className="size-6 text-primary" />,
-  },
-  {
-    title: "Cross-Platform",
-    description: "Includes a complete React Native Expo setup alongside Next.js for maximum reach.",
-    icon: <Smartphone className="size-6 text-primary" />,
-  },
-  {
-    title: "Production Ready",
-    description:
-      "Out-of-the-box Drizzle ORM, secure authentication, and a robust project architecture.",
-    icon: <Rocket className="size-6 text-primary" />,
-  },
-  {
-    title: "Cloud Native",
-    description: "Optimized for modern serverless hosting and scalable backend workflows.",
-    icon: <Globe className="size-6 text-primary" />,
+      "Direct integration with the Umurava Talent Pool to instantly pull in pre-vetted, high-quality candidates.",
+    icon: <Users className="size-6 text-primary" />,
   },
 ];
 
@@ -67,7 +69,7 @@ const WWWPage = () => {
             <SiteLogo className="size-24" />
 
             <h1 className="mb-6 text-5xl font-extrabold tracking-tight leading-tight sm:text-7xl lg:text-8xl sm:leading-[1.1] lg:leading-[1.1] bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/60">
-              Build faster with
+              Hire smarter with
               <br className="hidden sm:block" />
               <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
                 Lensly
@@ -75,9 +77,17 @@ const WWWPage = () => {
             </h1>
 
             <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              The ultimate monorepo template for modern robust applications. Featuring Turborepo,
-              Next.js, React Native, Elysia, and Drizzle.
+              An intelligent talent profile screening platform that enhances recruiter
+              decision-making while preserving human-led final hiring choices.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button size="lg" className="px-8 text-base font-semibold" asChild>
+                <Link href="/sign-up">Get Started</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="px-8 text-base font-semibold" asChild>
+                <Link href="#features">Explore Features</Link>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -88,11 +98,11 @@ const WWWPage = () => {
           <div className="mx-auto max-w-7xl">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl font-bold tracking-tight sm:text-5xl mb-4">
-                Everything you need
+                The future of technical recruiting
               </h2>
               <p className="text-lg text-muted-foreground">
-                We've spent thousands of hours refining the perfect tech stack so you don't have to.
-                Connect the puzzle pieces seamlessly.
+                We've combined cutting-edge LLMs with intuitive HR workflows to solve the problem of
+                high application volumes and objective candidate comparison.
               </p>
             </div>
 
@@ -122,7 +132,7 @@ const WWWPage = () => {
           className="py-20 px-6 sm:py-32 text-center relative max-w-7xl mx-auto overflow-hidden"
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-5xl mb-16">
-            Loved by developers
+            Trusted by hiring teams
           </h2>
 
           <TestimonialsCarousel />
@@ -139,8 +149,8 @@ const WWWPage = () => {
               <span className="font-bold text-2xl tracking-tight">Lensly</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Empowering developers to build incredible fullstack applications without the
-              boilerplate hassle.
+              Accelerating the hiring process while ensuring transparency, fairness, and human
+              oversight.
             </p>
             <div className="flex gap-4 pt-2">
               <Link
@@ -158,7 +168,7 @@ const WWWPage = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Developer</h3>
+            <h3 className="font-semibold text-foreground">Daniel Karume</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <Link
@@ -189,14 +199,29 @@ const WWWPage = () => {
               </li>
             </ul>
           </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold text-foreground">Javan Odhiambo</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="https://github.com/Javan-Odhiambo"
+                  target="_blank"
+                  className="hover:text-primary transition-colors"
+                >
+                  GitHub
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="mx-auto max-w-7xl mt-12 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground text-center">
             &copy; {dayjs().year()} Lensly. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            Designed and Made with <span className="inline-block animate-bounce">🗿</span>.
-          </div>
+          <p className="flex items-center gap-2 text-sm text-muted-foreground">
+            Built for the Umurava AI Hackathon
+          </p>
         </div>
       </footer>
     </div>
