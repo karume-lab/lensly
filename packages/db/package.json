@@ -8,11 +8,6 @@
     "@libsql/client": "^0.17.0",
     "zod": "^4.3.6"
   },
-  "exports": {
-    ".": "./src/index.ts",
-    "./schema": "./src/schema/index.ts",
-    "./types": "./src/types.ts"
-  },
   "scripts": {
     "lint": "biome check .",
     "clean": "biome check --write --no-errors-on-unmatched .",
