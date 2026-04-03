@@ -1,4 +1,4 @@
-import { AccountProfileClient } from "@/features/account/components/AccountProfileClient";
+import { AccountProfileClient } from "@/features/auth/components/AccountProfileClient";
 
 const ProfilePage = () => {
   return <AccountProfileClient />;

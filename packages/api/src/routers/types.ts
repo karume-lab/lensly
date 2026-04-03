@@ -14,22 +14,6 @@ export const UserSchema = t.Object({
   banExpires: t.Nullable(t.Date()),
 });
 
-export const TodoSchema = t.Object({
-  id: t.String(),
-  title: t.String(),
-  completed: t.Boolean(),
-  userId: t.String(),
-  createdAt: t.Date(),
-  updatedAt: t.Date(),
-});
-
-export const TodoWithUserSchema = t.Intersect([
-  TodoSchema,
-  t.Object({
-    user: UserSchema,
-  }),
-]);
-
 export const PaginationMetadataSchema = t.Object({
   totalCount: t.Number(),
   page: t.Number(),
@@ -38,10 +22,5 @@ export const PaginationMetadataSchema = t.Object({
 
 export const PaginatedUserResponseSchema = t.Object({
   data: t.Array(UserSchema),
-  metadata: PaginationMetadataSchema,
-});
-
-export const PaginatedTodoWithUserResponseSchema = t.Object({
-  data: t.Array(TodoWithUserSchema),
   metadata: PaginationMetadataSchema,
 });

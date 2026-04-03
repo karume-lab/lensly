@@ -1,13 +1,8 @@
-import {
-  PaginatedTodoWithUserResponseSchema,
-  PaginatedUserResponseSchema,
-  UserSchema,
-} from "@repo/api/routers/types";
+import { PaginatedUserResponseSchema, UserSchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { db, schema } from "@repo/db";
-import type { TodoWithUser, User } from "@repo/db/types";
-import { TODO_STATUSES } from "@repo/types";
-import { and, eq, like, or, sql } from "drizzle-orm";
+import type { User } from "@repo/db/types";
+import { eq, like, or, sql } from "drizzle-orm";
 import { Elysia, t } from "elysia";
 
 export const adminRouter = new Elysia({ prefix: "/admin" })
@@ -155,74 +150,18 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
         })
         .from(schema.user);
 
-      const [todoStats] = await db
-        .select({
-          total: sql<number>`cast(count(*) as int)`,
-          completed: sql<number>`cast(sum(case when completed=1 then 1 else 0 end) as int)`,
-        })
-        .from(schema.todo);
-
-      if (!userStats || !todoStats) {
+      if (!userStats) {
         throw new Response("Failed to fetch stats", { status: 500 });
       }
 
       return {
         users: { total: userStats.total, banned: userStats.banned },
-        todos: { total: todoStats.total, completed: todoStats.completed },
       };
     },
     {
       detail: { tags: ["Admin"], description: "Get administrative statistics" },
       response: t.Object({
         users: t.Object({ total: t.Number(), banned: t.Number() }),
-        todos: t.Object({ total: t.Number(), completed: t.Number() }),
       }),
-    },
-  )
-  .get(
-    "/todos",
-    async ({ query }) => {
-      const limit = query.limit || 50;
-      const page = query.page || 1;
-      const offset = (page - 1) * limit;
-
-      const conditions = [];
-      if (query.search) {
-        conditions.push(like(schema.todo.title, `%${query.search}%`));
-      }
-      if (query.status !== undefined) {
-        conditions.push(eq(schema.todo.completed, query.status === "completed"));
-      }
-      const where = conditions.length > 0 ? and(...conditions) : undefined;
-
-      const data = await db.query.todo.findMany({
-        with: { user: true },
-        where,
-        orderBy: (todos, { desc }) => [desc(todos.createdAt)],
-        limit,
-        offset,
-      });
-
-      const countResult = await db
-        .select({ count: sql<number>`cast(count(*) as int)` })
-        .from(schema.todo)
-        .where(where);
-      const totalCount = countResult[0]?.count || 0;
-      const totalPages = Math.ceil(totalCount / limit);
-
-      return {
-        data: data as TodoWithUser[],
-        metadata: { totalCount, page, totalPages },
-      };
-    },
-    {
-      query: t.Object({
-        limit: t.Optional(t.Numeric({ default: 50 })),
-        page: t.Optional(t.Numeric({ default: 1 })),
-        search: t.Optional(t.String()),
-        status: t.Optional(t.Union(TODO_STATUSES.map((s) => t.Literal(s)))),
-      }),
-      detail: { tags: ["Admin"], description: "Get all todos from all users" },
-      response: PaginatedTodoWithUserResponseSchema,
     },
   );

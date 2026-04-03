@@ -9,15 +9,15 @@ import {
   SidebarRail,
   useSidebar,
 } from "@repo/ui/web/components/ui/sidebar";
-import { ListTodo, User } from "lucide-react";
+import { LayoutDashboard, User } from "lucide-react";
 import { NavMain, NavUser } from "@/components/shared/SidebarComponents";
 import SiteLogo from "@/components/shared/SiteLogo";
 
 const navMain = [
   {
-    title: "Tasks",
+    title: "Dashboard",
     url: "/dashboard",
-    icon: ListTodo,
+    icon: LayoutDashboard,
     isActive: true,
   },
   {

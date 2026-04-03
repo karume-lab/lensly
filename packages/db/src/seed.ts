@@ -1,5 +1,4 @@
 import { db, schema } from "@repo/db";
-import todosData from "@repo/db/mock-data/todos.json";
 import usersData from "@repo/db/mock-data/users.json";
 import { hashPassword } from "better-auth/crypto";
 
@@ -7,7 +6,6 @@ const seed = async () => {
   console.log("Starting database seeding process...");
 
   console.log("Cleaning up existing data...");
-  await db.delete(schema.todo);
   await db.delete(schema.account);
   await db.delete(schema.session);
   await db.delete(schema.user);
@@ -35,17 +33,7 @@ const seed = async () => {
     });
   }
 
-  console.log(`Inserting ${todosData.length} mock todos...`);
-
-  for (const todo of todosData) {
-    await db.insert(schema.todo).values({
-      ...todo,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    });
-  }
-
-  console.log("Users, accounts, and todos successfully seeded.");
+  console.log("Users and accounts successfully seeded.");
   console.log("Database seeding finalized completely.");
   process.exit(0);
 };

@@ -1,4 +1,3 @@
-import type { TodoStatus } from "@repo/types";
 import { QUERY_KEYS } from "@repo/utils/query-keys";
 import type { createUserSchema } from "@repo/validators";
 import { queryOptions } from "@tanstack/react-query";
@@ -44,23 +43,6 @@ export const updateUserRoleMutation = () => ({
     return data;
   },
 });
-
-export const adminTodosQuery = (
-  page: number,
-  limit: number,
-  search?: string,
-  status?: TodoStatus,
-) =>
-  queryOptions({
-    queryKey: QUERY_KEYS.admin.todos.list(page, limit, search, status),
-    queryFn: async () => {
-      const { data, error } = await api.admin.todos.get({
-        query: { page, limit, search: search || undefined, status: status },
-      });
-      if (error) throw error.value;
-      return data;
-    },
-  });
 
 export const deleteUserMutation = () => ({
   mutationFn: async ({ id }: { id: string }) => {

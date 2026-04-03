@@ -9,16 +9,7 @@ import {
 } from "@repo/ui/web/components/ui/card";
 import { QUERY_KEYS } from "@repo/utils/query-keys";
 import { useQuery } from "@tanstack/react-query";
-import {
-  BarChart3,
-  ListTodo,
-  Loader2,
-  ShieldAlert,
-  TrendingUp,
-  UserCheck,
-  Users,
-  Zap,
-} from "lucide-react";
+import { BarChart3, Loader2, ShieldAlert, TrendingUp, UserCheck, Users } from "lucide-react";
 import { api } from "@/lib/api";
 
 export const AdminDashboardClient = () => {
@@ -36,12 +27,6 @@ export const AdminDashboardClient = () => {
   const bannedUsers = stats?.users.banned ?? 0;
   const activeUsers = totalUsers - bannedUsers;
 
-  const totalTodos = stats?.todos.total ?? 0;
-  const completedTodos = stats?.todos.completed ?? 0;
-  const pendingTodos = totalTodos - completedTodos;
-  const completionRate = totalTodos > 0 ? Math.round((completedTodos / totalTodos) * 100) : 0;
-  const avgTodosPerUser = totalUsers > 0 ? (totalTodos / totalUsers).toFixed(1) : "0";
-
   return (
     <div className="flex-1 space-y-6 p-4 pt-6">
       <div className="flex flex-col gap-2">
@@ -51,7 +36,7 @@ export const AdminDashboardClient = () => {
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Card className="hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Users</CardTitle>
@@ -92,62 +77,28 @@ export const AdminDashboardClient = () => {
             <p className="text-xs text-muted-foreground mt-1">Currently restricted access</p>
           </CardContent>
         </Card>
-
-        <Card className="hover:shadow-md transition-shadow">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Task Completion</CardTitle>
-            <Zap className="h-4 w-4 text-amber-500" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">
-              {isLoading ? <Loader2 className="animate-spin h-4 w-4" /> : `${completionRate}%`}
-            </div>
-            <p className="text-xs text-muted-foreground mt-1">Percentage of tasks finished</p>
-          </CardContent>
-        </Card>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Card className="col-span-1 md:col-span-2">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <ListTodo className="h-5 w-5 text-primary" />
-              Task Statistics
+              <BarChart3 className="h-5 w-5 text-primary" />
+              User Growth
             </CardTitle>
-            <CardDescription>Aggregate metrics for user-created todos</CardDescription>
+            <CardDescription>Platform adoption metrics</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid gap-4 md:grid-cols-3 py-4">
+            <div className="grid gap-4 md:grid-cols-2 py-4">
               <div className="flex flex-col gap-1">
-                <span className="text-sm text-muted-foreground">Total Tasks</span>
-                <span className="text-3xl font-bold">{isLoading ? "..." : totalTodos}</span>
+                <span className="text-sm text-muted-foreground">Total Registered</span>
+                <span className="text-3xl font-bold">{isLoading ? "..." : totalUsers}</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-sm text-muted-foreground">Completed</span>
-                <span className="text-3xl font-bold text-emerald-500">
-                  {isLoading ? "..." : completedTodos}
+                <span className="text-sm text-muted-foreground">Banned Users</span>
+                <span className="text-3xl font-bold text-destructive">
+                  {isLoading ? "..." : bannedUsers}
                 </span>
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-sm text-muted-foreground">Pending</span>
-                <span className="text-3xl font-bold text-amber-500">
-                  {isLoading ? "..." : pendingTodos}
-                </span>
-              </div>
-            </div>
-
-            <div className="mt-6 flex flex-col gap-4">
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="font-medium">Task Completion Progress</span>
-                  <span className="text-muted-foreground">{completionRate}%</span>
-                </div>
-                <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-primary transition-all duration-500"
-                    style={{ width: `${completionRate}%` }}
-                  />
-                </div>
               </div>
             </div>
           </CardContent>
@@ -156,26 +107,30 @@ export const AdminDashboardClient = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <BarChart3 className="h-5 w-5 text-primary" />
-              User Engagement
+              <TrendingUp className="h-5 w-5 text-primary" />
+              Platform Status
             </CardTitle>
-            <CardDescription>How users interact with tasks</CardDescription>
+            <CardDescription>Key performance indicators</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-center gap-4">
               <div className="p-2 bg-primary/10 rounded-full">
-                <TrendingUp className="h-5 w-5 text-primary" />
+                <UserCheck className="h-5 w-5 text-primary" />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-medium">Avg Tasks per User</span>
-                <span className="text-2xl font-bold">{isLoading ? "..." : avgTodosPerUser}</span>
+                <span className="text-sm font-medium">Active Ratio</span>
+                <span className="text-2xl font-bold">
+                  {isLoading
+                    ? "..."
+                    : `${Math.round((activeUsers / Math.max(totalUsers, 1)) * 100)}%`}
+                </span>
               </div>
             </div>
 
             <div className="pt-4 border-t space-y-4">
               <div className="flex justify-between items-center text-sm">
                 <span className="text-muted-foreground italic text-xs">
-                  These metrics are refreshed in real-time.
+                  Stats are refreshed automatically.
                 </span>
               </div>
             </div>

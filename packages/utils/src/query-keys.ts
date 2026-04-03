@@ -1,5 +1,4 @@
 const authBase = ["auth"] as const;
-const todosBase = ["todos"] as const;
 const adminBase = ["admin"] as const;
 
 export const QUERY_KEYS = {
@@ -7,13 +6,6 @@ export const QUERY_KEYS = {
     all: () => authBase,
     session: () => [...authBase, "session"] as const,
     user: (id: string) => [...authBase, "user", id] as const,
-  },
-  todos: {
-    all: () => todosBase,
-    lists: () => [...todosBase, "list"] as const,
-    list: (filters: Record<string, unknown>) => [...todosBase, "list", filters] as const,
-    details: () => [...todosBase, "detail"] as const,
-    detail: (id: string) => [...todosBase, "detail", id] as const,
   },
   admin: {
     all: () => adminBase,
@@ -27,12 +19,5 @@ export const QUERY_KEYS = {
       stats: () => [...adminBase, "users", "stats"] as const,
     },
     stats: () => [...adminBase, "stats"] as const,
-    todos: {
-      all: () => [...adminBase, "todos"] as const,
-      lists: () => [...adminBase, "todos", "list"] as const,
-      list: (page: number, limit: number, search?: string, status?: string) =>
-        [...adminBase, "todos", "list", { page, limit, search, status }] as const,
-      stats: () => [...adminBase, "todos", "stats"] as const,
-    },
   },
 } as const;
