@@ -56,7 +56,10 @@
     "turbo": "2.8.12",
     "typescript": "^5.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dayjs": "^1.11.20",
+    "lensly": "."
+  },
   "overrides": {
     "expo": "~54.0.33",
     "expo-constants": "~18.0.12",

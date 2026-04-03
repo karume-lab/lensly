@@ -7,6 +7,8 @@
       "@repo/auth/*": ["./packages/auth/src/*"],
       "@repo/db": ["./packages/db/src/index.ts"],
       "@repo/db/*": ["./packages/db/src/*"],
+      "@repo/db/schema": ["./packages/db/src/schema/index.ts"],
+      "@repo/db/schema/*": ["./packages/db/src/schema/*"],
       "@repo/types": ["./packages/types/src/index.ts"],
       "@repo/types/*": ["./packages/types/src/*"],
       "@repo/utils": ["./packages/utils/src/index.ts"],

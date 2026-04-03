@@ -12,9 +12,12 @@
     "zod": "^4.3.6"
   },
   "scripts": {
-    "db:generate-auth": "bunx @better-auth/cli@latest generate --output ../db/src/schema/auth.ts --config ./src/index.ts --yes",
+    "db:generate-auth": "bun better-auth generate --output ../db/src/schema/auth.ts --config ./src/index.ts --yes",
     "lint": "biome check .",
     "clean": "biome check --write --no-errors-on-unmatched .",
     "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@better-auth/cli": "^1.4.21"
   }
 }

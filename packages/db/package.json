@@ -3,10 +3,15 @@
   "main": "src/index.ts",
   "module": "src/index.ts",
   "dependencies": {
+    "@libsql/client": "^0.17.0",
     "better-auth": "^1.4.19",
     "drizzle-orm": "^0.45.1",
-    "@libsql/client": "^0.17.0",
     "zod": "^4.3.6"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema/index.ts",
+    "./schema/*": "./src/schema/*.ts"
   },
   "scripts": {
     "lint": "biome check .",
