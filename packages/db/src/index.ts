@@ -1,7 +1,7 @@
-export * as schema from "@repo/db/schema";
+export * as schema from "@repo/db/schema/index";
 
 import { createClient } from "@libsql/client/node";
-import * as schema from "@repo/db/schema";
+import * as schema from "@repo/db/schema/index";
 import { drizzle } from "drizzle-orm/libsql";
 
 export const createDbClient = () => {
