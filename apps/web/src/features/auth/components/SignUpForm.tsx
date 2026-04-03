@@ -22,6 +22,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { SocialAuth } from "./SocialAuth";
 
 export const SignUpForm = () => {
   const router = useRouter();
@@ -133,6 +134,10 @@ export const SignUpForm = () => {
             Sign up
           </Button>
         </form>
+
+        <div className="mt-8">
+          <SocialAuth />
+        </div>
       </CardContent>
 
       <CardFooter className="flex justify-center border-t border-zinc-100 p-6 dark:border-zinc-800/50">

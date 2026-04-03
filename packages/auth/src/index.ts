@@ -4,6 +4,14 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { admin } from "better-auth/plugins";
 
+const isGoogleConfigured = !!(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET);
+
+if (!isGoogleConfigured) {
+  console.warn(
+    "[AUTH] Google OAuth is not fully configured. Some authentication features may be unavailable.",
+  );
+}
+
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: "sqlite",
@@ -17,6 +25,16 @@ export const auth = betterAuth({
     `http://localhost:${process.env.PORT || "3000"}`,
   emailAndPassword: {
     enabled: true,
+  },
+  socialProviders: {
+    ...(isGoogleConfigured
+      ? {
+          google: {
+            clientId: process.env.GOOGLE_CLIENT_ID as string,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+          },
+        }
+      : {}),
   },
   emailVerification: {
     sendOnSignUp: true,
