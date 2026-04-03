@@ -84,7 +84,7 @@ export const AccountProfileClient = () => {
                 <Avatar className="h-24 w-24 border-4 border-background shadow-xl">
                   <AvatarImage src={session.user.image || ""} alt={session.user.name} />
                   <AvatarFallback className="text-2xl bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-400">
-                    {session.user.name.charAt(0)}
+                    {session.user.name?.charAt(0) || "U"}
                   </AvatarFallback>
                 </Avatar>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">

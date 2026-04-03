@@ -9,7 +9,7 @@ import { Controller, useForm } from "react-hook-form";
 import { Alert, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function SignInScreen() {
+const SignInScreen = () => {
   const router = useRouter();
   const queryClient = useQueryClient();
 
@@ -132,4 +132,6 @@ export default function SignInScreen() {
       </SafeAreaView>
     </>
   );
-}
+};
+
+export default SignInScreen;

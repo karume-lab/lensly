@@ -9,7 +9,7 @@ import {
   SidebarRail,
   useSidebar,
 } from "@repo/ui/web/components/ui/sidebar";
-import { LayoutDashboard, User } from "lucide-react";
+import { Briefcase, LayoutDashboard, PlusCircle, User } from "lucide-react";
 import { NavMain, NavUser } from "@/components/shared/SidebarComponents";
 import SiteLogo from "@/components/shared/SiteLogo";
 
@@ -19,6 +19,16 @@ const navMain = [
     url: "/dashboard",
     icon: LayoutDashboard,
     isActive: true,
+  },
+  {
+    title: "Jobs",
+    url: "/dashboard/jobs",
+    icon: Briefcase,
+  },
+  {
+    title: "New Job",
+    url: "/dashboard/jobs/new",
+    icon: PlusCircle,
   },
   {
     title: "Profile",

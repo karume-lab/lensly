@@ -9,7 +9,7 @@ import { Controller, useForm } from "react-hook-form";
 import { Alert, TextInput, View } from "react-native";
 import { useCSSVariable } from "uniwind";
 
-export default function SignUpScreen() {
+const SignUpScreen = () => {
   const router = useRouter();
   const queryClient = useQueryClient();
   const mutedForeground = useCSSVariable("--color-muted-foreground");
@@ -144,4 +144,6 @@ export default function SignUpScreen() {
       </View>
     </>
   );
-}
+};
+
+export default SignUpScreen;

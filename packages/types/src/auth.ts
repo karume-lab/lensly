@@ -1,4 +1,4 @@
-export type { Session, User } from "@repo/db/types";
+export type { Session, User } from "@repo/types/db";
 
 export interface AuthError {
   message: string;

@@ -1,3 +1,4 @@
+import { activity } from "@repo/db/schema/activity";
 import { job } from "@repo/db/schema/job";
 import { profile } from "@repo/db/schema/profile";
 import dayjs from "dayjs";
@@ -101,6 +102,7 @@ export const userRelations = relations(user, ({ many, one }) => ({
     references: [profile.userId],
   }),
   jobs: many(job),
+  activities: many(activity),
 }));
 
 export const sessionRelations = relations(session, ({ one }) => ({

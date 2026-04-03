@@ -1,11 +1,24 @@
-const DashboardPage = () => {
-  return (
-    <div className="flex-1 space-y-8 p-8 pt-6">
-      <div className="flex items-center justify-between space-y-2">
-        <h2 className="text-3xl font-bold">Dashboard</h2>
-      </div>
-    </div>
-  );
-};
+import { CommandCenter } from "@/features/dashboard";
+import { mockActivity, mockJobs, mockMetrics } from "@/lib/mock-data";
 
-export default DashboardPage;
+/**
+ * DashboardPage is a Server Component.
+ * In a production environment, this would execute a complex Drizzle query:
+ *
+ * const metrics = await db.select({
+ *   activeJobs: count(jobs.id),
+ *   pendingReviews: count(筛选结果),
+ *   avgMatchScore: avg(筛选结果.score)
+ * }).from(jobs).leftJoin(...)
+ */
+export default async function DashboardPage() {
+  // Simulate server-side data aggregation
+  const data = {
+    metrics: mockMetrics,
+    jobs: mockJobs,
+    activity: mockActivity,
+    user: { name: "Sarah" }, // Could be pulled from auth session
+  };
+
+  return <CommandCenter data={data} />;
+}

@@ -1,7 +1,7 @@
 import { LayoutDashboard, Rocket } from "lucide-react-native";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function DashboardScreen() {
+const DashboardScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -24,7 +24,7 @@ export default function DashboardScreen() {
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -88,3 +88,5 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
+
+export default DashboardScreen;

@@ -14,7 +14,7 @@ export {
   ErrorBoundary,
 } from "expo-router";
 
-export default function RootLayout() {
+const RootLayout = () => {
   const { theme } = useUniwind();
   const [queryClient] = useState(
     () =>
@@ -42,4 +42,6 @@ export default function RootLayout() {
       </ThemeProvider>
     </QueryClientProvider>
   );
-}
+};
+
+export default RootLayout;

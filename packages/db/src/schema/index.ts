@@ -1,3 +1,4 @@
+export * from "@repo/db/schema/activity";
 export * from "@repo/db/schema/applicant";
 export * from "@repo/db/schema/auth";
 export * from "@repo/db/schema/job";

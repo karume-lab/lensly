@@ -222,7 +222,7 @@ export function DataTable<TData, TValue>({
                 {renderCard ? renderCard(item) : (
                   <div className="p-4 border rounded-lg">
                     {/* Fallback card content */}
-                    {Object.values(item as any).map((val: any, i) => (
+                    {Object.values(item as Record<string, unknown>).map((val: unknown, i) => (
                       <div key={i} className="truncate text-sm">{String(val)}</div>
                     ))}
                   </div>

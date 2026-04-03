@@ -6,7 +6,7 @@ import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useCSSVariable } from "uniwind";
 
-export default function NotFoundScreen() {
+const NotFoundScreen = () => {
   const router = useRouter();
   const foreground = useCSSVariable("--color-foreground");
 
@@ -44,4 +44,6 @@ export default function NotFoundScreen() {
       </SafeAreaView>
     </>
   );
-}
+};
+
+export default NotFoundScreen;

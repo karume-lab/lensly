@@ -3,11 +3,11 @@ import { SignInForm } from "@/features/auth/components/SignInForm";
 
 const SignInPage = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black px-4">
-      <Suspense>
+    <Suspense>
+      <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <SignInForm />
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 };
 
