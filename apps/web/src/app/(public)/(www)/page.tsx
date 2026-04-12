@@ -110,10 +110,10 @@ const WWWPage = () => {
               {features.map((feature) => (
                 <Card
                   key={feature.title}
-                  className="bg-card/50 backdrop-blur-sm border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group"
+                  className="bg-card border-border hover:border-primary/30 transition-all duration-300 hover:shadow-md group"
                 >
                   <CardHeader>
-                    <div className="mb-4 h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                    <div className="mb-4 h-12 w-12 bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
                       {feature.icon}
                     </div>
                     <CardTitle className="text-xl">{feature.title}</CardTitle>

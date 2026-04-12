@@ -103,7 +103,7 @@ export const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) =
       <SidebarFooter>
         {isPending ? (
           <div className="flex items-center gap-2 px-4 py-2">
-            <div className="h-8 w-8 animate-pulse rounded-full bg-sidebar-accent" />
+            <div className="h-8 w-8 animate-pulse bg-sidebar-accent" />
             <div className="flex-1 space-y-1">
               <div className="h-3 w-20 animate-pulse rounded bg-sidebar-accent" />
               <div className="h-2 w-24 animate-pulse rounded bg-sidebar-accent" />

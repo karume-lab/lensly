@@ -16,7 +16,6 @@ import {
 import Dropzone from "@repo/ui/web/components/ui/dropzone";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/ui/web/components/ui/tabs";
 import type { ColumnDef, PaginationState } from "@tanstack/react-table";
-import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, Clock, FileUp, Globe, Loader2, Trash2, Zap } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { parseAsString, useQueryState } from "nuqs";
@@ -81,25 +80,23 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
         const applicant = row.original;
         return (
           <div className="flex flex-col">
-            <span className="font-semibold text-sm">{applicant.name}</span>
-            <span className="text-xs text-muted-foreground">{applicant.experience} Years Exp.</span>
+            <span className="font-medium text-sm">{applicant.name}</span>
+            <span className="text-xs text-muted-foreground">
+              {applicant.experience} years experience
+            </span>
           </div>
         );
       },
     },
     {
       accessorKey: "skills",
-      header: "Role & Skills",
+      header: "Role and skills",
       cell: ({ row }) => {
         const applicant = row.original;
         return (
           <div className="flex flex-wrap gap-1">
             {applicant.skills.slice(0, 3).map((skill) => (
-              <Badge
-                key={skill}
-                variant="outline"
-                className="text-[10px] font-medium bg-background/50 px-1.5 py-0"
-              >
+              <Badge key={skill} variant="outline" className="text-[10px] font-medium px-1.5 py-0">
                 {skill}
               </Badge>
             ))}
@@ -121,21 +118,19 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
     },
     {
       accessorKey: "matchPotential",
-      header: () => <div className="text-right">Match Potential</div>,
+      header: () => <div className="text-right">Match potential</div>,
       cell: ({ row }) => {
         const applicant = row.original;
         return (
           <div className="flex items-center justify-end gap-2">
-            <div className="w-12 h-1.5 bg-muted rounded-full overflow-hidden shrink-0">
-              <motion.div
-                className={`h-full ${applicant.matchPotential > 80 ? "bg-primary" : "bg-yellow-500"}`}
-                initial={{ width: 0 }}
-                animate={{ width: `${applicant.matchPotential}%` }}
-                transition={{ duration: 1, ease: "easeOut" }}
+            <div className="w-12 h-1.5 bg-muted overflow-hidden shrink-0">
+              <div
+                className={`h-full ${applicant.matchPotential > 80 ? "bg-primary" : "bg-amber-500"}`}
+                style={{ width: `${applicant.matchPotential}%` }}
               />
             </div>
             <span
-              className={`font-mono font-bold text-sm ${applicant.matchPotential > 80 ? "text-primary" : "text-yellow-600 dark:text-yellow-400"}`}
+              className={`font-semibold text-sm ${applicant.matchPotential > 80 ? "text-primary" : "text-amber-600"}`}
             >
               {applicant.matchPotential}%
             </span>
@@ -147,11 +142,11 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
 
   const handleFileDrop = (acceptedFiles: File[]) => {
     if (acceptedFiles.length > 0) {
-      toast.info("Extracting Resume Data...", {
-        description: "Simulating PDF parsing on the client-side.",
+      toast.info("Extracting data", {
+        description: "Processing resume contents.",
       });
       setTimeout(() => {
-        toast.success(`${acceptedFiles.length} External Candidate(s) Added!`);
+        toast.success("Candidates added");
       }, 2000);
     }
   };
@@ -159,9 +154,9 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
   const handleRunPipeline = () => {
     setIsProcessing(true);
     toast.promise(new Promise((resolve) => setTimeout(resolve, 3000)), {
-      loading: "Gemini is evaluating candidates...",
-      success: "Screening Complete! 12 High-potential matches found.",
-      error: "Pipeline failed.",
+      loading: "Evaluating candidates...",
+      success: "Screening complete",
+      error: "Processing failed",
     });
     setTimeout(() => {
       router.push(`/dashboard/jobs/${jobId}/shortlist`);
@@ -171,41 +166,34 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
   return (
     <div className="flex flex-col gap-6 p-4 md:p-8 animate-in fade-in duration-500">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Ingestion Hub</h1>
-          <p className="text-muted-foreground flex items-center gap-2">
-            Job: <span className="text-foreground font-semibold">Senior React Developer</span>
-            <Badge
-              variant="outline"
-              className="text-[10px] uppercase font-bold tracking-widest bg-muted border-border/50"
-            >
-              # Engineering
+        <div className="space-y-1">
+          <h1 className="text-2xl font-semibold tracking-tight">Ingestion hub</h1>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <span>
+              Job: <span className="text-foreground font-medium">Senior React Developer</span>
+            </span>
+            <Badge variant="secondary" className="h-5 px-1.5 py-0 text-[10px] font-medium">
+              Engineering
             </Badge>
-          </p>
+          </div>
         </div>
       </div>
 
       <Tabs defaultValue="umurava" className="w-full">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
-          <TabsList className="bg-muted/50 border border-border/50 p-1">
-            <TabsTrigger
-              value="umurava"
-              className="gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm px-6"
-            >
-              <Globe className="h-4 w-4" />
-              Umurava Network
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+          <TabsList>
+            <TabsTrigger value="umurava" className="gap-2 px-6">
+              <Globe className="size-4" />
+              Umurava network
             </TabsTrigger>
-            <TabsTrigger
-              value="external"
-              className="gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm px-6"
-            >
-              <FileUp className="h-4 w-4" />
-              External Uploads
+            <TabsTrigger value="external" className="gap-2 px-6">
+              <FileUp className="size-4" />
+              External uploads
             </TabsTrigger>
           </TabsList>
         </div>
 
-        <TabsContent value="umurava" className="mt-0 space-y-4">
+        <TabsContent value="umurava" className="mt-0">
           <DataTable
             columns={columns}
             data={mockUmuravaApplicants}
@@ -224,70 +212,70 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
               accept={{ "application/pdf": [".pdf"] }}
               multiple
               onDrop={handleFileDrop}
-              dropZoneClassName="border-border/50 bg-card/20 hover:bg-card/40 hover:border-primary/30 rounded-xl p-12 h-auto gap-4 flex-col"
+              dropZoneClassName="border-border bg-muted/20 hover:bg-muted/30 p-12 h-auto gap-4 flex-col transition-colors"
             >
               {(dropzone) => (
-                <div className="flex flex-col items-center gap-4 text-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform group-hover:scale-110">
+                <div className="flex flex-col items-center gap-6 text-center">
+                  <div className="flex h-16 w-16 items-center justify-center bg-primary/5 text-primary">
                     {dropzone.isDragAccept ? (
-                      <Loader2 className="h-10 w-10 animate-spin" />
+                      <Loader2 className="size-8 animate-spin" />
                     ) : (
-                      <FileUp className="h-10 w-10" />
+                      <FileUp className="size-8" />
                     )}
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold tracking-tight">
-                      {dropzone.isDragAccept ? "Release to upload!" : "Drop your resumes here"}
+                  <div className="space-y-1">
+                    <h3 className="text-base font-semibold">
+                      {dropzone.isDragAccept ? "Release to upload" : "Upload candidate resumes"}
                     </h3>
-                    <p className="text-sm text-muted-foreground max-w-sm mx-auto mt-1">
-                      Drag and drop PDF files directly from your desktop. We'll automatically
-                      extract the text for Gemini to analyze.
+                    <p className="text-sm text-muted-foreground max-w-sm mx-auto">
+                      Drag and drop PDF files from your system. Data is extracted and analyzed
+                      automatically.
                     </p>
                   </div>
-                  <Button type="button" className="mt-2 shadow-xl shadow-primary/10">
-                    Browse Local Files
+                  <Button type="button" variant="outline">
+                    Browse files
                   </Button>
                 </div>
               )}
             </Dropzone>
 
-            <div className="grid gap-4 md:grid-cols-3">
-              <Card className="border-border/50 bg-card/40">
-                <CardHeader className="p-4 pb-2">
-                  <CardTitle className="text-sm flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                    Automatic OCR
+            <div className="grid gap-6 md:grid-cols-3">
+              <Card className="border-border bg-card">
+                <CardHeader className="p-5 pb-2">
+                  <CardTitle className="text-sm font-semibold flex items-center gap-2">
+                    <CheckCircle2 className="size-4 text-emerald-600" />
+                    Automatic extraction
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 pt-0">
-                  <p className="text-xs text-muted-foreground">
-                    Every PDF is parsed instantly using our client-side extraction engine.
+                <CardContent className="p-5 pt-0">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Resumes are parsed instantly using localized extraction protocols.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-border/50 bg-card/40">
-                <CardHeader className="p-4 pb-2">
-                  <CardTitle className="text-sm flex items-center gap-2">
-                    <Zap className="h-4 w-4 text-primary" />
-                    Batch Processing
+              <Card className="border-border bg-card">
+                <CardHeader className="p-5 pb-2">
+                  <CardTitle className="text-sm font-semibold flex items-center gap-2">
+                    <Zap className="size-4 text-primary" />
+                    Batch processing
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 pt-0">
-                  <p className="text-xs text-muted-foreground">
-                    Upload up to 50 resumes at once for large-scale talent pooling.
+                <CardContent className="p-5 pt-0">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Evaluate multiple applications simultaneously for efficient screening.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-border/50 bg-card/40">
-                <CardHeader className="p-4 pb-2">
-                  <CardTitle className="text-sm flex items-center gap-2">
-                    <Trash2 className="h-4 w-4 text-red-500" />
-                    Privacy First
+              <Card className="border-border bg-card">
+                <CardHeader className="p-5 pb-2">
+                  <CardTitle className="text-sm font-semibold flex items-center gap-2">
+                    <Trash2 className="size-4 text-muted-foreground" />
+                    Data privacy
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 pt-0">
-                  <p className="text-xs text-muted-foreground">
-                    Data is processed via private Gemini endpoints. No training on candidate info.
+                <CardContent className="p-5 pt-0">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Process is secured via private endpoints. No data is stored or shared.
                   </p>
                 </CardContent>
               </Card>
@@ -296,90 +284,62 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
         </TabsContent>
       </Tabs>
 
-      {/* Sticky Action Footer */}
-      <AnimatePresence>
-        {selectedCandidates.length > 0 && (
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 100, opacity: 0 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl z-50 pointer-events-none"
-          >
-            <div className="bg-primary shadow-2xl shadow-primary/40 rounded-2xl p-4 flex items-center justify-between gap-6 pointer-events-auto border border-white/20">
-              <div className="flex items-center gap-4 text-primary-foreground pl-4">
-                <div className="flex -space-x-3 overflow-hidden">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="inline-block h-8 w-8 rounded-full ring-2 ring-primary bg-primary-foreground/20 text-[10px] flex items-center justify-center font-bold"
-                    >
-                      {i}
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-sm font-bold leading-none">
-                    {selectedCandidates.length} Candidates Selected
-                  </p>
-                  <p className="text-[10px] font-medium opacity-80 uppercase tracking-wider">
-                    Ready for AI screening
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Button
-                  variant="ghost"
-                  className="text-primary-foreground hover:bg-white/10"
-                  onClick={() => setSelectedCandidates([])}
-                >
-                  Cancel
-                </Button>
-                <Button
-                  className="bg-white text-primary hover:bg-white/90 px-8 font-bold"
-                  onClick={() => setShowConfirmModal(true)}
-                >
-                  Run Screening Pipeline
-                  <Zap className="ml-2 h-4 w-4 fill-primary" />
-                </Button>
+      {selectedCandidates.length > 0 && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-2xl z-50">
+          <div className="bg-primary border border-primary/20 p-3 flex items-center justify-between gap-6">
+            <div className="flex items-center gap-4 text-primary-foreground pl-2">
+              <div className="flex flex-col">
+                <p className="text-sm font-semibold">
+                  {selectedCandidates.length} candidates selected
+                </p>
+                <p className="text-[10px] opacity-80 uppercase tracking-wider">
+                  Ready for screening
+                </p>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-primary-foreground hover:bg-white/10"
+                onClick={() => setSelectedCandidates([])}
+              >
+                Cancel
+              </Button>
+              <Button
+                size="sm"
+                className="bg-white text-primary hover:bg-white/90 font-semibold"
+                onClick={() => setShowConfirmModal(true)}
+              >
+                Run screening
+                <Zap className="ml-2 size-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Dialog open={showConfirmModal} onOpenChange={setShowConfirmModal}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Zap className="h-6 w-6 text-primary" />
-              Analyze Intent
-              <Badge
-                variant="secondary"
-                className="ml-2 text-[10px] uppercase font-bold tracking-widest px-2 py-0"
-              >
-                High Priority
-              </Badge>
+              <Zap className="size-5 text-primary" />
+              Candidate assessment
             </DialogTitle>
             <DialogDescription className="pt-2">
-              You are about to evaluate{" "}
-              <span className="font-bold text-foreground">
-                {selectedCandidates.length} candidates
-              </span>{" "}
-              using Gemini 3.5 Flash.
+              Evaluate {selectedCandidates.length} candidates against defined job criteria.
               <br />
               <br />
-              The system will analyze every resume point-by-point against your Job weights (Skills,
-              Exp, Edu).
+              Screening will compare each profile against requirements for skills, experience, and
+              education.
             </DialogDescription>
           </DialogHeader>
-          <div className="bg-muted p-4 rounded-lg flex gap-4 items-center">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background border border-border/50 shadow-sm">
-              <Clock className="h-5 w-5 text-primary" />
-            </div>
+          <div className="bg-muted p-4 border border-border flex gap-4 items-center">
+            <Clock className="size-5 text-muted-foreground" />
             <div className="flex flex-col">
-              <p className="text-sm font-semibold">Estimated completion: ~8s</p>
-              <p className="text-xs text-muted-foreground italic leading-none mt-1">
-                Powered by high-throughput inferencing.
+              <p className="text-sm font-semibold">Processing time: ~8s</p>
+              <p className="text-xs text-muted-foreground mt-1">
+                Evaluation powered by concurrent analysis.
               </p>
             </div>
           </div>
@@ -389,20 +349,16 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
               onClick={() => setShowConfirmModal(false)}
               disabled={isProcessing}
             >
-              Go back
+              Back
             </Button>
-            <Button
-              className="px-8 shadow-lg shadow-primary/20"
-              onClick={handleRunPipeline}
-              disabled={isProcessing}
-            >
+            <Button onClick={handleRunPipeline} disabled={isProcessing}>
               {isProcessing ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className="mr-2 size-4 animate-spin" />
                   Analyzing...
                 </>
               ) : (
-                "Start AI Pipeline"
+                "Start screening"
               )}
             </Button>
           </DialogFooter>

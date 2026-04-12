@@ -22,10 +22,12 @@ import {
 import { Input } from "@repo/ui/web/components/ui/input";
 import { Label } from "@repo/ui/web/components/ui/label";
 import { type UpdateProfileValues, updateProfileSchema } from "@repo/validators";
-import { Camera, Check, Loader2, Mail, ShieldAlert, User } from "lucide-react";
+import { Camera, Check, Loader2, Mail, User } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+
+import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
 
 export const AccountProfileClient = () => {
   const { data: session, isPending: isSessionLoading } = authClient.useSession();
@@ -70,24 +72,24 @@ export const AccountProfileClient = () => {
   if (!session) return null;
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">Account Settings</h1>
-        <p className="text-muted-foreground">Manage your personal information and preferences.</p>
-      </header>
+    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <DashboardHeader
+        title="Personal Profile"
+        subtitle="Manage your personal information and preferences."
+      />
 
       <div className="grid gap-8 md:grid-cols-[250px_1fr]">
         <aside className="space-y-4">
-          <Card className="overflow-hidden border-none bg-indigo-600/5 dark:bg-indigo-600/10">
+          <Card className="border-border">
             <CardContent className="p-6 flex flex-col items-center">
               <div className="relative group">
-                <Avatar className="h-24 w-24 border-4 border-background shadow-xl">
+                <Avatar className="h-24 w-24 border-4 border-background">
                   <AvatarImage src={session.user.image || ""} alt={session.user.name} />
-                  <AvatarFallback className="text-2xl bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-400">
+                  <AvatarFallback className="text-2xl">
                     {session.user.name?.charAt(0) || "U"}
                   </AvatarFallback>
                 </Avatar>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
                   <Camera className="w-6 h-6 text-white" />
                 </div>
               </div>
@@ -99,21 +101,6 @@ export const AccountProfileClient = () => {
               </div>
             </CardContent>
           </Card>
-
-          <nav className="flex flex-col gap-1">
-            <Button variant="ghost" className="justify-start bg-accent/50 text-accent-foreground">
-              <User className="mr-2 h-4 w-4" />
-              General
-            </Button>
-            <Button
-              variant="ghost"
-              className="justify-start text-muted-foreground hover:text-foreground"
-              disabled
-            >
-              <ShieldAlert className="mr-2 h-4 w-4" />
-              Security
-            </Button>
-          </nav>
         </aside>
 
         <div className="space-y-6">
@@ -185,7 +172,7 @@ export const AccountProfileClient = () => {
                       type="submit"
                       loading={isUpdating}
                       disabled={!form.formState.isDirty}
-                      className="bg-indigo-600 hover:bg-indigo-700 text-white min-w-[120px] shadow-lg shadow-indigo-500/20"
+                      className="min-w-[120px] rounded-sm"
                     >
                       Save Changes
                     </Button>

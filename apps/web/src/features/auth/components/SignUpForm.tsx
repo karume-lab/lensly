@@ -22,7 +22,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { SocialAuth } from "./SocialAuth";
+import { SocialAuth } from "@/features/auth/components/SocialAuth";
 
 export const SignUpForm = () => {
   const router = useRouter();
@@ -69,7 +69,7 @@ export const SignUpForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-md shadow-xl dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800">
+    <Card className="w-full max-w-md border-border">
       <CardHeader className="text-center space-y-2">
         <CardTitle className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
           Create an account
@@ -81,7 +81,7 @@ export const SignUpForm = () => {
 
       <CardContent>
         {signUpMutation.isError && (
-          <div className="mb-4 rounded-md bg-red-50 p-4 dark:bg-red-900/30">
+          <div className="mb-4 bg-red-50 p-4 dark:bg-red-900/30">
             <p className="text-sm font-medium text-red-800 dark:text-red-300">
               {signUpMutation.error.message}
             </p>

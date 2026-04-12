@@ -82,8 +82,8 @@ export const AdminUsersClient = () => {
             <span
               className={
                 role === "admin"
-                  ? "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-500 px-2 py-1 rounded-full text-xs font-semibold"
-                  : "bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-300 px-2 py-1 rounded-full text-xs font-medium"
+                  ? "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-500 px-2 py-1 text-xs font-semibold"
+                  : "bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-300 px-2 py-1 text-xs font-medium"
               }
             >
               {role || "user"}

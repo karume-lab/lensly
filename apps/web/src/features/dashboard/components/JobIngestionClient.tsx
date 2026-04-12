@@ -51,13 +51,13 @@ export function JobIngestionClient({ jobId }: { jobId: string }) {
             <Share2 className="mr-2 h-4 w-4" />
             Share Pipeline
           </Button>
-          <Button size="sm" className="h-9 shadow-md shadow-primary/10" asChild>
+          <Button size="sm" className="h-9" asChild>
             <Link href={`/dashboard/jobs/${jobId}/shortlist` as Route}>View Results</Link>
           </Button>
         </div>
       </div>
 
-      <div className="rounded-xl border border-border/50 bg-card/30 backdrop-blur-md transition-all">
+      <div className="border border-border bg-card">
         <IngestionHub jobId={jobId} />
       </div>
     </div>

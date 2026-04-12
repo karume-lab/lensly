@@ -21,24 +21,20 @@ import {
 import { Input } from "@repo/ui/web/components/ui/input";
 import { Slider } from "@repo/ui/web/components/ui/slider";
 import { Textarea } from "@repo/ui/web/components/ui/textarea";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@repo/ui/web/components/ui/tooltip";
 import { type CreateJobInput, CreateJobSchema } from "@repo/validators/job";
-import { AnimatePresence, motion } from "framer-motion";
-import { Brain, ChevronRight, Info, Lightbulb, Plus, Sparkles, X } from "lucide-react";
+import { Brain, Loader2, Plus, Sparkles, X } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { createJobAction } from "@/app/actions/job";
+import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
 
 export const NewJobForm = () => {
   const [skillInput, setSkillInput] = useState("");
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
 
   const form = useForm<CreateJobInput>({
     resolver: zodResolver(CreateJobSchema),
@@ -53,17 +49,10 @@ export const NewJobForm = () => {
     },
   });
 
-  const title = form.watch("title");
   const skills = form.watch("requiredSkills");
   const weightSkills = form.watch("weightSkills");
   const weightExperience = form.watch("weightExperience");
   const weightEducation = form.watch("weightEducation");
-
-  const suggestions = title?.toLowerCase().includes("front")
-    ? ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"]
-    : title?.toLowerCase().includes("back")
-      ? ["Node.js", "Go", "PostgreSQL", "Docker", "Redis"]
-      : ["Communication", "Problem Solving", "Agile", "Teamwork"];
 
   const handleAddSkill = (skill: string) => {
     const trimmed = skill.trim();
@@ -116,7 +105,6 @@ export const NewJobForm = () => {
       newWeights[otherKeys[0]] += 100 - finalSum;
     }
 
-    // Update all weight fields in the form
     form.setValue("weightSkills", newWeights.weightSkills, { shouldValidate: true });
     form.setValue("weightExperience", newWeights.weightExperience, { shouldValidate: true });
     form.setValue("weightEducation", newWeights.weightEducation, { shouldValidate: true });
@@ -126,47 +114,40 @@ export const NewJobForm = () => {
     startTransition(async () => {
       try {
         await createJobAction(data);
-        toast.success("Job Created!");
-      } catch (_error) {
-        toast.error("Job Creation Failed.");
+        toast.success("Job created successfully");
+        router.push("/dashboard/jobs");
+      } catch {
+        toast.error("Failed to create job. Please try again.");
       }
     });
   };
 
   return (
-    <div className="max-w-3xl mx-auto py-8 px-4 space-y-8 animate-in fly-in-from-bottom duration-700">
-      <div className="space-y-1">
-        <h1 className="text-3xl font-bold tracking-tight">Create New Job</h1>
-        <p className="text-muted-foreground">
-          Define your requirements and AI screening parameters.
-        </p>
-      </div>
+    <div className="max-w-4xl space-y-8 animate-in fade-in duration-500">
+      <DashboardHeader
+        title="Create job"
+        subtitle="Define the requirements and screening parameters for your hiring pipeline."
+      />
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          {/* Basic Details */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+          <Card className="border-border">
             <CardHeader>
-              <CardTitle className="text-lg flex items-center gap-2">
-                <Lightbulb className="h-5 w-5 text-primary" />
-                Basic Details
+              <CardTitle className="text-lg font-semibold flex items-center gap-2">
+                <Plus className="size-4" /> Role details
               </CardTitle>
-              <CardDescription>Essential information about the role.</CardDescription>
+              <CardDescription>Basic information about the position.</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+            <CardContent className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
                   name="title"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Job Title</FormLabel>
+                      <FormLabel className="font-medium">Job title</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="e.g. Senior React Developer"
-                          className="bg-background/50"
-                          {...field}
-                        />
+                        <Input placeholder="e.g. Frontend Engineer" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -177,13 +158,9 @@ export const NewJobForm = () => {
                   name="department"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Department</FormLabel>
+                      <FormLabel className="font-medium">Department</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="e.g. Engineering"
-                          className="bg-background/50"
-                          {...field}
-                        />
+                        <Input placeholder="e.g. Product" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -195,11 +172,11 @@ export const NewJobForm = () => {
                 name="description"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Description</FormLabel>
+                    <FormLabel className="font-medium">Job description</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Talk about the role, team, and expectations..."
-                        className="min-h-[120px] bg-background/50"
+                        placeholder="Provide an overview of the role and responsibilities..."
+                        className="min-h-[120px] resize-none"
                         {...field}
                       />
                     </FormControl>
@@ -210,14 +187,12 @@ export const NewJobForm = () => {
             </CardContent>
           </Card>
 
-          {/* Requirements */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
+          <Card className="border-border">
             <CardHeader>
-              <CardTitle className="text-lg flex items-center gap-2">
-                <Plus className="h-5 w-5 text-primary" />
-                Requirements
+              <CardTitle className="text-lg font-semibold flex items-center gap-2">
+                <Sparkles className="size-4" /> Candidate requirements
               </CardTitle>
-              <CardDescription>Technical skills and mandatory experience.</CardDescription>
+              <CardDescription>Specific skills and qualifications required.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <FormField
@@ -225,119 +200,77 @@ export const NewJobForm = () => {
                 name="requiredSkills"
                 render={() => (
                   <FormItem>
-                    <FormLabel>Required Skills</FormLabel>
+                    <FormLabel className="font-medium">Required skills</FormLabel>
                     <FormControl>
-                      <div className="flex flex-wrap gap-2 min-h-[44px] p-2 rounded-md border border-input bg-background/50 transition-all focus-within:ring-2 focus-within:ring-primary/20">
-                        <AnimatePresence mode="popLayout">
+                      <div className="flex flex-col gap-4">
+                        <div className="flex gap-2">
+                          <Input
+                            className="flex-1"
+                            placeholder="Add a skill (e.g. React, Python)"
+                            value={skillInput}
+                            onChange={(e) => setSkillInput(e.target.value)}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter") {
+                                e.preventDefault();
+                                handleAddSkill(skillInput);
+                              }
+                            }}
+                          />
+                          <Button type="button" onClick={() => handleAddSkill(skillInput)}>
+                            Add
+                          </Button>
+                        </div>
+                        <div className="flex flex-wrap gap-2 min-h-[44px] p-4 border border-input bg-muted/20">
                           {skills.map((skill) => (
-                            <motion.div
+                            <Badge
                               key={skill}
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              exit={{ opacity: 0, scale: 0.8 }}
+                              variant="secondary"
+                              className="pl-3 pr-1 h-8 flex items-center gap-1"
                             >
-                              <Badge
-                                variant="secondary"
-                                className="pl-2 pr-1 h-7 flex items-center gap-1 bg-primary/10 border-primary/20 text-primary"
+                              <span className="font-medium">{skill}</span>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                type="button"
+                                onClick={() => removeSkill(skill)}
+                                className="h-4 w-4 p-0"
                               >
-                                {skill}
-                                <Button
-                                  variant="ghost"
-                                  size="icon"
-                                  type="button"
-                                  onClick={() => removeSkill(skill)}
-                                  className="h-4 w-4 hover:bg-primary/20 rounded-full p-0"
-                                >
-                                  <X className="h-3 w-3" />
-                                </Button>
-                              </Badge>
-                            </motion.div>
+                                <X className="size-3" />
+                              </Button>
+                            </Badge>
                           ))}
-                        </AnimatePresence>
-                        <Input
-                          className="flex-1 bg-transparent border-none outline-none text-sm min-w-[120px] h-7 focus-visible:ring-0 shadow-none"
-                          placeholder={skills.length === 0 ? "Type a skill and press Enter..." : ""}
-                          value={skillInput}
-                          onChange={(e) => setSkillInput(e.target.value)}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter") {
-                              e.preventDefault();
-                              handleAddSkill(skillInput);
-                            }
-                          }}
-                        />
+                          {skills.length === 0 && (
+                            <p className="text-sm text-muted-foreground">No skills added yet.</p>
+                          )}
+                        </div>
                       </div>
                     </FormControl>
                     <FormMessage />
-
-                    {/* Suggestions */}
-                    <div className="flex flex-col gap-2 mt-4">
-                      <span className="text-xs text-muted-foreground font-medium flex items-center gap-1">
-                        <Sparkles className="h-3 w-3" />
-                        Suggested based on title:
-                      </span>
-                      <div className="flex flex-wrap gap-2">
-                        {suggestions
-                          .filter((s) => !skills.includes(s))
-                          .map((s) => (
-                            <Button
-                              key={s}
-                              type="button"
-                              variant="outline"
-                              size="sm"
-                              onClick={() => handleAddSkill(s)}
-                              className="h-7 text-xs px-2 py-1 rounded bg-muted/50 hover:bg-primary/5 hover:text-primary transition-colors border border-border/50"
-                            >
-                              + {s}
-                            </Button>
-                          ))}
-                      </div>
-                    </div>
                   </FormItem>
                 )}
               />
             </CardContent>
           </Card>
 
-          {/* AI Calibration */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-all duration-1000" />
+          <Card className="border-border">
             <CardHeader>
-              <div className="flex items-center justify-between">
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <Brain className="h-5 w-5 text-primary" />
-                  AI Calibration
-                </CardTitle>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button variant="ghost" size="icon" className="h-8 w-8">
-                        <Info className="h-4 w-4 text-muted-foreground" />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p className="max-w-xs">
-                        Define how Gemini should weigh different traits when generating match
-                        scores. The total always equals 100%.
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </div>
-              <CardDescription>Configure candidate evaluation weightings.</CardDescription>
+              <CardTitle className="text-lg font-semibold flex items-center gap-2">
+                <Brain className="size-4" /> Assessment weights
+              </CardTitle>
+              <CardDescription>
+                Define how the screening process should prioritize candidate traits.
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-8 pt-4">
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <FormField
                   control={form.control}
                   name="weightSkills"
                   render={({ field }) => (
-                    <FormItem className="space-y-3">
+                    <FormItem className="space-y-4">
                       <div className="flex justify-between items-center">
-                        <FormLabel className="text-sm font-semibold">Skills Relevance</FormLabel>
-                        <span className="text-sm font-mono font-bold text-primary">
-                          {field.value}%
-                        </span>
+                        <FormLabel className="text-sm font-medium">Technical skills</FormLabel>
+                        <span className="text-sm font-semibold text-primary">{field.value}%</span>
                       </div>
                       <FormControl>
                         <Slider
@@ -345,7 +278,6 @@ export const NewJobForm = () => {
                           onValueChange={([v]) => handleWeightChange("weightSkills", v ?? 0)}
                           max={100}
                           step={1}
-                          className="[&_[role=slider]]:h-5 [&_[role=slider]]:w-5"
                         />
                       </FormControl>
                     </FormItem>
@@ -356,12 +288,10 @@ export const NewJobForm = () => {
                   control={form.control}
                   name="weightExperience"
                   render={({ field }) => (
-                    <FormItem className="space-y-3">
+                    <FormItem className="space-y-4">
                       <div className="flex justify-between items-center">
-                        <FormLabel className="text-sm font-semibold">Work Experience</FormLabel>
-                        <span className="text-sm font-mono font-bold text-primary">
-                          {field.value}%
-                        </span>
+                        <FormLabel className="text-sm font-medium">Work experience</FormLabel>
+                        <span className="text-sm font-semibold text-primary">{field.value}%</span>
                       </div>
                       <FormControl>
                         <Slider
@@ -369,7 +299,6 @@ export const NewJobForm = () => {
                           onValueChange={([v]) => handleWeightChange("weightExperience", v ?? 0)}
                           max={100}
                           step={1}
-                          className="[&_[role=slider]]:h-5 [&_[role=slider]]:w-5"
                         />
                       </FormControl>
                     </FormItem>
@@ -380,12 +309,10 @@ export const NewJobForm = () => {
                   control={form.control}
                   name="weightEducation"
                   render={({ field }) => (
-                    <FormItem className="space-y-3">
+                    <FormItem className="space-y-4">
                       <div className="flex justify-between items-center">
-                        <FormLabel className="text-sm font-semibold">Education Context</FormLabel>
-                        <span className="text-sm font-mono font-bold text-primary">
-                          {field.value}%
-                        </span>
+                        <FormLabel className="text-sm font-medium">Education context</FormLabel>
+                        <span className="text-sm font-semibold text-primary">{field.value}%</span>
                       </div>
                       <FormControl>
                         <Slider
@@ -393,7 +320,6 @@ export const NewJobForm = () => {
                           onValueChange={([v]) => handleWeightChange("weightEducation", v ?? 0)}
                           max={100}
                           step={1}
-                          className="[&_[role=slider]]:h-5 [&_[role=slider]]:w-5"
                         />
                       </FormControl>
                       <FormMessage />
@@ -401,41 +327,21 @@ export const NewJobForm = () => {
                   )}
                 />
               </div>
-
-              <div className="p-3 bg-muted/50 rounded-lg border border-border/50 flex gap-3 items-center mt-4">
-                <Sparkles className="h-5 w-5 text-yellow-500 animate-pulse" />
-                <p className="text-xs text-muted-foreground italic">
-                  Currently weighing <strong className="text-foreground">Skills</strong> heaviest.
-                  Gemini will focus on raw technical proficiency.
-                </p>
-              </div>
             </CardContent>
           </Card>
 
-          <div className="flex items-center justify-end gap-4 pt-4 pb-20">
+          <div className="flex items-center justify-end gap-3 pt-4 pb-20 border-t border-border">
             <Button variant="ghost" type="button" asChild disabled={isPending}>
               <Link href="/dashboard">Cancel</Link>
             </Button>
-            <Button
-              type="submit"
-              size="lg"
-              className="px-8 shadow-xl shadow-primary/20 group"
-              disabled={isPending}
-            >
+            <Button type="submit" className="min-w-[120px]" disabled={isPending}>
               {isPending ? (
                 <>
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-                    className="mr-2 h-4 w-4 border-2 border-white/30 border-t-white rounded-full"
-                  />
+                  <Loader2 className="mr-2 size-4 animate-spin" />
                   Creating...
                 </>
               ) : (
-                <>
-                  Save & Continue to Ingestion
-                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </>
+                <>Create job</>
               )}
             </Button>
           </div>

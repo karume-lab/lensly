@@ -66,10 +66,10 @@ export function JobOverviewClient({ jobId }: { jobId: string }) {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {sections.map((section) => (
           <Link key={section.title} href={section.href as Route} className="group transition-all">
-            <Card className="h-full bg-card/40 backdrop-blur-md border-border/50 hover:border-primary/30 transition-all hover:shadow-xl hover:shadow-primary/5">
+            <Card className="h-full bg-card border-border hover:border-primary/30 transition-all hover:shadow-md">
               <CardHeader>
                 <div
-                  className={`w-10 h-10 rounded-lg ${section.bg} ${section.color} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform`}
+                  className={`w-10 h-10 ${section.bg} ${section.color} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform`}
                 >
                   <section.icon className="h-5 w-5" />
                 </div>
@@ -85,7 +85,7 @@ export function JobOverviewClient({ jobId }: { jobId: string }) {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <Card className="bg-card/30 border-border/50">
+        <Card className="bg-card border-border">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
               <LayoutDashboard className="h-4 w-4" />

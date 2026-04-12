@@ -7,7 +7,10 @@ const SiteLogo = ({ className }: { className?: string }) => {
     <Image
       alt="Lensly Logo"
       src={Logo}
-      className={cn("rounded-2xl bg-black dark:bg-transparent", className)}
+      className={cn(
+        "bg-black dark:bg-transparent transition-transform duration-300 hover:scale-105",
+        className,
+      )}
       priority={true}
     />
   );

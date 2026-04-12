@@ -33,9 +33,9 @@ const NavigationPill = () => {
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
       <NavigationMenu
         className={cn(
-          "rounded-full border border-primary/10",
-          "bg-background/20 backdrop-blur-xl shadow-2xl",
-          "px-4 py-2 transition-all duration-300 hover:bg-background/40",
+          "border border-border",
+          "bg-background",
+          "px-4 py-2 transition-all duration-300 hover:bg-muted/50",
         )}
       >
         <NavigationMenuList className="gap-2">
@@ -44,7 +44,7 @@ const NavigationPill = () => {
               <Link
                 href={href as Route}
                 className={cn(
-                  "flex items-center justify-center size-10 rounded-full transition-all duration-300",
+                  "flex items-center justify-center size-10 transition-all duration-300",
                   "text-foreground/70 hover:text-primary",
                   "hover:bg-primary/10 hover:scale-110",
                   "focus:bg-primary/10 focus:outline-none",

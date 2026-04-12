@@ -44,13 +44,13 @@ export const NavProjects = ({
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>Resources</SidebarGroupLabel>
-      <SidebarMenu>
+      <SidebarMenu className="gap-1">
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton asChild>
+            <SidebarMenuButton asChild className="h-9 px-3">
               <Link href={item.url as Route} target="_blank" rel="noreferrer">
-                <item.icon />
-                <span>{item.name}</span>
+                <item.icon className="size-4" />
+                <span className="font-medium">{item.name}</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -90,34 +90,36 @@ export const NavUser = ({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground h-12"
             >
-              <Avatar className="h-8 w-8 rounded-full">
+              <Avatar className="h-8 w-8">
                 <AvatarImage src={user.avatar} alt={user.name} />
-                <AvatarFallback className="rounded-full">{user.name.charAt(0)}</AvatarFallback>
+                <AvatarFallback className="bg-sidebar-accent text-sidebar-accent-foreground">
+                  {user.name.charAt(0)}
+                </AvatarFallback>
               </Avatar>
-              <div className="grid flex-1 text-left text-sm leading-tight">
+              <div className="grid flex-1 text-left text-sm leading-tight ml-2">
                 <span className="truncate font-medium">{user.name}</span>
-                <span className="truncate text-xs">{user.email}</span>
+                <span className="truncate text-xs text-muted-foreground">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4" />
+              <ChevronsUpDown className="ml-auto size-4 text-muted-foreground" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
+            className="w-(--radix-dropdown-menu-trigger-width) min-w-56"
             side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}
           >
             <DropdownMenuLabel className="p-0 font-normal">
-              <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-                <Avatar className="h-8 w-8 rounded-full">
+              <div className="flex items-center gap-2 px-2 py-2 text-left text-sm">
+                <Avatar className="h-8 w-8">
                   <AvatarImage src={user.avatar} alt={user.name} />
-                  <AvatarFallback className="rounded-full">{user.name.charAt(0)}</AvatarFallback>
+                  <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{user.name}</span>
-                  <span className="truncate text-xs">{user.email}</span>
+                  <span className="truncate text-xs text-muted-foreground">{user.email}</span>
                 </div>
               </div>
             </DropdownMenuLabel>
@@ -125,14 +127,14 @@ export const NavUser = ({
             <DropdownMenuItem asChild>
               <Link href={"/dashboard/profile" as Route} className="cursor-pointer">
                 <User className="mr-2 h-4 w-4" />
-                Account Settings
+                Profile
               </Link>
             </DropdownMenuItem>
             {showReturnToTasks && (
               <DropdownMenuItem asChild>
                 <Link href="/dashboard" className="cursor-pointer">
                   <LayoutDashboard className="mr-2 h-4 w-4" />
-                  Return to Tasks
+                  Return to tasks
                 </Link>
               </DropdownMenuItem>
             )}
@@ -142,7 +144,7 @@ export const NavUser = ({
               className="text-destructive focus:text-destructive cursor-pointer"
             >
               <LogOut className="mr-2 h-4 w-4" />
-              Sign Out
+              Sign out
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -171,8 +173,7 @@ export const NavMain = ({
 
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Platform</SidebarGroupLabel>
-      <SidebarMenu>
+      <SidebarMenu className="gap-1">
         {items.map((item) => {
           const isAnyChildActive = item.items?.some((subItem) => pathname === subItem.url);
           const isActive = pathname === item.url || isAnyChildActive;
@@ -180,10 +181,28 @@ export const NavMain = ({
           if (!item.items) {
             return (
               <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild tooltip={item.title} isActive={pathname === item.url}>
-                  <Link href={item.url as Route}>
-                    {item.icon && <item.icon />}
-                    <span>{item.title}</span>
+                <SidebarMenuButton
+                  asChild
+                  tooltip={item.title}
+                  className={cn(
+                    "h-10 px-3 transition-colors",
+                    pathname === item.url
+                      ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  <Link href={item.url as Route} className="flex items-center gap-3">
+                    {item.icon && (
+                      <item.icon
+                        className={cn(
+                          "size-4",
+                          pathname === item.url
+                            ? "text-sidebar-accent-foreground"
+                            : "text-muted-foreground",
+                        )}
+                      />
+                    )}
+                    <span className="text-sm">{item.title}</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -201,23 +220,29 @@ export const NavMain = ({
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton
                     tooltip={item.title}
-                    isActive={pathname === item.url}
                     className={cn(
-                      isAnyChildActive && !isCollapsed && "text-sidebar-primary font-semibold",
+                      "h-10 px-3",
+                      isAnyChildActive &&
+                        !isCollapsed &&
+                        "text-sidebar-accent-foreground font-medium",
                     )}
                   >
-                    {item.icon && <item.icon />}
-                    <span>{item.title}</span>
-                    <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                    {item.icon && <item.icon className="size-4" />}
+                    <span className="text-sm">{item.title}</span>
+                    <ChevronRight className="ml-auto size-4 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <SidebarMenuSub>
+                  <SidebarMenuSub className="ml-4 border-l-0 pl-2">
                     {item.items?.map((subItem) => (
                       <SidebarMenuSubItem key={subItem.title}>
-                        <SidebarMenuSubButton asChild isActive={pathname === subItem.url}>
+                        <SidebarMenuSubButton
+                          asChild
+                          isActive={pathname === subItem.url}
+                          className="h-8"
+                        >
                           <Link href={subItem.url as Route}>
-                            <span>{subItem.title}</span>
+                            <span className="text-sm">{subItem.title}</span>
                           </Link>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>

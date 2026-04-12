@@ -114,7 +114,7 @@ export const AdminDashboardClient = () => {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-primary/10 rounded-full">
+              <div className="p-2 bg-primary/10">
                 <UserCheck className="h-5 w-5 text-primary" />
               </div>
               <div className="flex flex-col">

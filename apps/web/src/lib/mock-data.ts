@@ -1,4 +1,4 @@
-import type { Applicant, Job, ScreeningResult, User } from "@repo/types";
+import type { Applicant, HistoryItem, Job, ScreeningResult, User } from "@repo/types";
 import dayjs from "dayjs";
 
 // ==========================================
@@ -118,6 +118,49 @@ export const mockActivity = [
     title: "Anika approved 3 candidates",
     subtitle: "DevOps Engineer shortlist",
     timestamp: "1 hr ago",
+  },
+];
+
+export const mockHistory: HistoryItem[] = [
+  {
+    id: "hist_01",
+    jobTitle: "Senior Frontend Engineer",
+    date: "2024-03-20",
+    candidates: 124,
+    shortlisted: 12,
+    avgScore: 88,
+    timeSaved: "14.5h",
+    status: "Completed",
+  },
+  {
+    id: "hist_02",
+    jobTitle: "Java Backend Lead",
+    date: "2024-03-15",
+    candidates: 89,
+    shortlisted: 8,
+    avgScore: 76,
+    timeSaved: "10.2h",
+    status: "Completed",
+  },
+  {
+    id: "hist_03",
+    jobTitle: "UI/UX Researcher",
+    date: "2024-03-10",
+    candidates: 56,
+    shortlisted: 5,
+    avgScore: 92,
+    timeSaved: "6.8h",
+    status: "Archived",
+  },
+  {
+    id: "hist_04",
+    jobTitle: "Data Scientist",
+    date: "2024-03-05",
+    candidates: 210,
+    shortlisted: 15,
+    avgScore: 84,
+    timeSaved: "22.1h",
+    status: "Completed",
   },
 ];
 

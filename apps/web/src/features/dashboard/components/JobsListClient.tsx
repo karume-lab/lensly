@@ -22,6 +22,7 @@ import { Briefcase, MoreHorizontal, Plus, Search, Users } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
 import { useState } from "react";
+import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
 import { type DashboardJob, mockJobs } from "@/lib/mock-data";
 
 export function JobsListClient() {
@@ -49,104 +50,103 @@ export function JobsListClient() {
   };
 
   return (
-    <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Jobs & Campaigns</h1>
-          <p className="text-muted-foreground mt-1">
-            Manage your active recruitment pipelines and view AI screening results.
-          </p>
-        </div>
-        <Button
-          asChild
-          className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all active:scale-95"
-        >
+    <div className="flex flex-col gap-8 animate-in fade-in duration-500">
+      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+        <DashboardHeader
+          title="Jobs and campaigns"
+          subtitle="Manage your active recruitment pipelines and review screening results."
+          className="mb-0 border-none space-y-0 pb-0"
+        />
+        <Button asChild>
           <Link href={"/dashboard/jobs/new"}>
-            <Plus className="mr-2 h-4 w-4" />
-            Post New Job
+            <Plus className="mr-2 size-4" />
+            Create job
           </Link>
         </Button>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Jobs</CardTitle>
-            <Briefcase className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-xs font-medium text-muted-foreground">Active jobs</CardTitle>
+            <Briefcase className="size-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">12</div>
-            <p className="text-xs text-muted-foreground">+2 from last month</p>
+            <div className="text-2xl font-semibold">12</div>
+            <p className="text-xs text-muted-foreground mt-1">+2 from previous month</p>
           </CardContent>
         </Card>
-        <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Applicants</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-xs font-medium text-muted-foreground">
+              Total applicants
+            </CardTitle>
+            <Users className="size-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">1,284</div>
-            <p className="text-xs text-muted-foreground">+18% increase this week</p>
+            <div className="text-2xl font-semibold">1,284</div>
+            <p className="text-xs text-muted-foreground mt-1">18% increase this week</p>
           </CardContent>
         </Card>
-        <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Screened by AI</CardTitle>
-            <div className="h-4 w-4 rounded-full bg-primary/20 flex items-center justify-center">
-              <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            </div>
+            <CardTitle className="text-xs font-medium text-muted-foreground">
+              Candidates screened
+            </CardTitle>
+            <div className="size-2 bg-primary" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">942</div>
-            <p className="text-xs text-muted-foreground">73.4% screening rate</p>
+            <div className="text-2xl font-semibold">942</div>
+            <p className="text-xs text-muted-foreground mt-1">73.4% screening rate</p>
           </CardContent>
         </Card>
-        <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Avg. Match Score</CardTitle>
-            <div className="text-primary font-bold text-sm">A+</div>
+            <CardTitle className="text-xs font-medium text-muted-foreground">
+              Average match precision
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">82%</div>
-            <p className="text-xs text-muted-foreground">Above benchmark average</p>
+            <div className="text-2xl font-semibold">82%</div>
+            <p className="text-xs text-muted-foreground mt-1">Consistency above benchmark</p>
           </CardContent>
         </Card>
       </div>
 
-      <Card className="overflow-hidden bg-card/30 backdrop-blur-md border-border/50">
-        <CardHeader className="pb-3 border-b border-border/50 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <Card className="border-border">
+        <CardHeader className="pb-3 border-b border-border flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="space-y-1">
-            <CardTitle>Recent Campaigns</CardTitle>
-            <CardDescription>A list of your most recently updated job postings.</CardDescription>
+            <CardTitle className="text-base font-semibold">Recent campaigns</CardTitle>
+            <CardDescription>Review and manage your latest job postings.</CardDescription>
           </div>
           <div className="relative w-full md:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
             <Input
               placeholder="Search jobs..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-9 h-9 bg-background/50 border-border/50 ring-offset-background placeholder:text-muted-foreground/60 focus-visible:ring-primary/30"
+              className="pl-9 h-9"
             />
           </div>
         </CardHeader>
         <CardContent className="p-0">
           <Table>
-            <TableHeader className="bg-muted/30">
+            <TableHeader>
               <TableRow>
-                <TableHead className="w-[300px]">Job Title</TableHead>
+                <TableHead className="w-[300px]">Job title</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead>Applicants</TableHead>
-                <TableHead>Match Rate</TableHead>
+                <TableHead>Match score</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {filteredJobs.length > 0 ? (
                 filteredJobs.map((job) => (
-                  <TableRow key={job.id} className="hover:bg-muted/20 transition-colors group">
+                  <TableRow key={job.id} className="group">
                     <TableCell className="font-medium">
                       <div className="flex flex-col">
-                        <span>{job.title}</span>
+                        <span className="text-sm">{job.title}</span>
                         <span className="text-xs text-muted-foreground font-normal">
                           {job.department} • {job.seniority}
                         </span>
@@ -158,16 +158,16 @@ export function JobsListClient() {
                       </Badge>
                     </TableCell>
                     <TableCell>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1 text-sm">
                         <span className="font-semibold">{job.applicantCount}</span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className="text-muted-foreground">
                           ({job.screenedCount} screened)
                         </span>
                       </div>
                     </TableCell>
                     <TableCell>
                       <div className="flex items-center gap-2">
-                        <div className="w-16 h-1.5 rounded-full bg-muted overflow-hidden">
+                        <div className="w-16 h-1.5 bg-muted overflow-hidden">
                           <div
                             className="h-full bg-primary"
                             style={{ width: `${job.avgScore}%` }}
@@ -177,19 +177,19 @@ export function JobsListClient() {
                       </div>
                     </TableCell>
                     <TableCell className="text-right">
-                      <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="flex items-center justify-end gap-2">
                         <Button size="sm" variant="ghost" asChild>
                           <Link href={`/dashboard/jobs/${job.id}/ingestion` as Route}>Ingest</Link>
                         </Button>
-                        <Button size="sm" asChild>
+                        <Button size="sm" variant="outline" asChild>
                           <Link href={`/dashboard/jobs/${job.id}/shortlist` as Route}>Results</Link>
                         </Button>
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="h-8 w-8 text-muted-foreground hover:text-foreground"
+                          className="size-8 text-muted-foreground transition-colors hover:text-foreground"
                         >
-                          <MoreHorizontal className="h-4 w-4" />
+                          <MoreHorizontal className="size-4" />
                         </Button>
                       </div>
                     </TableCell>
@@ -198,7 +198,7 @@ export function JobsListClient() {
               ) : (
                 <TableRow>
                   <TableCell colSpan={5} className="h-32 text-center text-muted-foreground">
-                    No jobs found matching your search.
+                    No matching jobs found.
                   </TableCell>
                 </TableRow>
               )}
