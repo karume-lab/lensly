@@ -39,7 +39,7 @@ const ExplainabilityRow = ({ candidate }: { candidate: AppScreeningResult }) => 
   ];
 
   return (
-    <div className="bg-muted/10 border-t border-border p-6 grid md:grid-cols-2 gap-8 items-start animate-in fade-in duration-300">
+    <div className="bg-muted/10 border-t border-border p-6 grid md:grid-cols-2 gap-8 items-start  duration-300">
       <div className="flex flex-col gap-4">
         <h4 className="text-sm font-semibold flex items-center gap-2">
           <LayoutGrid className="size-4 text-muted-foreground" />
@@ -210,7 +210,7 @@ export const AIShortlist = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-4 md:p-8 animate-in fade-in duration-500">
+    <div className="flex flex-col gap-6 p-4 md:p-8">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div className="space-y-1">
           <h1 className="text-2xl font-semibold tracking-tight">AI shortlist</h1>

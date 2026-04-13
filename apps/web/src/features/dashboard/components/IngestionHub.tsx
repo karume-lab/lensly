@@ -164,7 +164,7 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-4 md:p-8 animate-in fade-in duration-500">
+    <div className="flex flex-col gap-6 p-4 md:p-8">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div className="space-y-1">
           <h1 className="text-2xl font-semibold tracking-tight">Ingestion hub</h1>

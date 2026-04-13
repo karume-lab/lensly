@@ -123,7 +123,7 @@ export const NewJobForm = () => {
   };
 
   return (
-    <div className="max-w-4xl space-y-8 animate-in fade-in duration-500">
+    <div className=" duration-500">
       <DashboardHeader
         title="Create job"
         subtitle="Define the requirements and screening parameters for your hiring pipeline."

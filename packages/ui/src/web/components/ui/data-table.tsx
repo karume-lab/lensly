@@ -52,6 +52,10 @@ interface DataTableProps<TData, TValue> {
   searchValue?: string
   onSearchChange?: (value: string) => void
   filterConfigs?: FilterConfig[]
+  renderFilters?: () => React.ReactNode
+  onClearFilters?: () => void
+  loading?: boolean
+  totalCount?: number
   viewMode?: "table" | "grid"
   onViewModeChange?: (view: "table" | "grid") => void
   renderCard?: (item: TData) => React.ReactNode
@@ -67,6 +71,10 @@ export function DataTable<TData, TValue>({
   searchValue,
   onSearchChange,
   filterConfigs,
+  renderFilters,
+  onClearFilters,
+  loading,
+  totalCount,
   viewMode = "table",
   onViewModeChange,
   renderCard,
@@ -100,74 +108,96 @@ export function DataTable<TData, TValue>({
   })
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div className="flex flex-1 items-center gap-2">
-          {searchKey && (
-            <div className="relative w-full max-w-sm">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-zinc-500" />
-              <Input
-                placeholder={`Search ${searchKey}...`}
-                value={localSearchValue}
-                onChange={(event) => setLocalSearchValue(event.target.value)}
-                className="pl-9 pr-8"
-              />
-              {searchValue && (
-                <Button
-                  variant="ghost"
-                  onClick={() => onSearchChange?.("")}
-                  className="absolute right-0 top-0 h-8 w-8 px-0 hover:bg-transparent"
-                >
-                  <X className="h-4 w-4 text-zinc-500" />
-                  <span className="sr-only">Clear search</span>
-                </Button>
-              )}
+    <div className="space-y-6">
+      {(renderFilters || filterConfigs || searchKey) && (
+        <div className="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 space-y-6">
+          <div className="flex items-center justify-between">
+            <div className="space-y-1">
+              <h4 className="text-sm font-semibold">Filters</h4>
+              <p className="text-xs text-muted-foreground">Refine your search results</p>
             </div>
-          )}
-          {filterConfigs?.map((config) => (
-            <Select
-              key={config.name}
-              value={config.value || "all"}
-              onValueChange={(value) => config.onValueChange?.(value)}
-            >
-              <SelectTrigger className="h-8 min-w-32 capitalize">
-                <SelectValue placeholder={`Filter by ${config.name}`} />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All {config.name}</SelectItem>
-                {config.options.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          ))}
-        </div>
-
-        {onViewModeChange && (
-          <div className="flex items-center gap-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 p-1 bg-white dark:bg-zinc-950">
-            <Button
-              variant={viewMode === "table" ? "secondary" : "ghost"}
-              size="sm"
-              onClick={() => onViewModeChange("table")}
-              className="h-7 w-7 p-0"
-              title="Table View"
-            >
-              <List className="h-4 w-4" />
-            </Button>
-            <Button
-              variant={viewMode === "grid" ? "secondary" : "ghost"}
-              size="sm"
-              onClick={() => onViewModeChange("grid")}
-              className="h-7 w-7 p-0"
-              title="Card View"
-            >
-              <LayoutGrid className="h-4 w-4" />
-            </Button>
+            {onClearFilters && (
+              <Button variant="outline" size="sm" onClick={onClearFilters}>
+                Clear All
+              </Button>
+            )}
           </div>
-        )}
-      </div>
+
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="flex flex-1 flex-wrap items-end gap-4">
+              {searchKey && (
+                <div className="space-y-1.5 flex-1 min-w-[280px]">
+                  <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Search</label>
+                  <div className="relative w-full">
+                    <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-zinc-500" />
+                    <Input
+                      placeholder={`Search ${searchKey}...`}
+                      value={localSearchValue}
+                      onChange={(event) => setLocalSearchValue(event.target.value)}
+                      className="pl-9 pr-8 h-10 py-0 bg-white dark:bg-zinc-950"
+                    />
+                    {searchValue && (
+                      <Button
+                        variant="ghost"
+                        onClick={() => onSearchChange?.("")}
+                        className="absolute right-0 top-0 h-10 w-10 px-0 hover:bg-transparent"
+                      >
+                        <X className="h-4 w-4 text-zinc-500" />
+                        <span className="sr-only">Clear search</span>
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              )}
+              
+              {filterConfigs?.map((config) => (
+                <div key={config.name} className="space-y-1.5">
+                  <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{config.name}</label>
+                  <Select
+                    value={config.value || "all"}
+                    onValueChange={(value) => config.onValueChange?.(value)}
+                  >
+                    <SelectTrigger className="h-10 py-0 min-w-[180px] capitalize bg-white dark:bg-zinc-950">
+                      <SelectValue placeholder={`Filter by ${config.name}`} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All {config.name}</SelectItem>
+                      {config.options.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              ))}
+
+              {renderFilters?.()}
+            </div>
+
+            {onViewModeChange && (
+              <div className="flex items-center gap-1 p-1 rounded-md border border-zinc-200 dark:border-zinc-800 bg-muted/20">
+                <Button
+                  variant={viewMode === "table" ? "secondary" : "ghost"}
+                  size="sm"
+                  onClick={() => onViewModeChange("table")}
+                  className="h-8 w-8 p-0"
+                >
+                  <List className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant={viewMode === "grid" ? "secondary" : "ghost"}
+                  size="sm"
+                  onClick={() => onViewModeChange("grid")}
+                  className="h-8 w-8 p-0"
+                >
+                  <LayoutGrid className="h-4 w-4" />
+                </Button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {viewMode === "table" ? (
         <div className="rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 overflow-hidden">
@@ -191,7 +221,16 @@ export function DataTable<TData, TValue>({
             ))}
           </TableHeader>
           <TableBody>
-            {table.getRowModel().rows?.length ? (
+            {loading ? (
+              <TableRow>
+                <TableCell colSpan={columns.length} className="h-24 text-center">
+                  <div className="flex items-center justify-center gap-2 text-zinc-500">
+                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-zinc-500 border-t-transparent" />
+                    Loading records...
+                  </div>
+                </TableCell>
+              </TableRow>
+            ) : table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   key={row.id}
@@ -238,8 +277,11 @@ export function DataTable<TData, TValue>({
       )}
       
       <div className="flex items-center justify-between px-2">
-        <div className="flex-1 text-sm text-zinc-500">
-          Showing {table.getRowModel().rows.length} records.
+        <div className="flex-1 text-sm text-muted-foreground">
+          {totalCount !== undefined 
+            ? `Showing ${Math.min(pagination.pageIndex * pagination.pageSize + 1, totalCount)} to ${Math.min((pagination.pageIndex + 1) * pagination.pageSize, totalCount)} of ${totalCount} records`
+            : `Showing ${table.getRowModel().rows.length} records.`
+          }
         </div>
         <div className="flex items-center space-x-6 lg:space-x-8">
           <div className="flex items-center space-x-2">

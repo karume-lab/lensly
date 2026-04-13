@@ -26,7 +26,6 @@ import { Camera, Check, Loader2, Mail, User } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-
 import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
 
 export const AccountProfileClient = () => {
@@ -72,30 +71,30 @@ export const AccountProfileClient = () => {
   if (!session) return null;
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="flex flex-col gap-8">
       <DashboardHeader
         title="Personal Profile"
-        subtitle="Manage your personal information and preferences."
+        subtitle="Manage your personal information and profile preferences."
       />
 
       <div className="grid gap-8 md:grid-cols-[250px_1fr]">
         <aside className="space-y-4">
-          <Card className="border-border">
+          <Card className="overflow-hidden border-border/50">
             <CardContent className="p-6 flex flex-col items-center">
               <div className="relative group">
-                <Avatar className="h-24 w-24 border-4 border-background">
+                <Avatar className="h-24 w-24 border-2 border-background shadow-sm">
                   <AvatarImage src={session.user.image || ""} alt={session.user.name} />
-                  <AvatarFallback className="text-2xl">
-                    {session.user.name?.charAt(0) || "U"}
+                  <AvatarFallback className="text-2xl bg-muted text-muted-foreground">
+                    {session.user.name.charAt(0)}
                   </AvatarFallback>
                 </Avatar>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
                   <Camera className="w-6 h-6 text-white" />
                 </div>
               </div>
               <div className="mt-4 text-center">
-                <h3 className="font-bold text-lg">{session.user.name}</h3>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                <h3 className="font-semibold text-lg">{session.user.name}</h3>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium">
                   {session.user.role || "User"}
                 </p>
               </div>
@@ -139,7 +138,7 @@ export const AccountProfileClient = () => {
                           className="pl-10 h-10 bg-muted/50 cursor-not-allowed opacity-70"
                         />
                       </div>
-                      <p className="text-[10px] text-muted-foreground mt-1 flex items-center gap-1">
+                      <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
                         <Check className="h-3 w-3 text-green-500" />
                         Verified account email
                       </p>
@@ -168,12 +167,7 @@ export const AccountProfileClient = () => {
                   />
 
                   <div className="flex items-center justify-end pt-4 border-t border-border/50">
-                    <Button
-                      type="submit"
-                      loading={isUpdating}
-                      disabled={!form.formState.isDirty}
-                      className="min-w-[120px] rounded-sm"
-                    >
+                    <Button type="submit" loading={isUpdating} disabled={!form.formState.isDirty}>
                       Save Changes
                     </Button>
                   </div>

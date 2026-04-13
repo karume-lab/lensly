@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
 import {
   Card,
@@ -9,12 +8,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/ui/web/components/ui/card";
-import { DataTable } from "@repo/ui/web/components/ui/data-table";
-import type { ColumnDef, PaginationState } from "@tanstack/react-table";
-import { ArrowUpRight, Briefcase, Clock, Plus, Users, Zap } from "lucide-react";
+import { Briefcase, Clock, Plus, Users, Zap } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-import type { DashboardJob, mockActivity, mockJobs, mockMetrics } from "@/lib/mock-data";
+import type { mockActivity, mockJobs, mockMetrics } from "@/lib/mock-data";
+import DashboardHeader from "./DashboardHeader";
+import { JobsTable } from "./jobs-table";
 
 export const CommandCenter = ({
   data,
@@ -26,107 +24,21 @@ export const CommandCenter = ({
     user: { name: string };
   };
 }) => {
-  const { metrics, jobs, activity, user } = data;
-  const [pagination, setPagination] = useState<PaginationState>({
-    pageIndex: 0,
-    pageSize: 10,
-  });
-  const [searchValue, setSearchValue] = useState("");
-
-  const columns: ColumnDef<DashboardJob>[] = [
-    {
-      accessorKey: "title",
-      header: "Role",
-      cell: ({ row }) => {
-        const job = row.original;
-        return (
-          <div className="flex flex-col">
-            <span className="font-medium text-sm">{job.title}</span>
-            <span className="text-xs text-muted-foreground">{job.department}</span>
-          </div>
-        );
-      },
-    },
-    {
-      accessorKey: "applicants",
-      header: "Screening progress",
-      cell: ({ row }) => {
-        const job = row.original;
-        return (
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">
-              {job.screenedCount} / {job.applicantCount}
-            </span>
-            <span className="text-xs text-muted-foreground">screened</span>
-          </div>
-        );
-      },
-    },
-    {
-      accessorKey: "status",
-      header: "Status",
-      cell: ({ row }) => {
-        const job = row.original;
-        const isReview = job.status === "Review Shortlist";
-        return (
-          <Badge
-            variant={isReview ? "default" : "secondary"}
-            className="text-xs font-medium px-2 py-0.5"
-          >
-            {job.status}
-          </Badge>
-        );
-      },
-    },
-    {
-      id: "actions",
-      header: () => <div className="text-right">Action</div>,
-      cell: ({ row }) => {
-        const job = row.original;
-        const isReview = job.status === "Review Shortlist";
-
-        if (isReview) {
-          return (
-            <div className="text-right">
-              <Button size="sm" asChild className="h-8">
-                <Link href={`/dashboard/jobs/${job.id}/shortlist`}>
-                  <span className="flex items-center gap-1">
-                    Review results
-                    <ArrowUpRight className="size-3" />
-                  </span>
-                </Link>
-              </Button>
-            </div>
-          );
-        }
-
-        return (
-          <div className="text-right">
-            <Button variant="ghost" size="sm" asChild className="h-8">
-              <Link href={`/dashboard/jobs/${job.id}/applicants`}>View applicants</Link>
-            </Button>
-          </div>
-        );
-      },
-    },
-  ];
+  const { metrics, activity, user } = data;
 
   return (
-    <div className="flex flex-col gap-8 animate-in fade-in duration-500">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div className="space-y-1">
-          <h1 className="text-3xl font-semibold tracking-tight">Welcome, {user.name}</h1>
-          <p className="text-muted-foreground">
-            Overview of your current hiring pipelines and pending actions.
-          </p>
-        </div>
+    <div className="flex flex-col gap-8">
+      <DashboardHeader
+        title={`Welcome, ${user.name}`}
+        subtitle="Overview of your current hiring pipelines and pending actions."
+      >
         <Button asChild>
           <Link href="/dashboard/jobs/new">
             <Plus className="mr-2 size-4" />
             Create job
           </Link>
         </Button>
-      </div>
+      </DashboardHeader>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {Object.entries(metrics).map(([key, metric]) => (
@@ -162,38 +74,61 @@ export const CommandCenter = ({
               Manage your jobs and review screening results.
             </p>
           </div>
-          <DataTable
-            columns={columns}
-            data={jobs}
-            pageCount={1}
-            pagination={pagination}
-            onPaginationChange={setPagination}
-            searchKey="role"
-            searchValue={searchValue}
-            onSearchChange={setSearchValue}
-          />
+          <JobsTable />
         </div>
 
-        <Card className="border-border">
-          <CardHeader>
+        <Card className="border-border shadow-sm">
+          <CardHeader className="pb-4">
             <CardTitle className="text-base font-semibold">Recent activity</CardTitle>
-            <CardDescription>Latest screening updates</CardDescription>
+            <CardDescription className="text-xs">
+              Latest screening and pipeline updates
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+            <div className="relative space-y-6 pl-4">
+              {/* Vertical line through all activities */}
+              <div className="absolute left-[21px] top-2 bottom-2 w-0.5 bg-zinc-100 dark:bg-zinc-800" />
+
               {activity.map((item) => (
-                <div key={item.id} className="flex gap-3 text-sm">
-                  <div className="mt-0.5 shrink-0 grow-0 h-2 w-2 bg-primary" />
-                  <div className="flex flex-col gap-1">
-                    <p className="font-medium leading-none">{item.title}</p>
-                    <p className="text-xs text-muted-foreground">{item.subtitle}</p>
-                    <p className="text-[10px] text-muted-foreground">{item.timestamp}</p>
+                <div key={item.id} className="relative flex gap-4">
+                  {/* Timeline dot container for perfect centering */}
+                  <div className="relative flex items-center justify-center w-3 h-5 shrink-0 z-10">
+                    <div
+                      className={`h-3 w-3 rounded-full ring-4 ring-white dark:ring-zinc-950 ${
+                        item.type === "ai"
+                          ? "bg-blue-500"
+                          : item.type === "candidate"
+                            ? "bg-emerald-500"
+                            : item.type === "user"
+                              ? "bg-amber-500"
+                              : "bg-zinc-500"
+                      }`}
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-1 pr-2">
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="font-semibold text-sm text-foreground leading-none">
+                        {item.title}
+                      </p>
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+                      {item.subtitle}
+                    </p>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold mt-0.5">
+                      {item.timestamp}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
-            <Button variant="ghost" size="sm" className="w-full mt-6 text-xs text-muted-foreground">
-              View history
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+              className="w-full mt-6 text-xs text-muted-foreground hover:bg-muted/50 font-medium"
+            >
+              <Link href="/dashboard/history">View full history</Link>
             </Button>
           </CardContent>
         </Card>

@@ -55,7 +55,7 @@ export function JobOverviewClient({ jobId }: { jobId: string }) {
   ];
 
   return (
-    <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="flex flex-col gap-8  slide-in-from-bottom-4 duration-500">
       <div className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold tracking-tight">{job.title}</h1>
         <p className="text-muted-foreground">
