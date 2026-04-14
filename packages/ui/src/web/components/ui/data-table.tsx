@@ -110,7 +110,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className="space-y-6">
       {(renderFilters || filterConfigs || searchKey) && (
-        <div className="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 space-y-6">
+        <div className="p-6 rounded-lg border border-border bg-card space-y-6">
           <div className="flex items-center justify-between">
             <div className="space-y-1">
               <h4 className="text-sm font-semibold">Filters</h4>
@@ -134,7 +134,7 @@ export function DataTable<TData, TValue>({
                       placeholder={`Search ${searchKey}...`}
                       value={localSearchValue}
                       onChange={(event) => setLocalSearchValue(event.target.value)}
-                      className="pl-9 pr-8 h-10 py-0 bg-white dark:bg-zinc-950"
+                      className="pl-9 pr-8 h-10 py-0 bg-background"
                     />
                     {searchValue && (
                       <Button
@@ -157,7 +157,7 @@ export function DataTable<TData, TValue>({
                     value={config.value || "all"}
                     onValueChange={(value) => config.onValueChange?.(value)}
                   >
-                    <SelectTrigger className="h-10 py-0 min-w-[180px] capitalize bg-white dark:bg-zinc-950">
+                    <SelectTrigger className="h-10 py-0 min-w-[180px] capitalize bg-background">
                       <SelectValue placeholder={`Filter by ${config.name}`} />
                     </SelectTrigger>
                     <SelectContent>
@@ -176,7 +176,7 @@ export function DataTable<TData, TValue>({
             </div>
 
             {onViewModeChange && (
-              <div className="flex items-center gap-1 p-1 rounded-md border border-zinc-200 dark:border-zinc-800 bg-muted/20">
+              <div className="flex items-center gap-1 p-1 rounded-md border border-border bg-muted/20">
                 <Button
                   variant={viewMode === "table" ? "secondary" : "ghost"}
                   size="sm"
@@ -200,7 +200,7 @@ export function DataTable<TData, TValue>({
       )}
 
       {viewMode === "table" ? (
-        <div className="rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 overflow-hidden">
+        <div className="rounded-md border border-border bg-card overflow-hidden">
           <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -224,8 +224,8 @@ export function DataTable<TData, TValue>({
             {loading ? (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                  <div className="flex items-center justify-center gap-2 text-zinc-500">
-                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-zinc-500 border-t-transparent" />
+                  <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
                     Loading records...
                   </div>
                 </TableCell>

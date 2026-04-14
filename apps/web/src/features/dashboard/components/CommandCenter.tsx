@@ -55,7 +55,7 @@ export const CommandCenter = ({
             <CardContent>
               <div className="text-2xl font-semibold">{metric.value}</div>
               <div className="mt-1 flex items-center text-xs">
-                <span className={metric.trend >= 0 ? "text-emerald-600" : "text-rose-600"}>
+                <span className={metric.trend >= 0 ? "text-success" : "text-destructive"}>
                   {metric.trend > 0 ? "+" : ""}
                   {metric.trend}%
                 </span>
@@ -87,21 +87,21 @@ export const CommandCenter = ({
           <CardContent>
             <div className="relative space-y-6 pl-4">
               {/* Vertical line through all activities */}
-              <div className="absolute left-[21px] top-2 bottom-2 w-0.5 bg-zinc-100 dark:bg-zinc-800" />
+              <div className="absolute left-[21px] top-2 bottom-2 w-0.5 bg-border" />
 
               {activity.map((item) => (
                 <div key={item.id} className="relative flex gap-4">
                   {/* Timeline dot container for perfect centering */}
                   <div className="relative flex items-center justify-center w-3 h-5 shrink-0 z-10">
                     <div
-                      className={`h-3 w-3 rounded-full ring-4 ring-white dark:ring-zinc-950 ${
+                      className={`h-3 w-3 rounded-full ring-4 ring-background ${
                         item.type === "ai"
-                          ? "bg-blue-500"
+                          ? "bg-info"
                           : item.type === "candidate"
-                            ? "bg-emerald-500"
+                            ? "bg-success"
                             : item.type === "user"
-                              ? "bg-amber-500"
-                              : "bg-zinc-500"
+                              ? "bg-warning"
+                              : "bg-muted"
                       }`}
                     />
                   </div>

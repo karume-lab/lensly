@@ -10,15 +10,15 @@ import type { DashboardJob } from "@/lib/mock-data";
 export const getStatusColor = (status: string) => {
   switch (status) {
     case "Screening":
-      return "bg-blue-500/10 text-blue-500 border-blue-500/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
+      return "bg-info/10 text-info-foreground border-info/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
     case "Shortlisting":
-      return "bg-purple-500/10 text-purple-500 border-purple-500/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
+      return "bg-primary/10 text-primary border-primary/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
     case "Review Shortlist":
-      return "bg-amber-500/10 text-amber-500 border-amber-500/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
+      return "bg-warning/10 text-warning-foreground border-warning/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
     case "Draft":
-      return "bg-slate-500/10 text-slate-500 border-slate-500/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
+      return "bg-muted text-muted-foreground border-border uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
     default:
-      return "bg-slate-500/10 text-slate-500 border-slate-500/20 uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
+      return "bg-muted text-muted-foreground border-border uppercase tracking-wider text-[10px] font-bold whitespace-nowrap";
   }
 };
 

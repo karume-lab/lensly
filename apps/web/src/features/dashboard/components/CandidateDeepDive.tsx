@@ -101,8 +101,8 @@ export const CandidateDeepDive = ({
               <div
                 className={`p-4 border flex items-center justify-between ${
                   data.recommendation === "Strong Yes"
-                    ? "bg-emerald-500/5 border-emerald-500/20 text-emerald-600"
-                    : "bg-amber-500/5 border-amber-500/20 text-amber-600"
+                    ? "bg-success/5 border-success/20 text-success"
+                    : "bg-warning/5 border-warning/20 text-warning"
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -167,7 +167,7 @@ export const CandidateDeepDive = ({
                 Reject candidate
               </Button>
               <Button
-                className="flex-[2] h-10 bg-emerald-600 hover:bg-emerald-700"
+                className="flex-[2] h-10 bg-success hover:opacity-90"
                 onClick={() => handleDecision("approve")}
                 disabled={isUpdating}
               >
@@ -195,13 +195,11 @@ export const CandidateDeepDive = ({
           </div>
 
           <div className="p-12 max-w-3xl mx-auto w-full">
-            <Card className="border border-border bg-white dark:bg-zinc-950 p-12 space-y-10">
+            <Card className="border border-border bg-card p-12 space-y-10">
               <div className="flex justify-between items-start">
                 <div className="space-y-1">
-                  <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">
-                    {data.name}
-                  </h1>
-                  <p className="text-base font-medium text-emerald-600">
+                  <h1 className="text-3xl font-bold text-foreground">{data.name}</h1>
+                  <p className="text-base font-medium text-success">
                     {data.profile.skills.slice(0, 3).join(" • ")}
                   </p>
                 </div>
@@ -246,7 +244,7 @@ export const CandidateDeepDive = ({
                       <div className="absolute left-[3.5px] top-4 h-[calc(100%-8px)] w-px bg-border/50" />
 
                       <div className="flex justify-between items-baseline mb-2">
-                        <h4 className="font-semibold text-slate-800 dark:text-slate-200">
+                        <h4 className="font-semibold text-foreground">
                           {exp.role} @ {exp.company}
                         </h4>
                         <span className="text-[10px] font-medium text-muted-foreground">

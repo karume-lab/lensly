@@ -99,10 +99,10 @@ export const NavUser = ({
                 </AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight ml-2">
-                <span className="truncate font-medium">{user.name}</span>
-                <span className="truncate text-xs text-muted-foreground">{user.email}</span>
+                <span className="truncate font-medium text-white">{user.name}</span>
+                <span className="truncate text-xs text-white/60">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4 text-muted-foreground" />
+              <ChevronsUpDown className="ml-auto size-4 text-white/60" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -187,8 +187,8 @@ export const NavMain = ({
                   className={cn(
                     "h-10 px-3 transition-colors",
                     pathname === item.url
-                      ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium"
-                      : "text-muted-foreground hover:text-foreground",
+                      ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold shadow-sm"
+                      : "text-white/80 hover:text-white hover:bg-white/10",
                   )}
                 >
                   <Link href={item.url as Route} className="flex items-center gap-3">
@@ -198,7 +198,7 @@ export const NavMain = ({
                           "size-4",
                           pathname === item.url
                             ? "text-sidebar-accent-foreground"
-                            : "text-muted-foreground",
+                            : "text-white/80",
                         )}
                       />
                     )}

@@ -62,17 +62,20 @@ export const DashboardSidebar = ({ ...props }: React.ComponentProps<typeof Sideb
 
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader className="border-b border-border/50">
+      <SidebarHeader>
         <div className="flex items-center gap-3 px-6 py-6 transition-all duration-200 group-data-[collapsible=icon]:px-2 group-data-[collapsible=icon]:justify-center h-20">
           <SiteLogo
             className={`w-auto object-contain shrink-0 transition-all duration-200 ${isCollapsed ? "h-10" : "h-12"}`}
           />
           <div className="flex flex-col group-data-[collapsible=icon]:hidden">
-            <span className="font-semibold text-lg tracking-tight leading-none">Lensly</span>
-            <span className="text-xs text-muted-foreground mt-0.5">AI Hiring Platform</span>
+            <span className="font-semibold text-lg tracking-tight leading-none text-white">
+              Lensly
+            </span>
+            <span className="text-xs text-white/70 mt-0.5">AI Hiring Platform</span>
           </div>
         </div>
       </SidebarHeader>
+
       <SidebarContent>
         <NavMain items={navMain} />
       </SidebarContent>
