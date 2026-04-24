@@ -21,3 +21,37 @@ export const UpdateApplicantStatusSchema = z.object({
 
 export type CreateApplicantInput = z.infer<typeof CreateApplicantSchema>;
 export type UpdateApplicantStatusInput = z.infer<typeof UpdateApplicantStatusSchema>;
+
+export interface Applicant {
+  id: string;
+  jobId: string;
+  name: string;
+  email: string;
+  source: string;
+  status: string;
+  resumeUrl?: string;
+  rawText?: string;
+  structuredData?: {
+    education?: {
+      institution?: string;
+      degree?: string;
+      field?: string;
+      year?: number;
+    }[];
+    experience?: {
+      company?: string;
+      role?: string;
+      duration?: string;
+      description?: string;
+    }[];
+    skills?: string[];
+    location?: string;
+  };
+  screening?: {
+    overallScore: number;
+    aiRecommendation: string;
+    aiReasoning: string;
+  };
+  createdAt: string;
+  updatedAt: string;
+}

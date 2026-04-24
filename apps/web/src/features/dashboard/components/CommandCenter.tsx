@@ -10,17 +10,19 @@ import {
 } from "@repo/ui/web/components/ui/card";
 import { Briefcase, Clock, Plus, Users, Zap } from "lucide-react";
 import Link from "next/link";
-import type { mockActivity, mockJobs, mockMetrics } from "@/lib/mock-data";
+import type { api, ExtractData } from "@/lib/api";
 import DashboardHeader from "./DashboardHeader";
 import { JobsTable } from "./jobs-table";
+
+type StatsData = ExtractData<typeof api.jobs.stats.get>;
+type ActivityData = ExtractData<typeof api.activities.get>;
 
 export const CommandCenter = ({
   data,
 }: {
   data: {
-    metrics: typeof mockMetrics;
-    jobs: typeof mockJobs;
-    activity: typeof mockActivity;
+    metrics: StatsData;
+    activity: ActivityData;
     user: { name: string };
   };
 }) => {
@@ -41,29 +43,32 @@ export const CommandCenter = ({
       </DashboardHeader>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {Object.entries(metrics).map(([key, metric]) => (
-          <Card key={key} className="border-border">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-xs font-medium text-muted-foreground">
-                {metric.label}
-              </CardTitle>
-              {key === "activeJobs" && <Briefcase className="size-4 text-muted-foreground" />}
-              {key === "pendingReviews" && <Users className="size-4 text-muted-foreground" />}
-              {key === "avgMatchScore" && <Zap className="size-4 text-muted-foreground" />}
-              {key === "timeSaved" && <Clock className="size-4 text-muted-foreground" />}
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-semibold">{metric.value}</div>
-              <div className="mt-1 flex items-center text-xs">
-                <span className={metric.trend >= 0 ? "text-success" : "text-destructive"}>
-                  {metric.trend > 0 ? "+" : ""}
-                  {metric.trend}%
-                </span>
-                <span className="ml-1 text-muted-foreground">since yesterday</span>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+        {metrics &&
+          Object.entries(
+            metrics as Record<string, { label: string; value: string | number; trend: number }>,
+          ).map(([key, metric]) => (
+            <Card key={key} className="border-border">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-xs font-medium text-muted-foreground">
+                  {metric.label}
+                </CardTitle>
+                {key === "activeJobs" && <Briefcase className="size-4 text-muted-foreground" />}
+                {key === "pendingReviews" && <Users className="size-4 text-muted-foreground" />}
+                {key === "avgMatchScore" && <Zap className="size-4 text-muted-foreground" />}
+                {key === "timeSaved" && <Clock className="size-4 text-muted-foreground" />}
+              </CardHeader>
+              <CardContent>
+                <div className="text-2xl font-semibold">{metric.value}</div>
+                <div className="mt-1 flex items-center text-xs">
+                  <span className={metric.trend >= 0 ? "text-emerald-600" : "text-destructive"}>
+                    {metric.trend > 0 ? "+" : ""}
+                    {metric.trend}%
+                  </span>
+                  <span className="ml-1 text-muted-foreground">since yesterday</span>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
       </div>
 
       <div className="grid gap-8 lg:grid-cols-3">
@@ -85,43 +90,49 @@ export const CommandCenter = ({
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="relative space-y-6 pl-4">
-              {/* Vertical line through all activities */}
-              <div className="absolute left-[21px] top-2 bottom-2 w-0.5 bg-border" />
+            {activity.length === 0 ? (
+              <div className="py-8 text-center text-xs text-muted-foreground">
+                No recent activity
+              </div>
+            ) : (
+              <div className="relative space-y-6 pl-4">
+                {/* Vertical line through all activities */}
+                <div className="absolute left-[21px] top-2 bottom-2 w-0.5 bg-border" />
 
-              {activity.map((item) => (
-                <div key={item.id} className="relative flex gap-4">
-                  {/* Timeline dot container for perfect centering */}
-                  <div className="relative flex items-center justify-center w-3 h-5 shrink-0 z-10">
-                    <div
-                      className={`h-3 w-3 rounded-full ring-4 ring-background ${
-                        item.type === "ai"
-                          ? "bg-info"
-                          : item.type === "candidate"
-                            ? "bg-success"
-                            : item.type === "user"
-                              ? "bg-warning"
-                              : "bg-muted"
-                      }`}
-                    />
-                  </div>
+                {activity.map((item) => (
+                  <div key={item.id} className="relative flex gap-4">
+                    {/* Timeline dot container for perfect centering */}
+                    <div className="relative flex items-center justify-center w-3 h-5 shrink-0 z-10">
+                      <div
+                        className={`h-3 w-3 rounded-full ring-4 ring-background ${
+                          item.type === "ai"
+                            ? "bg-blue-500"
+                            : item.type === "candidate"
+                              ? "bg-emerald-500"
+                              : item.type === "user"
+                                ? "bg-amber-500"
+                                : "bg-muted"
+                        }`}
+                      />
+                    </div>
 
-                  <div className="flex flex-col gap-1 pr-2">
-                    <div className="flex items-center justify-between gap-4">
-                      <p className="font-semibold text-sm text-foreground leading-none">
-                        {item.title}
+                    <div className="flex flex-col gap-1 pr-2">
+                      <div className="flex items-center justify-between gap-4">
+                        <p className="font-semibold text-sm text-foreground leading-none">
+                          {item.title}
+                        </p>
+                      </div>
+                      <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+                        {item.subtitle}
+                      </p>
+                      <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold mt-0.5">
+                        {item.timestamp}
                       </p>
                     </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-                      {item.subtitle}
-                    </p>
-                    <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold mt-0.5">
-                      {item.timestamp}
-                    </p>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
             <Button
               variant="ghost"
               size="sm"

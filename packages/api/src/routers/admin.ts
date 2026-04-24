@@ -1,8 +1,6 @@
 import { PaginatedUserResponseSchema, UserSchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
-import { db, schema } from "@repo/db";
-import type { User } from "@repo/db/types";
-import { eq, like, or, sql } from "drizzle-orm";
+import { schema } from "@repo/db";
 import { Elysia, t } from "elysia";
 
 export const adminRouter = new Elysia({ prefix: "/admin" })
@@ -21,31 +19,35 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
     async ({ query }) => {
       const limit = query.limit || 10;
       const page = query.page || 1;
-      const offset = (page - 1) * limit;
+      const skip = (page - 1) * limit;
 
-      const where = query.search
-        ? or(
-            like(schema.user.name, `%${query.search}%`),
-            like(schema.user.email, `%${query.search}%`),
-          )
-        : undefined;
+      const filter: Record<string, unknown> = {};
+      if (query.search) {
+        filter.$or = [
+          { name: { $regex: query.search, $options: "i" } },
+          { email: { $regex: query.search, $options: "i" } },
+        ];
+      }
 
-      const data = await db.query.user.findMany({
-        where,
-        orderBy: (users, { desc }) => [desc(users.createdAt)],
-        limit,
-        offset,
-      });
+      const users = await schema.User.find(filter).sort({ createdAt: -1 }).skip(skip).limit(limit);
 
-      const countResult = await db
-        .select({ count: sql<number>`cast(count(*) as int)` })
-        .from(schema.user)
-        .where(where);
-      const totalCount = countResult[0]?.count || 0;
+      const totalCount = await schema.User.countDocuments(filter);
       const totalPages = Math.ceil(totalCount / limit);
 
       return {
-        data: data as User[],
+        data: users.map((u) => ({
+          id: u._id.toString(),
+          name: u.name,
+          email: u.email,
+          emailVerified: u.emailVerified,
+          image: u.image || null,
+          role: u.role || null,
+          banned: u.banned || false,
+          banReason: u.banReason || null,
+          banExpires: u.banExpires || null,
+          createdAt: u.createdAt,
+          updatedAt: u.updatedAt,
+        })),
         metadata: { totalCount, page, totalPages },
       };
     },
@@ -69,15 +71,27 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
         asResponse: false,
       });
 
-      const [user] = await db
-        .update(schema.user)
-        .set({ role: role ?? "user" })
-        .where(eq(schema.user.id, result.user.id))
-        .returning();
+      const user = await schema.User.findByIdAndUpdate(
+        result.user.id,
+        { $set: { role: role ?? "user" } },
+        { new: true },
+      );
 
       if (!user) throw new Response("Failed to retrieve created user", { status: 500 });
 
-      return user as User;
+      return {
+        id: user._id.toString(),
+        name: user.name,
+        email: user.email,
+        emailVerified: user.emailVerified,
+        image: user.image || null,
+        role: user.role || null,
+        banned: user.banned || false,
+        banReason: user.banReason || null,
+        banExpires: user.banExpires || null,
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
+      };
     },
     {
       body: t.Object({
@@ -93,11 +107,21 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
   .get(
     "/users/:id",
     async ({ params: { id } }) => {
-      const user = await db.query.user.findFirst({
-        where: eq(schema.user.id, id),
-      });
+      const user = await schema.User.findById(id);
       if (!user) throw new Response("User not found", { status: 404 });
-      return user as User;
+      return {
+        id: user._id.toString(),
+        name: user.name,
+        email: user.email,
+        emailVerified: user.emailVerified,
+        image: user.image || null,
+        role: user.role || null,
+        banned: user.banned || false,
+        banReason: user.banReason || null,
+        banExpires: user.banExpires || null,
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
+      };
     },
     {
       params: t.Object({ id: t.String() }),
@@ -108,13 +132,21 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
   .put(
     "/users/:id/role",
     async ({ params: { id }, body: { role } }) => {
-      const [updated] = await db
-        .update(schema.user)
-        .set({ role })
-        .where(eq(schema.user.id, id))
-        .returning();
+      const updated = await schema.User.findByIdAndUpdate(id, { $set: { role } }, { new: true });
       if (!updated) throw new Response("User not found", { status: 404 });
-      return updated as User;
+      return {
+        id: updated._id.toString(),
+        name: updated.name,
+        email: updated.email,
+        emailVerified: updated.emailVerified,
+        image: updated.image || null,
+        role: updated.role || null,
+        banned: updated.banned || false,
+        banReason: updated.banReason || null,
+        banExpires: updated.banExpires || null,
+        createdAt: updated.createdAt,
+        updatedAt: updated.updatedAt,
+      };
     },
     {
       params: t.Object({ id: t.String() }),
@@ -126,9 +158,7 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
   .delete(
     "/users/:id",
     async ({ params: { id } }) => {
-      const existing = await db.query.user.findFirst({
-        where: eq(schema.user.id, id),
-      });
+      const existing = await schema.User.findById(id);
       if (!existing) throw new Response("User not found", { status: 404 });
 
       await auth.api.removeUser({ body: { userId: id } });
@@ -143,19 +173,11 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
   .get(
     "/stats",
     async () => {
-      const [userStats] = await db
-        .select({
-          total: sql<number>`cast(count(*) as int)`,
-          banned: sql<number>`cast(sum(case when banned=1 then 1 else 0 end) as int)`,
-        })
-        .from(schema.user);
-
-      if (!userStats) {
-        throw new Response("Failed to fetch stats", { status: 500 });
-      }
+      const total = await schema.User.countDocuments({});
+      const bannedCount = await schema.User.countDocuments({ banned: true });
 
       return {
-        users: { total: userStats.total, banned: userStats.banned },
+        users: { total, banned: bannedCount },
       };
     },
     {

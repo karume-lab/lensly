@@ -2,12 +2,16 @@
 
 import { DataTable } from "@repo/ui/web/components/ui/data-table";
 import type { PaginationState } from "@tanstack/react-table";
+import { Briefcase, Loader2 } from "lucide-react";
 import { parseAsInteger, parseAsString, useQueryStates } from "nuqs";
 import { useState } from "react";
-import { type DashboardJob, mockJobs } from "@/lib/mock-data";
+import { EmptyState } from "@/components/shared/EmptyState";
+import { useJobs } from "@/lib/queries/job";
 import { columns } from "./columns";
 
 export const JobsTable = () => {
+  const { data: jobs, isLoading } = useJobs();
+
   const [queryState, setQueryState] = useQueryStates({
     page: parseAsInteger.withDefault(1),
     pageSize: parseAsInteger.withDefault(10),
@@ -21,7 +25,29 @@ export const JobsTable = () => {
     pageSize: queryState.pageSize,
   });
 
-  const filteredJobs = mockJobs.filter((job: DashboardJob) => {
+  if (isLoading) {
+    return (
+      <div className="flex h-[400px] items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  if (!jobs || jobs.length === 0) {
+    return (
+      <EmptyState
+        icon={Briefcase}
+        title="No active campaigns"
+        description="Create your first hiring campaign to start screening candidates with AI."
+        action={{
+          label: "Create Job",
+          href: "/dashboard/jobs/new",
+        }}
+      />
+    );
+  }
+
+  const filteredJobs = jobs.filter((job) => {
     const matchesSearch =
       job.title.toLowerCase().includes(queryState.search.toLowerCase()) ||
       job.department.toLowerCase().includes(queryState.search.toLowerCase());
@@ -30,8 +56,8 @@ export const JobsTable = () => {
     return matchesSearch && matchesStatus && matchesDept;
   });
 
-  const departments = Array.from(new Set(mockJobs.map((j) => j.department)));
-  const statuses = Array.from(new Set(mockJobs.map((j) => j.status)));
+  const departments = Array.from(new Set(jobs.map((j) => j.department)));
+  const statuses = Array.from(new Set(jobs.map((j) => j.status)));
 
   return (
     <DataTable

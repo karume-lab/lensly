@@ -1,43 +1,38 @@
-import type { applicant } from "@repo/db/schema/applicant";
-import type { account, session, user } from "@repo/db/schema/auth";
-import type { job } from "@repo/db/schema/job";
-import type { profile } from "@repo/db/schema/profile";
-import type { screeningResult } from "@repo/db/schema/screening-result";
+import type { ActivitySchema } from "@repo/db/schema/activity";
+import type { ApplicantSchema } from "@repo/db/schema/applicant";
+import type {
+  AccountSchema,
+  SessionSchema,
+  UserSchema,
+  VerificationSchema,
+} from "@repo/db/schema/auth";
+import type { JobSchema } from "@repo/db/schema/job";
+import type { ProfileSchema } from "@repo/db/schema/profile";
+import type { ScreeningResultSchema } from "@repo/db/schema/screening-result";
+import type { InferSchemaType } from "mongoose";
 
-export type User = typeof user.$inferSelect;
-export type NewUser = typeof user.$inferInsert;
+export type User = InferSchemaType<typeof UserSchema> & { id: string };
+export type Session = InferSchemaType<typeof SessionSchema> & { id: string };
+export type Account = InferSchemaType<typeof AccountSchema> & { id: string };
+export type Verification = InferSchemaType<typeof VerificationSchema> & { id: string };
 
-export type Session = typeof session.$inferSelect;
-export type NewSession = typeof session.$inferInsert;
-
-export type Account = typeof account.$inferSelect;
-export type NewAccount = typeof account.$inferInsert;
-
-export type Profile = typeof profile.$inferSelect;
-export type NewProfile = typeof profile.$inferInsert;
-
-export type Job = typeof job.$inferSelect;
-export type NewJob = typeof job.$inferInsert;
-
-export type Applicant = typeof applicant.$inferSelect;
-export type NewApplicant = typeof applicant.$inferInsert;
-
-export type ScreeningResult = typeof screeningResult.$inferSelect;
-export type NewScreeningResult = typeof screeningResult.$inferInsert;
-
-// Relations Types
-export type UserWithProfile = User & { profile: Profile | null };
-export type JobWithRecruiter = Job & { recruiter: User };
-export type ApplicantWithJob = Applicant & { job: Job };
-export type ScreeningResultWithApplicant = ScreeningResult & { applicant: Applicant };
-
-export type JobWithRelations = Job & {
-  recruiter: User;
-  applicants: Applicant[];
-  screeningResults: ScreeningResult[];
+export type Job = InferSchemaType<typeof JobSchema> & {
+  id: string;
+  applicantCount?: number;
+  screenedCount?: number;
 };
 
-export type ApplicantWithResult = Applicant & {
-  job: Job;
-  screeningResult: ScreeningResult | null;
+export type Applicant = InferSchemaType<typeof ApplicantSchema> & { id: string };
+
+export type ScreeningResult = InferSchemaType<typeof ScreeningResultSchema> & { id: string };
+
+export type Profile = InferSchemaType<typeof ProfileSchema> & { id: string };
+
+export type Activity = InferSchemaType<typeof ActivitySchema> & { id: string };
+
+export type ScreeningResultWithApplicant = ScreeningResult & {
+  applicant: {
+    name: string;
+    role: string;
+  };
 };

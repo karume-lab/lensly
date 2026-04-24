@@ -41,6 +41,7 @@ export const NewJobForm = () => {
     defaultValues: {
       title: "",
       department: "",
+      seniority: "",
       description: "",
       requiredSkills: [],
       weightSkills: 50,
@@ -161,6 +162,19 @@ export const NewJobForm = () => {
                       <FormLabel className="font-medium">Department</FormLabel>
                       <FormControl>
                         <Input placeholder="e.g. Product" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="seniority"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="font-medium">Seniority</FormLabel>
+                      <FormControl>
+                        <Input placeholder="e.g. Senior" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

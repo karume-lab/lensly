@@ -1,120 +1,110 @@
-import { activity } from "@repo/db/schema/activity";
-import { job } from "@repo/db/schema/job";
-import { profile } from "@repo/db/schema/profile";
-import dayjs from "dayjs";
-import { relations, sql } from "drizzle-orm";
-import { index, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { type Model, model, models, Schema } from "mongoose";
 
-export const user = sqliteTable("user", {
-  id: text("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull().unique(),
-  emailVerified: integer("email_verified", { mode: "boolean" }).default(false).notNull(),
-  image: text("image"),
-  createdAt: integer("created_at", { mode: "timestamp_ms" })
-    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-    .notNull(),
-  updatedAt: integer("updated_at", { mode: "timestamp_ms" })
-    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-    .$onUpdate(() => dayjs().toDate())
-    .notNull(),
-  role: text("role"),
-  banned: integer("banned", { mode: "boolean" }).default(false),
-  banReason: text("ban_reason"),
-  banExpires: integer("ban_expires", { mode: "timestamp_ms" }),
-});
+export interface IUser {
+  name: string;
+  email: string;
+  emailVerified: boolean;
+  image: string | null;
+  role: string | null;
+  banned: boolean | null;
+  banReason: string | null;
+  banExpires: Date | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
-export const session = sqliteTable(
-  "session",
+export interface ISession {
+  expiresAt: Date;
+  token: string;
+  ipAddress?: string;
+  userAgent?: string;
+  userId: string;
+  impersonatedBy?: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface IAccount {
+  accountId: string;
+  providerId: string;
+  userId: string;
+  accessToken?: string;
+  refreshToken?: string;
+  idToken?: string;
+  accessTokenExpiresAt?: Date;
+  refreshTokenExpiresAt?: Date;
+  scope?: string;
+  password?: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface IVerification {
+  identifier: string;
+  value: string;
+  expiresAt: Date;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export const UserSchema = new Schema<IUser>(
   {
-    id: text("id").primaryKey(),
-    expiresAt: integer("expires_at", { mode: "timestamp_ms" }).notNull(),
-    token: text("token").notNull().unique(),
-    createdAt: integer("created_at", { mode: "timestamp_ms" })
-      .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-      .notNull(),
-    updatedAt: integer("updated_at", { mode: "timestamp_ms" })
-      .$onUpdate(() => dayjs().toDate())
-      .notNull(),
-    ipAddress: text("ip_address"),
-    userAgent: text("user_agent"),
-    userId: text("user_id")
-      .notNull()
-      .references(() => user.id, { onDelete: "cascade" }),
-    impersonatedBy: text("impersonated_by"),
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    emailVerified: { type: Boolean, default: false },
+    image: { type: String },
+    role: { type: String },
+    banned: { type: Boolean, default: false },
+    banReason: { type: String },
+    banExpires: { type: Date },
   },
-  (table) => [index("session_userId_idx").on(table.userId)],
+  { timestamps: true },
 );
 
-export const account = sqliteTable(
-  "account",
+export const SessionSchema = new Schema<ISession>(
   {
-    id: text("id").primaryKey(),
-    accountId: text("account_id").notNull(),
-    providerId: text("provider_id").notNull(),
-    userId: text("user_id")
-      .notNull()
-      .references(() => user.id, { onDelete: "cascade" }),
-    accessToken: text("access_token"),
-    refreshToken: text("refresh_token"),
-    idToken: text("id_token"),
-    accessTokenExpiresAt: integer("access_token_expires_at", {
-      mode: "timestamp_ms",
-    }),
-    refreshTokenExpiresAt: integer("refresh_token_expires_at", {
-      mode: "timestamp_ms",
-    }),
-    scope: text("scope"),
-    password: text("password"),
-    createdAt: integer("created_at", { mode: "timestamp_ms" })
-      .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-      .notNull(),
-    updatedAt: integer("updated_at", { mode: "timestamp_ms" })
-      .$onUpdate(() => dayjs().toDate())
-      .notNull(),
+    expiresAt: { type: Date, required: true },
+    token: { type: String, required: true, unique: true },
+    ipAddress: { type: String },
+    userAgent: { type: String },
+    userId: { type: String, required: true },
+    impersonatedBy: { type: String },
   },
-  (table) => [index("account_userId_idx").on(table.userId)],
+  { timestamps: true },
 );
 
-export const verification = sqliteTable(
-  "verification",
+export const AccountSchema = new Schema<IAccount>(
   {
-    id: text("id").primaryKey(),
-    identifier: text("identifier").notNull(),
-    value: text("value").notNull(),
-    expiresAt: integer("expires_at", { mode: "timestamp_ms" }).notNull(),
-    createdAt: integer("created_at", { mode: "timestamp_ms" })
-      .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-      .notNull(),
-    updatedAt: integer("updated_at", { mode: "timestamp_ms" })
-      .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-      .$onUpdate(() => dayjs().toDate())
-      .notNull(),
+    accountId: { type: String, required: true },
+    providerId: { type: String, required: true },
+    userId: { type: String, required: true },
+    accessToken: { type: String },
+    refreshToken: { type: String },
+    idToken: { type: String },
+    accessTokenExpiresAt: { type: Date },
+    refreshTokenExpiresAt: { type: Date },
+    scope: { type: String },
+    password: { type: String },
   },
-  (table) => [index("verification_identifier_idx").on(table.identifier)],
+  { timestamps: true },
 );
 
-export const userRelations = relations(user, ({ many, one }) => ({
-  sessions: many(session),
-  accounts: many(account),
-  profile: one(profile, {
-    fields: [user.id],
-    references: [profile.userId],
-  }),
-  jobs: many(job),
-  activities: many(activity),
-}));
+export const VerificationSchema = new Schema<IVerification>(
+  {
+    identifier: { type: String, required: true },
+    value: { type: String, required: true },
+    expiresAt: { type: Date, required: true },
+  },
+  { timestamps: true },
+);
 
-export const sessionRelations = relations(session, ({ one }) => ({
-  user: one(user, {
-    fields: [session.userId],
-    references: [user.id],
-  }),
-}));
+export const User: Model<IUser> = models.User || model<IUser>("User", UserSchema);
+export const Session: Model<ISession> = models.Session || model<ISession>("Session", SessionSchema);
+export const Account: Model<IAccount> = models.Account || model<IAccount>("Account", AccountSchema);
+export const Verification: Model<IVerification> =
+  models.Verification || model<IVerification>("Verification", VerificationSchema);
 
-export const accountRelations = relations(account, ({ one }) => ({
-  user: one(user, {
-    fields: [account.userId],
-    references: [user.id],
-  }),
-}));
+export const user = User;
+export const session = Session;
+export const account = Account;
+export const verification = Verification;

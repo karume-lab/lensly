@@ -1,41 +1,46 @@
-import { applicant } from "@repo/db/schema/applicant";
-import { job } from "@repo/db/schema/job";
-import { relations, sql } from "drizzle-orm";
-import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import type mongoose from "mongoose";
+import { type Model, model, models, Schema } from "mongoose";
 
-export const screeningResult = sqliteTable("screening_result", {
-  id: text("id").primaryKey(),
-  applicantId: text("applicant_id")
-    .notNull()
-    .unique()
-    .references(() => applicant.id, { onDelete: "cascade" }),
-  jobId: text("job_id")
-    .notNull()
-    .references(() => job.id, { onDelete: "cascade" }),
+export interface IScreeningResult {
+  applicantId: mongoose.Types.ObjectId;
+  jobId: mongoose.Types.ObjectId;
+  overallScore: number;
+  skillScore: number;
+  experienceScore: number;
+  educationScore: number;
+  relevanceScore: number;
+  strengths: string[];
+  gaps: string[];
+  aiRecommendation: string;
+  aiReasoning?: string;
+  processedAt: Date;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
-  overallScore: integer("overall_score").notNull(),
-  skillScore: integer("skill_score").notNull(),
-  experienceScore: integer("experience_score").notNull(),
-  educationScore: integer("education_score").notNull(),
-  relevanceScore: integer("relevance_score").notNull(),
+export const ScreeningResultSchema = new Schema<IScreeningResult>(
+  {
+    applicantId: {
+      type: Schema.Types.ObjectId,
+      ref: "Applicant",
+      required: true,
+      unique: true,
+    },
+    jobId: { type: Schema.Types.ObjectId, ref: "Job", required: true },
+    overallScore: { type: Number, required: true },
+    skillScore: { type: Number, required: true },
+    experienceScore: { type: Number, required: true },
+    educationScore: { type: Number, required: true },
+    relevanceScore: { type: Number, required: true },
+    strengths: [{ type: String }],
+    gaps: [{ type: String }],
+    aiRecommendation: { type: String, required: true },
+    aiReasoning: { type: String },
+    processedAt: { type: Date, default: Date.now },
+  },
+  { timestamps: true },
+);
 
-  strengths: text("strengths", { mode: "json" }).$type<string[]>().notNull(),
-  gaps: text("gaps", { mode: "json" }).$type<string[]>().notNull(),
-
-  aiRecommendation: text("ai_recommendation").notNull(),
-
-  processedAt: integer("processed_at", { mode: "timestamp_ms" })
-    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-    .notNull(),
-});
-
-export const screeningResultRelations = relations(screeningResult, ({ one }) => ({
-  applicant: one(applicant, {
-    fields: [screeningResult.applicantId],
-    references: [applicant.id],
-  }),
-  job: one(job, {
-    fields: [screeningResult.jobId],
-    references: [job.id],
-  }),
-}));
+export const ScreeningResult: Model<IScreeningResult> =
+  models.ScreeningResult || model<IScreeningResult>("ScreeningResult", ScreeningResultSchema);
+export const screeningResult = ScreeningResult;

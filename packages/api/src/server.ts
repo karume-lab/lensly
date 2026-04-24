@@ -1,7 +1,7 @@
 import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
-import { router } from "@repo/api/routers";
 import { Elysia } from "elysia";
+import { appRouter } from "./routers";
 
 const routes = new Elysia()
   .use(cors())
@@ -17,7 +17,7 @@ const routes = new Elysia()
       path: "/openapi.json",
     }),
   )
-  .use(router);
+  .use(appRouter);
 
 export const app = new Elysia().group("/api", (app) => app.use(routes));
 

@@ -16,22 +16,45 @@ import {
 import Dropzone from "@repo/ui/web/components/ui/dropzone";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/ui/web/components/ui/tabs";
 import type { ColumnDef, PaginationState } from "@tanstack/react-table";
-import { CheckCircle2, Clock, FileUp, Globe, Loader2, Trash2, Zap } from "lucide-react";
+import {
+  CheckCircle2,
+  Clock,
+  FileUp,
+  Globe,
+  Loader2,
+  Search as SearchIcon,
+  Trash2,
+  Zap,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { parseAsString, useQueryState } from "nuqs";
 import { useState } from "react";
 import { toast } from "sonner";
-import { type IngestionApplicant, mockUmuravaApplicants } from "@/lib/mock-data";
+import { EmptyState } from "@/components/shared/EmptyState";
+import type { api, ExtractData } from "@/lib/api";
+import {
+  useApplicants,
+  useScreeningMutation,
+  useUploadMetadataMutation,
+} from "@/lib/queries/applicant";
+import { useJob } from "@/lib/queries/job";
+
+type ApplicantData =
+  ExtractData<ReturnType<typeof api.applicants.job>["get"]> extends Array<infer T> ? T : never;
 
 export const IngestionHub = ({ jobId }: { jobId: string }) => {
   const router = useRouter();
+  const { data: job, isLoading: jobLoading } = useJob(jobId);
+  const { data: applicants, isLoading: applicantsLoading } = useApplicants(jobId);
+  const screeningMutation = useScreeningMutation();
+  const uploadMutation = useUploadMetadataMutation();
+
   const [search, setSearch] = useQueryState(
     "search",
     parseAsString.withDefault("").withOptions({ shallow: true }),
   );
   const [selectedCandidates, setSelectedCandidates] = useState<string[]>([]);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [isProcessing, setIsProcessing] = useState(false);
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10,
@@ -43,7 +66,7 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
     );
   };
 
-  const columns: ColumnDef<IngestionApplicant>[] = [
+  const columns: ColumnDef<ApplicantData>[] = [
     {
       id: "select",
       header: ({ table }) => (
@@ -82,7 +105,7 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
           <div className="flex flex-col">
             <span className="font-medium text-sm">{applicant.name}</span>
             <span className="text-xs text-muted-foreground">
-              {applicant.experience} years experience
+              {applicant.structuredData?.experience?.[0]?.duration || "N/A"}
             </span>
           </div>
         );
@@ -93,75 +116,91 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
       header: "Role and skills",
       cell: ({ row }) => {
         const applicant = row.original;
+        const skills = applicant.structuredData?.skills || [];
         return (
           <div className="flex flex-wrap gap-1">
-            {applicant.skills.slice(0, 3).map((skill) => (
+            {skills.slice(0, 3).map((skill) => (
               <Badge key={skill} variant="outline" className="text-[10px] font-medium px-1.5 py-0">
                 {skill}
               </Badge>
             ))}
-            {applicant.skills.length > 3 && (
+            {skills.length > 3 && (
               <span className="text-[10px] text-muted-foreground ml-1">
-                +{applicant.skills.length - 3} more
+                +{skills.length - 3} more
               </span>
+            )}
+            {skills.length === 0 && (
+              <span className="text-[10px] text-muted-foreground">No skills listed</span>
             )}
           </div>
         );
       },
     },
     {
-      accessorKey: "location",
-      header: "Location",
+      accessorKey: "status",
+      header: "Status",
       cell: ({ row }) => (
-        <span className="text-muted-foreground text-sm">{row.original.location}</span>
+        <Badge variant="secondary" className="capitalize">
+          {row.original.status.replace("_", " ")}
+        </Badge>
       ),
     },
     {
-      accessorKey: "matchPotential",
-      header: () => <div className="text-right">Match potential</div>,
-      cell: ({ row }) => {
-        const applicant = row.original;
-        return (
-          <div className="flex items-center justify-end gap-2">
-            <div className="w-12 h-1.5 bg-muted overflow-hidden shrink-0">
-              <div
-                className={`h-full ${applicant.matchPotential > 80 ? "bg-primary" : "bg-amber-500"}`}
-                style={{ width: `${applicant.matchPotential}%` }}
-              />
-            </div>
-            <span
-              className={`font-semibold text-sm ${applicant.matchPotential > 80 ? "text-primary" : "text-amber-600"}`}
-            >
-              {applicant.matchPotential}%
-            </span>
-          </div>
-        );
-      },
+      accessorKey: "source",
+      header: "Source",
+      cell: ({ row }) => (
+        <span className="text-muted-foreground text-sm">{row.original.source}</span>
+      ),
     },
   ];
 
-  const handleFileDrop = (acceptedFiles: File[]) => {
+  const handleFileDrop = async (acceptedFiles: File[]) => {
     if (acceptedFiles.length > 0) {
       toast.info("Extracting data", {
-        description: "Processing resume contents.",
+        description: `Processing ${acceptedFiles.length} resume(s).`,
       });
-      setTimeout(() => {
-        toast.success("Candidates added");
-      }, 2000);
+
+      try {
+        for (const file of acceptedFiles) {
+          // Simulate extraction and upload
+          await uploadMutation.mutateAsync({
+            jobId,
+            name: file.name.replace(".pdf", ""),
+            source: "External Upload",
+            structuredData: {
+              skills: ["Extracted Skill"],
+              experience: [{ duration: "Pending Analysis" }],
+            },
+          });
+        }
+        toast.success("Candidates added successfully");
+      } catch (_error) {
+        toast.error("Failed to upload candidates");
+      }
     }
   };
 
-  const handleRunPipeline = () => {
-    setIsProcessing(true);
-    toast.promise(new Promise((resolve) => setTimeout(resolve, 3000)), {
-      loading: "Evaluating candidates...",
-      success: "Screening complete",
-      error: "Processing failed",
-    });
-    setTimeout(() => {
+  const handleRunPipeline = async () => {
+    try {
+      for (const id of selectedCandidates) {
+        await screeningMutation.mutateAsync(id);
+      }
+      toast.success("Screening complete for all selected candidates");
       router.push(`/dashboard/jobs/${jobId}/shortlist`);
-    }, 3500);
+    } catch (_error) {
+      toast.error("Screening failed");
+    } finally {
+      setShowConfirmModal(false);
+    }
   };
+
+  if (jobLoading || applicantsLoading) {
+    return (
+      <div className="flex h-[400px] items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-6 p-4 md:p-8">
@@ -170,21 +209,21 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
           <h1 className="text-2xl font-semibold tracking-tight">Ingestion hub</h1>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>
-              Job: <span className="text-foreground font-medium">Senior React Developer</span>
+              Job: <span className="text-foreground font-medium">{job?.title}</span>
             </span>
             <Badge variant="secondary" className="h-5 px-1.5 py-0 text-[10px] font-medium">
-              Engineering
+              {job?.department}
             </Badge>
           </div>
         </div>
       </div>
 
-      <Tabs defaultValue="umurava" className="w-full">
+      <Tabs defaultValue="network" className="w-full">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
           <TabsList>
-            <TabsTrigger value="umurava" className="gap-2 px-6">
+            <TabsTrigger value="network" className="gap-2 px-6">
               <Globe className="size-4" />
-              Umurava network
+              Network Candidates
             </TabsTrigger>
             <TabsTrigger value="external" className="gap-2 px-6">
               <FileUp className="size-4" />
@@ -193,17 +232,25 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
           </TabsList>
         </div>
 
-        <TabsContent value="umurava" className="mt-0">
-          <DataTable
-            columns={columns}
-            data={mockUmuravaApplicants}
-            pageCount={1}
-            pagination={pagination}
-            onPaginationChange={setPagination}
-            searchKey="candidates"
-            searchValue={search || ""}
-            onSearchChange={setSearch}
-          />
+        <TabsContent value="network" className="mt-0">
+          {!applicants || applicants.length === 0 ? (
+            <EmptyState
+              icon={SearchIcon}
+              title="No applicants yet"
+              description="Upload resumes or wait for candidates to apply to see them here."
+            />
+          ) : (
+            <DataTable
+              columns={columns}
+              data={applicants}
+              pageCount={1}
+              pagination={pagination}
+              onPaginationChange={setPagination}
+              searchKey="name"
+              searchValue={search || ""}
+              onSearchChange={setSearch}
+            />
+          )}
         </TabsContent>
 
         <TabsContent value="external" className="mt-0">
@@ -232,8 +279,8 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
                       automatically.
                     </p>
                   </div>
-                  <Button type="button" variant="outline">
-                    Browse files
+                  <Button type="button" variant="outline" disabled={uploadMutation.isPending}>
+                    {uploadMutation.isPending ? "Uploading..." : "Browse files"}
                   </Button>
                 </div>
               )}
@@ -303,6 +350,7 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
                 size="sm"
                 className="text-primary-foreground hover:bg-white/10"
                 onClick={() => setSelectedCandidates([])}
+                disabled={screeningMutation.isPending}
               >
                 Cancel
               </Button>
@@ -310,6 +358,7 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
                 size="sm"
                 className="bg-white text-primary hover:bg-white/90 font-semibold"
                 onClick={() => setShowConfirmModal(true)}
+                disabled={screeningMutation.isPending}
               >
                 Run screening
                 <Zap className="ml-2 size-4" />
@@ -337,7 +386,9 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
           <div className="bg-muted p-4 border border-border flex gap-4 items-center">
             <Clock className="size-5 text-muted-foreground" />
             <div className="flex flex-col">
-              <p className="text-sm font-semibold">Processing time: ~8s</p>
+              <p className="text-sm font-semibold">
+                Processing time: ~{selectedCandidates.length * 3}s
+              </p>
               <p className="text-xs text-muted-foreground mt-1">
                 Evaluation powered by concurrent analysis.
               </p>
@@ -347,12 +398,12 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
             <Button
               variant="ghost"
               onClick={() => setShowConfirmModal(false)}
-              disabled={isProcessing}
+              disabled={screeningMutation.isPending}
             >
               Back
             </Button>
-            <Button onClick={handleRunPipeline} disabled={isProcessing}>
-              {isProcessing ? (
+            <Button onClick={handleRunPipeline} disabled={screeningMutation.isPending}>
+              {screeningMutation.isPending ? (
                 <>
                   <Loader2 className="mr-2 size-4 animate-spin" />
                   Analyzing...

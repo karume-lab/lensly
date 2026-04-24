@@ -3,9 +3,9 @@
   "main": "src/index.ts",
   "module": "src/index.ts",
   "dependencies": {
-    "@libsql/client": "^0.17.0",
     "better-auth": "^1.4.19",
-    "drizzle-orm": "^0.45.1",
+    "drizzle-orm": "^0.45.2",
+    "mongoose": "^9.5.0",
     "zod": "^4.3.6"
   },
   "exports": {

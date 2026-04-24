@@ -2,14 +2,29 @@
 
 import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
-import { ChevronLeft, Share2 } from "lucide-react";
+import { ChevronLeft, Loader2, Share2 } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
+import { toast } from "sonner";
 import { IngestionHub } from "@/features/dashboard/components/IngestionHub";
-import { mockJobs } from "@/lib/mock-data";
+import { useJob } from "@/lib/queries/job";
 
 export function JobIngestionClient({ jobId }: { jobId: string }) {
-  const job = mockJobs.find((j) => j.id === jobId);
+  const { data: job, isLoading } = useJob(jobId);
+
+  const handleShare = () => {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url);
+    toast.success("Pipeline URL copied to clipboard");
+  };
+
+  if (isLoading) {
+    return (
+      <div className="flex h-[400px] items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
 
   if (!job) {
     return (
@@ -47,7 +62,7 @@ export function JobIngestionClient({ jobId }: { jobId: string }) {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" className="h-9">
+          <Button variant="outline" size="sm" className="h-9" onClick={handleShare}>
             <Share2 className="mr-2 h-4 w-4" />
             Share Pipeline
           </Button>

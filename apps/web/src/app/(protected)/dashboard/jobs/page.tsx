@@ -1,7 +1,12 @@
+import { Suspense } from "react";
 import { JobsListClient } from "@/features/dashboard/components/JobsListClient";
 
 const JobsPage = () => {
-  return <JobsListClient />;
+  return (
+    <Suspense>
+      <JobsListClient />
+    </Suspense>
+  );
 };
 
 export default JobsPage;

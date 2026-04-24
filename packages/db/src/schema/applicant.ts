@@ -1,37 +1,67 @@
-import { job } from "@repo/db/schema/job";
-import { screeningResult } from "@repo/db/schema/screening-result";
-import { relations, sql } from "drizzle-orm";
-import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import type mongoose from "mongoose";
+import { type Model, model, models, Schema } from "mongoose";
 
-export const applicant = sqliteTable("applicant", {
-  id: text("id").primaryKey(),
-  jobId: text("job_id")
-    .notNull()
-    .references(() => job.id, { onDelete: "cascade" }),
+export interface IApplicant {
+  jobId: mongoose.Types.ObjectId;
+  name: string;
+  email?: string;
+  source: string;
+  resumeUrl?: string;
+  rawText?: string;
+  structuredData?: {
+    education?: {
+      institution?: string;
+      degree?: string;
+      field?: string;
+      year?: number;
+    }[];
+    experience?: {
+      company?: string;
+      role?: string;
+      duration?: string;
+      description?: string;
+    }[];
+    skills?: string[];
+    location?: string;
+  };
+  status: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
-  name: text("name").notNull(),
-  email: text("email"),
+export const ApplicantSchema = new Schema<IApplicant>(
+  {
+    jobId: { type: Schema.Types.ObjectId, ref: "Job", required: true },
+    name: { type: String, required: true },
+    email: { type: String },
+    source: { type: String, required: true },
+    resumeUrl: { type: String },
+    rawText: { type: String },
+    structuredData: {
+      education: [
+        {
+          institution: String,
+          degree: String,
+          field: String,
+          year: Number,
+        },
+      ],
+      experience: [
+        {
+          company: String,
+          role: String,
+          duration: String,
+          description: String,
+        },
+      ],
+      skills: [String],
+      location: String,
+    },
+    status: { type: String, required: true, default: "Pending_Screening" },
+  },
+  { timestamps: true },
+);
 
-  source: text("source").notNull(),
-
-  resumeUrl: text("resume_url"),
-  rawText: text("raw_text"),
-  structuredData: text("structured_data", { mode: "json" }),
-
-  status: text("status").notNull().default("Pending_Screening"),
-
-  createdAt: integer("created_at", { mode: "timestamp_ms" })
-    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-    .notNull(),
-});
-
-export const applicantRelations = relations(applicant, ({ one }) => ({
-  job: one(job, {
-    fields: [applicant.jobId],
-    references: [job.id],
-  }),
-  screeningResult: one(screeningResult, {
-    fields: [applicant.id],
-    references: [screeningResult.applicantId],
-  }),
-}));
+export const Applicant: Model<IApplicant> =
+  models.Applicant || model<IApplicant>("Applicant", ApplicantSchema);
+export const applicant = Applicant;

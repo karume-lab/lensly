@@ -4,8 +4,11 @@ import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
 import type { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpRight } from "lucide-react";
+import type { Route } from "next";
 import Link from "next/link";
-import type { DashboardJob } from "@/lib/mock-data";
+import type { api, ExtractData } from "@/lib/api";
+
+type JobData = ExtractData<typeof api.jobs.get> extends Array<infer T> ? T : never;
 
 export const getStatusColor = (status: string) => {
   switch (status) {
@@ -22,7 +25,7 @@ export const getStatusColor = (status: string) => {
   }
 };
 
-export const columns: ColumnDef<DashboardJob>[] = [
+export const columns: ColumnDef<JobData>[] = [
   {
     accessorKey: "title",
     header: "Role",
@@ -57,7 +60,7 @@ export const columns: ColumnDef<DashboardJob>[] = [
     cell: ({ row }) => {
       const job = row.original;
       return (
-        <Badge variant="outline" className={getStatusColor(job.status)}>
+        <Badge variant="outline" className={getStatusColor(job.status ?? "Draft")}>
           {job.status}
         </Badge>
       );
@@ -71,9 +74,9 @@ export const columns: ColumnDef<DashboardJob>[] = [
       return (
         <div className="flex items-center gap-2">
           <div className="w-16 h-1.5 bg-muted overflow-hidden rounded-full">
-            <div className="h-full bg-primary" style={{ width: `${job.avgScore}%` }} />
+            <div className="h-full bg-primary" style={{ width: `${job.avgScore || 0}%` }} />
           </div>
-          <span className="text-xs font-medium">{job.avgScore}%</span>
+          <span className="text-xs font-medium">{job.avgScore || 0}%</span>
         </div>
       );
     },
@@ -83,13 +86,13 @@ export const columns: ColumnDef<DashboardJob>[] = [
     header: () => <div className="text-right">Action</div>,
     cell: ({ row }) => {
       const job = row.original;
-      const isReview = job.status === "Review Shortlist";
+      const isReview = job.status === "Review Shortlist" || job.status === "Active";
 
       if (isReview) {
         return (
           <div className="text-right">
             <Button size="sm" asChild className="h-8">
-              <Link href={`/dashboard/jobs/${job.id}/shortlist`}>
+              <Link href={`/dashboard/jobs/${job.id}/shortlist` as Route}>
                 <span className="flex items-center gap-1">
                   Review results
                   <ArrowUpRight className="size-3" />
@@ -103,7 +106,7 @@ export const columns: ColumnDef<DashboardJob>[] = [
       return (
         <div className="text-right">
           <Button variant="ghost" size="sm" asChild className="h-8">
-            <Link href={`/dashboard/jobs/${job.id}/applicants`}>View applicants</Link>
+            <Link href={`/dashboard/jobs/${job.id}/ingestion` as Route}>View applicants</Link>
           </Button>
         </div>
       );

@@ -1,17 +1,24 @@
-export * as schema from "@repo/db/schema/index";
+import mongoose from "mongoose";
+import * as schema from "./schema/index";
 
-import { createClient } from "@libsql/client/node";
-import * as schema from "@repo/db/schema/index";
-import { drizzle } from "drizzle-orm/libsql";
+export { schema };
 
-export const createDbClient = () => {
-  const url = process.env.DATABASE_URL || "file:../../local.db";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/lensly";
 
-  const client = createClient({
-    url,
-  });
+export const connectDB = async () => {
+  if (mongoose.connection.readyState >= 1) return;
 
-  return drizzle(client, { schema });
+  try {
+    await mongoose.connect(MONGODB_URI);
+    console.log("MongoDB Connected");
+  } catch (error) {
+    console.error("MongoDB connection error:", error);
+  }
 };
 
-export const db = createDbClient();
+// Ensure connection is established
+connectDB();
+
+export const client = mongoose.connection.getClient();
+export const dbInstance = mongoose.connection.db;
+export const db = mongoose.connection;

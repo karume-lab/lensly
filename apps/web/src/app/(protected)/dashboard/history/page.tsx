@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { HistoryClient } from "@/features/history";
 
 export const metadata = {
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function HistoryPage() {
-  return <HistoryClient />;
+  return (
+    <Suspense>
+      <HistoryClient />
+    </Suspense>
+  );
 }

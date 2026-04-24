@@ -1,7 +1,7 @@
-import { db, schema } from "@repo/db";
+import { dbInstance } from "@repo/db";
 import { getLocalIPs } from "@repo/utils/get-ip";
 import { betterAuth } from "better-auth";
-import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { admin } from "better-auth/plugins";
 
 const isGoogleConfigured = !!(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET);
@@ -13,12 +13,7 @@ if (!isGoogleConfigured) {
 }
 
 export const auth = betterAuth({
-  database: drizzleAdapter(db, {
-    provider: "sqlite",
-    schema: {
-      ...schema,
-    },
-  }),
+  database: mongodbAdapter(dbInstance as NonNullable<typeof dbInstance>),
   baseURL:
     process.env.BETTER_AUTH_URL ??
     process.env.NEXT_PUBLIC_APP_URL ??

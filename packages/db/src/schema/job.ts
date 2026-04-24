@@ -1,43 +1,35 @@
-import { applicant } from "@repo/db/schema/applicant";
-import { user } from "@repo/db/schema/auth";
-import { screeningResult } from "@repo/db/schema/screening-result";
-import dayjs from "dayjs";
-import { relations, sql } from "drizzle-orm";
-import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { type Model, model, models, Schema } from "mongoose";
 
-export const job = sqliteTable("job", {
-  id: text("id").primaryKey(),
-  userId: text("user_id")
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
+export interface IJob {
+  userId: string;
+  title: string;
+  department: string;
+  seniority: string;
+  description: string;
+  requiredSkills: string[];
+  weightSkills: number;
+  weightExperience: number;
+  weightEducation: number;
+  status: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
-  title: text("title").notNull(),
-  department: text("department").notNull(),
-  seniority: text("seniority").notNull(),
-  description: text("description").notNull(),
+export const JobSchema = new Schema<IJob>(
+  {
+    userId: { type: String, required: true },
+    title: { type: String, required: true },
+    department: { type: String, required: true },
+    seniority: { type: String, required: true },
+    description: { type: String, required: true },
+    requiredSkills: [{ type: String }],
+    weightSkills: { type: Number, required: true },
+    weightExperience: { type: Number, required: true },
+    weightEducation: { type: Number, required: true },
+    status: { type: String, required: true, default: "Draft" },
+  },
+  { timestamps: true },
+);
 
-  requiredSkills: text("required_skills", { mode: "json" }).$type<string[]>().notNull(),
-
-  weightSkills: integer("weight_skills").notNull(),
-  weightExperience: integer("weight_experience").notNull(),
-  weightEducation: integer("weight_education").notNull(),
-
-  status: text("status").notNull().default("Draft"),
-
-  createdAt: integer("created_at", { mode: "timestamp_ms" })
-    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-    .notNull(),
-  updatedAt: integer("updated_at", { mode: "timestamp_ms" })
-    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-    .$onUpdate(() => dayjs().toDate())
-    .notNull(),
-});
-
-export const jobRelations = relations(job, ({ one, many }) => ({
-  recruiter: one(user, {
-    fields: [job.userId],
-    references: [user.id],
-  }),
-  applicants: many(applicant),
-  screeningResults: many(screeningResult),
-}));
+export const Job: Model<IJob> = models.Job || model<IJob>("Job", JobSchema);
+export const job = Job;

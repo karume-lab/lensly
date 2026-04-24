@@ -1,4 +1,11 @@
+import { activityRouter } from "@repo/api/routers/activity";
 import { adminRouter } from "@repo/api/routers/admin";
+import { applicantRouter } from "@repo/api/routers/applicant";
+import { jobRouter } from "@repo/api/routers/job";
 import { Elysia } from "elysia";
 
-export const router = new Elysia().use(adminRouter);
+export const appRouter = new Elysia()
+  .use(jobRouter)
+  .use(applicantRouter)
+  .use(activityRouter)
+  .use(adminRouter);

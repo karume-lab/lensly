@@ -1,27 +1,26 @@
-import { user } from "@repo/db/schema/auth";
-import { relations, sql } from "drizzle-orm";
-import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { type Model, model, models, Schema } from "mongoose";
 
-export const activity = sqliteTable("activity", {
-  id: text("id").primaryKey(),
-  userId: text("user_id")
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
+export interface IActivity {
+  userId: string;
+  action: string;
+  entityId: string;
+  entityType: string;
+  metadata?: Record<string, unknown>;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
-  action: text("action").notNull(), // e.g., 'JOB_CREATED', 'APPLICANT_STATUS_UPDATED'
-  entityId: text("entity_id").notNull(), // e.g., jobId, applicantId
-  entityType: text("entity_type").notNull(), // e.g., 'job', 'applicant'
+export const ActivitySchema = new Schema<IActivity>(
+  {
+    userId: { type: String, required: true },
+    action: { type: String, required: true },
+    entityId: { type: String, required: true },
+    entityType: { type: String, required: true },
+    metadata: { type: Schema.Types.Mixed },
+  },
+  { timestamps: true },
+);
 
-  metadata: text("metadata", { mode: "json" }), // e.g., { "old_status": "Pending", "new_status": "Shortlisted" }
-
-  createdAt: integer("created_at", { mode: "timestamp_ms" })
-    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
-    .notNull(),
-});
-
-export const activityRelations = relations(activity, ({ one }) => ({
-  actor: one(user, {
-    fields: [activity.userId],
-    references: [user.id],
-  }),
-}));
+export const Activity: Model<IActivity> =
+  models.Activity || model<IActivity>("Activity", ActivitySchema);
+export const activity = Activity;

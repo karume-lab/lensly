@@ -1,6 +1,5 @@
 "use client";
 
-import type { User as SystemUser } from "@repo/db/types";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -21,7 +20,10 @@ import { Edit, Loader2, Shield, Trash2, User } from "lucide-react";
 import Link from "next/link";
 import { parseAsInteger, useQueryState } from "nuqs";
 import { useMemo, useState } from "react";
+import type { api, ExtractData } from "@/lib/api";
 import { useAdminUsers, useDeleteUser, useUpdateUserRole } from "@/lib/hooks/use-admin-users";
+
+type AdminUserData = NonNullable<ExtractData<typeof api.admin.users.get>>["data"][number];
 
 export const AdminUsersClient = () => {
   const [page, setPage] = useQueryState(
@@ -55,7 +57,7 @@ export const AdminUsersClient = () => {
     setLimit(nextPagination.pageSize);
   };
 
-  const columns: ColumnDef<SystemUser>[] = useMemo(
+  const columns: ColumnDef<AdminUserData>[] = useMemo(
     () => [
       {
         accessorKey: "id",
@@ -176,7 +178,7 @@ export const AdminUsersClient = () => {
 
       <DataTable
         columns={columns}
-        data={(response?.data as SystemUser[]) || []}
+        data={response?.data || []}
         pageCount={response?.metadata?.totalPages || 0}
         pagination={pagination}
         onPaginationChange={onPaginationChange}

@@ -1,4 +1,4 @@
-import { db, schema } from "@repo/db";
+import { schema } from "@repo/db";
 import usersData from "@repo/db/mock-data/users.json";
 import { hashPassword } from "better-auth/crypto";
 
@@ -6,24 +6,23 @@ const seed = async () => {
   console.log("Starting database seeding process...");
 
   console.log("Cleaning up existing data...");
-  await db.delete(schema.account);
-  await db.delete(schema.session);
-  await db.delete(schema.user);
+  await schema.account.deleteMany({});
+  await schema.session.deleteMany({});
+  await schema.user.deleteMany({});
 
   console.log(`Inserting ${usersData.length} mock users...`);
 
   for (const userData of usersData) {
     const { password, ...user } = userData;
 
-    await db.insert(schema.user).values({
+    await schema.user.create({
       ...user,
       createdAt: new Date(user.createdAt),
       updatedAt: new Date(user.updatedAt),
     });
 
     const hashedPassword = await hashPassword(password);
-    await db.insert(schema.account).values({
-      id: crypto.randomUUID(),
+    await schema.account.create({
       userId: user.id,
       accountId: user.id,
       providerId: "credential",

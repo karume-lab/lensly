@@ -1,12 +1,14 @@
 "use client";
 
-import type { HistoryItem } from "@repo/types";
 import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
 import type { ColumnDef } from "@tanstack/react-table";
 import { Calendar, Download } from "lucide-react";
+import type { api, ExtractData } from "@/lib/api";
 
-export const columns: ColumnDef<HistoryItem>[] = [
+type HistoryData = ExtractData<typeof api.jobs.history.get> extends Array<infer T> ? T : never;
+
+export const columns: ColumnDef<HistoryData>[] = [
   {
     accessorKey: "jobTitle",
     header: "Campaign name",

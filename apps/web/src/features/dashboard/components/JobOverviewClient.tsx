@@ -11,10 +11,12 @@ import {
 import { ChevronRight, FileText, LayoutDashboard, Settings, Users } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
-import { mockJobs } from "@/lib/mock-data";
+import type { api, ExtractData } from "@/lib/api";
 
-export function JobOverviewClient({ jobId }: { jobId: string }) {
-  const job = mockJobs.find((j) => j.id === jobId);
+type JobData = NonNullable<ExtractData<ReturnType<typeof api.jobs>["get"]>>;
+
+export function JobOverviewClient({ initialData }: { initialData: JobData }) {
+  const job = initialData;
 
   if (!job) {
     return (
@@ -32,7 +34,7 @@ export function JobOverviewClient({ jobId }: { jobId: string }) {
       title: "Ingestion Hub",
       description: "Upload and process new candidate resumes.",
       icon: FileText,
-      href: `/dashboard/jobs/${jobId}/ingestion`,
+      href: `/dashboard/jobs/${job.id}/ingestion`,
       color: "text-blue-500",
       bg: "bg-blue-500/10",
     },
@@ -40,7 +42,7 @@ export function JobOverviewClient({ jobId }: { jobId: string }) {
       title: "Shortlist & Matching",
       description: "View AI-ranked candidates and match scores.",
       icon: Users,
-      href: `/dashboard/jobs/${jobId}/shortlist`,
+      href: `/dashboard/jobs/${job.id}/shortlist`,
       color: "text-purple-500",
       bg: "bg-purple-500/10",
     },
@@ -48,7 +50,7 @@ export function JobOverviewClient({ jobId }: { jobId: string }) {
       title: "Settings",
       description: "Update job description and AI weights.",
       icon: Settings,
-      href: `/dashboard/jobs/${jobId}/settings`,
+      href: `/dashboard/jobs/${job.id}/settings`,
       color: "text-slate-500",
       bg: "bg-slate-500/10",
     },
