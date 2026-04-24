@@ -43,7 +43,7 @@
   },
   "overrides": [
     {
-      "includes": ["packages/ui/src/web/components/ui/**", "apps/mobile/src/components/ui/**"],
+      "includes": ["packages/ui/src/web/components/ui/**"],
       "linter": {
         "enabled": false
       },

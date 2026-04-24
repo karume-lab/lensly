@@ -6,7 +6,7 @@
   <em>This is an image of a hacksaw</em>
 </p>
 
-A fullstack JavaScript/TypeScript monorepo template for rapidly building Web and Mobile MVPs using modern tools. It bridges Next.js on the web and React Native (Expo) on mobile, connected via end-to-end type-safe RPC (Elysia + Eden Treaty).
+A fullstack JavaScript/TypeScript monorepo template for rapidly building Web MVPs using modern tools. It features Next.js on the web, connected via end-to-end type-safe RPC (Elysia + Eden Treaty).
 
 > [!NOTE]
 > This template is designed for **MVPs and prototyping** — it prioritizes developer velocity over production-grade hardening. Use it as a starting point to validate ideas quickly, then harden as needed.
@@ -21,7 +21,6 @@ Learn how to build with Lensly by following the <a href="https://code2tutorial.c
 
 - **Monorepo:** Turborepo & Bun Workspaces — Efficient management of shared packages and apps with high-performance dependency resolution.
 - **Web App:** Next.js (App Router) — Modern React framework optimized for performance, SEO, and developer productivity.
-- **Mobile App:** React Native (Expo Router) — Native mobile development with shared logic and file-based routing.
 - **Database & ORM:** Drizzle ORM + SQLite — Lightweight, local-first database with a type-safe, developer-friendly ORM.
 - **Authentication:** Better Auth — A comprehensive authentication framework designed for safety and ease of integration.
 - **Communication:** Elysia + Eden Treaty — High-performance, Bun-native RPC for seamless, end-to-end type safety between services.
@@ -36,8 +35,7 @@ Learn how to build with Lensly by following the <a href="https://code2tutorial.c
 ```text
 .
 ├── apps/
-│   ├── web/                     # Next.js App Router (Dashboard & API)
-│   └── mobile/                  # React Native / Expo (Native Client)
+│   └── web/                     # Next.js App Router (Dashboard & API)
 ├── packages/
 │   ├── api/                     # Elysia API (End-to-end type-safety bridge)
 │   ├── auth/                    # Better Auth (Authentication logic)
@@ -71,7 +69,6 @@ Each app and package may require environment variables. Copy the `.env.example` 
 
 - `.env`
 - `apps/web/.env`
-- `apps/mobile/.env`
 
 ### 3. Database Initialization
 
@@ -95,7 +92,7 @@ bun db:seed
 
 ### Development
 
-Start all dev servers (Next.js + Expo) in parallel:
+Start all dev servers in parallel:
 
 ```bash
 bun dev
@@ -106,25 +103,6 @@ Or run individual apps:
 ```bash
 # Web only (Next.js)
 bun dev:web
-
-# Mobile only (Expo)
-bun dev:mobile
-```
-
-### Mobile Specifics
-
-```bash
-# Android emulator/device
-bun android:mobile
-
-# iOS simulator
-bun ios:mobile
-
-# Get local IP (for mobile connection)
-bun get-ip:mobile
-
-# Check mobile environment health
-bun doctor:mobile
 ```
 
 ### API Documentation
@@ -139,15 +117,12 @@ The API documentation is automatically generated from your Elysia routes using t
 #### New API Procedure
 1. Define your Zod schema in `packages/validators`.
 2. Implement the procedure in `packages/api/src/routers/`.
-3. The type-safe client will be automatically available to both `web` and `mobile`.
+3. The type-safe client will be automatically available to `web`.
 
 #### New UI Component
 ```bash
 # Web (shadcn/ui)
 bun ui:web [component-name]
-
-# Mobile (react-native-reusables)
-bun ui:mobile [component-name]
 ```
 
 ### Code Quality
@@ -170,9 +145,6 @@ Or target specific apps:
 ```bash
 # Lint web app only
 bun lint:web
-
-# Typecheck mobile app only
-bun typecheck:mobile
 ```
 
 ## Available Scripts
@@ -188,11 +160,6 @@ bun typecheck:mobile
 | `bun dev:web` | Start Next.js development server |
 | `bun build:web` | Build Next.js for production |
 | `bun lint:web` | Lint web app |
-| **Mobile App** | |
-| `bun dev:mobile` | Start Expo development server |
-| `bun android:mobile` | Run on Android |
-| `bun ios:mobile` | Run on iOS |
-| `bun doctor:mobile` | Run Expo doctor |
 | **Database** | |
 | `bun db:push` | Push schema to database |
 | `bun db:generate` | Generate migration files |
@@ -203,20 +170,6 @@ bun typecheck:mobile
 
 ### Web (Next.js)
 Deploy to [Vercel](https://vercel.com/) by connecting your repository. Ensure you set all environment variables in the Vercel dashboard.
-
-### Mobile (React Native)
-Use [Expo Application Services (EAS)](https://expo.dev/eas) for builds and submissions:
-
-```bash
-# Login to Expo
-bunx eas login
-
-# Build for Android
-bunx eas build -p android
-
-# Build for iOS
-bunx eas build -p ios
-```
 
 ## Contributing
 

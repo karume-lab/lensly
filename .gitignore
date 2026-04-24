@@ -24,8 +24,6 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # caches
 .turbo
-android
-ios
 .eslintcache
 .cache
 *.tsbuildinfo
@@ -38,51 +36,7 @@ next-env.d.ts
 # Finder (MacOS) folder config
 .DS_Store
 
-# --- Expo / Mobile ---
-.expo/
-web-build/
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-.metro-health-check*
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-*.pem
-expo-env.d.ts
-uniwind-types.d.ts
 
-# --- Android ---
-build/
-.gradle
-local.properties
-*.iml
-*.hprof
-.cxx/
-*.jsbundle
-
-# --- iOS ---
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-project.xcworkspace
-.xcode.env.local
-/Pods/
 
 .agent
 migrations/
