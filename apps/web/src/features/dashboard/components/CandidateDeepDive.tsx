@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { toast } from "sonner";
 import { api, type ExtractData } from "@/lib/api";
 import { useApplicants, useUpdateApplicantStatusMutation } from "@/lib/queries/applicant";
@@ -32,8 +31,6 @@ export const CandidateDeepDive = ({
   candidateId: string;
 }) => {
   const router = useRouter();
-  const [isUpdating, setIsUpdating] = useState(false);
-
   const { data, isLoading } = useQuery<DeepDiveData>({
     queryKey: ["candidate-deep-dive", candidateId],
     queryFn: async () => {
@@ -47,7 +44,6 @@ export const CandidateDeepDive = ({
   const { data: applicants } = useApplicants(jobId);
 
   const handleDecision = async (decision: "approve" | "reject") => {
-    setIsUpdating(true);
     const status = decision === "approve" ? "Interviewing" : "Rejected";
 
     try {
@@ -64,7 +60,6 @@ export const CandidateDeepDive = ({
       }
     } catch (_error) {
       toast.error("Update failed");
-      setIsUpdating(false);
     }
   };
 
@@ -174,7 +169,7 @@ export const CandidateDeepDive = ({
                 variant="outline"
                 className="flex-1 h-10 border-destructive/20 text-destructive hover:bg-destructive/10"
                 onClick={() => handleDecision("reject")}
-                disabled={isUpdating}
+                loading={statusMutation.isPending}
               >
                 <XCircle className="size-4 mr-2" />
                 Reject candidate
@@ -182,7 +177,7 @@ export const CandidateDeepDive = ({
               <Button
                 className="flex-2 h-10 bg-emerald-600 hover:bg-emerald-700 text-white"
                 onClick={() => handleDecision("approve")}
-                disabled={isUpdating}
+                loading={statusMutation.isPending}
               >
                 <CheckCircle2 className="size-4 mr-2" />
                 Move to Interview

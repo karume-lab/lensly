@@ -1,3 +1,4 @@
+import { existsSync, mkdirSync } from "node:fs";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
 import { Elysia, t } from "elysia";
@@ -187,7 +188,11 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
     "/upload",
     async ({ body: { jobId, file } }) => {
       const fileName = `${Date.now()}-${file.name}`;
-      const path = `./uploads/${fileName}`;
+      const uploadDir = "./uploads";
+      if (!existsSync(uploadDir)) {
+        mkdirSync(uploadDir, { recursive: true });
+      }
+      const path = `${uploadDir}/${fileName}`;
       await Bun.write(path, file);
 
       const applicant = new schema.Applicant({

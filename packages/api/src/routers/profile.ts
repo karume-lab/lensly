@@ -14,32 +14,17 @@ export const profileRouter = new Elysia({ prefix: "/profile" })
   .get(
     "/",
     async ({ user }) => {
-      const profile = await schema.Profile.findOne({ userId: user.id });
-
+      let profile = await schema.Profile.findOne({ userId: user.id });
       if (!profile) {
-        // Return sensible defaults for a user who has not onboarded yet
-        return {
+        profile = new schema.Profile({
           userId: user.id,
-          companyName: undefined,
-          role: undefined,
           defaultWeightSkills: 50,
           defaultWeightExperience: 30,
           defaultWeightEducation: 20,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        };
+        });
+        await profile.save();
       }
-
-      return {
-        userId: profile.userId,
-        companyName: profile.companyName,
-        role: profile.role,
-        defaultWeightSkills: profile.defaultWeightSkills,
-        defaultWeightExperience: profile.defaultWeightExperience,
-        defaultWeightEducation: profile.defaultWeightEducation,
-        createdAt: profile.createdAt,
-        updatedAt: profile.updatedAt,
-      };
+      return profile;
     },
     {
       response: ProfileSchema,
@@ -50,37 +35,21 @@ export const profileRouter = new Elysia({ prefix: "/profile" })
     async ({ body, user }) => {
       const profile = await schema.Profile.findOneAndUpdate(
         { userId: user.id },
-        {
-          $set: {
-            companyName: body.companyName,
-            role: body.role,
-            defaultWeightSkills: body.defaultWeightSkills,
-            defaultWeightExperience: body.defaultWeightExperience,
-            defaultWeightEducation: body.defaultWeightEducation,
-          },
-        },
+        { $set: body },
         { new: true, upsert: true },
       );
-
-      return {
-        userId: profile.userId,
-        companyName: profile.companyName,
-        role: profile.role,
-        defaultWeightSkills: profile.defaultWeightSkills,
-        defaultWeightExperience: profile.defaultWeightExperience,
-        defaultWeightEducation: profile.defaultWeightEducation,
-        createdAt: profile.createdAt,
-        updatedAt: profile.updatedAt,
-      };
+      return profile;
     },
     {
-      body: t.Object({
-        companyName: t.Optional(t.String()),
-        role: t.Optional(t.String()),
-        defaultWeightSkills: t.Number(),
-        defaultWeightExperience: t.Number(),
-        defaultWeightEducation: t.Number(),
-      }),
+      body: t.Partial(
+        t.Object({
+          companyName: t.String(),
+          role: t.String(),
+          defaultWeightSkills: t.Number(),
+          defaultWeightExperience: t.Number(),
+          defaultWeightEducation: t.Number(),
+        }),
+      ),
       response: ProfileSchema,
     },
   );

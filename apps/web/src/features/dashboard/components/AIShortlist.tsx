@@ -21,6 +21,7 @@ import { parseAsString, useQueryState } from "nuqs";
 import { useState } from "react";
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from "recharts";
 import { toast } from "sonner";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { api, type ExtractData } from "@/lib/api";
 import { useJob } from "@/lib/queries/job";
 
@@ -288,27 +289,39 @@ export const AIShortlist = ({ jobId }: { jobId: string }) => {
         </div>
       </div>
 
-      <div className="border border-border overflow-hidden bg-card">
-        <DataTable
-          columns={columns}
-          data={shortlist || []}
-          pageCount={1}
-          pagination={pagination}
-          onPaginationChange={setPagination}
-          searchKey="name"
-          searchValue={search || ""}
-          onSearchChange={setSearch}
+      {!shortlist || shortlist.length === 0 ? (
+        <EmptyState
+          icon={Zap}
+          title="No candidates shortlisted yet"
+          description="Candidates will appear here once they have been screened and processed through the pipeline."
+          action={{
+            label: "Go to Ingestion",
+            href: `/dashboard/jobs/${jobId}/ingestion` as Route,
+          }}
         />
-        {expandedId &&
-          (() => {
-            const candidate = shortlist?.find((c) => c.id === expandedId);
-            return candidate ? (
-              <div className="border-t border-border">
-                <ExplainabilityRow candidate={candidate} jobId={jobId} />
-              </div>
-            ) : null;
-          })()}
-      </div>
+      ) : (
+        <div className="border border-border overflow-hidden bg-card">
+          <DataTable
+            columns={columns}
+            data={shortlist || []}
+            pageCount={1}
+            pagination={pagination}
+            onPaginationChange={setPagination}
+            searchKey="name"
+            searchValue={search || ""}
+            onSearchChange={setSearch}
+          />
+          {expandedId &&
+            (() => {
+              const candidate = shortlist?.find((c) => c.id === expandedId);
+              return candidate ? (
+                <div className="border-t border-border">
+                  <ExplainabilityRow candidate={candidate} jobId={jobId} />
+                </div>
+              ) : null;
+            })()}
+        </div>
+      )}
 
       <p className="text-center text-[10px] text-muted-foreground py-4 uppercase tracking-widest">
         Showing top {shortlist?.length || 0} results from {job?.applicantCount || 0} analyzed
