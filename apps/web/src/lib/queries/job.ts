@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 
 export const useJob = (id: string) => {
@@ -30,6 +30,52 @@ export const useJobStats = () => {
       const { data, error } = await api.jobs.stats.get();
       if (error) throw error;
       return data;
+    },
+  });
+};
+
+export const useCreateJobMutation = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (body: Parameters<typeof api.jobs.post>[0]) => {
+      const { data, error } = await api.jobs.post(body);
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job-stats"] });
+    },
+  });
+};
+
+export const useUpdateJobMutation = (id: string) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (body: Parameters<ReturnType<typeof api.jobs>["patch"]>[0]) => {
+      const { data, error } = await api.jobs({ id }).patch(body);
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job", id] });
+      queryClient.invalidateQueries({ queryKey: ["job-stats"] });
+    },
+  });
+};
+
+export const useDeleteJobMutation = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (id: string) => {
+      const { data, error } = await api.jobs({ id }).delete();
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job-stats"] });
     },
   });
 };

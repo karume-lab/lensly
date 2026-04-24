@@ -104,3 +104,14 @@ export const ActivitySchema = t.Object({
   timestamp: t.String(),
   type: t.String(),
 });
+
+export const ProfileSchema = t.Object({
+  userId: t.String(),
+  companyName: t.Optional(t.String()),
+  role: t.Optional(t.String()),
+  defaultWeightSkills: t.Number(),
+  defaultWeightExperience: t.Number(),
+  defaultWeightEducation: t.Number(),
+  createdAt: t.Date(),
+  updatedAt: t.Date(),
+});

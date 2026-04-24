@@ -276,7 +276,7 @@ export const AIShortlist = ({ jobId }: { jobId: string }) => {
         </div>
         <div className="flex items-center gap-2">
           <Button variant="outline" size="sm" asChild>
-            <Link href={`/dashboard/jobs/${jobId}/settings` as Route}>
+            <Link href={`/dashboard/jobs/${jobId}/edit` as Route}>
               <Settings2 className="mr-2 size-4" />
               Update criteria
             </Link>

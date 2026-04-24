@@ -25,28 +25,40 @@ import { type CreateJobInput, CreateJobSchema } from "@repo/validators/job";
 import { Brain, Loader2, Plus, Sparkles, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { createJobAction } from "@/app/actions/job";
 import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
+import type { api, ExtractData } from "@/lib/api";
+import { useCreateJobMutation, useUpdateJobMutation } from "@/lib/queries/job";
 
-export const NewJobForm = () => {
+type JobData = ExtractData<ReturnType<typeof api.jobs>["get"]>;
+
+interface NewJobFormProps {
+  initialData?: JobData;
+}
+
+export const NewJobForm = ({ initialData }: NewJobFormProps) => {
   const [skillInput, setSkillInput] = useState("");
-  const [isPending, startTransition] = useTransition();
   const router = useRouter();
+  const isEditMode = initialData !== undefined;
+
+  const createMutation = useCreateJobMutation();
+  const updateMutation = useUpdateJobMutation(initialData?.id ?? "");
+
+  const isPending = createMutation.isPending || updateMutation.isPending;
 
   const form = useForm<CreateJobInput>({
     resolver: zodResolver(CreateJobSchema),
     defaultValues: {
-      title: "",
-      department: "",
-      seniority: "",
-      description: "",
-      requiredSkills: [],
-      weightSkills: 50,
-      weightExperience: 30,
-      weightEducation: 20,
+      title: initialData?.title ?? "",
+      department: initialData?.department ?? "",
+      seniority: initialData?.seniority ?? "",
+      description: initialData?.description ?? "",
+      requiredSkills: initialData?.requiredSkills ?? [],
+      weightSkills: initialData?.weightSkills ?? 50,
+      weightExperience: initialData?.weightExperience ?? 30,
+      weightEducation: initialData?.weightEducation ?? 20,
     },
   });
 
@@ -112,22 +124,38 @@ export const NewJobForm = () => {
   };
 
   const onSubmit = async (data: CreateJobInput) => {
-    startTransition(async () => {
-      try {
-        await createJobAction(data);
-        toast.success("Job created successfully");
-        router.push("/dashboard/jobs");
-      } catch {
-        toast.error("Failed to create job. Please try again.");
-      }
-    });
+    if (isEditMode) {
+      updateMutation.mutate(data, {
+        onSuccess: () => {
+          toast.success("Job updated successfully");
+          router.push("/dashboard/jobs");
+        },
+        onError: () => {
+          toast.error("Failed to update job. Please try again.");
+        },
+      });
+    } else {
+      createMutation.mutate(data, {
+        onSuccess: () => {
+          toast.success("Job created successfully");
+          router.push("/dashboard/jobs");
+        },
+        onError: () => {
+          toast.error("Failed to create job. Please try again.");
+        },
+      });
+    }
   };
 
   return (
     <div className=" duration-500">
       <DashboardHeader
-        title="Create job"
-        subtitle="Define the requirements and screening parameters for your hiring pipeline."
+        title={isEditMode ? "Edit job" : "Create job"}
+        subtitle={
+          isEditMode
+            ? "Update the requirements and screening parameters for this role."
+            : "Define the requirements and screening parameters for your hiring pipeline."
+        }
       />
 
       <Form {...form}>
@@ -346,16 +374,18 @@ export const NewJobForm = () => {
 
           <div className="flex items-center justify-end gap-3 pt-4 pb-20 border-t border-border">
             <Button variant="ghost" type="button" asChild disabled={isPending}>
-              <Link href="/dashboard">Cancel</Link>
+              <Link href="/dashboard/jobs">Cancel</Link>
             </Button>
             <Button type="submit" className="min-w-[120px]" disabled={isPending}>
               {isPending ? (
                 <>
                   <Loader2 className="mr-2 size-4 animate-spin" />
-                  Creating...
+                  {isEditMode ? "Saving..." : "Creating..."}
                 </>
+              ) : isEditMode ? (
+                "Save changes"
               ) : (
-                <>Create job</>
+                "Create job"
               )}
             </Button>
           </div>
