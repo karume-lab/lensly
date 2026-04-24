@@ -3,7 +3,7 @@
 import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
 import { Card } from "@repo/ui/web/components/ui/card";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import {
   ArrowLeft,
   Brain,
@@ -20,6 +20,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 import { api, type ExtractData } from "@/lib/api";
+import { useApplicants, useUpdateApplicantStatusMutation } from "@/lib/queries/applicant";
 
 type DeepDiveData = NonNullable<ExtractData<ReturnType<typeof api.applicants>["deep-dive"]["get"]>>;
 
@@ -42,25 +43,25 @@ export const CandidateDeepDive = ({
     },
   });
 
-  const statusMutation = useMutation({
-    mutationFn: async (status: string) => {
-      const { data, error } = await api.applicants({ id: candidateId }).status.patch({ status });
-      if (error) throw error;
-      return data;
-    },
-  });
+  const statusMutation = useUpdateApplicantStatusMutation(candidateId);
+  const { data: applicants } = useApplicants(jobId);
 
   const handleDecision = async (decision: "approve" | "reject") => {
     setIsUpdating(true);
-    const intent = decision === "approve" ? "Hired" : "Rejected";
-    const status = decision === "approve" ? "Hired" : "Rejected";
+    const status = decision === "approve" ? "Interviewing" : "Rejected";
 
     try {
-      await statusMutation.mutateAsync(status);
-      toast.success(`${intent}: Candidate status updated`);
-      setTimeout(() => {
+      await statusMutation.mutateAsync({ status });
+      toast.success(`Candidate ${decision === "approve" ? "shortlisted" : "rejected"}`);
+
+      const currentIndex = applicants?.findIndex((a) => a.id === candidateId) ?? -1;
+      const nextCandidate = applicants && currentIndex !== -1 ? applicants[currentIndex + 1] : null;
+
+      if (nextCandidate) {
+        router.push(`/dashboard/jobs/${jobId}/candidates/${nextCandidate.id}`);
+      } else {
         router.push(`/dashboard/jobs/${jobId}/shortlist`);
-      }, 1000);
+      }
     } catch (_error) {
       toast.error("Update failed");
       setIsUpdating(false);
@@ -179,12 +180,12 @@ export const CandidateDeepDive = ({
                 Reject candidate
               </Button>
               <Button
-                className="flex-[2] h-10 bg-emerald-600 hover:bg-emerald-700 text-white"
+                className="flex-2 h-10 bg-emerald-600 hover:bg-emerald-700 text-white"
                 onClick={() => handleDecision("approve")}
                 disabled={isUpdating}
               >
                 <CheckCircle2 className="size-4 mr-2" />
-                Approve for Hire
+                Move to Interview
               </Button>
             </div>
           </div>

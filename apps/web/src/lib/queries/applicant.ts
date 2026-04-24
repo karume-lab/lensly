@@ -39,3 +39,35 @@ export const useUploadMetadataMutation = () => {
     },
   });
 };
+export const useUploadApplicantMutation = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async ({ jobId, file }: { jobId: string; file: File }) => {
+      const { data, error } = await api.applicants.upload.post({
+        jobId,
+        file,
+      });
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (_, variables) => {
+      queryClient.invalidateQueries({ queryKey: ["applicants", variables.jobId] });
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job-stats"] });
+    },
+  });
+};
+
+export const useUpdateApplicantStatusMutation = (id: string) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async ({ status }: { status: string }) => {
+      const { data, error } = await api.applicants({ id }).status.patch({ status });
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ["applicants", data.jobId] });
+    },
+  });
+};

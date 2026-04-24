@@ -14,8 +14,8 @@ import type { api, ExtractData } from "@/lib/api";
 import DashboardHeader from "./DashboardHeader";
 import { JobsTable } from "./jobs-table";
 
-type StatsData = ExtractData<typeof api.jobs.stats.get>;
-type ActivityData = ExtractData<typeof api.activities.get>;
+type StatsData = ExtractData<typeof api.dashboard.metrics.get>;
+type ActivityData = ExtractData<typeof api.dashboard.activity.get>;
 
 export const CommandCenter = ({
   data,

@@ -1,6 +1,7 @@
 import { activityRouter } from "@repo/api/routers/activity";
 import { adminRouter } from "@repo/api/routers/admin";
 import { applicantRouter } from "@repo/api/routers/applicant";
+import { dashboardRouter } from "@repo/api/routers/dashboard";
 import { jobRouter } from "@repo/api/routers/job";
 import { profileRouter } from "@repo/api/routers/profile";
 import { Elysia } from "elysia";
@@ -10,4 +11,5 @@ export const appRouter = new Elysia()
   .use(applicantRouter)
   .use(activityRouter)
   .use(adminRouter)
-  .use(profileRouter);
+  .use(profileRouter)
+  .use(dashboardRouter);

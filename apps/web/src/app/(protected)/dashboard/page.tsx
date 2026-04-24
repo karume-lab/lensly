@@ -12,7 +12,7 @@ export default async function DashboardPage() {
   const session = await auth.api.getSession({ headers: h });
 
   // Fetch real data from the API with session headers
-  const { data: metrics } = await api.jobs.stats.get({
+  const { data: metrics } = await api.dashboard.metrics.get({
     headers: {
       cookie: h.get("cookie") ?? "",
     },
@@ -24,7 +24,7 @@ export default async function DashboardPage() {
     },
   });
 
-  const { data: activity } = await api.activities.get({
+  const { data: activity } = await api.dashboard.activity.get({
     headers: {
       cookie: h.get("cookie") ?? "",
     },

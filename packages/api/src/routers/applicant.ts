@@ -184,6 +184,44 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
     },
   )
   .post(
+    "/upload",
+    async ({ body: { jobId, file } }) => {
+      const fileName = `${Date.now()}-${file.name}`;
+      const path = `./uploads/${fileName}`;
+      await Bun.write(path, file);
+
+      const applicant = new schema.Applicant({
+        jobId,
+        name: file.name.replace(/\.[^/.]+$/, ""), // Use filename as name for now
+        source: "External Upload",
+        resumeUrl: path,
+        status: "Applied",
+      });
+      await applicant.save();
+
+      return {
+        id: applicant._id.toString(),
+        jobId: applicant.jobId.toString(),
+        name: applicant.name,
+        email: applicant.email,
+        source: applicant.source,
+        status: applicant.status,
+        resumeUrl: applicant.resumeUrl,
+        rawText: applicant.rawText,
+        structuredData: applicant.structuredData,
+        createdAt: applicant.createdAt,
+        updatedAt: applicant.updatedAt,
+      };
+    },
+    {
+      body: t.Object({
+        jobId: t.String(),
+        file: t.File(),
+      }),
+      response: ApplicantSchema,
+    },
+  )
+  .post(
     "/upload-metadata",
     async ({ body }) => {
       const applicant = new schema.Applicant(body);

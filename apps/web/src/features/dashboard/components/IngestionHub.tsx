@@ -35,7 +35,7 @@ import type { api, ExtractData } from "@/lib/api";
 import {
   useApplicants,
   useScreeningMutation,
-  useUploadMetadataMutation,
+  useUploadApplicantMutation,
 } from "@/lib/queries/applicant";
 import { useJob } from "@/lib/queries/job";
 
@@ -47,7 +47,7 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
   const { data: job, isLoading: jobLoading } = useJob(jobId);
   const { data: applicants, isLoading: applicantsLoading } = useApplicants(jobId);
   const screeningMutation = useScreeningMutation();
-  const uploadMutation = useUploadMetadataMutation();
+  const uploadMutation = useUploadApplicantMutation();
 
   const [search, setSearch] = useQueryState(
     "search",
@@ -156,26 +156,20 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
 
   const handleFileDrop = async (acceptedFiles: File[]) => {
     if (acceptedFiles.length > 0) {
-      toast.info("Extracting data", {
-        description: `Processing ${acceptedFiles.length} resume(s).`,
+      toast.info("Uploading resumes", {
+        description: `Uploading ${acceptedFiles.length} resume(s).`,
       });
 
       try {
         for (const file of acceptedFiles) {
-          // Simulate extraction and upload
           await uploadMutation.mutateAsync({
             jobId,
-            name: file.name.replace(".pdf", ""),
-            source: "External Upload",
-            structuredData: {
-              skills: ["Extracted Skill"],
-              experience: [{ duration: "Pending Analysis" }],
-            },
+            file,
           });
         }
-        toast.success("Candidates added successfully");
+        toast.success("Resumes uploaded successfully");
       } catch (_error) {
-        toast.error("Failed to upload candidates");
+        toast.error("Failed to upload resumes");
       }
     }
   };
