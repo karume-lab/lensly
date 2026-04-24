@@ -1,7 +1,10 @@
 import { existsSync, mkdirSync } from "node:fs";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
+import type { IApplicant } from "@repo/db/schema";
 import { Elysia, t } from "elysia";
+import { aiService } from "../lib/ai";
+import { documentService } from "../lib/document";
 import { ApplicantSchema, ScreeningResultSchema, StructuredDataSchema } from "./types";
 
 export const applicantRouter = new Elysia({ prefix: "/applicants" })
@@ -195,11 +198,29 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
       const path = `${uploadDir}/${fileName}`;
       await Bun.write(path, file);
 
+      let rawText = "";
+      try {
+        rawText = await documentService.extractText(path);
+      } catch (error) {
+        console.error("Failed to extract text from document:", error);
+      }
+
+      let structuredData: IApplicant["structuredData"];
+      if (rawText) {
+        try {
+          structuredData = await aiService.parseResume(rawText);
+        } catch (error) {
+          console.error("Failed to parse resume with AI:", error);
+        }
+      }
+
       const applicant = new schema.Applicant({
         jobId,
         name: file.name.replace(/\.[^/.]+$/, ""), // Use filename as name for now
         source: "External Upload",
         resumeUrl: path,
+        rawText: rawText || undefined,
+        structuredData: structuredData || undefined,
         status: "Applied",
       });
       await applicant.save();
@@ -261,31 +282,47 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   .post(
     "/:id/screen",
     async ({ params: { id } }) => {
-      // Stubbed screening endpoint: wait 3 seconds
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-
       const applicant = await schema.Applicant.findById(id);
       if (!applicant) throw new Response("Applicant not found", { status: 404 });
 
-      // Create a fake screening result
+      const job = await schema.Job.findById(applicant.jobId);
+      if (!job) throw new Response("Job not found", { status: 404 });
+
+      // Use AI service to screen the applicant
+      const result = await aiService.screenApplicant(
+        {
+          title: job.title,
+          description: job.description,
+          requiredSkills: job.requiredSkills,
+          weightSkills: job.weightSkills,
+          weightExperience: job.weightExperience,
+          weightEducation: job.weightEducation,
+        },
+        {
+          name: applicant.name,
+          rawText: applicant.rawText,
+          structuredData: applicant.structuredData,
+        },
+      );
+
+      // Create screening result in database
       const screeningResult = new schema.ScreeningResult({
         applicantId: applicant._id,
         jobId: applicant.jobId,
-        overallScore: 85,
-        skillScore: 90,
-        experienceScore: 80,
-        educationScore: 75,
-        relevanceScore: 95,
-        strengths: ["Strong technical background", "Relevant experience"],
-        gaps: ["Needs more leadership experience"],
-        aiRecommendation: "Strong Yes",
-        aiReasoning:
-          "Candidate demonstrates exceptional technical proficiency and alignment with core requirements.\n\nExperience with similar tech stacks suggests high ramp-up potential.",
+        overallScore: result.overallScore,
+        skillScore: result.skillScore,
+        experienceScore: result.experienceScore,
+        educationScore: result.educationScore,
+        relevanceScore: result.relevanceScore,
+        strengths: result.strengths,
+        gaps: result.gaps,
+        aiRecommendation: result.aiRecommendation,
+        aiReasoning: result.aiReasoning,
       });
       await screeningResult.save();
 
       // Update applicant status
-      applicant.status = "Shortlisted";
+      applicant.status = result.overallScore >= 70 ? "Shortlisted" : "Screened";
       await applicant.save();
 
       return {
