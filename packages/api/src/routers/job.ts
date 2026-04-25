@@ -1,7 +1,7 @@
+import { JobSchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
 import { Elysia, t } from "elysia";
-import { JobSchema } from "./types";
 
 export const jobRouter = new Elysia({ prefix: "/jobs" })
   .derive(async ({ request }) => {

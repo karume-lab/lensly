@@ -1,7 +1,7 @@
+import { ActivitySchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
 import { Elysia, t } from "elysia";
-import { ActivitySchema } from "./types";
 
 export const activityRouter = new Elysia({ prefix: "/activities" })
   .derive(async ({ request }) => {
@@ -14,9 +14,7 @@ export const activityRouter = new Elysia({ prefix: "/activities" })
   .get(
     "/",
     async ({ user }) => {
-      const activities = await schema.Activity.find({ userId: user.id })
-        .sort({ createdAt: -1 })
-        .limit(10);
+      const activities = await schema.Activity.find({ userId: user.id }).sort({ createdAt: -1 });
       return activities.map((a) => ({
         id: a._id.toString(),
         title: a.action,

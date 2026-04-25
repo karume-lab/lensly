@@ -3,18 +3,18 @@
 import { DataTable } from "@repo/ui/web/components/ui/data-table";
 import { useQuery } from "@tanstack/react-query";
 import type { PaginationState } from "@tanstack/react-table";
-import { History as HistoryIcon, Loader2 } from "lucide-react";
+import { Activity as ActivityIcon, Loader2 } from "lucide-react";
 import { parseAsInteger, parseAsString, useQueryStates } from "nuqs";
 import { useState } from "react";
 import { EmptyState } from "@/components/shared/EmptyState";
-import { columns } from "@/features/history/components/history-table/columns";
+import { columns } from "@/features/history/components/activity-table/columns";
 import { api } from "@/lib/api";
 
-export const HistoryTable = () => {
-  const { data: history, isLoading } = useQuery({
-    queryKey: ["job-history"],
+export const ActivityTable = () => {
+  const { data: activities, isLoading } = useQuery({
+    queryKey: ["full-activity-log"],
     queryFn: async () => {
-      const { data, error } = await api.jobs.history.get();
+      const { data, error } = await api.activities.get();
       if (error) throw error;
       return data;
     },
@@ -24,7 +24,6 @@ export const HistoryTable = () => {
     page: parseAsInteger.withDefault(1),
     pageSize: parseAsInteger.withDefault(10),
     search: parseAsString.withDefault(""),
-    status: parseAsString.withDefault("all"),
   });
 
   const [pagination, setPagination] = useState<PaginationState>({
@@ -40,27 +39,29 @@ export const HistoryTable = () => {
     );
   }
 
-  if (!history || history.length === 0) {
+  if (!activities || activities.length === 0) {
     return (
       <EmptyState
-        icon={HistoryIcon}
-        title="No history yet"
-        description="Completed hiring campaigns will appear here once you close them."
+        icon={ActivityIcon}
+        title="No activity recorded"
+        description="Your interactions with the platform will appear here."
       />
     );
   }
 
-  const filteredHistory = history.filter((item) => {
-    const matchesSearch = item.jobTitle.toLowerCase().includes(queryState.search.toLowerCase());
+  const filteredActivities = activities.filter((item) => {
+    const matchesSearch =
+      item.title.toLowerCase().includes(queryState.search.toLowerCase()) ||
+      item.subtitle.toLowerCase().includes(queryState.search.toLowerCase());
     return matchesSearch;
   });
 
   return (
     <DataTable
       columns={columns}
-      data={filteredHistory}
-      totalCount={filteredHistory.length}
-      pageCount={Math.ceil(filteredHistory.length / queryState.pageSize)}
+      data={filteredActivities}
+      totalCount={filteredActivities.length}
+      pageCount={Math.ceil(filteredActivities.length / queryState.pageSize)}
       pagination={{
         pageIndex: queryState.page - 1,
         pageSize: queryState.pageSize,
@@ -73,12 +74,12 @@ export const HistoryTable = () => {
           pageSize: nextPagination.pageSize,
         });
       }}
-      searchKey="history"
+      searchKey="activity"
       searchValue={queryState.search}
       onSearchChange={(search) => setQueryState({ search, page: 1 })}
-      onClearFilters={() => setQueryState({ search: "", status: "all", page: 1 })}
+      onClearFilters={() => setQueryState({ search: "", page: 1 })}
     />
   );
 };
 
-export default HistoryTable;
+export default ActivityTable;

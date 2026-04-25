@@ -1,5 +1,5 @@
+import * as schema from "@repo/db/schema";
 import mongoose from "mongoose";
-import * as schema from "./schema/index";
 
 export { schema };
 

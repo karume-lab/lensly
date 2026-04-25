@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/web/component
 import { Briefcase, Plus, Users } from "lucide-react";
 import Link from "next/link";
 import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
-import { JobsTable } from "./jobs-table";
+import { JobsTable } from "@/features/dashboard/components/jobs-table";
 
 export function JobsListClient() {
   return (

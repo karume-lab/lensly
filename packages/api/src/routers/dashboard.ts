@@ -1,7 +1,7 @@
+import { ActivitySchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
 import { Elysia, t } from "elysia";
-import { ActivitySchema } from "./types";
 
 export const dashboardRouter = new Elysia({ prefix: "/dashboard" })
   .derive(async ({ request }) => {

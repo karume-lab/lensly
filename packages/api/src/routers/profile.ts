@@ -1,7 +1,7 @@
+import { ProfileSchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
 import { Elysia, t } from "elysia";
-import { ProfileSchema } from "./types";
 
 export const profileRouter = new Elysia({ prefix: "/profile" })
   .derive(async ({ request }) => {

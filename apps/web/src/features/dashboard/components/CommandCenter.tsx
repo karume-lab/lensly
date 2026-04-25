@@ -11,9 +11,9 @@ import {
 import { ScrollArea } from "@repo/ui/web/components/ui/scroll-area";
 import { Briefcase, Clock, Plus, Users, Zap } from "lucide-react";
 import Link from "next/link";
+import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
+import { JobsTable } from "@/features/dashboard/components/jobs-table";
 import type { api, ExtractData } from "@/lib/api";
-import DashboardHeader from "./DashboardHeader";
-import { JobsTable } from "./jobs-table";
 
 type StatsData = ExtractData<typeof api.dashboard.metrics.get>;
 type ActivityData = ExtractData<typeof api.dashboard.activity.get>;

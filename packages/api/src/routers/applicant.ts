@@ -1,11 +1,15 @@
 import { existsSync, mkdirSync } from "node:fs";
+import { aiService } from "@repo/api/lib/ai";
+import { documentService } from "@repo/api/lib/document";
+import {
+  ApplicantSchema,
+  ScreeningResultSchema,
+  StructuredDataSchema,
+} from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
 import type { IApplicant } from "@repo/db/schema";
 import { Elysia, t } from "elysia";
-import { aiService } from "../lib/ai";
-import { documentService } from "../lib/document";
-import { ApplicantSchema, ScreeningResultSchema, StructuredDataSchema } from "./types";
 
 export const applicantRouter = new Elysia({ prefix: "/applicants" })
   .derive(async ({ request }) => {

@@ -6,8 +6,8 @@ import { Briefcase, Loader2 } from "lucide-react";
 import { parseAsInteger, parseAsString, useQueryStates } from "nuqs";
 import { useState } from "react";
 import { EmptyState } from "@/components/shared/EmptyState";
+import { columns } from "@/features/dashboard/components/jobs-table/columns";
 import { useJobs } from "@/lib/queries/job";
-import { columns } from "./columns";
 
 export const JobsTable = () => {
   const { data: jobs, isLoading } = useJobs();

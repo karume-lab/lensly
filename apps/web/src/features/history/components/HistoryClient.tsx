@@ -1,9 +1,11 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/web/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/ui/web/components/ui/tabs";
 import { TrendingUp } from "lucide-react";
 import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
-import { HistoryTable } from "./history-table";
+import { ActivityTable } from "@/features/history/components/activity-table";
+import { HistoryTable } from "@/features/history/components/history-table";
 
 export const HistoryClient = () => {
   return (
@@ -55,15 +57,27 @@ export const HistoryClient = () => {
         </Card>
       </div>
 
-      <div className="space-y-4">
-        <div className="space-y-1">
-          <h2 className="text-xl font-semibold tracking-tight">Historical logs</h2>
-          <p className="text-sm text-muted-foreground">
-            Audit and download reports from previous recruitment campaigns.
-          </p>
+      <Tabs defaultValue="campaigns" className="w-full">
+        <div className="flex items-center justify-between mb-4">
+          <div className="space-y-1">
+            <h2 className="text-xl font-semibold tracking-tight">Audit logs</h2>
+            <p className="text-sm text-muted-foreground">
+              Detailed history of campaigns and individual system actions.
+            </p>
+          </div>
+          <TabsList>
+            <TabsTrigger value="campaigns">Closed Campaigns</TabsTrigger>
+            <TabsTrigger value="activity">Activity Log</TabsTrigger>
+          </TabsList>
         </div>
-        <HistoryTable />
-      </div>
+
+        <TabsContent value="campaigns" className="mt-0 border-none p-0">
+          <HistoryTable />
+        </TabsContent>
+        <TabsContent value="activity" className="mt-0 border-none p-0">
+          <ActivityTable />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };
