@@ -195,7 +195,7 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
     "/upload",
     async ({ body: { jobId, file } }) => {
       const fileName = `${Date.now()}-${file.name}`;
-      const uploadDir = "./uploads";
+      const uploadDir = "../../apps/web/public/uploads";
       if (!existsSync(uploadDir)) {
         mkdirSync(uploadDir, { recursive: true });
       }
@@ -222,7 +222,7 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
         jobId,
         name: file.name.replace(/\.[^/.]+$/, ""), // Use filename as name for now
         source: "External Upload",
-        resumeUrl: path,
+        resumeUrl: `/uploads/${fileName}`,
         rawText: rawText || undefined,
         structuredData: structuredData || undefined,
         status: "Applied",

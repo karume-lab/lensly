@@ -8,6 +8,7 @@ import {
   ArrowLeft,
   Brain,
   CheckCircle2,
+  FileSearch,
   FileText,
   Loader2,
   Mail,
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { toast } from "sonner";
 import { api, type ExtractData } from "@/lib/api";
 import { useShortlist, useUpdateApplicantStatusMutation } from "@/lib/queries/applicant";
@@ -42,6 +44,7 @@ export const CandidateDeepDive = ({
 
   const statusMutation = useUpdateApplicantStatusMutation(candidateId);
   const { data: shortlist } = useShortlist(jobId);
+  const [viewMode, setViewMode] = useState<"pdf" | "data">("pdf");
 
   const handleDecision = async (decision: "approve" | "reject") => {
     const status = decision === "approve" ? "Interviewing" : "Rejected";
@@ -187,69 +190,99 @@ export const CandidateDeepDive = ({
         </div>
 
         {/* Right Pane: Source document */}
-        <div className="flex-1 bg-muted/20 overflow-y-auto flex flex-col relative">
-          <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-3 bg-card/80 backdrop-blur-sm border-b border-border">
+        <div className="flex-1 bg-muted/20 overflow-hidden flex flex-col relative">
+          <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-3 bg-card/80 backdrop-blur-sm border-b border-border shrink-0">
             <div className="flex items-center gap-2">
               <FileText className="size-4 text-muted-foreground" />
               <span className="text-xs font-medium">Original profile: {data.name}</span>
             </div>
+            {data.resumeUrl && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-8 text-xs gap-2"
+                onClick={() => setViewMode(viewMode === "pdf" ? "data" : "pdf")}
+              >
+                {viewMode === "pdf" ? (
+                  <>
+                    <FileSearch className="size-3" />
+                    View Extracted Data
+                  </>
+                ) : (
+                  <>
+                    <FileText className="size-3" />
+                    View Original PDF
+                  </>
+                )}
+              </Button>
+            )}
           </div>
 
-          <div className="p-12 max-w-3xl mx-auto w-full">
-            <Card className="border border-border bg-card p-12 space-y-10">
-              <div className="flex justify-between items-start">
-                <div className="space-y-1">
-                  <h1 className="text-3xl font-bold text-foreground">{data.name}</h1>
-                  <p className="text-base font-medium text-emerald-600">
-                    {structured?.skills?.slice(0, 3).join(" • ") || "N/A"}
-                  </p>
-                </div>
-                <div className="text-right space-y-1">
-                  <div className="flex items-center justify-end gap-2 text-[11px] text-muted-foreground">
-                    <MapPin className="size-3" /> {structured?.location || "Remote"}
-                  </div>
-                  <div className="flex items-center justify-end gap-2 text-[11px] text-muted-foreground">
-                    <Mail className="size-3" /> {data.email}
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">
-                  Technical skillset
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {structured?.skills?.map((skill: string) => (
-                    <Badge key={`skill-${skill}`} variant="outline" className="font-medium">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">
-                  Work experience
-                </h3>
-                <div className="space-y-8">
-                  {structured?.experience?.map((exp, i) => (
-                    <div key={`${exp.company}-${exp.role}-${i}`} className="relative pl-6">
-                      <div className="absolute left-0 top-1.5 size-2 bg-border" />
-                      <div className="absolute left-[3.5px] top-4 h-[calc(100%-8px)] w-px bg-border/50" />
-
-                      <div className="flex justify-between items-baseline mb-2">
-                        <h4 className="font-semibold text-foreground">
-                          {exp.role} @ {exp.company || "N/A"}
-                        </h4>
-                        <span className="text-[10px] font-medium text-muted-foreground">
-                          {exp.duration}
-                        </span>
+          <div className="flex-1 overflow-y-auto">
+            {viewMode === "pdf" && data.resumeUrl ? (
+              <iframe
+                src={data.resumeUrl}
+                className="w-full h-full border-none"
+                title={`Resume of ${data.name}`}
+              />
+            ) : (
+              <div className="p-12 max-w-3xl mx-auto w-full">
+                <Card className="border border-border bg-card p-12 space-y-10">
+                  <div className="flex justify-between items-start">
+                    <div className="space-y-1">
+                      <h1 className="text-3xl font-bold text-foreground">{data.name}</h1>
+                      <p className="text-base font-medium text-emerald-600">
+                        {structured?.skills?.slice(0, 3).join(" • ") || "N/A"}
+                      </p>
+                    </div>
+                    <div className="text-right space-y-1">
+                      <div className="flex items-center justify-end gap-2 text-[11px] text-muted-foreground">
+                        <MapPin className="size-3" /> {structured?.location || "Remote"}
+                      </div>
+                      <div className="flex items-center justify-end gap-2 text-[11px] text-muted-foreground">
+                        <Mail className="size-3" /> {data.email}
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+                      Technical skillset
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {structured?.skills?.map((skill: string) => (
+                        <Badge key={`skill-${skill}`} variant="outline" className="font-medium">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+                      Work experience
+                    </h3>
+                    <div className="space-y-8">
+                      {structured?.experience?.map((exp, i) => (
+                        <div key={`${exp.company}-${exp.role}-${i}`} className="relative pl-6">
+                          <div className="absolute left-0 top-1.5 size-2 bg-border" />
+                          <div className="absolute left-[3.5px] top-4 h-[calc(100%-8px)] w-px bg-border/50" />
+
+                          <div className="flex justify-between items-baseline mb-2">
+                            <h4 className="font-semibold text-foreground">
+                              {exp.role} @ {exp.company || "N/A"}
+                            </h4>
+                            <span className="text-[10px] font-medium text-muted-foreground">
+                              {exp.duration}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
               </div>
-            </Card>
+            )}
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ const NavigationPill = () => {
               <Link
                 href={href as Route}
                 className={cn(
-                  "flex items-center justify-center size-10 transition-all duration-300",
+                  "flex items-center justify-center size-10 transition-all duration-300 rounded-full",
                   "text-foreground/70 hover:text-primary",
                   "hover:bg-primary/10 hover:scale-110",
                   "focus:bg-primary/10 focus:outline-none",
