@@ -68,7 +68,7 @@ export const UserSchema = new Schema<IUser>(
     banReason: { type: String },
     banExpires: { type: Date },
   },
-  { timestamps: true },
+  { timestamps: true, collection: "user" },
 );
 
 export const SessionSchema = new Schema<ISession>(
@@ -82,7 +82,7 @@ export const SessionSchema = new Schema<ISession>(
     userId: { type: String, required: true },
     impersonatedBy: { type: String },
   },
-  { timestamps: true },
+  { timestamps: true, collection: "session" },
 );
 
 export const AccountSchema = new Schema<IAccount>(
@@ -100,7 +100,7 @@ export const AccountSchema = new Schema<IAccount>(
     scope: { type: String },
     password: { type: String },
   },
-  { timestamps: true },
+  { timestamps: true, collection: "account" },
 );
 
 export const VerificationSchema = new Schema<IVerification>(
@@ -111,7 +111,7 @@ export const VerificationSchema = new Schema<IVerification>(
     value: { type: String, required: true },
     expiresAt: { type: Date, required: true },
   },
-  { timestamps: true },
+  { timestamps: true, collection: "verification" },
 );
 
 export const User: Model<IUser> = models.User || model<IUser>("User", UserSchema);
