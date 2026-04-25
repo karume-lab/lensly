@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
 import {
   Card,
@@ -19,6 +20,12 @@ import {
 } from "@repo/ui/web/components/ui/form";
 import { Input } from "@repo/ui/web/components/ui/input";
 import { Slider } from "@repo/ui/web/components/ui/slider";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@repo/ui/web/components/ui/tooltip";
 import { type OnboardingInput, OnboardingSchema } from "@repo/validators/profile";
 import { Brain, Building2, Loader2, Rocket } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -56,26 +63,29 @@ export function OnboardingClient({ initialData }: OnboardingClientProps) {
     key: "defaultWeightSkills" | "defaultWeightExperience" | "defaultWeightEducation",
     value: number,
   ) => {
-    const newValue = value;
+    const currentWeights = form.getValues();
     const weights = {
-      defaultWeightSkills: weightSkills,
-      defaultWeightExperience: weightExperience,
-      defaultWeightEducation: weightEducation,
+      defaultWeightSkills: currentWeights.defaultWeightSkills,
+      defaultWeightExperience: currentWeights.defaultWeightExperience,
+      defaultWeightEducation: currentWeights.defaultWeightEducation,
     };
 
     const otherKeys = (Object.keys(weights) as Array<keyof typeof weights>).filter(
       (k) => k !== key,
     );
 
-    const remaining = 100 - newValue;
+    const remaining = 100 - value;
     const currentSumOther = otherKeys.reduce((acc, k) => acc + weights[k], 0);
 
     const newWeights = { ...weights };
-    newWeights[key] = newValue;
+    newWeights[key] = value;
 
     if (currentSumOther === 0) {
-      const share = remaining / otherKeys.length;
+      const share = Math.floor(remaining / otherKeys.length);
       for (const k of otherKeys) newWeights[k] = share;
+      // Fix rounding
+      const currentSum = Object.values(newWeights).reduce((a, b) => a + b, 0);
+      if (currentSum !== 100 && otherKeys[0]) newWeights[otherKeys[0]] += 100 - currentSum;
     } else {
       for (const k of otherKeys) {
         newWeights[k] = Math.round((weights[k] / currentSumOther) * remaining);
@@ -87,13 +97,40 @@ export function OnboardingClient({ initialData }: OnboardingClientProps) {
       newWeights[otherKeys[0]] += 100 - finalSum;
     }
 
-    form.setValue("defaultWeightSkills", newWeights.defaultWeightSkills, { shouldValidate: true });
-    form.setValue("defaultWeightExperience", newWeights.defaultWeightExperience, {
-      shouldValidate: true,
-    });
+    form.setValue("defaultWeightSkills", newWeights.defaultWeightSkills);
+    form.setValue("defaultWeightExperience", newWeights.defaultWeightExperience);
     form.setValue("defaultWeightEducation", newWeights.defaultWeightEducation, {
       shouldValidate: true,
     });
+  };
+
+  const PRESETS = [
+    {
+      label: "Balanced",
+      values: { s: 40, x: 30, e: 30 },
+      description: "Equal focus on skills, experience, and education.",
+    },
+    {
+      label: "Tech-Heavy",
+      values: { s: 70, x: 20, e: 10 },
+      description: "Prioritizes deep technical expertise above all else.",
+    },
+    {
+      label: "Experience-led",
+      values: { s: 20, x: 70, e: 10 },
+      description: "Focuses on candidates with a proven track record in the field.",
+    },
+    {
+      label: "Entry/Academic",
+      values: { s: 30, x: 10, e: 60 },
+      description: "Emphasizes educational background and potential for entry-level roles.",
+    },
+  ];
+
+  const applyPreset = (values: { s: number; x: number; e: number }) => {
+    form.setValue("defaultWeightSkills", values.s);
+    form.setValue("defaultWeightExperience", values.x);
+    form.setValue("defaultWeightEducation", values.e, { shouldValidate: true });
   };
 
   const onSubmit = (data: OnboardingInput) => {
@@ -161,9 +198,41 @@ export function OnboardingClient({ initialData }: OnboardingClientProps) {
               <CardTitle className="text-lg font-semibold flex items-center gap-2">
                 <Brain className="size-4" /> Default assessment weights
               </CardTitle>
-              <CardDescription>
-                Define how you typically prioritize candidate traits. These can be adjusted per job.
+              <CardDescription className="flex justify-between items-center">
+                <span>
+                  Define how you typically prioritize candidate traits. These can be adjusted per
+                  job.
+                </span>
+                <Badge
+                  variant="outline"
+                  className="bg-primary/5 text-primary border-primary/20 font-mono whitespace-nowrap ml-4"
+                >
+                  Total: {weightSkills + weightExperience + weightEducation}%
+                </Badge>
               </CardDescription>
+              <p className="text-[10px] text-muted-foreground mt-2 italic">
+                * Weights will automatically adjust to maintain a 100% total.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <TooltipProvider>
+                  {PRESETS.map((preset) => (
+                    <Tooltip key={preset.label}>
+                      <TooltipTrigger asChild>
+                        <Badge
+                          variant="secondary"
+                          className="cursor-pointer hover:bg-secondary/80 transition-colors py-1"
+                          onClick={() => applyPreset(preset.values)}
+                        >
+                          {preset.label}
+                        </Badge>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="text-xs">{preset.description}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                </TooltipProvider>
+              </div>
             </CardHeader>
             <CardContent className="space-y-8 pt-4">
               <div className="space-y-8">
@@ -184,6 +253,7 @@ export function OnboardingClient({ initialData }: OnboardingClientProps) {
                           step={1}
                         />
                       </FormControl>
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -207,6 +277,7 @@ export function OnboardingClient({ initialData }: OnboardingClientProps) {
                           step={1}
                         />
                       </FormControl>
+                      <FormMessage />
                     </FormItem>
                   )}
                 />

@@ -21,6 +21,12 @@ import {
 import { Input } from "@repo/ui/web/components/ui/input";
 import { Slider } from "@repo/ui/web/components/ui/slider";
 import { Textarea } from "@repo/ui/web/components/ui/textarea";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@repo/ui/web/components/ui/tooltip";
 import { type CreateJobInput, CreateJobSchema } from "@repo/validators/job";
 import { Brain, Loader2, Plus, Sparkles, X } from "lucide-react";
 import Link from "next/link";
@@ -87,26 +93,29 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
     key: "weightSkills" | "weightExperience" | "weightEducation",
     value: number,
   ) => {
-    const newValue = value;
+    const currentWeights = form.getValues();
     const weights = {
-      weightSkills,
-      weightExperience,
-      weightEducation,
+      weightSkills: currentWeights.weightSkills,
+      weightExperience: currentWeights.weightExperience,
+      weightEducation: currentWeights.weightEducation,
     };
 
     const otherKeys = (Object.keys(weights) as Array<keyof typeof weights>).filter(
       (k) => k !== key,
     );
 
-    const remaining = 100 - newValue;
+    const remaining = 100 - value;
     const currentSumOther = otherKeys.reduce((acc, k) => acc + weights[k], 0);
 
     const newWeights = { ...weights };
-    newWeights[key] = newValue;
+    newWeights[key] = value;
 
     if (currentSumOther === 0) {
-      const share = remaining / otherKeys.length;
+      const share = Math.floor(remaining / otherKeys.length);
       for (const k of otherKeys) newWeights[k] = share;
+      // Fix rounding
+      const currentSum = Object.values(newWeights).reduce((a, b) => a + b, 0);
+      if (currentSum !== 100 && otherKeys[0]) newWeights[otherKeys[0]] += 100 - currentSum;
     } else {
       for (const k of otherKeys) {
         newWeights[k] = Math.round((weights[k] / currentSumOther) * remaining);
@@ -118,9 +127,38 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
       newWeights[otherKeys[0]] += 100 - finalSum;
     }
 
-    form.setValue("weightSkills", newWeights.weightSkills, { shouldValidate: true });
-    form.setValue("weightExperience", newWeights.weightExperience, { shouldValidate: true });
+    form.setValue("weightSkills", newWeights.weightSkills);
+    form.setValue("weightExperience", newWeights.weightExperience);
     form.setValue("weightEducation", newWeights.weightEducation, { shouldValidate: true });
+  };
+
+  const PRESETS = [
+    {
+      label: "Balanced",
+      values: { s: 40, x: 30, e: 30 },
+      description: "Equal focus on skills, experience, and education.",
+    },
+    {
+      label: "Tech-Heavy",
+      values: { s: 70, x: 20, e: 10 },
+      description: "Prioritizes deep technical expertise above all else.",
+    },
+    {
+      label: "Experience-led",
+      values: { s: 20, x: 70, e: 10 },
+      description: "Focuses on candidates with a proven track record in the field.",
+    },
+    {
+      label: "Entry/Academic",
+      values: { s: 30, x: 10, e: 60 },
+      description: "Emphasizes educational background and potential for entry-level roles.",
+    },
+  ];
+
+  const applyPreset = (values: { s: number; x: number; e: number }) => {
+    form.setValue("weightSkills", values.s);
+    form.setValue("weightExperience", values.x);
+    form.setValue("weightEducation", values.e, { shouldValidate: true });
   };
 
   const onSubmit = async (data: CreateJobInput) => {
@@ -299,9 +337,38 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
               <CardTitle className="text-lg font-semibold flex items-center gap-2">
                 <Brain className="size-4" /> Assessment weights
               </CardTitle>
-              <CardDescription>
-                Define how the screening process should prioritize candidate traits.
+              <CardDescription className="flex justify-between items-center">
+                <span>Define how the screening process should prioritize candidate traits.</span>
+                <Badge
+                  variant="outline"
+                  className="bg-primary/5 text-primary border-primary/20 font-mono"
+                >
+                  Total: {weightSkills + weightExperience + weightEducation}%
+                </Badge>
               </CardDescription>
+              <p className="text-[10px] text-muted-foreground mt-2 italic">
+                * Weights will automatically adjust to maintain a 100% total.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <TooltipProvider>
+                  {PRESETS.map((preset) => (
+                    <Tooltip key={preset.label}>
+                      <TooltipTrigger asChild>
+                        <Badge
+                          variant="secondary"
+                          className="cursor-pointer hover:bg-secondary/80 transition-colors py-1"
+                          onClick={() => applyPreset(preset.values)}
+                        >
+                          {preset.label}
+                        </Badge>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="text-xs">{preset.description}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                </TooltipProvider>
+              </div>
             </CardHeader>
             <CardContent className="space-y-8 pt-4">
               <div className="space-y-8">
@@ -322,6 +389,7 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
                           step={1}
                         />
                       </FormControl>
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -343,6 +411,7 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
                           step={1}
                         />
                       </FormControl>
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
