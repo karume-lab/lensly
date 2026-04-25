@@ -1,0 +1,1652 @@
+[
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "UPDATED_JOB",
+    "entityId": "4023c09fac22b8ed50d4aa4a",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T22:22:54.204Z",
+    "updatedAt": "2026-04-25T05:02:43.362Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "UPDATED_JOB",
+    "entityId": "22c702f0b93d66148901686c",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T05:29:11.223Z",
+    "updatedAt": "2026-04-25T05:02:43.362Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "bfea5bca2004d2e3b6480505",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T06:51:02.593Z",
+    "updatedAt": "2026-04-25T05:02:43.362Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "HIRED_APPLICANT",
+    "entityId": "d0616b0fb6b8de2d7d18d945",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T07:42:20.182Z",
+    "updatedAt": "2026-04-25T05:02:43.362Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "HIRED_APPLICANT",
+    "entityId": "8f581c0360671d07a03126a8",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T15:19:02.081Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "HIRED_APPLICANT",
+    "entityId": "8e1d0d9a282db18de99595a7",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T20:45:25.653Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "75aff30a1f3c556600257352",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T19:07:27.655Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "UPDATED_JOB",
+    "entityId": "3aa06bf3b75eaf218a193c84",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T11:42:01.107Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "UPDATED_JOB",
+    "entityId": "ab744a661453cf6b78b962d1",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T04:25:41.742Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "UPDATED_JOB",
+    "entityId": "7429a694dfa31a9267942464",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T20:18:08.728Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "HIRED_APPLICANT",
+    "entityId": "e6d181e8c5776327ff791b75",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T21:07:16.742Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "UPDATED_JOB",
+    "entityId": "c2be49ca68b9443964f79ebc",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T18:12:04.254Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "HIRED_APPLICANT",
+    "entityId": "b363499ffdf80ed9122b7a7f",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T22:22:45.955Z",
+    "updatedAt": "2026-04-25T05:02:43.363Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "b0004e4fe44d0d865fde5f3a",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T07:36:12.595Z",
+    "updatedAt": "2026-04-25T05:02:43.364Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "HIRED_APPLICANT",
+    "entityId": "49fa7036bfce96f2af2cfafe",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T14:06:42.974Z",
+    "updatedAt": "2026-04-25T05:02:43.364Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "4e6d105bac072b6ef7901abc",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T16:54:57.209Z",
+    "updatedAt": "2026-04-25T05:02:43.364Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "b4fc453ea5a205c8972f179c",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T06:23:13.197Z",
+    "updatedAt": "2026-04-25T05:02:43.364Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "CREATED_JOB",
+    "entityId": "623c536b9fb0925d364b604f",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T19:35:36.992Z",
+    "updatedAt": "2026-04-25T05:02:43.364Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "59e90ac639dae515e7f9917a",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T06:24:56.518Z",
+    "updatedAt": "2026-04-25T05:02:43.364Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "c8a8a282805dbbd8f4d48bcf",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T01:31:56.471Z",
+    "updatedAt": "2026-04-25T05:02:43.364Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "CREATED_JOB",
+    "entityId": "4e0f02bc5281f8c45ecb1330",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T19:27:56.957Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "HIRED_APPLICANT",
+    "entityId": "c84264767ddcecba75cfd130",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T21:04:46.203Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "HIRED_APPLICANT",
+    "entityId": "d2c9d8102da31375a808da28",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T20:20:21.520Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "c4f66d9dba0e2a8cebfe627f",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T18:50:17.833Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "UPDATED_JOB",
+    "entityId": "bf71ea4ea8cdf00e0b6f84bd",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T13:37:49.328Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "HIRED_APPLICANT",
+    "entityId": "201cdfdd414d75ae4c4470da",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T12:24:35.476Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "CREATED_JOB",
+    "entityId": "772baa040e3c7b2b4d2d9c94",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T10:34:10.149Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "13fae4dbacd61c8190c0dae9",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T08:35:46.803Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "CREATED_JOB",
+    "entityId": "d2aed322613ed2d3b6d2e9ff",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T16:55:17.356Z",
+    "updatedAt": "2026-04-25T05:02:43.365Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "HIRED_APPLICANT",
+    "entityId": "fb438c3f966b45f183c26064",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-25T03:00:42.502Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "UPDATED_JOB",
+    "entityId": "8da43b7b390b004ab7637f65",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T18:37:35.266Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "668c11aa04c936d00ccfed06",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-17T23:49:34.599Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "bb21ed45d62ce933244a4a19",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-17T20:12:23.892Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "da427cc3f344088220a4124e",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T06:27:10.207Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "CREATED_JOB",
+    "entityId": "0a9acfc077907e1a5a68283e",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T23:12:45.422Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "ec237df1d57c492d688ecafa",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T12:17:46.856Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "133840ce03d4b5acee1a739c",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T22:02:44.406Z",
+    "updatedAt": "2026-04-25T05:02:43.366Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "94b8ad13a066bb2938bbdab7",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T03:44:28.798Z",
+    "updatedAt": "2026-04-25T05:02:43.367Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "1e1cfb1d5f081a988ed5cd56",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T13:29:14.575Z",
+    "updatedAt": "2026-04-25T05:02:43.367Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "3bb4963de4b479b624a82ca9",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T05:04:30.267Z",
+    "updatedAt": "2026-04-25T05:02:43.367Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "HIRED_APPLICANT",
+    "entityId": "f5c0cdad549563cad332b06d",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T14:10:53.803Z",
+    "updatedAt": "2026-04-25T05:02:43.367Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "0e07bb5b71edee6c1a194c91",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-13T21:12:51.578Z",
+    "updatedAt": "2026-04-25T05:02:43.367Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "112844d5d781eabc8f7980ef",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T06:05:28.471Z",
+    "updatedAt": "2026-04-25T05:02:43.367Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "41400dc648a41262c4dc6de0",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T20:56:24.656Z",
+    "updatedAt": "2026-04-25T05:02:43.367Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "5dc1a05dc81653d27ba0ed98",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T22:16:12.975Z",
+    "updatedAt": "2026-04-25T05:02:43.368Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "544caff52b3e3eb838fd16b6",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T00:10:53.114Z",
+    "updatedAt": "2026-04-25T05:02:43.368Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "e56ce2075b3b4918704d75b7",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T03:47:53.847Z",
+    "updatedAt": "2026-04-25T05:02:43.368Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "bd46223d43074cf82e8fda93",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T18:00:43.021Z",
+    "updatedAt": "2026-04-25T05:02:43.368Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "HIRED_APPLICANT",
+    "entityId": "e59b577c414fdbd2d5aeb7c8",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T03:40:08.045Z",
+    "updatedAt": "2026-04-25T05:02:43.368Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "CREATED_JOB",
+    "entityId": "82199d1d24a21b8f5f015dda",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T09:45:40.328Z",
+    "updatedAt": "2026-04-25T05:02:43.368Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "f1b3a5e7145432fc0d59d5a4",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T04:22:34.066Z",
+    "updatedAt": "2026-04-25T05:02:43.368Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "CREATED_JOB",
+    "entityId": "02e5ff47b48cc50b1e1bc3c9",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T05:50:02.283Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "e10faecad757af2f83bb95f9",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T02:18:09.416Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "f43ed93cecc5c7fb384831fe",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T03:46:47.870Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "HIRED_APPLICANT",
+    "entityId": "ecf41ba261fa4e9ddecbead9",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T20:27:54.220Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "HIRED_APPLICANT",
+    "entityId": "f37772a31534865076d59dac",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T17:15:32.269Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "CREATED_JOB",
+    "entityId": "94f4b02a811a452c77daf75c",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-13T22:36:48.132Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "HIRED_APPLICANT",
+    "entityId": "5ed4adf2a88b0c7f0e6cf7eb",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T18:51:12.379Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "72272510d6f26ff6125ca28e",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T01:17:55.842Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "HIRED_APPLICANT",
+    "entityId": "6391774706477ea48f4e0515",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T18:03:10.776Z",
+    "updatedAt": "2026-04-25T05:02:43.369Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "HIRED_APPLICANT",
+    "entityId": "70fa1ebe4d7aebf11c2037ec",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T05:28:43.138Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "2327b390a95d57e5c56960e2",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-13T17:34:11.465Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "a534af6dde454e3e21c107c6",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-25T03:19:03.322Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "1aa5042b446be33b0b547071",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T18:07:47.457Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "CREATED_JOB",
+    "entityId": "c745fe2caa25f65bfecd4238",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T20:01:26.966Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "CREATED_JOB",
+    "entityId": "4c971ff204682f0853b91f61",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-17T16:21:35.348Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "HIRED_APPLICANT",
+    "entityId": "d9bfb1998604686e8282eec6",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T19:26:04.090Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "60787b82a2cc68b7164dd0ce",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T05:04:13.531Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "6de4ce003db15c58d1ecbd7c",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T07:42:22.535Z",
+    "updatedAt": "2026-04-25T05:02:43.370Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "CREATED_JOB",
+    "entityId": "32067829da400b434647782f",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T08:47:34.722Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "HIRED_APPLICANT",
+    "entityId": "c2cd50e7ec0f112b3bae0a40",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T07:46:05.941Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "26bf6135067bbd83016832ea",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T01:57:24.527Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "CREATED_JOB",
+    "entityId": "5ae84b4fa89fc93180107a4c",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T12:47:56.816Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "HIRED_APPLICANT",
+    "entityId": "e42bf0089b1c976aa2ce92a8",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T12:03:36.366Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "38a1b77045ee33ed14308a9d",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T06:00:06.070Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "CREATED_JOB",
+    "entityId": "67b42a526a32a0e37f5d2f54",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T23:20:37.083Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "1b1a6ca2b032a5c26f35aa19",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T07:16:21.486Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "efdbb9896816c9bc2b5dc5dc",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-13T17:48:20.351Z",
+    "updatedAt": "2026-04-25T05:02:43.371Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "cbbb0c5132be3805006efbf4",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T18:52:23.292Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "HIRED_APPLICANT",
+    "entityId": "3472e9ef17ddd6626f57e797",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T01:27:18.774Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "HIRED_APPLICANT",
+    "entityId": "906e929216c17b698b5d9611",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T05:37:34.496Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "UPDATED_JOB",
+    "entityId": "e2b8e5de573b5b259264f628",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T13:40:09.296Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "af9bdedb3d15e55b64d4e4db",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T17:36:04.550Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "UPDATED_JOB",
+    "entityId": "08879b7222242efb6eea38d9",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T22:18:07.695Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "d6f53884f1b2ba195145f52b",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T06:50:51.233Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "UPDATED_JOB",
+    "entityId": "d0b8a4ae08f31029ab881a04",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T04:21:00.427Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "f5c6c6899d34a85da7959234",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T14:02:04.297Z",
+    "updatedAt": "2026-04-25T05:02:43.372Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "d7caacc1615e40f1d6ec54db",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T05:29:31.553Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "7cff7a94190a8374f308f1f4",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T10:33:28.283Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "7c350bef161efd3110301177",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T20:51:36.691Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "UPDATED_JOB",
+    "entityId": "70eff0db6d620ad38df0dedc",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T09:54:58.253Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "HIRED_APPLICANT",
+    "entityId": "ea739c24235c1839e99cc65a",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T21:43:55.788Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "HIRED_APPLICANT",
+    "entityId": "0d4d163298180fcdc78f2a7e",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-14T20:11:15.339Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "292db762487153ef46e2f99f",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T01:24:03.113Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "CREATED_JOB",
+    "entityId": "25da94ee780c42a9319bf791",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T20:32:10.765Z",
+    "updatedAt": "2026-04-25T05:02:43.373Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "UPDATED_JOB",
+    "entityId": "1a9b050fbacacdfba1a8c142",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T06:37:39.915Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "UPDATED_JOB",
+    "entityId": "dbbd4a11f37497ed6dbd30be",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T10:37:53.269Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "HIRED_APPLICANT",
+    "entityId": "f82e2b3301dc5059de78db5e",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T19:25:48.565Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "HIRED_APPLICANT",
+    "entityId": "d7439fdc4f96a907142beaee",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-17T15:25:10.405Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "103d29be25cd1abc0697f955",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T01:48:07.146Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "f85af88ae356f7c9b13343cb",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T16:23:53.861Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "96e52685a549a36197cba5ad",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T07:54:33.034Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "CREATED_JOB",
+    "entityId": "2576e32b727437d6b1a6e3eb",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-17T00:19:26.280Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "190e20c7ae48c10e1335f4df",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T18:20:03.265Z",
+    "updatedAt": "2026-04-25T05:02:43.374Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "HIRED_APPLICANT",
+    "entityId": "c6b02780047a79c5382cb5b6",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T07:55:57.892Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "CREATED_JOB",
+    "entityId": "d356e3076f77b98d50f04674",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T07:18:34.849Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "CREATED_JOB",
+    "entityId": "e434887ce258ce10ecba8213",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T20:31:33.283Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "6b315c2e46b718e075261905",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T02:01:28.326Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "UPDATED_JOB",
+    "entityId": "81833e0719ebeda03764d889",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T00:31:52.927Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "CREATED_JOB",
+    "entityId": "703c1eb91f0e4a90384dd83e",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T15:49:51.452Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "HIRED_APPLICANT",
+    "entityId": "894754006b50b5563b770ca5",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T23:46:40.065Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "7b0e584b54aca3f04c367256",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T18:40:35.576Z",
+    "updatedAt": "2026-04-25T05:02:43.375Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "HIRED_APPLICANT",
+    "entityId": "2ce3a8925f510938d2ca6949",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T23:41:51.634Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "2cca037ec497f0273333a694",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T00:07:09.490Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "c7b3e948d0805f2b27168d53",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T03:04:17.129Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "HIRED_APPLICANT",
+    "entityId": "88ad0f1e3c7d97449005461d",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T15:16:59.229Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "HIRED_APPLICANT",
+    "entityId": "f40ac76ad52025356f43b6c0",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T12:56:36.324Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "6cfa07a4bbd50eba32a20122",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T15:44:38.814Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "HIRED_APPLICANT",
+    "entityId": "0011e4f521cdf671f4760b31",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T17:49:37.354Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "6d0c1e07a7e9218d34e0460d",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-13T22:42:32.961Z",
+    "updatedAt": "2026-04-25T05:02:43.376Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "CREATED_JOB",
+    "entityId": "9aea9630cd4259adaf8d7fb0",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T11:34:57.199Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "c6c49c9e27309cddab19855e",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T14:29:09.989Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "UPDATED_JOB",
+    "entityId": "cc92197142c1b9488e792d10",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T04:32:02.353Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "UPDATED_JOB",
+    "entityId": "4dfcd801caad75fa6c238a14",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T03:30:42.231Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "e909d938e7e81929b1af6081",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T11:44:30.853Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "CREATED_JOB",
+    "entityId": "c8925f2bdc8a27a14efcf1cf",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T06:59:01.161Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "UPDATED_JOB",
+    "entityId": "68153f0c886d0598cb89b1e7",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T01:42:06.392Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "d1290543c1435da5787e28a2",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T00:10:58.594Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "3fdb607affec0e2d558d3954",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T21:46:50.554Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "UPDATED_JOB",
+    "entityId": "d242e193b3bc6fdf9729441a",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T02:55:48.337Z",
+    "updatedAt": "2026-04-25T05:02:43.377Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "UPDATED_JOB",
+    "entityId": "d49530875c5b6036560612cf",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T15:37:07.454Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "UPDATED_JOB",
+    "entityId": "7788b4c05195104a33b01188",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T11:23:36.769Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "c27a6d64cc0523cec4ed53ff",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-17T14:50:52.241Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "06b11aab83241b9cb20a2a30",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T20:33:47.572Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "CREATED_JOB",
+    "entityId": "5e86a6026a73b8295106650c",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-24T15:43:04.684Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "092b1152b2e7547be0068620",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T02:09:39.095Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "79228558-34c9-4b54-a7ac-08f656f2a112",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "0a757df5d181469792968209",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T09:01:54.858Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "06baf2b0-5bf2-4e17-bef3-08f956c1f1ae",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "cede497249b430a3f7cd94a4",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T10:25:53.584Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "9b846017-2f47-4c95-a9ee-0cbc0c07fd42",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "b0c831c8143225b9f90a8faf",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T20:27:34.988Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "4c4a42db-4e1d-43d1-869c-7580766eb084",
+    "action": "CREATED_JOB",
+    "entityId": "a667405b4c41438ad22b8bbc",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T10:49:00.156Z",
+    "updatedAt": "2026-04-25T05:02:43.378Z"
+  },
+  {
+    "userId": "c45e2102-f6c0-4cd0-973d-b1d47f7b572b",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "f7d0194949aa4b02ff1cec85",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-20T01:25:34.756Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "84f2d7d6-dbce-4c74-b6c5-69ebe0c879dc",
+    "action": "UPDATED_JOB",
+    "entityId": "6a79a736985e336df74c5715",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action UPDATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-17T11:29:46.324Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "9a4ae8df-8180-4a5e-8720-4640d270c585",
+    "action": "HIRED_APPLICANT",
+    "entityId": "16df233e8fccaa30d0052919",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-22T12:44:11.932Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "953f96c2-36ad-4dd7-aff0-c4d36edc9cfb",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "e24e95a9e5fac2311f388f8e",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T22:27:04.168Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "950a5401-0d92-4843-8420-cb08af994dbf",
+    "action": "REJECTED_APPLICANT",
+    "entityId": "e11b1e3e4cc2cdc63cd2565f",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action REJECTED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-18T18:16:21.509Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "d47b6348-59d7-4e59-91f7-38d409279646",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "e64968426672ea994dba2061",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-23T21:19:45.818Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "1bee9529-03db-4f2f-a89e-94021b9fcee0",
+    "action": "CREATED_JOB",
+    "entityId": "4712360ff8d0564bd4d55a64",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-19T13:44:13.749Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "1b658331-8024-4b80-a7eb-ec3249d6afb0",
+    "action": "SCREENED_APPLICANT",
+    "entityId": "48f53755b5da0cf72c388be7",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action SCREENED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-21T06:38:42.545Z",
+    "updatedAt": "2026-04-25T05:02:43.379Z"
+  },
+  {
+    "userId": "7031324e-2fb1-4460-b97f-846c8567799f",
+    "action": "HIRED_APPLICANT",
+    "entityId": "1af6236fe2040413666fbad3",
+    "entityType": "Applicant",
+    "metadata": {
+      "info": "Action HIRED_APPLICANT performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-15T18:23:59.804Z",
+    "updatedAt": "2026-04-25T05:02:43.380Z"
+  },
+  {
+    "userId": "586ca9ed-39d5-4f9c-a581-a456e4cc3793",
+    "action": "CREATED_JOB",
+    "entityId": "2c1eebb065f17c89ee4b66b1",
+    "entityType": "Job",
+    "metadata": {
+      "info": "Action CREATED_JOB performed on 4/25/2026"
+    },
+    "createdAt": "2026-04-16T22:09:14.762Z",
+    "updatedAt": "2026-04-25T05:02:43.380Z"
+  }
+]

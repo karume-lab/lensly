@@ -1,0 +1,4652 @@
+[
+  {
+    "_id": "2c0b9818b0b3953700c7db01",
+    "jobId": "5e37ad6b9247e7e4192847c7",
+    "name": "Jennifer Rodriguez",
+    "email": "jennifer.rodriguez1@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/2c0b9818b0b3953700c7db01.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-10T08:26:57.130Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "d5c7e37f7fd26ee9d1cd2a4e",
+    "jobId": "f84fe0238472214e17a8dbb7",
+    "name": "John Wilson",
+    "email": "john.wilson2@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/d5c7e37f7fd26ee9d1cd2a4e.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-22T06:16:18.807Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "4d07d8e60703eab96ab7d2fc",
+    "jobId": "475c18d6608111870fcab810",
+    "name": "Barbara Miller",
+    "email": "barbara.miller3@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/4d07d8e60703eab96ab7d2fc.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Roadmapping", "Agile/Scrum", "Jira", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-24T16:42:58.582Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "551e016c0a247a96a6dcd42a",
+    "jobId": "3244096bb1dc0b6b68932dda",
+    "name": "Susan Rodriguez",
+    "email": "susan.rodriguez4@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/551e016c0a247a96a6dcd42a.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-07T23:54:50.917Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "81a5a4fb12956b383e1c9558",
+    "jobId": "b3eeaf75f4a9b87dd0795ae7",
+    "name": "Robert Gonzalez",
+    "email": "robert.gonzalez5@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/81a5a4fb12956b383e1c9558.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-13T03:44:08.320Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "2ecf650eb408c66615b73321",
+    "jobId": "27ccb5153e1e2cbe6cfc5cbc",
+    "name": "Patricia Brown",
+    "email": "patricia.brown6@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/2ecf650eb408c66615b73321.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "React", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-16T13:43:25.185Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "4d8ab74324ae3b0f8df658cf",
+    "jobId": "c7f71ac8d7a0228a584c2817",
+    "name": "Barbara Garcia",
+    "email": "barbara.garcia7@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/4d8ab74324ae3b0f8df658cf.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Agile/Scrum", "Roadmapping", "Market Analysis", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-21T09:09:50.605Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "1fded4e882da8c18f64153db",
+    "jobId": "475c18d6608111870fcab810",
+    "name": "Christopher Lopez",
+    "email": "christopher.lopez8@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/1fded4e882da8c18f64153db.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Roadmapping", "Agile/Scrum", "Jira", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-13T04:42:31.965Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "d32a0be9d8ab0573bebeba02",
+    "jobId": "e97d09986a28db9f0d5819f0",
+    "name": "James Martin",
+    "email": "james.martin9@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/d32a0be9d8ab0573bebeba02.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-17T23:58:06.109Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "afbfaf4389d6730619112989",
+    "jobId": "3244096bb1dc0b6b68932dda",
+    "name": "Jessica Johnson",
+    "email": "jessica.johnson10@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/afbfaf4389d6730619112989.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-10T22:33:42.620Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "3a7fb4143db6128e31dab6d3",
+    "jobId": "b1ffddb00acb8fe56d9ba55d",
+    "name": "William Moore",
+    "email": "william.moore11@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/3a7fb4143db6128e31dab6d3.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-12T17:42:27.491Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "969b2ea03cdcdd45cbdec3fc",
+    "jobId": "6abf5cb1db455a1754bbc6a9",
+    "name": "Susan Jones",
+    "email": "susan.jones12@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/969b2ea03cdcdd45cbdec3fc.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Design Systems", "Figma", "Adobe XD", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-16T19:23:06.674Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "7d27861a1e7fc675198a4adf",
+    "jobId": "cd8d2bb39cd4ee84f8dee456",
+    "name": "Michael Davis",
+    "email": "michael.davis13@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/7d27861a1e7fc675198a4adf.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-20T00:04:56.946Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "69f75bd5a75362bf27ff3b1c",
+    "jobId": "5e37ad6b9247e7e4192847c7",
+    "name": "Jennifer Miller",
+    "email": "jennifer.miller14@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/69f75bd5a75362bf27ff3b1c.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-19T05:48:10.800Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "334dfe24794317a0085ce049",
+    "jobId": "7f42a419964c8f2ce65ddebc",
+    "name": "William Moore",
+    "email": "william.moore15@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/334dfe24794317a0085ce049.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-19T04:09:10.165Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "64f17eabaf0826b4a75000f8",
+    "jobId": "482b7e643538ce0bf459c32d",
+    "name": "Christopher Smith",
+    "email": "christopher.smith16@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/64f17eabaf0826b4a75000f8.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-13T10:35:49.923Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "fbac420d33ce8f08d9722e38",
+    "jobId": "cd8d2bb39cd4ee84f8dee456",
+    "name": "Linda Hernandez",
+    "email": "linda.hernandez17@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/fbac420d33ce8f08d9722e38.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-02T21:35:56.786Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "bfbcbce3071476492373a923",
+    "jobId": "df09c0385dbc61c614541d6e",
+    "name": "Patricia Lopez",
+    "email": "patricia.lopez18@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/bfbcbce3071476492373a923.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-17T12:43:36.124Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "fa7cc51e29a2ce9f63fe03b1",
+    "jobId": "5601fa60e4c421f9f4efb538",
+    "name": "Thomas Moore",
+    "email": "thomas.moore19@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/fa7cc51e29a2ce9f63fe03b1.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-22T02:36:36.745Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "92ae5da301953f39d4277875",
+    "jobId": "eaa1127867253d88bc053cd1",
+    "name": "Mary Wilson",
+    "email": "mary.wilson20@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/92ae5da301953f39d4277875.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["MongoDB", "Python", "JavaScript", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-23T12:04:43.168Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "6c1181e6e8a3fa9f53e0c7b1",
+    "jobId": "1a13a9149360a9c051929ef0",
+    "name": "Jessica Martinez",
+    "email": "jessica.martinez21@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/6c1181e6e8a3fa9f53e0c7b1.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Docker", "MongoDB", "GraphQL", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-19T21:07:59.093Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "82a43904dc1b28a9d102bdf2",
+    "jobId": "961a10a9add9c179c1f7ae43",
+    "name": "Michael Hernandez",
+    "email": "michael.hernandez22@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/82a43904dc1b28a9d102bdf2.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-20T04:05:54.709Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "62707a46d6ad1ec7c0338c30",
+    "jobId": "f089a428486a5f712fb113df",
+    "name": "Sarah Taylor",
+    "email": "sarah.taylor23@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/62707a46d6ad1ec7c0338c30.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Prototyping", "User Research", "Tailwind CSS", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-02T17:38:12.218Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "a4b54db8e85bda0685b212c5",
+    "jobId": "961a10a9add9c179c1f7ae43",
+    "name": "Christopher Jones",
+    "email": "christopher.jones24@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/a4b54db8e85bda0685b212c5.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-09T20:43:56.288Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "15500e1792595636dc891b85",
+    "jobId": "17d71d6cf7c5759733566515",
+    "name": "Linda Williams",
+    "email": "linda.williams25@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/15500e1792595636dc891b85.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-11T06:57:50.426Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "4224e39a34c547cc21802f94",
+    "jobId": "6d8d5b7d7a901e26c148a433",
+    "name": "Sarah Thomas",
+    "email": "sarah.thomas26@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/4224e39a34c547cc21802f94.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-19T08:32:48.073Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "7ae960174101ef5ac3aa4e54",
+    "jobId": "482b7e643538ce0bf459c32d",
+    "name": "Barbara Brown",
+    "email": "barbara.brown27@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/7ae960174101ef5ac3aa4e54.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-03T19:34:40.237Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "cae7e5d23d77a438a555337b",
+    "jobId": "f089a428486a5f712fb113df",
+    "name": "Barbara Anderson",
+    "email": "barbara.anderson28@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/cae7e5d23d77a438a555337b.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Prototyping", "User Research", "Tailwind CSS", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-04T17:14:15.516Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "8bee5358aecd9ece59533568",
+    "jobId": "90f06a71aeb4568075dfc154",
+    "name": "Robert Miller",
+    "email": "robert.miller29@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/8bee5358aecd9ece59533568.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Product Strategy", "Agile/Scrum", "Market Analysis", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-07T18:26:15.719Z",
+    "updatedAt": "2026-04-25T05:02:43.333Z"
+  },
+  {
+    "_id": "e7f3c128e9d3a902d908c24d",
+    "jobId": "8323c15419da1aeabbe97603",
+    "name": "Susan Wilson",
+    "email": "susan.wilson30@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/e7f3c128e9d3a902d908c24d.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "React", "JavaScript", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-19T07:37:22.387Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "e4f00b3414542140504e2e10",
+    "jobId": "7f42a419964c8f2ce65ddebc",
+    "name": "Joseph Taylor",
+    "email": "joseph.taylor31@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/e4f00b3414542140504e2e10.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-19T18:50:34.738Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "7f1fc13d53ddacd4dc18b632",
+    "jobId": "b1ffddb00acb8fe56d9ba55d",
+    "name": "Thomas Taylor",
+    "email": "thomas.taylor32@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/7f1fc13d53ddacd4dc18b632.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-16T17:16:23.208Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "ee0da55afdddc61be913e1d0",
+    "jobId": "a1dc0faa2dc9c619f514a4d5",
+    "name": "James Garcia",
+    "email": "james.garcia33@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/ee0da55afdddc61be913e1d0.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-04T15:38:05.945Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "8144c9e20e2be80a73a5fe9e",
+    "jobId": "7f42a419964c8f2ce65ddebc",
+    "name": "Sarah Moore",
+    "email": "sarah.moore34@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/8144c9e20e2be80a73a5fe9e.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-15T13:19:36.745Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "2ff9c0702ab8c904977a5131",
+    "jobId": "966bcbafb070759cb1913f60",
+    "name": "Robert Martin",
+    "email": "robert.martin35@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/2ff9c0702ab8c904977a5131.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-18T23:52:52.922Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "d40b76a9d900c8e31ada3f9b",
+    "jobId": "e97d09986a28db9f0d5819f0",
+    "name": "Karen Brown",
+    "email": "karen.brown36@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/d40b76a9d900c8e31ada3f9b.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-11T01:54:13.400Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "fbdd792edb656015509d166f",
+    "jobId": "732db5ae58df7afde2a12977",
+    "name": "Karen Thomas",
+    "email": "karen.thomas37@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/fbdd792edb656015509d166f.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-03T22:50:53.127Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "25f811d9ba3614461a1bc7a1",
+    "jobId": "6a479c47a27e034e35bbe9de",
+    "name": "Karen Jackson",
+    "email": "karen.jackson38@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/25f811d9ba3614461a1bc7a1.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Product Strategy", "Roadmapping", "Agile/Scrum", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-13T22:18:03.485Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "bf60cd0bc57935edf0676482",
+    "jobId": "2df203614910bc4653ea334a",
+    "name": "Jessica Davis",
+    "email": "jessica.davis39@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/bf60cd0bc57935edf0676482.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "Node.js", "React", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-17T07:43:12.333Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "a260e49d8073f4c0477d0fc3",
+    "jobId": "5601fa60e4c421f9f4efb538",
+    "name": "David Jones",
+    "email": "david.jones40@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/a260e49d8073f4c0477d0fc3.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-10T02:57:36.743Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "0d181300360ac9520805e0ff",
+    "jobId": "a3b885e3dad0acd310e45427",
+    "name": "James Miller",
+    "email": "james.miller41@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/0d181300360ac9520805e0ff.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "Rust", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-07T09:12:04.965Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "e73cd4649193bf86d7718a5c",
+    "jobId": "732db5ae58df7afde2a12977",
+    "name": "Michael Jackson",
+    "email": "michael.jackson42@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/e73cd4649193bf86d7718a5c.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-20T04:46:25.704Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "91580acd4dd80edd2c2d3ff7",
+    "jobId": "6e3171c69d8a95a520f8139c",
+    "name": "Patricia Thomas",
+    "email": "patricia.thomas43@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/91580acd4dd80edd2c2d3ff7.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "GraphQL", "Next.js", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-16T13:38:23.289Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "29f86a179706ac950261fa67",
+    "jobId": "5e37ad6b9247e7e4192847c7",
+    "name": "David Brown",
+    "email": "david.brown44@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/29f86a179706ac950261fa67.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-10T11:59:42.143Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "c073960b7065e9178582fc80",
+    "jobId": "14f8a760ec9a805ba80dba29",
+    "name": "Jessica Williams",
+    "email": "jessica.williams45@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/c073960b7065e9178582fc80.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "GraphQL", "Rust", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-20T10:59:00.089Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "8f8d03b3c4921d70a7775f32",
+    "jobId": "4eedf6509fb0bc698b0c2e1a",
+    "name": "Elizabeth Wilson",
+    "email": "elizabeth.wilson46@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/8f8d03b3c4921d70a7775f32.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "PostgreSQL", "Docker", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-10T22:52:29.983Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "0bcd4c5f97be2947b55bdbed",
+    "jobId": "5e37ad6b9247e7e4192847c7",
+    "name": "Robert Gonzalez",
+    "email": "robert.gonzalez47@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/0bcd4c5f97be2947b55bdbed.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-12T11:35:42.213Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "6bba23a7e3e047b08b1fa1e6",
+    "jobId": "961a10a9add9c179c1f7ae43",
+    "name": "Linda Davis",
+    "email": "linda.davis48@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/6bba23a7e3e047b08b1fa1e6.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-02T08:05:23.775Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "e0778211cfbced2906a5110b",
+    "jobId": "a1dc0faa2dc9c619f514a4d5",
+    "name": "Sarah Miller",
+    "email": "sarah.miller49@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/e0778211cfbced2906a5110b.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-23T20:01:07.341Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "a36fb9b2ae040c3fe821a41b",
+    "jobId": "42fc3ff4de4ddf126280d009",
+    "name": "Linda Wilson",
+    "email": "linda.wilson50@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/a36fb9b2ae040c3fe821a41b.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "PostgreSQL", "React", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-08T20:15:59.567Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "d4297e88e281c5bba9157556",
+    "jobId": "3f19c5556064a43bd107bcd7",
+    "name": "Patricia Hernandez",
+    "email": "patricia.hernandez51@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/d4297e88e281c5bba9157556.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Roadmapping", "Product Strategy", "Agile/Scrum", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-16T19:20:17.391Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "08cb29f5f0e45c34ceec86b9",
+    "jobId": "f84fe0238472214e17a8dbb7",
+    "name": "Karen Lopez",
+    "email": "karen.lopez52@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/08cb29f5f0e45c34ceec86b9.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-20T17:37:41.047Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "f479dec2f0df510171fee08c",
+    "jobId": "0f56a48470bad3d50d60a8bd",
+    "name": "Joseph Garcia",
+    "email": "joseph.garcia53@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/f479dec2f0df510171fee08c.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Mixpanel", "Agile/Scrum", "Roadmapping", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-14T21:07:09.472Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "c10326bc5c61483cee9119c2",
+    "jobId": "f84fe0238472214e17a8dbb7",
+    "name": "Sarah Martin",
+    "email": "sarah.martin54@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/c10326bc5c61483cee9119c2.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-09T12:17:50.408Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "64ba3cd8b470fe499e6eb998",
+    "jobId": "2d269508340cf3f625692249",
+    "name": "Richard Lopez",
+    "email": "richard.lopez55@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/64ba3cd8b470fe499e6eb998.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-23T09:02:54.744Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "b0bdd3e7bb5f62b0f38482e5",
+    "jobId": "4ba9a00ba1be7bb3a68a3094",
+    "name": "Susan Taylor",
+    "email": "susan.taylor56@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/b0bdd3e7bb5f62b0f38482e5.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Jira", "Product Strategy", "Agile/Scrum", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-13T16:13:07.485Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "4dd3d8e2e9e1c19e881a301c",
+    "jobId": "fe5228a858dffb7319f00140",
+    "name": "Thomas Lopez",
+    "email": "thomas.lopez57@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/4dd3d8e2e9e1c19e881a301c.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "React", "AWS", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-04T10:34:15.108Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "6502caf10a23cc576e84d981",
+    "jobId": "90f06a71aeb4568075dfc154",
+    "name": "Robert Smith",
+    "email": "robert.smith58@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/6502caf10a23cc576e84d981.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Product Strategy", "Agile/Scrum", "Market Analysis", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-05T19:15:48.715Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "0c05338ae6cf63c07f4c9820",
+    "jobId": "5601fa60e4c421f9f4efb538",
+    "name": "Thomas Martin",
+    "email": "thomas.martin59@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/0c05338ae6cf63c07f4c9820.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-04T15:42:37.863Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "ef694f89d3983b5d9dde7b53",
+    "jobId": "5601fa60e4c421f9f4efb538",
+    "name": "Christopher Taylor",
+    "email": "christopher.taylor60@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/ef694f89d3983b5d9dde7b53.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-04T11:08:07.340Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "2eca66e45f316b722e59a0e9",
+    "jobId": "7f42a419964c8f2ce65ddebc",
+    "name": "Sarah Hernandez",
+    "email": "sarah.hernandez61@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/2eca66e45f316b722e59a0e9.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-24T06:29:11.601Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "f746dd05e071fabab7e2c9d6",
+    "jobId": "fe5228a858dffb7319f00140",
+    "name": "Linda Martin",
+    "email": "linda.martin62@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/f746dd05e071fabab7e2c9d6.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "React", "AWS", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-02T07:05:27.624Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "3e06c909789e5b5771ec1339",
+    "jobId": "46c850a3ece517508baec5bb",
+    "name": "Elizabeth Moore",
+    "email": "elizabeth.moore63@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/3e06c909789e5b5771ec1339.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Prototyping", "Design Systems", "Adobe XD", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-23T11:07:57.109Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "0ad2a012968cad5707aa446f",
+    "jobId": "d985343779d4bf2a86ad3739",
+    "name": "John Garcia",
+    "email": "john.garcia64@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/0ad2a012968cad5707aa446f.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Design Systems", "Tailwind CSS", "Adobe XD", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-15T21:45:00.716Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "9ff6ac0e649b5e56fc87b760",
+    "jobId": "9a0c63be3847885f004f5e44",
+    "name": "Susan Miller",
+    "email": "susan.miller65@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/9ff6ac0e649b5e56fc87b760.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "PostgreSQL", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-19T19:50:22.759Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "d0b9cc17cdde4c82b877213d",
+    "jobId": "1491c818def7466754c14a0e",
+    "name": "Sarah Garcia",
+    "email": "sarah.garcia66@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/d0b9cc17cdde4c82b877213d.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "Redis", "React", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-19T13:45:10.378Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "11dd89f57a3e4a0e85b910fa",
+    "jobId": "2df203614910bc4653ea334a",
+    "name": "Barbara Smith",
+    "email": "barbara.smith67@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/11dd89f57a3e4a0e85b910fa.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "Node.js", "React", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-20T19:31:05.526Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "30e240e448563935b0f2b05d",
+    "jobId": "732db5ae58df7afde2a12977",
+    "name": "Christopher Smith",
+    "email": "christopher.smith68@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/30e240e448563935b0f2b05d.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-13T15:33:33.401Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "24608ba62ee69faff9322e7b",
+    "jobId": "e97d09986a28db9f0d5819f0",
+    "name": "David Thomas",
+    "email": "david.thomas69@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/24608ba62ee69faff9322e7b.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-06T00:11:30.646Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "bc5c3c1d72aaf5689c83fa70",
+    "jobId": "9bc5982d4433bd8cc84ba2b4",
+    "name": "Elizabeth Moore",
+    "email": "elizabeth.moore70@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/bc5c3c1d72aaf5689c83fa70.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["PostgreSQL", "Kubernetes", "JavaScript", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-20T01:06:10.029Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "4e48da360be71344afd73935",
+    "jobId": "a1dc0faa2dc9c619f514a4d5",
+    "name": "Karen Wilson",
+    "email": "karen.wilson71@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/4e48da360be71344afd73935.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-16T04:48:47.693Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "bc4f5c2334936ba3ae529989",
+    "jobId": "1a13a9149360a9c051929ef0",
+    "name": "Linda Jones",
+    "email": "linda.jones72@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/bc4f5c2334936ba3ae529989.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Docker", "MongoDB", "GraphQL", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-15T02:19:39.887Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "35fab4952404edcf3625777b",
+    "jobId": "6d8d5b7d7a901e26c148a433",
+    "name": "Karen Taylor",
+    "email": "karen.taylor73@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/35fab4952404edcf3625777b.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-05T07:37:27.996Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "ad2023517dc40398e3d4fd71",
+    "jobId": "a1dc0faa2dc9c619f514a4d5",
+    "name": "Robert Williams",
+    "email": "robert.williams74@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/ad2023517dc40398e3d4fd71.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-22T04:40:17.798Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "99bf87af9468a77a67a75f2e",
+    "jobId": "cd8d2bb39cd4ee84f8dee456",
+    "name": "Jennifer Brown",
+    "email": "jennifer.brown75@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/99bf87af9468a77a67a75f2e.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-04T20:18:04.601Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "b66c0788f657dffbda3324fd",
+    "jobId": "90f06a71aeb4568075dfc154",
+    "name": "William Miller",
+    "email": "william.miller76@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/b66c0788f657dffbda3324fd.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Product Strategy", "Agile/Scrum", "Market Analysis", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-05T16:02:27.564Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "45c3e36fc20b299aaf78f3fb",
+    "jobId": "f84fe0238472214e17a8dbb7",
+    "name": "Susan Gonzalez",
+    "email": "susan.gonzalez77@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/45c3e36fc20b299aaf78f3fb.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-05T22:43:25.164Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "12247ea6c16f4c445c91beb2",
+    "jobId": "5bd4e9650eaf450d60b87e8f",
+    "name": "Elizabeth Wilson",
+    "email": "elizabeth.wilson78@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/12247ea6c16f4c445c91beb2.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Docker", "Python", "JavaScript", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-14T00:49:43.169Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "6d63ddb1c3002a2fd30d0815",
+    "jobId": "7f5f9bfcbc6a77ed41c7597d",
+    "name": "James Lopez",
+    "email": "james.lopez79@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/6d63ddb1c3002a2fd30d0815.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "GraphQL", "PostgreSQL", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-13T04:34:41.325Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "fe3ce968c90af09d32ff506f",
+    "jobId": "fe5228a858dffb7319f00140",
+    "name": "Barbara Wilson",
+    "email": "barbara.wilson80@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/fe3ce968c90af09d32ff506f.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "React", "AWS", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-19T13:25:52.598Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "89d7ae026cd9bbf2dd3af1f2",
+    "jobId": "373bee65d5e1d1e0e300cceb",
+    "name": "Mary Martin",
+    "email": "mary.martin81@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/89d7ae026cd9bbf2dd3af1f2.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "Kubernetes", "Python", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-08T08:59:05.164Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "6b151d11c2e428fcf1204495",
+    "jobId": "cd8d2bb39cd4ee84f8dee456",
+    "name": "Christopher Williams",
+    "email": "christopher.williams82@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/6b151d11c2e428fcf1204495.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-15T23:24:09.435Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "17583d8ed566a710c4190a13",
+    "jobId": "6d8d5b7d7a901e26c148a433",
+    "name": "Mary Miller",
+    "email": "mary.miller83@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/17583d8ed566a710c4190a13.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-17T00:29:09.539Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "748be1fc130ebb765deac536",
+    "jobId": "9a0c63be3847885f004f5e44",
+    "name": "William Brown",
+    "email": "william.brown84@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/748be1fc130ebb765deac536.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "PostgreSQL", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-07T02:38:42.469Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "2b25450ef5542d499f00747e",
+    "jobId": "17d71d6cf7c5759733566515",
+    "name": "Jennifer Moore",
+    "email": "jennifer.moore85@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/2b25450ef5542d499f00747e.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-20T21:21:38.486Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "06c38a13cfe58f96a506bbe8",
+    "jobId": "966bcbafb070759cb1913f60",
+    "name": "Karen Thomas",
+    "email": "karen.thomas86@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/06c38a13cfe58f96a506bbe8.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-03T04:23:42.908Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "2d025c3227472fa51142dd68",
+    "jobId": "e97d09986a28db9f0d5819f0",
+    "name": "Thomas Hernandez",
+    "email": "thomas.hernandez87@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/2d025c3227472fa51142dd68.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-18T18:53:35.363Z",
+    "updatedAt": "2026-04-25T05:02:43.334Z"
+  },
+  {
+    "_id": "fafb62fcd68e998a9412831c",
+    "jobId": "2d269508340cf3f625692249",
+    "name": "Thomas Martin",
+    "email": "thomas.martin88@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/fafb62fcd68e998a9412831c.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-11T20:55:24.966Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "32227b666a30901dd95bb271",
+    "jobId": "eaa1127867253d88bc053cd1",
+    "name": "Patricia Brown",
+    "email": "patricia.brown89@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/32227b666a30901dd95bb271.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["MongoDB", "Python", "JavaScript", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-08T01:35:49.440Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "0ae07089a1f53f7c6b7dd323",
+    "jobId": "966bcbafb070759cb1913f60",
+    "name": "David Rodriguez",
+    "email": "david.rodriguez90@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/0ae07089a1f53f7c6b7dd323.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-10T23:22:51.027Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "8d1d26416b5ee42bdc683de0",
+    "jobId": "436c2892f5ca9384bebac054",
+    "name": "Christopher Miller",
+    "email": "christopher.miller91@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/8d1d26416b5ee42bdc683de0.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Mixpanel", "Jira", "Agile/Scrum", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-18T06:00:57.540Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "f5aed4b81183e230fe1a3119",
+    "jobId": "2f46095a27ba0d05f057a825",
+    "name": "Michael Thomas",
+    "email": "michael.thomas92@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/f5aed4b81183e230fe1a3119.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Next.js", "Node.js", "GraphQL", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-09T14:25:38.432Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "49edd61b5000a35a63dfc1d8",
+    "jobId": "1d6a853ee927f6356aa913b4",
+    "name": "David Williams",
+    "email": "david.williams93@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/49edd61b5000a35a63dfc1d8.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Market Analysis", "Roadmapping", "Product Strategy", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-21T03:47:43.915Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "d5345fcad7d3006da5bd0fcd",
+    "jobId": "961a10a9add9c179c1f7ae43",
+    "name": "Robert Jackson",
+    "email": "robert.jackson94@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/d5345fcad7d3006da5bd0fcd.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-13T21:01:22.448Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "23875280ed7175793566b2fd",
+    "jobId": "3244096bb1dc0b6b68932dda",
+    "name": "James Moore",
+    "email": "james.moore95@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/23875280ed7175793566b2fd.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-15T02:23:09.278Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "502e86496fd8f5e13a2a9d15",
+    "jobId": "b3eeaf75f4a9b87dd0795ae7",
+    "name": "Sarah Smith",
+    "email": "sarah.smith96@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/502e86496fd8f5e13a2a9d15.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-24T14:59:59.508Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "cd28a850aa77b5d3995d9afb",
+    "jobId": "5f09871c27f79e712ffbdc1a",
+    "name": "Barbara Martinez",
+    "email": "barbara.martinez97@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/cd28a850aa77b5d3995d9afb.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "MongoDB", "JavaScript", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-02T03:08:01.781Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "9bf88db2b4e72cd409ae15aa",
+    "jobId": "4eedf6509fb0bc698b0c2e1a",
+    "name": "Robert Wilson",
+    "email": "robert.wilson98@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/9bf88db2b4e72cd409ae15aa.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "PostgreSQL", "Docker", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-12T03:24:32.156Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "3fef0bed29cfc8c29c9cb447",
+    "jobId": "a3b885e3dad0acd310e45427",
+    "name": "Elizabeth Jackson",
+    "email": "elizabeth.jackson99@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/3fef0bed29cfc8c29c9cb447.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "Rust", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-03T02:22:12.974Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "efdd0c58cd962619f054d44f",
+    "jobId": "9a0c63be3847885f004f5e44",
+    "name": "Sarah Wilson",
+    "email": "sarah.wilson100@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/efdd0c58cd962619f054d44f.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "MongoDB", "PostgreSQL", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-14T15:50:46.217Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "84411e2c91b55014e667de85",
+    "jobId": "87653db1e20c9aad5385b774",
+    "name": "Linda Wilson",
+    "email": "linda.wilson101@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/84411e2c91b55014e667de85.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Adobe XD", "Figma", "Tailwind CSS", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-18T11:34:30.566Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "0fb42ad6cba63bc0a7d12aff",
+    "jobId": "7f5f9bfcbc6a77ed41c7597d",
+    "name": "James Moore",
+    "email": "james.moore102@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/0fb42ad6cba63bc0a7d12aff.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "GraphQL", "PostgreSQL", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-16T16:59:30.755Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "a6492862b56b43494ff46ba0",
+    "jobId": "5bd4e9650eaf450d60b87e8f",
+    "name": "Elizabeth Davis",
+    "email": "elizabeth.davis103@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/a6492862b56b43494ff46ba0.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Docker", "Python", "JavaScript", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-13T17:21:06.275Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "b3e70d61ef0f22aef3f308e7",
+    "jobId": "46c850a3ece517508baec5bb",
+    "name": "Susan Brown",
+    "email": "susan.brown104@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/b3e70d61ef0f22aef3f308e7.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Prototyping", "Design Systems", "Adobe XD", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-11T21:13:37.095Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "17374b69d867071ec8e8e6d5",
+    "jobId": "5e37ad6b9247e7e4192847c7",
+    "name": "Patricia Taylor",
+    "email": "patricia.taylor105@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/17374b69d867071ec8e8e6d5.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-08T12:16:36.464Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "8f1ebf34c1dacc5678127c37",
+    "jobId": "732db5ae58df7afde2a12977",
+    "name": "Michael Davis",
+    "email": "michael.davis106@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/8f1ebf34c1dacc5678127c37.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-22T12:00:50.131Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "5234e965eedc12438ed0e81e",
+    "jobId": "df09c0385dbc61c614541d6e",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson107@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/5234e965eedc12438ed0e81e.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-16T04:19:03.293Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "b670f18da54c8ecaec0db0d1",
+    "jobId": "d985343779d4bf2a86ad3739",
+    "name": "Barbara Hernandez",
+    "email": "barbara.hernandez108@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/b670f18da54c8ecaec0db0d1.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Design Systems", "Tailwind CSS", "Adobe XD", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-12T18:17:05.553Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "baf496e73eca6af4ce7fdc92",
+    "jobId": "475c18d6608111870fcab810",
+    "name": "Barbara Miller",
+    "email": "barbara.miller109@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/baf496e73eca6af4ce7fdc92.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Roadmapping", "Agile/Scrum", "Jira", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-19T16:25:24.350Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "d6b14680b816a757fe2cc3a8",
+    "jobId": "966bcbafb070759cb1913f60",
+    "name": "William Johnson",
+    "email": "william.johnson110@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/d6b14680b816a757fe2cc3a8.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-09T05:14:31.849Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "f5ba32e9482c4c5692af0365",
+    "jobId": "17313c967f57b1269b792025",
+    "name": "Joseph Taylor",
+    "email": "joseph.taylor111@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/f5ba32e9482c4c5692af0365.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["React", "Next.js", "JavaScript", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-13T23:54:44.047Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "353fd09558f5ffecba752654",
+    "jobId": "df09c0385dbc61c614541d6e",
+    "name": "Michael Davis",
+    "email": "michael.davis112@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/353fd09558f5ffecba752654.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "SkyLine AI",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-06T05:47:43.270Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "29ac8cfb01aaa3b1f7c646aa",
+    "jobId": "1491c818def7466754c14a0e",
+    "name": "Patricia Martin",
+    "email": "patricia.martin113@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/29ac8cfb01aaa3b1f7c646aa.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "Redis", "React", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-22T17:41:17.316Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "b117eecedb90c79518e22fd2",
+    "jobId": "5601fa60e4c421f9f4efb538",
+    "name": "William Lopez",
+    "email": "william.lopez114@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/b117eecedb90c79518e22fd2.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2019
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-23T21:57:32.644Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "10386d2ac112b676fbf4c76e",
+    "jobId": "a1dc0faa2dc9c619f514a4d5",
+    "name": "Joseph Miller",
+    "email": "joseph.miller115@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/10386d2ac112b676fbf4c76e.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-16T22:08:07.410Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "0f0f2dc7a91b9a843e79cf2f",
+    "jobId": "2d269508340cf3f625692249",
+    "name": "Patricia Johnson",
+    "email": "patricia.johnson116@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/0f0f2dc7a91b9a843e79cf2f.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-19T17:21:00.146Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "fde2c5bab125fe33e4d76b81",
+    "jobId": "6d8d5b7d7a901e26c148a433",
+    "name": "Susan Williams",
+    "email": "susan.williams117@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/fde2c5bab125fe33e4d76b81.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-03T02:06:51.090Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "6c5a288a4dbec17d70aa13ce",
+    "jobId": "b1ffddb00acb8fe56d9ba55d",
+    "name": "Joseph Hernandez",
+    "email": "joseph.hernandez118@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/6c5a288a4dbec17d70aa13ce.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-19T03:28:59.452Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "54ed63ad986f5e20732cdab9",
+    "jobId": "42fc3ff4de4ddf126280d009",
+    "name": "William Jones",
+    "email": "william.jones119@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/54ed63ad986f5e20732cdab9.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "PostgreSQL", "React", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-25T02:06:54.041Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "de3c22a8666e044db5113568",
+    "jobId": "373bee65d5e1d1e0e300cceb",
+    "name": "Linda Lopez",
+    "email": "linda.lopez120@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/de3c22a8666e044db5113568.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Rust", "Kubernetes", "Python", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-05T06:42:22.165Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "3ed1760c4db9fcad0419e6fc",
+    "jobId": "961a10a9add9c179c1f7ae43",
+    "name": "David Jackson",
+    "email": "david.jackson121@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/3ed1760c4db9fcad0419e6fc.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-07T21:27:40.149Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "8ec42468cfca1c90881c2b27",
+    "jobId": "3244096bb1dc0b6b68932dda",
+    "name": "Sarah Garcia",
+    "email": "sarah.garcia122@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/8ec42468cfca1c90881c2b27.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-13T21:54:15.691Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "e386df05a66c2468540307f2",
+    "jobId": "14f8a760ec9a805ba80dba29",
+    "name": "Barbara Williams",
+    "email": "barbara.williams123@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/e386df05a66c2468540307f2.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "GraphQL", "Rust", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-24T13:01:20.165Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "040d1e06f09f74d977bf5ee8",
+    "jobId": "5f09871c27f79e712ffbdc1a",
+    "name": "Mary Brown",
+    "email": "mary.brown124@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/040d1e06f09f74d977bf5ee8.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "MongoDB", "JavaScript", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-03T01:36:54.167Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "f6a142178d0d624600abe7f2",
+    "jobId": "7f42a419964c8f2ce65ddebc",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson125@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/f6a142178d0d624600abe7f2.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-18T07:23:01.044Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "370e1702995481b9b676f2b9",
+    "jobId": "44dd0ca158a9df1b78faf48f",
+    "name": "Jennifer Williams",
+    "email": "jennifer.williams126@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/370e1702995481b9b676f2b9.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Go", "JavaScript", "TypeScript", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-07T10:52:16.477Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "722716ac7d9b9c5c2dfa9536",
+    "jobId": "482b7e643538ce0bf459c32d",
+    "name": "Elizabeth Garcia",
+    "email": "elizabeth.garcia127@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/722716ac7d9b9c5c2dfa9536.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-20T07:58:30.220Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "30bdc1b4418cbad4714ac63a",
+    "jobId": "0f56a48470bad3d50d60a8bd",
+    "name": "David Gonzalez",
+    "email": "david.gonzalez128@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/30bdc1b4418cbad4714ac63a.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Mixpanel", "Agile/Scrum", "Roadmapping", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-23T14:19:33.610Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "0743404f30396ba802e56d38",
+    "jobId": "1491c818def7466754c14a0e",
+    "name": "Robert Jackson",
+    "email": "robert.jackson129@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/0743404f30396ba802e56d38.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "Redis", "React", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-16T11:03:02.817Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "636a6365f6f269d482874665",
+    "jobId": "732db5ae58df7afde2a12977",
+    "name": "Elizabeth Miller",
+    "email": "elizabeth.miller130@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/636a6365f6f269d482874665.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-23T08:20:35.857Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "a2958be1d9f6314560d1a5cd",
+    "jobId": "17d71d6cf7c5759733566515",
+    "name": "Patricia Lopez",
+    "email": "patricia.lopez131@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/a2958be1d9f6314560d1a5cd.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-07T07:58:44.826Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "3a6c87a696e08301443d1322",
+    "jobId": "436c2892f5ca9384bebac054",
+    "name": "James Gonzalez",
+    "email": "james.gonzalez132@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/3a6c87a696e08301443d1322.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Mixpanel", "Jira", "Agile/Scrum", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-11T12:51:16.058Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "b010ad551f49d89f0e055b01",
+    "jobId": "f089a428486a5f712fb113df",
+    "name": "Jennifer Smith",
+    "email": "jennifer.smith133@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/b010ad551f49d89f0e055b01.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Prototyping", "User Research", "Tailwind CSS", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-20T01:51:26.148Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "59413e2663e0d4ec4118f2e4",
+    "jobId": "5cf9d63d7053788dc6bad6d7",
+    "name": "Karen Hernandez",
+    "email": "karen.hernandez134@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/59413e2663e0d4ec4118f2e4.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["User Research", "Adobe XD", "Prototyping", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-03T21:37:07.902Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "8f9c85f9e9ab4ee2a102cd54",
+    "jobId": "b3eeaf75f4a9b87dd0795ae7",
+    "name": "Sarah Brown",
+    "email": "sarah.brown135@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/8f9c85f9e9ab4ee2a102cd54.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-20T02:00:52.415Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "f88c5af6094b142ff23ca14c",
+    "jobId": "df09c0385dbc61c614541d6e",
+    "name": "Jessica Davis",
+    "email": "jessica.davis136@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/f88c5af6094b142ff23ca14c.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-12T13:37:34.571Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "b02380edf598cd14bfb158db",
+    "jobId": "5601fa60e4c421f9f4efb538",
+    "name": "Elizabeth Williams",
+    "email": "elizabeth.williams137@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/b02380edf598cd14bfb158db.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2016
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
+      "location": "San Francisco, CA"
+    },
+    "createdAt": "2026-04-11T14:17:25.740Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "023cd5912314f9bd3bcd9af9",
+    "jobId": "7d3d9f143d4eee6c728a601e",
+    "name": "Susan Gonzalez",
+    "email": "susan.gonzalez138@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/023cd5912314f9bd3bcd9af9.pdf",
+    "status": "Interviewing",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2021
+        }
+      ],
+      "experience": [
+        {
+          "company": "QuantumSolutions",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["React", "GraphQL", "Docker", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-22T17:16:10.120Z",
+    "updatedAt": "2026-04-25T05:02:43.335Z"
+  },
+  {
+    "_id": "5bc8e273494513c0ba8b3545",
+    "jobId": "482b7e643538ce0bf459c32d",
+    "name": "Karen Anderson",
+    "email": "karen.anderson139@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/5bc8e273494513c0ba8b3545.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "TechFlow",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-16T09:09:55.252Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "1d2b28974bffe100775093f1",
+    "jobId": "9c04aadb89adfd8e74381cb3",
+    "name": "Susan Jackson",
+    "email": "susan.jackson140@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/1d2b28974bffe100775093f1.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["MongoDB", "Python", "TypeScript", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-23T15:17:53.034Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "427d74b7ab750d62852232e1",
+    "jobId": "b3eeaf75f4a9b87dd0795ae7",
+    "name": "Patricia Rodriguez",
+    "email": "patricia.rodriguez141@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/427d74b7ab750d62852232e1.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrightByte",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-11T10:23:27.741Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "787a944f9c803c11e773d580",
+    "jobId": "9bc5982d4433bd8cc84ba2b4",
+    "name": "Susan Williams",
+    "email": "susan.williams142@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/787a944f9c803c11e773d580.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["PostgreSQL", "Kubernetes", "JavaScript", "Git", "Agile"],
+      "location": "Seattle, WA"
+    },
+    "createdAt": "2026-04-10T14:12:42.288Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "4125a02e400c9a77bfcc7833",
+    "jobId": "6e3171c69d8a95a520f8139c",
+    "name": "Susan Martin",
+    "email": "susan.martin143@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/4125a02e400c9a77bfcc7833.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Oxford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Kubernetes", "GraphQL", "Next.js", "Git", "Agile"],
+      "location": "Remote"
+    },
+    "createdAt": "2026-04-05T08:35:23.866Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "8c13bb9bb36148a670bd7e63",
+    "jobId": "2d269508340cf3f625692249",
+    "name": "William Williams",
+    "email": "william.williams144@gmail.com",
+    "source": "Referral",
+    "resumeUrl": "https://storage.lensly.app/resumes/8c13bb9bb36148a670bd7e63.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
+      "location": "Berlin, Germany"
+    },
+    "createdAt": "2026-04-21T03:30:58.085Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "a848e3bf534681e6f214eb57",
+    "jobId": "1a13a9149360a9c051929ef0",
+    "name": "John Garcia",
+    "email": "john.garcia145@gmail.com",
+    "source": "Company Website",
+    "resumeUrl": "https://storage.lensly.app/resumes/a848e3bf534681e6f214eb57.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2018
+        }
+      ],
+      "experience": [
+        {
+          "company": "CloudScale",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Docker", "MongoDB", "GraphQL", "Git", "Agile"],
+      "location": "Toronto, ON"
+    },
+    "createdAt": "2026-04-07T19:37:20.264Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "8ba20115eb461df4503329ff",
+    "jobId": "5cf9d63d7053788dc6bad6d7",
+    "name": "Christopher Moore",
+    "email": "christopher.moore146@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/8ba20115eb461df4503329ff.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2022
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataViz",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["User Research", "Adobe XD", "Prototyping", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-23T00:06:03.523Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "85999d5fe59829a1987b11f1",
+    "jobId": "eaa1127867253d88bc053cd1",
+    "name": "Joseph Miller",
+    "email": "joseph.miller147@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/85999d5fe59829a1987b11f1.pdf",
+    "status": "Rejected",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "StreamLine",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["MongoDB", "Python", "JavaScript", "Git", "Agile"],
+      "location": "Austin, TX"
+    },
+    "createdAt": "2026-04-23T23:44:15.573Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "419fa743083050773c1a0cf1",
+    "jobId": "466180891690eec1fdd8dd4e",
+    "name": "Mary Smith",
+    "email": "mary.smith148@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/419fa743083050773c1a0cf1.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2017
+        }
+      ],
+      "experience": [
+        {
+          "company": "CoreLogic",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Redis", "React", "JavaScript", "Git", "Agile"],
+      "location": "London, UK"
+    },
+    "createdAt": "2026-04-24T07:16:30.928Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "d9606b87e467439e55bc207a",
+    "jobId": "17d71d6cf7c5759733566515",
+    "name": "Linda Martinez",
+    "email": "linda.martinez149@gmail.com",
+    "source": "LinkedIn",
+    "resumeUrl": "https://storage.lensly.app/resumes/d9606b87e467439e55bc207a.pdf",
+    "status": "Pending_Screening",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "MIT",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2015
+        }
+      ],
+      "experience": [
+        {
+          "company": "InnovateIQ",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-10T18:07:38.920Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  },
+  {
+    "_id": "646f1c2724f9fe5f7b2acfc7",
+    "jobId": "b1ffddb00acb8fe56d9ba55d",
+    "name": "James Moore",
+    "email": "james.moore150@gmail.com",
+    "source": "Indeed",
+    "resumeUrl": "https://storage.lensly.app/resumes/646f1c2724f9fe5f7b2acfc7.pdf",
+    "status": "Shortlisted",
+    "structuredData": {
+      "education": [
+        {
+          "institution": "Georgia Tech",
+          "degree": "BSc",
+          "field": "Computer Science",
+          "year": 2020
+        }
+      ],
+      "experience": [
+        {
+          "company": "NexusSoft",
+          "role": "Software Engineer",
+          "duration": "3 years",
+          "description": "Developed and maintained various web applications using modern stacks."
+        }
+      ],
+      "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
+      "location": "New York, NY"
+    },
+    "createdAt": "2026-04-18T03:33:51.229Z",
+    "updatedAt": "2026-04-25T05:02:43.336Z"
+  }
+]

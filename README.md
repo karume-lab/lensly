@@ -85,9 +85,11 @@ However, you still need to generate the auth schema for Better Auth and seed you
 # Generate auth-related types and initial setup for Better Auth
 bun db:generate-auth
 
-# Seed the database with initial mock users and data
+# Seed the database with 50+ realistic users, jobs, and applicants
 bun db:seed
 ```
+
+The seed data is located in `packages/db/src/seed-data/` and is populated via the [main seeder](packages/db/src/seed.ts).
 
 ## Managing Database Changes (MongoDB / Mongoose)
 
