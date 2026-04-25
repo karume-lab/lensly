@@ -5,6 +5,7 @@ import { z } from "zod";
 const AIStructuredDataSchema = z.object({
   firstName: z.string().optional(),
   lastName: z.string().optional(),
+  email: z.email().optional(),
   headline: z.string().optional(),
   bio: z.string().optional(),
   education: z
@@ -126,8 +127,8 @@ export class AIService {
 
   async parseResume(text: string): Promise<AIStructuredData> {
     const prompt = PromptTemplate.fromTemplate(`
-      Extract structured information from the following resume text. 
-      Include candidate names, headline, bio, education history, work experience, skills (with level and years of experience), languages, certifications, and location.
+      Extract candidate information from the following resume text. 
+      Fields: firstName, lastName, email, headline, bio, education history, work experience, skills, languages, certifications, location.
       
       Resume Text:
       {text}

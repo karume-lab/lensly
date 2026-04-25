@@ -6,11 +6,13 @@ export interface IApplicant {
   name: string;
   email?: string;
   source: string;
+  originalFilename?: string;
   resumeUrl?: string;
   rawText?: string;
   structuredData?: {
     firstName?: string;
     lastName?: string;
+    email?: string;
     headline?: string;
     bio?: string;
     education?: {
@@ -71,11 +73,13 @@ export const ApplicantSchema = new Schema<IApplicant>(
     name: { type: String, required: true },
     email: { type: String },
     source: { type: String, required: true },
+    originalFilename: { type: String },
     resumeUrl: { type: String },
     rawText: { type: String },
     structuredData: {
       firstName: String,
       lastName: String,
+      email: String,
       headline: String,
       bio: String,
       education: [

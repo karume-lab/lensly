@@ -182,20 +182,20 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
 
   const handleFileDrop = async (acceptedFiles: File[]) => {
     if (acceptedFiles.length > 0) {
-      toast.info("Uploading resumes", {
-        description: `Uploading ${acceptedFiles.length} resume(s).`,
-      });
+      toast.info(`Uploading ${acceptedFiles.length} resume(s)…`);
 
-      try {
-        for (const file of acceptedFiles) {
-          await uploadMutation.mutateAsync({
-            jobId,
-            file,
-          });
+      let successCount = 0;
+      for (const file of acceptedFiles) {
+        try {
+          const result = await uploadMutation.mutateAsync({ jobId, file });
+          if (!result.data?.isDuplicate) successCount++;
+        } catch {
+          toast.error(`Failed to upload ${file.name}`);
         }
-        toast.success("Resumes uploaded successfully");
-      } catch (_error) {
-        toast.error("Failed to upload resumes");
+      }
+
+      if (successCount > 0) {
+        toast.success(`${successCount} resume(s) uploaded successfully`);
       }
     }
   };

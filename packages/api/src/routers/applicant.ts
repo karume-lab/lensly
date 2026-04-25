@@ -196,9 +196,37 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   .post(
     "/upload",
     async ({ body: { jobId, file } }) => {
-      const fileName = `${Date.now()}-${file.name}`;
       const path = require("node:path");
       const fs = require("node:fs");
+
+      // ─── Step 1: Check for duplicate by filename BEFORE doing anything expensive ───
+      const existingByFilename = await schema.Applicant.findOne({
+        jobId,
+        originalFilename: file.name,
+      }).lean();
+
+      if (existingByFilename) {
+        console.log(`[Duplicate] Filename match: ${file.name}`);
+        return {
+          applicant: {
+            id: existingByFilename._id.toString(),
+            jobId: existingByFilename.jobId.toString(),
+            name: existingByFilename.name,
+            email: existingByFilename.email,
+            source: existingByFilename.source,
+            status: existingByFilename.status,
+            resumeUrl: existingByFilename.resumeUrl,
+            rawText: existingByFilename.rawText,
+            structuredData: existingByFilename.structuredData,
+            createdAt: existingByFilename.createdAt,
+            updatedAt: existingByFilename.updatedAt,
+          },
+          isDuplicate: true,
+        };
+      }
+
+      // ─── Step 2: Write file to disk ───────────────────────────────────────────────
+      const fileName = `${Date.now()}-${file.name}`;
       const baseDir = process.cwd().endsWith("apps/web")
         ? process.cwd()
         : path.join(process.cwd(), "apps/web");
@@ -213,6 +241,7 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
       const buffer = Buffer.from(arrayBuffer);
       await fs.promises.writeFile(filePath, buffer);
 
+      // ─── Step 3: Extract text and parse with AI ───────────────────────────────────
       let rawText = "";
       try {
         rawText = await documentService.extractText(filePath);
@@ -229,9 +258,55 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
         }
       }
 
+      // ─── Step 4: Derive name/email from AI parse, then check for duplicates ──────
+      let applicantName = file.name.replace(/\.[^/.]+$/, "");
+      let applicantEmail: string | undefined;
+
+      if (structuredData) {
+        if (structuredData.firstName || structuredData.lastName) {
+          applicantName =
+            `${structuredData.firstName || ""} ${structuredData.lastName || ""}`.trim();
+        }
+        if (structuredData.email) {
+          applicantEmail = structuredData.email;
+        }
+      }
+
+      // Check by email or name (AI-extracted)
+      let existingByMeta = null;
+      if (applicantEmail) {
+        existingByMeta = await schema.Applicant.findOne({ jobId, email: applicantEmail }).lean();
+      }
+      if (!existingByMeta) {
+        existingByMeta = await schema.Applicant.findOne({ jobId, name: applicantName }).lean();
+      }
+
+      if (existingByMeta) {
+        console.log(`[Duplicate] Meta match: ${existingByMeta.name}`);
+        return {
+          applicant: {
+            id: existingByMeta._id.toString(),
+            jobId: existingByMeta.jobId.toString(),
+            name: existingByMeta.name,
+            email: existingByMeta.email,
+            source: existingByMeta.source,
+            status: existingByMeta.status,
+            resumeUrl: existingByMeta.resumeUrl,
+            rawText: existingByMeta.rawText,
+            structuredData: existingByMeta.structuredData,
+            createdAt: existingByMeta.createdAt,
+            updatedAt: existingByMeta.updatedAt,
+          },
+          isDuplicate: true,
+        };
+      }
+
+      // ─── Step 5: Create new applicant ─────────────────────────────────────────────
       const applicant = new schema.Applicant({
         jobId,
-        name: file.name.replace(/\.[^/.]+$/, ""), // Use filename as name for now
+        name: applicantName,
+        email: applicantEmail,
+        originalFilename: file.name,
         source: "External Upload",
         resumeUrl: `/uploads/${fileName}`,
         rawText: rawText || undefined,
@@ -241,17 +316,20 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
       await applicant.save();
 
       return {
-        id: applicant._id.toString(),
-        jobId: applicant.jobId.toString(),
-        name: applicant.name,
-        email: applicant.email,
-        source: applicant.source,
-        status: applicant.status,
-        resumeUrl: applicant.resumeUrl,
-        rawText: applicant.rawText,
-        structuredData: applicant.structuredData,
-        createdAt: applicant.createdAt,
-        updatedAt: applicant.updatedAt,
+        applicant: {
+          id: applicant._id.toString(),
+          jobId: applicant.jobId.toString(),
+          name: applicant.name,
+          email: applicant.email,
+          source: applicant.source,
+          status: applicant.status,
+          resumeUrl: applicant.resumeUrl,
+          rawText: applicant.rawText,
+          structuredData: applicant.structuredData,
+          createdAt: applicant.createdAt,
+          updatedAt: applicant.updatedAt,
+        },
+        isDuplicate: false,
       };
     },
     {
@@ -259,7 +337,10 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
         jobId: t.String(),
         file: t.File(),
       }),
-      response: ApplicantSchema,
+      response: t.Object({
+        applicant: ApplicantSchema,
+        isDuplicate: t.Boolean(),
+      }),
     },
   )
   .post(
