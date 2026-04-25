@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
     "@repo/utils",
     "@repo/assets",
   ],
+  serverExternalPackages: ["pdf-parse", "pdfjs-dist", "tesseract.js", "mammoth"],
 };
 
 export default nextConfig;

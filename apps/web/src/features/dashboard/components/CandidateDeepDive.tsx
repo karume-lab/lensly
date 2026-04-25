@@ -234,7 +234,7 @@ export const CandidateDeepDive = ({
                       <p className="text-base font-medium text-emerald-600">
                         {structured?.skills
                           ?.slice(0, 3)
-                          .map((s) => s.name)
+                          .map((s: { name: string }) => s.name)
                           .join(" • ") || "N/A"}
                       </p>
                     </div>
@@ -253,7 +253,7 @@ export const CandidateDeepDive = ({
                       Technical skillset
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {structured?.skills?.map((skill) => (
+                      {structured?.skills?.map((skill: { name: string; level: string }) => (
                         <Badge
                           key={`skill-${skill.name}`}
                           variant="outline"
@@ -270,21 +270,26 @@ export const CandidateDeepDive = ({
                       Work experience
                     </h3>
                     <div className="space-y-8">
-                      {structured?.experience?.map((exp, i) => (
-                        <div key={`${exp.company}-${exp.role}-${i}`} className="relative pl-6">
-                          <div className="absolute left-0 top-1.5 size-2 bg-border" />
-                          <div className="absolute left-[3.5px] top-4 h-[calc(100%-8px)] w-px bg-border/50" />
+                      {structured?.experience?.map(
+                        (
+                          exp: { company?: string; role?: string; duration?: string },
+                          i: number,
+                        ) => (
+                          <div key={`${exp.company}-${exp.role}-${i}`} className="relative pl-6">
+                            <div className="absolute left-0 top-1.5 size-2 bg-border" />
+                            <div className="absolute left-[3.5px] top-4 h-[calc(100%-8px)] w-px bg-border/50" />
 
-                          <div className="flex justify-between items-baseline mb-2">
-                            <h4 className="font-semibold text-foreground">
-                              {exp.role} @ {exp.company || "N/A"}
-                            </h4>
-                            <span className="text-[10px] font-medium text-muted-foreground">
-                              {exp.duration}
-                            </span>
+                            <div className="flex justify-between items-baseline mb-2">
+                              <h4 className="font-semibold text-foreground">
+                                {exp.role} @ {exp.company || "N/A"}
+                              </h4>
+                              <span className="text-[10px] font-medium text-muted-foreground">
+                                {exp.duration}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ),
+                      )}
                     </div>
                   </div>
                 </Card>

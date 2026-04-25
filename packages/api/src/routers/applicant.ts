@@ -1,4 +1,3 @@
-import { existsSync, mkdirSync } from "node:fs";
 import { aiService } from "@repo/api/lib/ai";
 import { documentService } from "@repo/api/lib/document";
 import { sendNotification } from "@repo/api/lib/notifications";
@@ -23,7 +22,7 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   .get(
     "/job/:jobId",
     async ({ params: { jobId } }) => {
-      const applicants = await schema.Applicant.find({ jobId }).sort({ createdAt: -1 });
+      const applicants = await schema.Applicant.find({ jobId }).sort({ createdAt: -1 }).lean();
       return applicants.map((a) => ({
         id: a._id.toString(),
         jobId: a.jobId.toString(),
@@ -46,10 +45,12 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   .get(
     "/job/:jobId/shortlist",
     async ({ params: { jobId } }) => {
-      const results = await schema.ScreeningResult.find({ jobId }).sort({ overallScore: -1 });
+      const results = await schema.ScreeningResult.find({ jobId })
+        .sort({ overallScore: -1 })
+        .lean();
       const populated = await Promise.all(
         results.map(async (r) => {
-          const applicant = await schema.Applicant.findById(r.applicantId);
+          const applicant = await schema.Applicant.findById(r.applicantId).lean();
           return {
             id: r._id.toString(),
             applicantId: r.applicantId.toString(),
@@ -93,7 +94,7 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   .get(
     "/:id",
     async ({ params: { id } }) => {
-      const applicant = await schema.Applicant.findById(id);
+      const applicant = await schema.Applicant.findById(id).lean();
       if (!applicant) throw new Response("Applicant not found", { status: 404 });
       return {
         id: applicant._id.toString(),
@@ -196,16 +197,25 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
     "/upload",
     async ({ body: { jobId, file } }) => {
       const fileName = `${Date.now()}-${file.name}`;
-      const uploadDir = "../../apps/web/public/uploads";
-      if (!existsSync(uploadDir)) {
-        mkdirSync(uploadDir, { recursive: true });
+      const path = require("node:path");
+      const fs = require("node:fs");
+      const baseDir = process.cwd().endsWith("apps/web")
+        ? process.cwd()
+        : path.join(process.cwd(), "apps/web");
+      const uploadDir = path.join(baseDir, "public", "uploads");
+
+      if (!fs.existsSync(uploadDir)) {
+        fs.mkdirSync(uploadDir, { recursive: true });
       }
-      const path = `${uploadDir}/${fileName}`;
-      await Bun.write(path, file);
+      const filePath = path.join(uploadDir, fileName);
+
+      const arrayBuffer = await file.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      await fs.promises.writeFile(filePath, buffer);
 
       let rawText = "";
       try {
-        rawText = await documentService.extractText(path);
+        rawText = await documentService.extractText(filePath);
       } catch (error) {
         console.error("Failed to extract text from document:", error);
       }
