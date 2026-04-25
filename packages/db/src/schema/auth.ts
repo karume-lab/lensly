@@ -74,7 +74,7 @@ export const UserSchema = new Schema<IUser>(
 export const SessionSchema = new Schema<ISession>(
   {
     _id: { type: String },
-    id: { type: String, required: true, unique: true },
+    id: { type: String, sparse: true, unique: true },
     expiresAt: { type: Date, required: true },
     token: { type: String, required: true, unique: true },
     ipAddress: { type: String },
@@ -88,7 +88,7 @@ export const SessionSchema = new Schema<ISession>(
 export const AccountSchema = new Schema<IAccount>(
   {
     _id: { type: String },
-    id: { type: String, required: true, unique: true },
+    id: { type: String, sparse: true, unique: true },
     accountId: { type: String, required: true },
     providerId: { type: String, required: true },
     userId: { type: String, required: true },
@@ -106,7 +106,7 @@ export const AccountSchema = new Schema<IAccount>(
 export const VerificationSchema = new Schema<IVerification>(
   {
     _id: { type: String },
-    id: { type: String, required: true, unique: true },
+    id: { type: String, sparse: true, unique: true },
     identifier: { type: String, required: true },
     value: { type: String, required: true },
     expiresAt: { type: Date, required: true },
