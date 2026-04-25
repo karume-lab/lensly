@@ -35,7 +35,7 @@ const NavigationPill = () => {
         className={cn(
           "border border-border",
           "bg-background",
-          "px-4 py-2 transition-all duration-300 hover:bg-muted/50",
+          "px-4 py-2 transition-all duration-300 hover:bg-muted/50 rounded-full",
         )}
       >
         <NavigationMenuList className="gap-2">
