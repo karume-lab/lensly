@@ -3,6 +3,7 @@
 import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
 import type { ColumnDef } from "@tanstack/react-table";
+import dayjs from "dayjs";
 import { Calendar, Download } from "lucide-react";
 import type { api, ExtractData } from "@/lib/api";
 
@@ -16,7 +17,7 @@ export const columns: ColumnDef<HistoryData>[] = [
       <div className="flex flex-col">
         <span className="font-medium text-sm tracking-tight">{row.original.jobTitle}</span>
         <span className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
-          <Calendar className="size-3" /> {row.original.date}
+          <Calendar className="size-3" /> {dayjs(row.original.date).format("MMM D, YYYY")}
         </span>
       </div>
     ),

@@ -29,7 +29,7 @@ import {
 import { Separator } from "@repo/ui/web/components/ui/separator";
 import { Switch } from "@repo/ui/web/components/ui/switch";
 import { UserSettingsSchema, type UserSettingsValues } from "@repo/validators";
-import { Bell, Cpu, Loader2, Save, ShieldCheck, User } from "lucide-react";
+import { Bell, Cpu, ShieldCheck, User } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -252,16 +252,13 @@ export default function SettingsClient() {
             </Card>
 
             <div className="flex justify-end">
-              <Button type="submit" disabled={isSaving} className="min-w-[160px]">
-                {isSaving ? (
-                  <>
-                    <Loader2 className="size-4 animate-spin mr-2" /> Saving...
-                  </>
-                ) : (
-                  <>
-                    <Save className="size-4 mr-2" /> Save settings
-                  </>
-                )}
+              <Button
+                type="submit"
+                disabled={isSaving}
+                className="min-w-[160px]"
+                loading={isSaving}
+              >
+                Save
               </Button>
             </div>
           </form>

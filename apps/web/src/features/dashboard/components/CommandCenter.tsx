@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/ui/web/components/ui/card";
+import { ScrollArea } from "@repo/ui/web/components/ui/scroll-area";
 import { Briefcase, Clock, Plus, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import type { api, ExtractData } from "@/lib/api";
@@ -82,67 +83,75 @@ export const CommandCenter = ({
           <JobsTable />
         </div>
 
-        <Card className="border-border shadow-sm">
-          <CardHeader className="pb-4">
-            <CardTitle className="text-base font-semibold">Recent activity</CardTitle>
-            <CardDescription className="text-xs">
-              Latest screening and pipeline updates
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {activity.length === 0 ? (
-              <div className="py-8 text-center text-xs text-muted-foreground">
-                No recent activity
-              </div>
-            ) : (
-              <div className="relative space-y-6 pl-4">
-                {/* Vertical line through all activities */}
-                <div className="absolute left-[21px] top-2 bottom-2 w-0.5 bg-border" />
-
-                {activity.map((item) => (
-                  <div key={item.id} className="relative flex gap-4">
-                    {/* Timeline dot container for perfect centering */}
-                    <div className="relative flex items-center justify-center w-3 h-5 shrink-0 z-10">
-                      <div
-                        className={`h-3 w-3 rounded-full ring-4 ring-background ${
-                          item.type === "ai"
-                            ? "bg-blue-500"
-                            : item.type === "candidate"
-                              ? "bg-emerald-500"
-                              : item.type === "user"
-                                ? "bg-amber-500"
-                                : "bg-muted"
-                        }`}
-                      />
+        <div className="lg:col-span-1 relative min-h-[500px] lg:min-h-0">
+          <div className="lg:absolute lg:inset-0">
+            <Card className="border-border shadow-sm flex flex-col h-full">
+              <CardHeader className="pb-4 shrink-0">
+                <CardTitle className="text-base font-semibold">Recent activity</CardTitle>
+                <CardDescription className="text-xs">
+                  Latest screening and pipeline updates
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex-1 min-h-0 pb-0">
+                <ScrollArea className="h-full">
+                  {activity.length === 0 ? (
+                    <div className="py-8 text-center text-xs text-muted-foreground">
+                      No recent activity
                     </div>
+                  ) : (
+                    <div className="relative space-y-6 pl-4 pr-4">
+                      {/* Vertical line through all activities */}
+                      <div className="absolute left-[21px] top-2 bottom-2 w-0.5 bg-border" />
 
-                    <div className="flex flex-col gap-1 pr-2">
-                      <div className="flex items-center justify-between gap-4">
-                        <p className="font-semibold text-sm text-foreground leading-none">
-                          {item.title}
-                        </p>
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-                        {item.subtitle}
-                      </p>
-                      <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold mt-0.5">
-                        {item.timestamp}
-                      </p>
+                      {activity.map((item) => (
+                        <div key={item.id} className="relative flex gap-4">
+                          {/* Timeline dot container for perfect centering */}
+                          <div className="relative flex items-center justify-center w-3 h-5 shrink-0 z-10">
+                            <div
+                              className={`h-3 w-3 rounded-full ring-4 ring-background ${
+                                item.type === "ai"
+                                  ? "bg-blue-500"
+                                  : item.type === "candidate"
+                                    ? "bg-emerald-500"
+                                    : item.type === "user"
+                                      ? "bg-amber-500"
+                                      : "bg-muted"
+                              }`}
+                            />
+                          </div>
+
+                          <div className="flex flex-col gap-1 pr-2">
+                            <div className="flex items-center justify-between gap-4">
+                              <p className="font-semibold text-sm text-foreground leading-none">
+                                {item.title.replace(/_/g, " ")}
+                              </p>
+                            </div>
+                            <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+                              {item.subtitle}
+                            </p>
+                            <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold mt-0.5">
+                              {item.timestamp}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  </div>
-                ))}
+                  )}
+                </ScrollArea>
+              </CardContent>
+              <div className="p-4 shrink-0">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  asChild
+                  className="w-full text-xs text-muted-foreground hover:bg-muted/50 font-medium"
+                >
+                  <Link href="/dashboard/history">View full history</Link>
+                </Button>
               </div>
-            )}
-            <Button
-              variant="ghost"
-              size="sm"
-              asChild
-              className="w-full mt-6 text-xs text-muted-foreground hover:bg-muted/50 font-medium"
-            >
-              <Link href="/dashboard/history">View full history</Link>
-            </Button>
-          </CardContent>
-        </Card>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   );

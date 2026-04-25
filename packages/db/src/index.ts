@@ -10,7 +10,6 @@ export const connectDB = async () => {
 
   try {
     await mongoose.connect(MONGODB_URI);
-    console.log("MongoDB Connected");
   } catch (error) {
     console.error("CRITICAL: MongoDB connection error:", error);
     throw error; // Re-throw to prevent exporting undefined dbInstance
