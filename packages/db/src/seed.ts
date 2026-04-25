@@ -376,9 +376,12 @@ const seed = async () => {
       const pdfPath = path.join(resumesDir, fileName);
 
       // Generate resume for Umurava talent
+      const [localPart, domain] = talent.email.split("@");
+      const uniqueEmail = `${localPart}+${job._id.toString().slice(-4)}@${domain}`;
+
       const talentApplicant = {
         name: talentName,
-        email: `${job._id.toString().slice(-4)}_${talent.email}`,
+        email: uniqueEmail,
         structuredData: rest,
       };
       await generateResumePDF(talentApplicant, pdfPath, true);
@@ -386,7 +389,7 @@ const seed = async () => {
       await schema.applicant.create({
         jobId: new mongoose.Types.ObjectId(job._id as string),
         name: talentName,
-        email: `${job._id.toString().slice(-4)}_${talent.email}`,
+        email: uniqueEmail,
         source: "Umurava Talent Pool",
         structuredData: rest,
         status: "Pending_Screening",

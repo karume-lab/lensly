@@ -18,14 +18,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Jennifer Rodriguez is a Backend Engineer based in New York, NY with 2+ years building high-performance, scalable APIs. Expert in Rust and AWS, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-10T08:26:57.130Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -49,14 +50,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "John Wilson is a performance-minded Backend Engineer from London, UK specializing in Python and JavaScript. With 3 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-22T06:16:18.807Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -80,14 +82,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "GrowthBase",
+          "role": "Product Manager",
+          "duration": "4 years",
+          "description": "Established data-driven product decision frameworks using Mixpanel and custom dashboards, improving feature adoption by 40%."
         }
       ],
       "skills": ["Roadmapping", "Agile/Scrum", "Jira", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Barbara Miller is a strategic Product Manager based in Remote with 4+ years driving product vision and roadmaps. Expert in Roadmapping and Agile/Scrum, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-24T16:42:58.582Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -111,14 +114,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PivotHQ",
+          "role": "Product Manager",
+          "duration": "5 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Susan Rodriguez is a results-driven Product Manager from San Francisco, CA specializing in agile delivery and data-driven decision-making. With 5 years of experience, they excel in Jira and Agile/Scrum to align cross-functional teams."
     },
     "createdAt": "2026-04-07T23:54:50.917Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -142,14 +146,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "6 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Robert Gonzalez is a Backend Engineer based in Austin, TX with 6+ years building high-performance, scalable APIs. Expert in GraphQL and JavaScript, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-13T03:44:08.320Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -173,14 +178,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "7 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "MongoDB", "React", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Patricia Brown is a performance-minded Backend Engineer from San Francisco, CA specializing in Go and MongoDB. With 7 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-16T13:43:25.185Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -204,14 +210,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "LaunchPad",
+          "role": "Product Manager",
+          "duration": "8 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Agile/Scrum", "Roadmapping", "Market Analysis", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Barbara Garcia is a strategic Product Manager based in Berlin, Germany with 8+ years driving product vision and roadmaps. Expert in Agile/Scrum and Roadmapping, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-21T09:09:50.605Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -235,14 +242,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "GrowthBase",
+          "role": "Product Manager",
+          "duration": "2 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Roadmapping", "Agile/Scrum", "Jira", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Christopher Lopez is a results-driven Product Manager from Remote specializing in agile delivery and data-driven decision-making. With 2 years of experience, they excel in Roadmapping and Agile/Scrum to align cross-functional teams."
     },
     "createdAt": "2026-04-13T04:42:31.965Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -266,14 +274,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "James Martin is a Backend Engineer based in San Francisco, CA with 3+ years building high-performance, scalable APIs. Expert in Go and MongoDB, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-17T23:58:06.109Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -297,14 +306,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "VelocityPM",
+          "role": "Product Manager",
+          "duration": "4 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Jessica Johnson is a results-driven Product Manager from New York, NY specializing in agile delivery and data-driven decision-making. With 4 years of experience, they excel in Jira and Agile/Scrum to align cross-functional teams."
     },
     "createdAt": "2026-04-10T22:33:42.620Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -328,14 +338,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "TechFlow",
+          "role": "Fullstack Engineer",
+          "duration": "5 years",
+          "description": "Built real-time collaboration features using WebSockets and React, increasing daily engagement by 35%."
         }
       ],
       "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "William Moore is a Fullstack Engineer based in Remote with 5+ years delivering end-to-end web solutions. Skilled across Next.js and AWS, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-12T17:42:27.491Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -359,14 +370,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DesignLab",
+          "role": "UI/UX Designer",
+          "duration": "6 years",
+          "description": "Conducted user research and usability testing sessions, translating insights into measurable UX improvements."
         }
       ],
       "skills": ["Design Systems", "Figma", "Adobe XD", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Susan Jones is a creative UI/UX Designer based in London, UK with a passion for accessible, pixel-perfect design. With 6 years in the field, they have led design systems and end-to-end product experiences using Design Systems and Figma."
     },
     "createdAt": "2026-04-16T19:23:06.674Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -390,14 +402,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "Insight Analytics",
+          "role": "Data Scientist",
+          "duration": "7 years",
+          "description": "Built and deployed machine learning models that improved customer churn prediction accuracy to 87%."
         }
       ],
       "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Michael Davis is a Data Scientist based in Remote with 7+ years applying machine learning to real-world problems. Expert in Python and TypeScript, they translate data into actionable business intelligence."
     },
     "createdAt": "2026-04-20T00:04:56.946Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -421,14 +434,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "8 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Jennifer Miller is a performance-minded Backend Engineer from Remote specializing in Rust and AWS. With 8 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-19T05:48:10.800Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -452,14 +466,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DeployHub",
+          "role": "DevOps Engineer",
+          "duration": "2 years",
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "William Moore is a DevOps Engineer based in Austin, TX with 2+ years automating infrastructure and CI/CD pipelines. Proficient in Kubernetes and AWS, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-19T04:09:10.165Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -483,14 +498,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
+          "company": "TechFlow",
+          "role": "Fullstack Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Delivered full-stack features from database schema to frontend UI for a B2B SaaS platform with 10k+ active users."
         }
       ],
       "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Christopher Smith is a versatile Fullstack Engineer from Seattle, WA with 3 years of experience building full-featured web applications. They are proficient in JavaScript and TypeScript, with a track record of owning features from design to deployment."
     },
     "createdAt": "2026-04-13T10:35:49.923Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -514,14 +530,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "MLOps Co",
+          "role": "Data Scientist",
+          "duration": "4 years",
+          "description": "Designed and maintained ETL pipelines using Python and Pandas, processing 500GB of data daily for analytics reporting."
         }
       ],
       "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Linda Hernandez is a Data Scientist based in Remote with 4+ years applying machine learning to real-world problems. Expert in Python and TypeScript, they translate data into actionable business intelligence."
     },
     "createdAt": "2026-04-02T21:35:56.786Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -545,14 +562,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "FrontPilot",
+          "role": "Frontend Engineer",
+          "duration": "5 years",
+          "description": "Implemented accessibility improvements (WCAG 2.1 AA) across the entire product surface, expanding the addressable user base."
         }
       ],
       "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Patricia Lopez is a detail-oriented Frontend Engineer from Remote passionate about UI quality and user experience. With 5 years of expertise in Python and JavaScript, they deliver pixel-perfect, accessible applications."
     },
     "createdAt": "2026-04-17T12:43:36.124Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -576,14 +594,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PivotHQ",
+          "role": "Product Manager",
+          "duration": "6 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Thomas Moore is a strategic Product Manager based in Seattle, WA with 6+ years driving product vision and roadmaps. Expert in Agile/Scrum and Product Strategy, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-22T02:36:36.745Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -607,14 +626,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "SigmaAI",
+          "role": "Data Scientist",
+          "duration": "7 years",
+          "description": "Designed and maintained ETL pipelines using Python and Pandas, processing 500GB of data daily for analytics reporting."
         }
       ],
       "skills": ["MongoDB", "Python", "JavaScript", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Mary Wilson is an analytical Data Scientist from Seattle, WA specializing in MongoDB and Python. Over 7 years, they have built predictive models and data pipelines that drive product decisions."
     },
     "createdAt": "2026-04-23T12:04:43.168Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -638,14 +658,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CloudScale",
+          "role": "DevOps Engineer",
+          "duration": "8 years",
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["Docker", "MongoDB", "GraphQL", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Jessica Martinez is a DevOps Engineer based in Austin, TX with 8+ years automating infrastructure and CI/CD pipelines. Proficient in Docker and MongoDB, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-19T21:07:59.093Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -669,14 +690,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Michael Hernandez is a performance-minded Backend Engineer from London, UK specializing in React and TypeScript. With 2 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-20T04:05:54.709Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -700,14 +722,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
+          "company": "UXForge",
+          "role": "UI/UX Designer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["Prototyping", "User Research", "Tailwind CSS", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Sarah Taylor is a Remote-based UI/UX Designer with 3+ years crafting user-centered digital experiences. Skilled in Prototyping and User Research, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-02T17:38:12.218Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -731,14 +754,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Christopher Jones is a performance-minded Backend Engineer from London, UK specializing in React and TypeScript. With 4 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-09T20:43:56.288Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -762,14 +786,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "Clarity Design",
+          "role": "UI/UX Designer",
+          "duration": "5 years",
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Linda Williams is a Remote-based UI/UX Designer with 5+ years crafting user-centered digital experiences. Skilled in Figma and Sketch, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-11T06:57:50.426Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -793,14 +818,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "TechFlow",
+          "role": "Fullstack Engineer",
+          "duration": "6 years",
+          "description": "Built real-time collaboration features using WebSockets and React, increasing daily engagement by 35%."
         }
       ],
       "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Sarah Thomas is a versatile Fullstack Engineer from Seattle, WA with 6 years of experience building full-featured web applications. They are proficient in JavaScript and MongoDB, with a track record of owning features from design to deployment."
     },
     "createdAt": "2026-04-19T08:32:48.073Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -824,14 +850,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "BrightByte",
+          "role": "Fullstack Engineer",
+          "duration": "7 years",
+          "description": "Integrated third-party payment providers and built an internal billing dashboard, processing $2M+ monthly revenue."
         }
       ],
       "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Barbara Brown is a Fullstack Engineer based in Austin, TX with 7+ years delivering end-to-end web solutions. Skilled across JavaScript and TypeScript, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-03T19:34:40.237Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -855,14 +882,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "UXForge",
+          "role": "UI/UX Designer",
+          "duration": "8 years",
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Prototyping", "User Research", "Tailwind CSS", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Barbara Anderson is a creative UI/UX Designer based in San Francisco, CA with a passion for accessible, pixel-perfect design. With 8 years in the field, they have led design systems and end-to-end product experiences using Prototyping and User Research."
     },
     "createdAt": "2026-04-04T17:14:15.516Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -886,14 +914,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PivotHQ",
+          "role": "Product Manager",
+          "duration": "2 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Product Strategy", "Agile/Scrum", "Market Analysis", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Robert Miller is a strategic Product Manager based in Berlin, Germany with 2+ years driving product vision and roadmaps. Expert in Product Strategy and Agile/Scrum, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-07T18:26:15.719Z",
     "updatedAt": "2026-04-25T05:02:43.333Z"
@@ -917,14 +946,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
+          "company": "DeployHub",
+          "role": "DevOps Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["Kubernetes", "React", "JavaScript", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Susan Wilson is a platform-focused DevOps Engineer from Toronto, ON with deep expertise in Kubernetes and React. Over 3 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-19T07:37:22.387Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -948,14 +978,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CloudScale",
+          "role": "DevOps Engineer",
+          "duration": "4 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Joseph Taylor is a DevOps Engineer based in Seattle, WA with 4+ years automating infrastructure and CI/CD pipelines. Proficient in Kubernetes and AWS, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-19T18:50:34.738Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -979,14 +1010,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "BrightByte",
+          "role": "Fullstack Engineer",
+          "duration": "5 years",
+          "description": "Built real-time collaboration features using WebSockets and React, increasing daily engagement by 35%."
         }
       ],
       "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Thomas Taylor is a versatile Fullstack Engineer from Berlin, Germany with 5 years of experience building full-featured web applications. They are proficient in Next.js and AWS, with a track record of owning features from design to deployment."
     },
     "createdAt": "2026-04-16T17:16:23.208Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1010,14 +1042,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "StreamLine",
+          "role": "Fullstack Engineer",
+          "duration": "6 years",
+          "description": "Integrated third-party payment providers and built an internal billing dashboard, processing $2M+ monthly revenue."
         }
       ],
       "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "James Garcia is a Fullstack Engineer based in London, UK with 6+ years delivering end-to-end web solutions. Skilled across JavaScript and React, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-04T15:38:05.945Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1041,14 +1074,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "SkyOps",
+          "role": "DevOps Engineer",
+          "duration": "7 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Sarah Moore is a platform-focused DevOps Engineer from Seattle, WA with deep expertise in Kubernetes and AWS. Over 7 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-15T13:19:36.745Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1072,14 +1106,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "8 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Robert Martin is a Backend Engineer based in Seattle, WA with 8+ years building high-performance, scalable APIs. Expert in JavaScript and React, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-18T23:52:52.922Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1103,14 +1138,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Karen Brown is a performance-minded Backend Engineer from Seattle, WA specializing in Go and MongoDB. With 2 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-11T01:54:13.400Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1134,14 +1170,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
+          "company": "DesignLab",
+          "role": "UI/UX Designer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Karen Thomas is a Remote-based UI/UX Designer with 3+ years crafting user-centered digital experiences. Skilled in Figma and Adobe XD, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-03T22:50:53.127Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1165,14 +1202,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "GrowthBase",
+          "role": "Product Manager",
+          "duration": "4 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Product Strategy", "Roadmapping", "Agile/Scrum", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Karen Jackson is a results-driven Product Manager from New York, NY specializing in agile delivery and data-driven decision-making. With 4 years of experience, they excel in Product Strategy and Roadmapping to align cross-functional teams."
     },
     "createdAt": "2026-04-13T22:18:03.485Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1196,14 +1234,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "5 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Rust", "Node.js", "React", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Jessica Davis is a Backend Engineer based in Berlin, Germany with 5+ years building high-performance, scalable APIs. Expert in Rust and Node.js, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-17T07:43:12.333Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1227,14 +1266,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "VelocityPM",
+          "role": "Product Manager",
+          "duration": "6 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "David Jones is a results-driven Product Manager from New York, NY specializing in agile delivery and data-driven decision-making. With 6 years of experience, they excel in Agile/Scrum and Product Strategy to align cross-functional teams."
     },
     "createdAt": "2026-04-10T02:57:36.743Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1258,14 +1298,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "7 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "React", "Rust", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "James Miller is a Backend Engineer based in Toronto, ON with 7+ years building high-performance, scalable APIs. Expert in JavaScript and React, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-07T09:12:04.965Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1289,14 +1330,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DesignLab",
+          "role": "UI/UX Designer",
+          "duration": "8 years",
+          "description": "Conducted user research and usability testing sessions, translating insights into measurable UX improvements."
         }
       ],
       "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Michael Jackson is a creative UI/UX Designer based in Austin, TX with a passion for accessible, pixel-perfect design. With 8 years in the field, they have led design systems and end-to-end product experiences using Figma and Adobe XD."
     },
     "createdAt": "2026-04-20T04:46:25.704Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1320,14 +1362,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PipelineOps",
+          "role": "DevOps Engineer",
+          "duration": "2 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["Kubernetes", "GraphQL", "Next.js", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Patricia Thomas is a DevOps Engineer based in San Francisco, CA with 2+ years automating infrastructure and CI/CD pipelines. Proficient in Kubernetes and GraphQL, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-16T13:38:23.289Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1351,14 +1394,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "David Brown is a performance-minded Backend Engineer from New York, NY specializing in Rust and AWS. With 3 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-10T11:59:42.143Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1382,14 +1426,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "GraphQL", "Rust", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Jessica Williams is a Backend Engineer based in Remote with 4+ years building high-performance, scalable APIs. Expert in Go and GraphQL, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-20T10:59:00.089Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1413,14 +1458,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CloudScale",
+          "role": "DevOps Engineer",
+          "duration": "5 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["JavaScript", "PostgreSQL", "Docker", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Elizabeth Wilson is a platform-focused DevOps Engineer from New York, NY with deep expertise in JavaScript and PostgreSQL. Over 5 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-10T22:52:29.983Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1444,14 +1490,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "6 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Robert Gonzalez is a Backend Engineer based in Austin, TX with 6+ years building high-performance, scalable APIs. Expert in Rust and AWS, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-12T11:35:42.213Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1476,13 +1523,14 @@
       "experience": [
         {
           "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "role": "Backend Engineer",
+          "duration": "7 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Linda Davis is a performance-minded Backend Engineer from Seattle, WA specializing in React and TypeScript. With 7 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-02T08:05:23.775Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1506,14 +1554,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "InnovateIQ",
+          "role": "Fullstack Engineer",
+          "duration": "8 years",
+          "description": "Delivered full-stack features from database schema to frontend UI for a B2B SaaS platform with 10k+ active users."
         }
       ],
       "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Sarah Miller is a Fullstack Engineer based in Seattle, WA with 8+ years delivering end-to-end web solutions. Skilled across JavaScript and React, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-23T20:01:07.341Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1537,14 +1586,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "PostgreSQL", "React", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Linda Wilson is a performance-minded Backend Engineer from Seattle, WA specializing in JavaScript and PostgreSQL. With 2 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-08T20:15:59.567Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1568,14 +1618,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
+          "company": "ProductHive",
+          "role": "Product Manager",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Established data-driven product decision frameworks using Mixpanel and custom dashboards, improving feature adoption by 40%."
         }
       ],
       "skills": ["Roadmapping", "Product Strategy", "Agile/Scrum", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Patricia Hernandez is a strategic Product Manager based in Toronto, ON with 3+ years driving product vision and roadmaps. Expert in Roadmapping and Product Strategy, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-16T19:20:17.391Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1599,14 +1650,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Karen Lopez is a performance-minded Backend Engineer from Remote specializing in Python and JavaScript. With 4 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-20T17:37:41.047Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1630,14 +1682,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "GrowthBase",
+          "role": "Product Manager",
+          "duration": "5 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Mixpanel", "Agile/Scrum", "Roadmapping", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Joseph Garcia is a strategic Product Manager based in Berlin, Germany with 5+ years driving product vision and roadmaps. Expert in Mixpanel and Agile/Scrum, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-14T21:07:09.472Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1661,14 +1714,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "6 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Sarah Martin is a performance-minded Backend Engineer from Toronto, ON specializing in Python and JavaScript. With 6 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-09T12:17:50.408Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1692,14 +1746,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "7 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Richard Lopez is a Backend Engineer based in Berlin, Germany with 7+ years building high-performance, scalable APIs. Expert in JavaScript and Next.js, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-23T09:02:54.744Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1723,14 +1778,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ProductHive",
+          "role": "Product Manager",
+          "duration": "8 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Jira", "Product Strategy", "Agile/Scrum", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Susan Taylor is a results-driven Product Manager from London, UK specializing in agile delivery and data-driven decision-making. With 8 years of experience, they excel in Jira and Product Strategy to align cross-functional teams."
     },
     "createdAt": "2026-04-13T16:13:07.485Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1754,14 +1810,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Rust", "React", "AWS", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Thomas Lopez is a Backend Engineer based in New York, NY with 2+ years building high-performance, scalable APIs. Expert in Rust and React, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-04T10:34:15.108Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1785,14 +1842,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
+          "company": "GrowthBase",
+          "role": "Product Manager",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Product Strategy", "Agile/Scrum", "Market Analysis", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Robert Smith is a results-driven Product Manager from New York, NY specializing in agile delivery and data-driven decision-making. With 3 years of experience, they excel in Product Strategy and Agile/Scrum to align cross-functional teams."
     },
     "createdAt": "2026-04-05T19:15:48.715Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1816,14 +1874,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PivotHQ",
+          "role": "Product Manager",
+          "duration": "4 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Thomas Martin is a strategic Product Manager based in San Francisco, CA with 4+ years driving product vision and roadmaps. Expert in Agile/Scrum and Product Strategy, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-04T15:42:37.863Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1847,14 +1906,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "VelocityPM",
+          "role": "Product Manager",
+          "duration": "5 years",
+          "description": "Established data-driven product decision frameworks using Mixpanel and custom dashboards, improving feature adoption by 40%."
         }
       ],
       "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Christopher Taylor is a results-driven Product Manager from Remote specializing in agile delivery and data-driven decision-making. With 5 years of experience, they excel in Agile/Scrum and Product Strategy to align cross-functional teams."
     },
     "createdAt": "2026-04-04T11:08:07.340Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1878,14 +1938,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CloudScale",
+          "role": "DevOps Engineer",
+          "duration": "6 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Sarah Hernandez is a DevOps Engineer based in Toronto, ON with 6+ years automating infrastructure and CI/CD pipelines. Proficient in Kubernetes and AWS, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-24T06:29:11.601Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1909,14 +1970,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "7 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Rust", "React", "AWS", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Linda Martin is a performance-minded Backend Engineer from Austin, TX specializing in Rust and React. With 7 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-02T07:05:27.624Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1940,14 +2002,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "UXForge",
+          "role": "UI/UX Designer",
+          "duration": "8 years",
+          "description": "Conducted user research and usability testing sessions, translating insights into measurable UX improvements."
         }
       ],
       "skills": ["Prototyping", "Design Systems", "Adobe XD", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Elizabeth Moore is a Toronto, ON-based UI/UX Designer with 8+ years crafting user-centered digital experiences. Skilled in Prototyping and Design Systems, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-23T11:07:57.109Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -1971,14 +2034,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CreativeOps",
+          "role": "UI/UX Designer",
+          "duration": "2 years",
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Design Systems", "Tailwind CSS", "Adobe XD", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "John Garcia is a creative UI/UX Designer based in Seattle, WA with a passion for accessible, pixel-perfect design. With 2 years in the field, they have led design systems and end-to-end product experiences using Design Systems and Tailwind CSS."
     },
     "createdAt": "2026-04-15T21:45:00.716Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2002,14 +2066,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
+          "company": "DataLink",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Go", "MongoDB", "PostgreSQL", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Susan Miller is a Backend Engineer based in Toronto, ON with 3+ years building high-performance, scalable APIs. Expert in Go and MongoDB, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-19T19:50:22.759Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2033,14 +2098,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["JavaScript", "Redis", "React", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Sarah Garcia is a performance-minded Backend Engineer from London, UK specializing in JavaScript and Redis. With 4 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-19T13:45:10.378Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2064,14 +2130,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "5 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["Rust", "Node.js", "React", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Barbara Smith is a Backend Engineer based in Remote with 5+ years building high-performance, scalable APIs. Expert in Rust and Node.js, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-20T19:31:05.526Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2095,14 +2162,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "UXForge",
+          "role": "UI/UX Designer",
+          "duration": "6 years",
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Christopher Smith is a creative UI/UX Designer based in London, UK with a passion for accessible, pixel-perfect design. With 6 years in the field, they have led design systems and end-to-end product experiences using Figma and Adobe XD."
     },
     "createdAt": "2026-04-13T15:33:33.401Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2126,14 +2194,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "7 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "David Thomas is a Backend Engineer based in London, UK with 7+ years building high-performance, scalable APIs. Expert in Go and MongoDB, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-06T00:11:30.646Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2157,14 +2226,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DeployHub",
+          "role": "DevOps Engineer",
+          "duration": "8 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["PostgreSQL", "Kubernetes", "JavaScript", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Elizabeth Moore is a platform-focused DevOps Engineer from Berlin, Germany with deep expertise in PostgreSQL and Kubernetes. Over 8 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-20T01:06:10.029Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2188,14 +2258,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "TechFlow",
+          "role": "Fullstack Engineer",
+          "duration": "2 years",
+          "description": "Built real-time collaboration features using WebSockets and React, increasing daily engagement by 35%."
         }
       ],
       "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Karen Wilson is a Fullstack Engineer based in Berlin, Germany with 2+ years delivering end-to-end web solutions. Skilled across JavaScript and React, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-16T04:48:47.693Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2219,14 +2290,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
+          "company": "InfraCore",
+          "role": "DevOps Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["Docker", "MongoDB", "GraphQL", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Linda Jones is a platform-focused DevOps Engineer from Austin, TX with deep expertise in Docker and MongoDB. Over 3 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-15T02:19:39.887Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2250,14 +2322,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "StreamLine",
+          "role": "Fullstack Engineer",
+          "duration": "4 years",
+          "description": "Delivered full-stack features from database schema to frontend UI for a B2B SaaS platform with 10k+ active users."
         }
       ],
       "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Karen Taylor is a Fullstack Engineer based in Remote with 4+ years delivering end-to-end web solutions. Skilled across JavaScript and MongoDB, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-05T07:37:27.996Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2281,14 +2354,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "InnovateIQ",
+          "role": "Fullstack Engineer",
+          "duration": "5 years",
+          "description": "Built real-time collaboration features using WebSockets and React, increasing daily engagement by 35%."
         }
       ],
       "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Robert Williams is a versatile Fullstack Engineer from Seattle, WA with 5 years of experience building full-featured web applications. They are proficient in JavaScript and React, with a track record of owning features from design to deployment."
     },
     "createdAt": "2026-04-22T04:40:17.798Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2312,14 +2386,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "SigmaAI",
+          "role": "Data Scientist",
+          "duration": "6 years",
+          "description": "Collaborated with product teams to instrument analytics funnels and surface insights that informed key product decisions."
         }
       ],
       "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Jennifer Brown is a Data Scientist based in London, UK with 6+ years applying machine learning to real-world problems. Expert in Python and TypeScript, they translate data into actionable business intelligence."
     },
     "createdAt": "2026-04-04T20:18:04.601Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2343,14 +2418,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ProductHive",
+          "role": "Product Manager",
+          "duration": "7 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Product Strategy", "Agile/Scrum", "Market Analysis", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "William Miller is a results-driven Product Manager from Seattle, WA specializing in agile delivery and data-driven decision-making. With 7 years of experience, they excel in Product Strategy and Agile/Scrum to align cross-functional teams."
     },
     "createdAt": "2026-04-05T16:02:27.564Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2374,14 +2450,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "8 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Python", "JavaScript", "Go", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Susan Gonzalez is a Backend Engineer based in San Francisco, CA with 8+ years building high-performance, scalable APIs. Expert in Python and JavaScript, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-05T22:43:25.164Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2405,14 +2482,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PipelineOps",
+          "role": "DevOps Engineer",
+          "duration": "2 years",
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["Docker", "Python", "JavaScript", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Elizabeth Wilson is a platform-focused DevOps Engineer from San Francisco, CA with deep expertise in Docker and Python. Over 2 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-14T00:49:43.169Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2436,14 +2514,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["Python", "GraphQL", "PostgreSQL", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "James Lopez is a Backend Engineer based in New York, NY with 3+ years building high-performance, scalable APIs. Expert in Python and GraphQL, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-13T04:34:41.325Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2467,14 +2546,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Rust", "React", "AWS", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Barbara Wilson is a performance-minded Backend Engineer from Austin, TX specializing in Rust and React. With 4 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-19T13:25:52.598Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2498,14 +2578,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CloudScale",
+          "role": "DevOps Engineer",
+          "duration": "5 years",
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["Rust", "Kubernetes", "Python", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Mary Martin is a DevOps Engineer based in Austin, TX with 5+ years automating infrastructure and CI/CD pipelines. Proficient in Rust and Kubernetes, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-08T08:59:05.164Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2529,14 +2610,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "MLOps Co",
+          "role": "Data Scientist",
+          "duration": "6 years",
+          "description": "Built and deployed machine learning models that improved customer churn prediction accuracy to 87%."
         }
       ],
       "skills": ["Python", "TypeScript", "AWS", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Christopher Williams is an analytical Data Scientist from Remote specializing in Python and TypeScript. Over 6 years, they have built predictive models and data pipelines that drive product decisions."
     },
     "createdAt": "2026-04-15T23:24:09.435Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2560,14 +2642,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "StreamLine",
+          "role": "Fullstack Engineer",
+          "duration": "7 years",
+          "description": "Built real-time collaboration features using WebSockets and React, increasing daily engagement by 35%."
         }
       ],
       "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Mary Miller is a Fullstack Engineer based in Berlin, Germany with 7+ years delivering end-to-end web solutions. Skilled across JavaScript and MongoDB, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-17T00:29:09.539Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2591,14 +2674,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "8 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "MongoDB", "PostgreSQL", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "William Brown is a performance-minded Backend Engineer from Seattle, WA specializing in Go and MongoDB. With 8 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-07T02:38:42.469Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2622,14 +2706,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "Clarity Design",
+          "role": "UI/UX Designer",
+          "duration": "2 years",
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Jennifer Moore is a Berlin, Germany-based UI/UX Designer with 2+ years crafting user-centered digital experiences. Skilled in Figma and Sketch, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-20T21:21:38.486Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2653,14 +2738,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Karen Thomas is a performance-minded Backend Engineer from Remote specializing in JavaScript and React. With 3 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-03T04:23:42.908Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2684,14 +2770,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "MongoDB", "TypeScript", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Thomas Hernandez is a Backend Engineer based in London, UK with 4+ years building high-performance, scalable APIs. Expert in Go and MongoDB, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-18T18:53:35.363Z",
     "updatedAt": "2026-04-25T05:02:43.334Z"
@@ -2715,14 +2802,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "NexusSoft",
+          "role": "Backend Engineer",
+          "duration": "5 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Thomas Martin is a performance-minded Backend Engineer from Berlin, Germany specializing in JavaScript and Next.js. With 5 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-11T20:55:24.966Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2746,14 +2834,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "NeuralPath",
+          "role": "Data Scientist",
+          "duration": "6 years",
+          "description": "Designed and maintained ETL pipelines using Python and Pandas, processing 500GB of data daily for analytics reporting."
         }
       ],
       "skills": ["MongoDB", "Python", "JavaScript", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Patricia Brown is a Data Scientist based in Seattle, WA with 6+ years applying machine learning to real-world problems. Expert in MongoDB and Python, they translate data into actionable business intelligence."
     },
     "createdAt": "2026-04-08T01:35:49.440Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2777,14 +2866,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "7 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "David Rodriguez is a performance-minded Backend Engineer from Berlin, Germany specializing in JavaScript and React. With 7 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-10T23:22:51.027Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2808,14 +2898,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ProductHive",
+          "role": "Product Manager",
+          "duration": "8 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Mixpanel", "Jira", "Agile/Scrum", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Christopher Miller is a strategic Product Manager based in London, UK with 8+ years driving product vision and roadmaps. Expert in Mixpanel and Jira, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-18T06:00:57.540Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2839,14 +2930,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["Next.js", "Node.js", "GraphQL", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Michael Thomas is a performance-minded Backend Engineer from Remote specializing in Next.js and Node.js. With 2 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-09T14:25:38.432Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2870,14 +2962,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
+          "company": "GrowthBase",
+          "role": "Product Manager",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Established data-driven product decision frameworks using Mixpanel and custom dashboards, improving feature adoption by 40%."
         }
       ],
       "skills": ["Market Analysis", "Roadmapping", "Product Strategy", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "David Williams is a strategic Product Manager based in Berlin, Germany with 3+ years driving product vision and roadmaps. Expert in Market Analysis and Roadmapping, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-21T03:47:43.915Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2901,14 +2994,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Robert Jackson is a performance-minded Backend Engineer from Toronto, ON specializing in React and TypeScript. With 4 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-13T21:01:22.448Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2932,14 +3026,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "VelocityPM",
+          "role": "Product Manager",
+          "duration": "5 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "James Moore is a strategic Product Manager based in Toronto, ON with 5+ years driving product vision and roadmaps. Expert in Jira and Agile/Scrum, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-15T02:23:09.278Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2963,14 +3058,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "6 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Sarah Smith is a performance-minded Backend Engineer from Toronto, ON specializing in GraphQL and JavaScript. With 6 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-24T14:59:59.508Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -2994,14 +3090,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "MLOps Co",
+          "role": "Data Scientist",
+          "duration": "7 years",
+          "description": "Built and deployed machine learning models that improved customer churn prediction accuracy to 87%."
         }
       ],
       "skills": ["Python", "MongoDB", "JavaScript", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Barbara Martinez is a Data Scientist based in New York, NY with 7+ years applying machine learning to real-world problems. Expert in Python and MongoDB, they translate data into actionable business intelligence."
     },
     "createdAt": "2026-04-02T03:08:01.781Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3025,14 +3122,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PipelineOps",
+          "role": "DevOps Engineer",
+          "duration": "8 years",
+          "description": "Managed Kubernetes clusters across 3 environments, achieving 99.98% uptime for critical production services."
         }
       ],
       "skills": ["JavaScript", "PostgreSQL", "Docker", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Robert Wilson is a platform-focused DevOps Engineer from San Francisco, CA with deep expertise in JavaScript and PostgreSQL. Over 8 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-12T03:24:32.156Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3056,14 +3154,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["JavaScript", "React", "Rust", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Elizabeth Jackson is a Backend Engineer based in Berlin, Germany with 2+ years building high-performance, scalable APIs. Expert in JavaScript and React, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-03T02:22:12.974Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3087,14 +3186,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
+          "company": "DataLink",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["Go", "MongoDB", "PostgreSQL", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Sarah Wilson is a performance-minded Backend Engineer from Toronto, ON specializing in Go and MongoDB. With 3 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-14T15:50:46.217Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3118,14 +3218,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PixelCraft Studio",
+          "role": "UI/UX Designer",
+          "duration": "4 years",
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["Adobe XD", "Figma", "Tailwind CSS", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Linda Wilson is a Remote-based UI/UX Designer with 4+ years crafting user-centered digital experiences. Skilled in Adobe XD and Figma, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-18T11:34:30.566Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3149,14 +3250,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "QuantumSolutions",
+          "role": "Backend Engineer",
+          "duration": "5 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Python", "GraphQL", "PostgreSQL", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "James Moore is a performance-minded Backend Engineer from Toronto, ON specializing in Python and GraphQL. With 5 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-16T16:59:30.755Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3180,14 +3282,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PipelineOps",
+          "role": "DevOps Engineer",
+          "duration": "6 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["Docker", "Python", "JavaScript", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Elizabeth Davis is a DevOps Engineer based in Seattle, WA with 6+ years automating infrastructure and CI/CD pipelines. Proficient in Docker and Python, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-13T17:21:06.275Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3211,14 +3314,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CreativeOps",
+          "role": "UI/UX Designer",
+          "duration": "7 years",
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["Prototyping", "Design Systems", "Adobe XD", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Susan Brown is a creative UI/UX Designer based in San Francisco, CA with a passion for accessible, pixel-perfect design. With 7 years in the field, they have led design systems and end-to-end product experiences using Prototyping and Design Systems."
     },
     "createdAt": "2026-04-11T21:13:37.095Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3242,14 +3346,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "8 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Rust", "AWS", "PostgreSQL", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Patricia Taylor is a Backend Engineer based in San Francisco, CA with 8+ years building high-performance, scalable APIs. Expert in Rust and AWS, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-08T12:16:36.464Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3273,14 +3378,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PixelCraft Studio",
+          "role": "UI/UX Designer",
+          "duration": "2 years",
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Michael Davis is a creative UI/UX Designer based in London, UK with a passion for accessible, pixel-perfect design. With 2 years in the field, they have led design systems and end-to-end product experiences using Figma and Adobe XD."
     },
     "createdAt": "2026-04-22T12:00:50.131Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3304,14 +3410,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
+          "company": "ReactForge",
+          "role": "Frontend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Developed reusable component libraries adopted by 4 development teams, reducing UI development time by 40%."
         }
       ],
       "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Sarah Johnson is a Frontend Engineer based in London, UK with 3+ years building responsive, high-quality web interfaces. Proficient in Python and JavaScript, they focus on performance and developer experience."
     },
     "createdAt": "2026-04-16T04:19:03.293Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3335,14 +3442,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "UXForge",
+          "role": "UI/UX Designer",
+          "duration": "4 years",
+          "description": "Conducted user research and usability testing sessions, translating insights into measurable UX improvements."
         }
       ],
       "skills": ["Design Systems", "Tailwind CSS", "Adobe XD", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Barbara Hernandez is a creative UI/UX Designer based in Berlin, Germany with a passion for accessible, pixel-perfect design. With 4 years in the field, they have led design systems and end-to-end product experiences using Design Systems and Tailwind CSS."
     },
     "createdAt": "2026-04-12T18:17:05.553Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3366,14 +3474,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PivotHQ",
+          "role": "Product Manager",
+          "duration": "5 years",
+          "description": "Defined and executed product roadmaps for a SaaS platform, leading cross-functional sprints and driving 2 major feature releases per quarter."
         }
       ],
       "skills": ["Roadmapping", "Agile/Scrum", "Jira", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Barbara Miller is a strategic Product Manager based in London, UK with 5+ years driving product vision and roadmaps. Expert in Roadmapping and Agile/Scrum, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-19T16:25:24.350Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3397,14 +3506,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DataLink",
+          "role": "Backend Engineer",
+          "duration": "6 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "React", "PostgreSQL", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "William Johnson is a performance-minded Backend Engineer from Remote specializing in JavaScript and React. With 6 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-09T05:14:31.849Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3428,14 +3538,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "UIBridge",
+          "role": "Frontend Engineer",
+          "duration": "7 years",
+          "description": "Implemented accessibility improvements (WCAG 2.1 AA) across the entire product surface, expanding the addressable user base."
         }
       ],
       "skills": ["React", "Next.js", "JavaScript", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Joseph Taylor is a Frontend Engineer based in New York, NY with 7+ years building responsive, high-quality web interfaces. Proficient in React and Next.js, they focus on performance and developer experience."
     },
     "createdAt": "2026-04-13T23:54:44.047Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3459,14 +3570,15 @@
       ],
       "experience": [
         {
-          "company": "SkyLine AI",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ReactForge",
+          "role": "Frontend Engineer",
+          "duration": "8 years",
+          "description": "Built performant React and Next.js applications with SSR and code-splitting, achieving Lighthouse scores above 95."
         }
       ],
       "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Michael Davis is a detail-oriented Frontend Engineer from New York, NY passionate about UI quality and user experience. With 8 years of expertise in Python and JavaScript, they deliver pixel-perfect, accessible applications."
     },
     "createdAt": "2026-04-06T05:47:43.270Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3490,14 +3602,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "NexusSoft",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "Redis", "React", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Patricia Martin is a Backend Engineer based in London, UK with 2+ years building high-performance, scalable APIs. Expert in JavaScript and Redis, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-22T17:41:17.316Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3521,14 +3634,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
+          "company": "PivotHQ",
+          "role": "Product Manager",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Established data-driven product decision frameworks using Mixpanel and custom dashboards, improving feature adoption by 40%."
         }
       ],
       "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "William Lopez is a results-driven Product Manager from London, UK specializing in agile delivery and data-driven decision-making. With 3 years of experience, they excel in Agile/Scrum and Product Strategy to align cross-functional teams."
     },
     "createdAt": "2026-04-23T21:57:32.644Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3552,14 +3666,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "SkyLine AI",
+          "role": "Fullstack Engineer",
+          "duration": "4 years",
+          "description": "Delivered full-stack features from database schema to frontend UI for a B2B SaaS platform with 10k+ active users."
         }
       ],
       "skills": ["JavaScript", "React", "MongoDB", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Joseph Miller is a Fullstack Engineer based in Berlin, Germany with 4+ years delivering end-to-end web solutions. Skilled across JavaScript and React, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-16T22:08:07.410Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3584,13 +3699,14 @@
       "experience": [
         {
           "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "role": "Backend Engineer",
+          "duration": "5 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Patricia Johnson is a performance-minded Backend Engineer from Remote specializing in JavaScript and Next.js. With 5 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-19T17:21:00.146Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3614,14 +3730,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "BrightByte",
+          "role": "Fullstack Engineer",
+          "duration": "6 years",
+          "description": "Integrated third-party payment providers and built an internal billing dashboard, processing $2M+ monthly revenue."
         }
       ],
       "skills": ["JavaScript", "MongoDB", "AWS", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Susan Williams is a Fullstack Engineer based in San Francisco, CA with 6+ years delivering end-to-end web solutions. Skilled across JavaScript and MongoDB, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-03T02:06:51.090Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3645,14 +3762,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "StreamLine",
+          "role": "Fullstack Engineer",
+          "duration": "7 years",
+          "description": "Delivered full-stack features from database schema to frontend UI for a B2B SaaS platform with 10k+ active users."
         }
       ],
       "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "Joseph Hernandez is a versatile Fullstack Engineer from Berlin, Germany with 7 years of experience building full-featured web applications. They are proficient in Next.js and AWS, with a track record of owning features from design to deployment."
     },
     "createdAt": "2026-04-19T03:28:59.452Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3676,14 +3794,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "8 years",
+          "description": "Designed a distributed job processing system using Kafka and Redis, handling 1M+ events per day without downtime."
         }
       ],
       "skills": ["JavaScript", "PostgreSQL", "React", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "William Jones is a Backend Engineer based in New York, NY with 8+ years building high-performance, scalable APIs. Expert in JavaScript and PostgreSQL, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-25T02:06:54.041Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3707,14 +3826,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DeployHub",
+          "role": "DevOps Engineer",
+          "duration": "2 years",
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["Rust", "Kubernetes", "Python", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Linda Lopez is a platform-focused DevOps Engineer from Austin, TX with deep expertise in Rust and Kubernetes. Over 2 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-05T06:42:22.165Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3738,14 +3858,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["React", "TypeScript", "Redis", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "David Jackson is a Backend Engineer based in Berlin, Germany with 3+ years building high-performance, scalable APIs. Expert in React and TypeScript, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-07T21:27:40.149Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3769,14 +3890,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "LaunchPad",
+          "role": "Product Manager",
+          "duration": "4 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Jira", "Agile/Scrum", "Mixpanel", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Sarah Garcia is a results-driven Product Manager from London, UK specializing in agile delivery and data-driven decision-making. With 4 years of experience, they excel in Jira and Agile/Scrum to align cross-functional teams."
     },
     "createdAt": "2026-04-13T21:54:15.691Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3800,14 +3922,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "NexusSoft",
+          "role": "Backend Engineer",
+          "duration": "5 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "GraphQL", "Rust", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Barbara Williams is a Backend Engineer based in Austin, TX with 5+ years building high-performance, scalable APIs. Expert in Go and GraphQL, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-24T13:01:20.165Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3831,14 +3954,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "NeuralPath",
+          "role": "Data Scientist",
+          "duration": "6 years",
+          "description": "Built and deployed machine learning models that improved customer churn prediction accuracy to 87%."
         }
       ],
       "skills": ["Python", "MongoDB", "JavaScript", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Mary Brown is an analytical Data Scientist from Remote specializing in Python and MongoDB. Over 6 years, they have built predictive models and data pipelines that drive product decisions."
     },
     "createdAt": "2026-04-03T01:36:54.167Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3862,14 +3986,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DeployHub",
+          "role": "DevOps Engineer",
+          "duration": "7 years",
+          "description": "Managed Kubernetes clusters across 3 environments, achieving 99.98% uptime for critical production services."
         }
       ],
       "skills": ["Kubernetes", "AWS", "Next.js", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Sarah Johnson is a DevOps Engineer based in San Francisco, CA with 7+ years automating infrastructure and CI/CD pipelines. Proficient in Kubernetes and AWS, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-18T07:23:01.044Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3893,14 +4018,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "8 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["Go", "JavaScript", "TypeScript", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Jennifer Williams is a performance-minded Backend Engineer from San Francisco, CA specializing in Go and JavaScript. With 8 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-07T10:52:16.477Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3924,14 +4050,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "BrightByte",
+          "role": "Fullstack Engineer",
+          "duration": "2 years",
+          "description": "Delivered full-stack features from database schema to frontend UI for a B2B SaaS platform with 10k+ active users."
         }
       ],
       "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Elizabeth Garcia is a Fullstack Engineer based in San Francisco, CA with 2+ years delivering end-to-end web solutions. Skilled across JavaScript and TypeScript, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-20T07:58:30.220Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3955,14 +4082,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
+          "company": "GrowthBase",
+          "role": "Product Manager",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Mixpanel", "Agile/Scrum", "Roadmapping", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "David Gonzalez is a results-driven Product Manager from Seattle, WA specializing in agile delivery and data-driven decision-making. With 3 years of experience, they excel in Mixpanel and Agile/Scrum to align cross-functional teams."
     },
     "createdAt": "2026-04-23T14:19:33.610Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -3986,14 +4114,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "4 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["JavaScript", "Redis", "React", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Robert Jackson is a Backend Engineer based in London, UK with 4+ years building high-performance, scalable APIs. Expert in JavaScript and Redis, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-16T11:03:02.817Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4017,14 +4146,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "Clarity Design",
+          "role": "UI/UX Designer",
+          "duration": "5 years",
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Figma", "Adobe XD", "User Research", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Elizabeth Miller is a creative UI/UX Designer based in San Francisco, CA with a passion for accessible, pixel-perfect design. With 5 years in the field, they have led design systems and end-to-end product experiences using Figma and Adobe XD."
     },
     "createdAt": "2026-04-23T08:20:35.857Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4048,14 +4178,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PixelCraft Studio",
+          "role": "UI/UX Designer",
+          "duration": "6 years",
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Patricia Lopez is a London, UK-based UI/UX Designer with 6+ years crafting user-centered digital experiences. Skilled in Figma and Sketch, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-07T07:58:44.826Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4079,14 +4210,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "LaunchPad",
+          "role": "Product Manager",
+          "duration": "7 years",
+          "description": "Established data-driven product decision frameworks using Mixpanel and custom dashboards, improving feature adoption by 40%."
         }
       ],
       "skills": ["Mixpanel", "Jira", "Agile/Scrum", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "James Gonzalez is a results-driven Product Manager from Berlin, Germany specializing in agile delivery and data-driven decision-making. With 7 years of experience, they excel in Mixpanel and Jira to align cross-functional teams."
     },
     "createdAt": "2026-04-11T12:51:16.058Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4110,14 +4242,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "UXForge",
+          "role": "UI/UX Designer",
+          "duration": "8 years",
+          "description": "Led end-to-end design for mobile and web products, creating wireframes, prototypes, and final visuals that improved user retention by 30%."
         }
       ],
       "skills": ["Prototyping", "User Research", "Tailwind CSS", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Jennifer Smith is a London, UK-based UI/UX Designer with 8+ years crafting user-centered digital experiences. Skilled in Prototyping and User Research, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-20T01:51:26.148Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4141,14 +4274,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CreativeOps",
+          "role": "UI/UX Designer",
+          "duration": "2 years",
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["User Research", "Adobe XD", "Prototyping", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Karen Hernandez is a creative UI/UX Designer based in San Francisco, CA with a passion for accessible, pixel-perfect design. With 2 years in the field, they have led design systems and end-to-end product experiences using User Research and Adobe XD."
     },
     "createdAt": "2026-04-03T21:37:07.902Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4172,14 +4306,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
+          "company": "DataLink",
+          "role": "Backend Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "Sarah Brown is a Backend Engineer based in Toronto, ON with 3+ years building high-performance, scalable APIs. Expert in GraphQL and JavaScript, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-20T02:00:52.415Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4203,14 +4338,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "UIBridge",
+          "role": "Frontend Engineer",
+          "duration": "4 years",
+          "description": "Built performant React and Next.js applications with SSR and code-splitting, achieving Lighthouse scores above 95."
         }
       ],
       "skills": ["Python", "JavaScript", "Next.js", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Jessica Davis is a detail-oriented Frontend Engineer from San Francisco, CA passionate about UI quality and user experience. With 4 years of expertise in Python and JavaScript, they deliver pixel-perfect, accessible applications."
     },
     "createdAt": "2026-04-12T13:37:34.571Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4234,14 +4370,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "LaunchPad",
+          "role": "Product Manager",
+          "duration": "5 years",
+          "description": "Worked closely with engineering, design, and sales to prioritize backlog items and reduce time-to-market by 25%."
         }
       ],
       "skills": ["Agile/Scrum", "Product Strategy", "Roadmapping", "Git", "Agile"],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "bio": "Elizabeth Williams is a strategic Product Manager based in San Francisco, CA with 5+ years driving product vision and roadmaps. Expert in Agile/Scrum and Product Strategy, they bridge engineering and business to deliver measurable impact."
     },
     "createdAt": "2026-04-11T14:17:25.740Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4265,14 +4402,15 @@
       ],
       "experience": [
         {
-          "company": "QuantumSolutions",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PipelineOps",
+          "role": "DevOps Engineer",
+          "duration": "6 years",
+          "description": "Implemented infrastructure-as-code with Terraform and Ansible, enabling reproducible environments across teams."
         }
       ],
       "skills": ["React", "GraphQL", "Docker", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Susan Gonzalez is a platform-focused DevOps Engineer from Seattle, WA with deep expertise in React and GraphQL. Over 6 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-22T17:16:10.120Z",
     "updatedAt": "2026-04-25T05:02:43.335Z"
@@ -4296,14 +4434,15 @@
       ],
       "experience": [
         {
-          "company": "TechFlow",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "InnovateIQ",
+          "role": "Fullstack Engineer",
+          "duration": "7 years",
+          "description": "Delivered full-stack features from database schema to frontend UI for a B2B SaaS platform with 10k+ active users."
         }
       ],
       "skills": ["JavaScript", "TypeScript", "Node.js", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Karen Anderson is a Fullstack Engineer based in New York, NY with 7+ years delivering end-to-end web solutions. Skilled across JavaScript and TypeScript, they move seamlessly between frontend and backend to ship complete features."
     },
     "createdAt": "2026-04-16T09:09:55.252Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4327,14 +4466,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "SigmaAI",
+          "role": "Data Scientist",
+          "duration": "8 years",
+          "description": "Designed and maintained ETL pipelines using Python and Pandas, processing 500GB of data daily for analytics reporting."
         }
       ],
       "skills": ["MongoDB", "Python", "TypeScript", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Susan Jackson is an analytical Data Scientist from Seattle, WA specializing in MongoDB and Python. Over 8 years, they have built predictive models and data pipelines that drive product decisions."
     },
     "createdAt": "2026-04-23T15:17:53.034Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4358,14 +4498,15 @@
       ],
       "experience": [
         {
-          "company": "BrightByte",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "CoreLogic",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["GraphQL", "JavaScript", "React", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Patricia Rodriguez is a Backend Engineer based in New York, NY with 2+ years building high-performance, scalable APIs. Expert in GraphQL and JavaScript, they thrive in distributed systems and low-latency architectures."
     },
     "createdAt": "2026-04-11T10:23:27.741Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4389,14 +4530,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
+          "company": "InfraCore",
+          "role": "DevOps Engineer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["PostgreSQL", "Kubernetes", "JavaScript", "Git", "Agile"],
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "bio": "Susan Williams is a platform-focused DevOps Engineer from Seattle, WA with deep expertise in PostgreSQL and Kubernetes. Over 3 years, they have built resilient deployment systems that support millions of users."
     },
     "createdAt": "2026-04-10T14:12:42.288Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4420,14 +4562,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PipelineOps",
+          "role": "DevOps Engineer",
+          "duration": "4 years",
+          "description": "Managed Kubernetes clusters across 3 environments, achieving 99.98% uptime for critical production services."
         }
       ],
       "skills": ["Kubernetes", "GraphQL", "Next.js", "Git", "Agile"],
-      "location": "Remote"
+      "location": "Remote",
+      "bio": "Susan Martin is a DevOps Engineer based in Remote with 4+ years automating infrastructure and CI/CD pipelines. Proficient in Kubernetes and GraphQL, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-05T08:35:23.866Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4451,14 +4594,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "ServerSide Labs",
+          "role": "Backend Engineer",
+          "duration": "5 years",
+          "description": "Optimized PostgreSQL queries and indexing strategies, reducing average query time by 65% for critical reporting workflows."
         }
       ],
       "skills": ["JavaScript", "Next.js", "Rust", "Git", "Agile"],
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "bio": "William Williams is a performance-minded Backend Engineer from Berlin, Germany specializing in JavaScript and Next.js. With 5 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-21T03:30:58.085Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4482,14 +4626,15 @@
       ],
       "experience": [
         {
-          "company": "CloudScale",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "DeployHub",
+          "role": "DevOps Engineer",
+          "duration": "6 years",
+          "description": "Designed and maintained CI/CD pipelines that reduced deployment time from 2 hours to under 15 minutes."
         }
       ],
       "skills": ["Docker", "MongoDB", "GraphQL", "Git", "Agile"],
-      "location": "Toronto, ON"
+      "location": "Toronto, ON",
+      "bio": "John Garcia is a DevOps Engineer based in Toronto, ON with 6+ years automating infrastructure and CI/CD pipelines. Proficient in Docker and MongoDB, they champion reliability and deployment velocity."
     },
     "createdAt": "2026-04-07T19:37:20.264Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4513,14 +4658,15 @@
       ],
       "experience": [
         {
-          "company": "DataViz",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "PixelCraft Studio",
+          "role": "UI/UX Designer",
+          "duration": "7 years",
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["User Research", "Adobe XD", "Prototyping", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Christopher Moore is a creative UI/UX Designer based in London, UK with a passion for accessible, pixel-perfect design. With 7 years in the field, they have led design systems and end-to-end product experiences using User Research and Adobe XD."
     },
     "createdAt": "2026-04-23T00:06:03.523Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4544,14 +4690,15 @@
       ],
       "experience": [
         {
-          "company": "StreamLine",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "MLOps Co",
+          "role": "Data Scientist",
+          "duration": "8 years",
+          "description": "Collaborated with product teams to instrument analytics funnels and surface insights that informed key product decisions."
         }
       ],
       "skills": ["MongoDB", "Python", "JavaScript", "Git", "Agile"],
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "bio": "Joseph Miller is a Data Scientist based in Austin, TX with 8+ years applying machine learning to real-world problems. Expert in MongoDB and Python, they translate data into actionable business intelligence."
     },
     "createdAt": "2026-04-23T23:44:15.573Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4575,14 +4722,15 @@
       ],
       "experience": [
         {
-          "company": "CoreLogic",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "NexusSoft",
+          "role": "Backend Engineer",
+          "duration": "2 years",
+          "description": "Built and maintained high-throughput REST and GraphQL APIs serving 50k+ daily active users with sub-50ms p99 latency."
         }
       ],
       "skills": ["Redis", "React", "JavaScript", "Git", "Agile"],
-      "location": "London, UK"
+      "location": "London, UK",
+      "bio": "Mary Smith is a performance-minded Backend Engineer from London, UK specializing in Redis and React. With 2 years of experience, they have designed and scaled backend services for fast-growing products."
     },
     "createdAt": "2026-04-24T07:16:30.928Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4606,14 +4754,15 @@
       ],
       "experience": [
         {
-          "company": "InnovateIQ",
-          "role": "Software Engineer",
+          "company": "CreativeOps",
+          "role": "UI/UX Designer",
           "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "description": "Collaborated with engineering and product teams to build and maintain a unified design system adopted across 5 product lines."
         }
       ],
       "skills": ["Figma", "Sketch", "User Research", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "Linda Martinez is a New York, NY-based UI/UX Designer with 3+ years crafting user-centered digital experiences. Skilled in Figma and Sketch, they specialize in translating complex user needs into intuitive interfaces."
     },
     "createdAt": "2026-04-10T18:07:38.920Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"
@@ -4637,14 +4786,15 @@
       ],
       "experience": [
         {
-          "company": "NexusSoft",
-          "role": "Software Engineer",
-          "duration": "3 years",
-          "description": "Developed and maintained various web applications using modern stacks."
+          "company": "SkyLine AI",
+          "role": "Fullstack Engineer",
+          "duration": "4 years",
+          "description": "Integrated third-party payment providers and built an internal billing dashboard, processing $2M+ monthly revenue."
         }
       ],
       "skills": ["Next.js", "AWS", "TypeScript", "Git", "Agile"],
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "bio": "James Moore is a versatile Fullstack Engineer from New York, NY with 4 years of experience building full-featured web applications. They are proficient in Next.js and AWS, with a track record of owning features from design to deployment."
     },
     "createdAt": "2026-04-18T03:33:51.229Z",
     "updatedAt": "2026-04-25T05:02:43.336Z"

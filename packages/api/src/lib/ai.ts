@@ -121,7 +121,7 @@ export class AIService {
     this.model = new ChatGoogleGenerativeAI({
       model: "gemini-flash-latest",
       apiVersion: "v1beta",
-      maxOutputTokens: 2048,
+      maxOutputTokens: 8192,
     });
   }
 

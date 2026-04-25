@@ -6,17 +6,43 @@
     "headline": "Senior Fullstack Engineer | Next.js & ElysiaJS Expert",
     "bio": "Passionate developer with 8+ years of experience building scalable web applications. Focus on performance and type-safety.",
     "skills": [
-      { "name": "Next.js", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "ElysiaJS", "level": "Expert", "yearsOfExperience": 2 },
-      { "name": "TypeScript", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": "Tailwind CSS", "level": "Expert", "yearsOfExperience": 4 }
+      {
+        "name": "Next.js",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "ElysiaJS",
+        "level": "Expert",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "TypeScript",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      }
     ],
     "languages": [
-      { "name": "English", "proficiency": "Native" },
-      { "name": "Swahili", "proficiency": "Fluent" }
+      {
+        "name": "English",
+        "proficiency": "Native"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Fluent"
+      }
     ],
     "certifications": [
-      { "name": "AWS Certified Solutions Architect", "issuer": "Amazon", "issueDate": "2023-05" }
+      {
+        "name": "AWS Certified Solutions Architect",
+        "issuer": "Amazon",
+        "issueDate": "2023-05"
+      }
     ],
     "projects": [
       {
@@ -29,9 +55,32 @@
         "endDate": "2023-12"
       }
     ],
-    "availability": { "status": "Available", "type": "Full-time", "startDate": "2024-05" },
-    "socialLinks": { "linkedin": "linkedin.com/in/alexkamau", "github": "github.com/alexk" },
-    "location": "Nairobi, Kenya"
+    "availability": {
+      "status": "Available",
+      "type": "Full-time",
+      "startDate": "2024-05"
+    },
+    "socialLinks": {
+      "linkedin": "linkedin.com/in/alexkamau",
+      "github": "github.com/alexk"
+    },
+    "location": "Nairobi, Kenya",
+    "education": [
+      {
+        "institution": "University of Rwanda",
+        "degree": "BSc",
+        "field": "Computer Science",
+        "year": 2018
+      }
+    ],
+    "experience": [
+      {
+        "company": "Zipline",
+        "role": "Senior Fullstack Engineer",
+        "duration": "6 years",
+        "description": "Working as a Senior Fullstack Engineer, focusing on building scalable systems using Next.js and ElysiaJS."
+      }
+    ]
   },
   {
     "firstName": "Sarah",
@@ -40,18 +89,47 @@
     "headline": "AI Engineer | PyTorch & Computer Vision",
     "bio": "Focusing on deep learning and natural language processing. Experience in deploying models at scale.",
     "skills": [
-      { "name": "PyTorch", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Python", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": "TensorFlow", "level": "Intermediate", "yearsOfExperience": 3 },
-      { "name": "Scikit-Learn", "level": "Expert", "yearsOfExperience": 5 }
+      {
+        "name": "PyTorch",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Python",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "TensorFlow",
+        "level": "Intermediate",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "Scikit-Learn",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      }
     ],
     "languages": [
-      { "name": "French", "proficiency": "Fluent" },
-      { "name": "Kinyarwanda", "proficiency": "Native" },
-      { "name": "English", "proficiency": "Fluent" }
+      {
+        "name": "French",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Kinyarwanda",
+        "proficiency": "Native"
+      },
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      }
     ],
     "certifications": [
-      { "name": "Deep Learning Specialization", "issuer": "Coursera", "issueDate": "2022-08" }
+      {
+        "name": "Deep Learning Specialization",
+        "issuer": "Coursera",
+        "issueDate": "2022-08"
+      }
     ],
     "projects": [
       {
@@ -64,9 +142,32 @@
         "endDate": "2023-06"
       }
     ],
-    "availability": { "status": "Open to work", "type": "Hybrid", "startDate": "2024-06" },
-    "socialLinks": { "github": "github.com/suwase", "portfolio": "sarahai.dev" },
-    "location": "Kigali, Rwanda"
+    "availability": {
+      "status": "Open to work",
+      "type": "Hybrid",
+      "startDate": "2024-06"
+    },
+    "socialLinks": {
+      "github": "github.com/suwase",
+      "portfolio": "sarahai.dev"
+    },
+    "location": "Kigali, Rwanda",
+    "education": [
+      {
+        "institution": "Carnegie Mellon University Africa",
+        "degree": "MSc",
+        "field": "Information Technology",
+        "year": 2018
+      }
+    ],
+    "experience": [
+      {
+        "company": "Sandberg",
+        "role": "AI Engineer",
+        "duration": "6 years",
+        "description": "Working as a AI Engineer, focusing on building scalable systems using PyTorch and Python."
+      }
+    ]
   },
   {
     "firstName": "Jean",
@@ -75,14 +176,36 @@
     "headline": "Frontend Engineer | UI/UX Specialist",
     "bio": "Creating beautiful and accessible user interfaces. Expert in React and Framer Motion.",
     "skills": [
-      { "name": "React", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "Figma", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "Tailwind", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Storybook", "level": "Intermediate", "yearsOfExperience": 2 }
+      {
+        "name": "React",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Figma",
+        "level": "Expert",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "Tailwind",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Storybook",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      }
     ],
     "languages": [
-      { "name": "English", "proficiency": "Fluent" },
-      { "name": "Kinyarwanda", "proficiency": "Native" }
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Kinyarwanda",
+        "proficiency": "Native"
+      }
     ],
     "certifications": [],
     "projects": [
@@ -96,9 +219,32 @@
         "endDate": "2024-01"
       }
     ],
-    "availability": { "status": "Busy", "type": "Freelance", "startDate": "2024-08" },
-    "socialLinks": { "linkedin": "linkedin.com/in/jeanmugabo", "portfolio": "jeanm.com" },
-    "location": "Kigali, Rwanda"
+    "availability": {
+      "status": "Busy",
+      "type": "Freelance",
+      "startDate": "2024-08"
+    },
+    "socialLinks": {
+      "linkedin": "linkedin.com/in/jeanmugabo",
+      "portfolio": "jeanm.com"
+    },
+    "location": "Kigali, Rwanda",
+    "education": [
+      {
+        "institution": "Kenyatta University",
+        "degree": "BSc",
+        "field": "Software Engineering",
+        "year": 2019
+      }
+    ],
+    "experience": [
+      {
+        "company": "Safcom",
+        "role": "Frontend Engineer",
+        "duration": "5 years",
+        "description": "Working as a Frontend Engineer, focusing on building scalable systems using React and Figma."
+      }
+    ]
   },
   {
     "firstName": "Fatuma",
@@ -107,14 +253,36 @@
     "headline": "Fullstack Developer | Node.js & GraphQL",
     "bio": "Building robust backend systems and seamless frontend integrations.",
     "skills": [
-      { "name": "Node.js", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": "GraphQL", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "React", "level": "Intermediate", "yearsOfExperience": 4 },
-      { "name": "MongoDB", "level": "Expert", "yearsOfExperience": 5 }
+      {
+        "name": "Node.js",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "GraphQL",
+        "level": "Expert",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "React",
+        "level": "Intermediate",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "MongoDB",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      }
     ],
     "languages": [
-      { "name": "Swahili", "proficiency": "Native" },
-      { "name": "English", "proficiency": "Fluent" }
+      {
+        "name": "Swahili",
+        "proficiency": "Native"
+      },
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      }
     ],
     "certifications": [
       {
@@ -134,9 +302,32 @@
         "endDate": "2022-11"
       }
     ],
-    "availability": { "status": "Available", "type": "Remote", "startDate": "2024-04" },
-    "socialLinks": { "github": "github.com/fbakari", "linkedin": "linkedin.com/in/fatumab" },
-    "location": "Dar es Salaam, Tanzania"
+    "availability": {
+      "status": "Available",
+      "type": "Remote",
+      "startDate": "2024-04"
+    },
+    "socialLinks": {
+      "github": "github.com/fbakari",
+      "linkedin": "linkedin.com/in/fatumab"
+    },
+    "location": "Dar es Salaam, Tanzania",
+    "education": [
+      {
+        "institution": "University of Nairobi",
+        "degree": "BSc",
+        "field": "Computer Science",
+        "year": 2018
+      }
+    ],
+    "experience": [
+      {
+        "company": "Irembo",
+        "role": "Fullstack Developer",
+        "duration": "6 years",
+        "description": "Working as a Fullstack Developer, focusing on building scalable systems using Node.js and GraphQL."
+      }
+    ]
   },
   {
     "firstName": "Samuel",
@@ -145,14 +336,39 @@
     "headline": "Junior Fullstack Developer | React & Express",
     "bio": "Recent graduate eager to contribute to innovative projects. Quick learner with a focus on MERN stack.",
     "skills": [
-      { "name": "React", "level": "Intermediate", "yearsOfExperience": 2 },
-      { "name": "Express", "level": "Intermediate", "yearsOfExperience": 2 },
-      { "name": "MongoDB", "level": "Beginner", "yearsOfExperience": 1 },
-      { "name": "Node.js", "level": "Intermediate", "yearsOfExperience": 2 }
+      {
+        "name": "React",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "Express",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "MongoDB",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      }
     ],
-    "languages": [{ "name": "English", "proficiency": "Fluent" }],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      }
+    ],
     "certifications": [
-      { "name": "Full Stack Open", "issuer": "University of Helsinki", "issueDate": "2023-09" }
+      {
+        "name": "Full Stack Open",
+        "issuer": "University of Helsinki",
+        "issueDate": "2023-09"
+      }
     ],
     "projects": [
       {
@@ -165,502 +381,30 @@
         "endDate": "2023-11"
       }
     ],
-    "availability": { "status": "Available", "type": "Full-time", "startDate": "2024-04" },
-    "socialLinks": { "github": "github.com/samndungu" },
-    "location": "Nairobi, Kenya"
-  },
-  {
-    "firstName": "Grace",
-    "lastName": "Ineza",
-    "email": "grace.ineza@example.com",
-    "headline": "UI/UX Designer | Mobile First Design",
-    "bio": "Crafting user-centric experiences for mobile and web applications.",
-    "skills": [
-      { "name": "Figma", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Adobe XD", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "User Research", "level": "Intermediate", "yearsOfExperience": 2 }
-    ],
-    "languages": [
-      { "name": "English", "proficiency": "Fluent" },
-      { "name": "French", "proficiency": "Native" }
-    ],
-    "certifications": [
+    "availability": {
+      "status": "Available",
+      "type": "Full-time",
+      "startDate": "2024-04"
+    },
+    "socialLinks": {
+      "github": "github.com/samndungu"
+    },
+    "location": "Nairobi, Kenya",
+    "education": [
       {
-        "name": "Google UX Design Professional Certificate",
-        "issuer": "Google",
-        "issueDate": "2022-03"
+        "institution": "Lagos State University",
+        "degree": "BSc",
+        "field": "Computer Science",
+        "year": 2022
       }
     ],
-    "projects": [
+    "experience": [
       {
-        "name": "Health Track App",
-        "description": "Design for a health monitoring mobile application.",
-        "technologies": ["Figma", "Prototyping"],
-        "role": "Lead Designer",
-        "link": "https://behance.net/graceineza",
-        "startDate": "2022-05",
-        "endDate": "2022-09"
+        "company": "MTN",
+        "role": "Junior Fullstack Developer",
+        "duration": "2 years",
+        "description": "Working as a Junior Fullstack Developer, focusing on building scalable systems using React and Express."
       }
-    ],
-    "availability": { "status": "Open to work", "type": "Contract", "startDate": "2024-05" },
-    "socialLinks": { "linkedin": "linkedin.com/in/graceineza", "portfolio": "gracei.design" },
-    "location": "Kigali, Rwanda"
-  },
-  {
-    "firstName": "David",
-    "lastName": "Ochieng",
-    "email": "david.ochieng@example.com",
-    "headline": "Staff Engineer | Cloud Infrastructure & SRE",
-    "bio": "Ensuring reliability and scalability of complex distributed systems.",
-    "skills": [
-      { "name": "Kubernetes", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "Terraform", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Go", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": "AWS", "level": "Expert", "yearsOfExperience": 7 }
-    ],
-    "languages": [{ "name": "English", "proficiency": "Native" }],
-    "certifications": [
-      { "name": "Certified Kubernetes Administrator", "issuer": "CNCF", "issueDate": "2021-06" }
-    ],
-    "projects": [
-      {
-        "name": "Auto-scaling Engine",
-        "description": "Custom auto-scaler for microservices based on traffic patterns.",
-        "technologies": ["Go", "Kubernetes", "Prometheus"],
-        "role": "Staff Engineer",
-        "link": "https://github.com/david/autoscaler",
-        "startDate": "2021-08",
-        "endDate": "2022-12"
-      }
-    ],
-    "availability": { "status": "Busy", "type": "Full-time", "startDate": "2024-12" },
-    "socialLinks": { "github": "github.com/dochieng", "linkedin": "linkedin.com/in/david-ochieng" },
-    "location": "Mombasa, Kenya"
-  },
-  {
-    "firstName": "Aisha",
-    "lastName": "Omar",
-    "email": "aisha.omar@example.com",
-    "headline": "Data Scientist | NLP & LLMs",
-    "bio": "Specializing in large language models and sentiment analysis.",
-    "skills": [
-      { "name": "Python", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "Hugging Face", "level": "Expert", "yearsOfExperience": 2 },
-      { "name": "Pandas", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "SQL", "level": "Expert", "yearsOfExperience": 6 }
-    ],
-    "languages": [
-      { "name": "Arabic", "proficiency": "Native" },
-      { "name": "English", "proficiency": "Fluent" }
-    ],
-    "certifications": [],
-    "projects": [
-      {
-        "name": "Chatbot Framework",
-        "description": "Customizable NLP framework for customer support chatbots.",
-        "technologies": ["Transformers", "Python", "FastAPI"],
-        "role": "Senior Data Scientist",
-        "link": "https://github.com/aisha/chatbot",
-        "startDate": "2023-02",
-        "endDate": "2023-11"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Remote", "startDate": "2024-05" },
-    "socialLinks": { "linkedin": "linkedin.com/in/aishaomar", "github": "github.com/aomar" },
-    "location": "Lagos, Nigeria"
-  },
-  {
-    "firstName": "Kofi",
-    "lastName": "Mensah",
-    "email": "kofi.mensah@example.com",
-    "headline": "Mobile Developer | Flutter & Dart",
-    "bio": "Building high-quality cross-platform mobile apps.",
-    "skills": [
-      { "name": "Flutter", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Dart", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Firebase", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "SQLite", "level": "Intermediate", "yearsOfExperience": 2 }
-    ],
-    "languages": [
-      { "name": "English", "proficiency": "Native" },
-      { "name": "Akan", "proficiency": "Native" }
-    ],
-    "certifications": [],
-    "projects": [
-      {
-        "name": "Fintech App",
-        "description": "Secure mobile application for money transfers.",
-        "technologies": ["Flutter", "Firebase", "Node.js"],
-        "role": "Lead Mobile Developer",
-        "link": "https://github.com/kofi/fintech",
-        "startDate": "2022-06",
-        "endDate": "2023-04"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Full-time", "startDate": "2024-05" },
-    "socialLinks": { "github": "github.com/kmensah", "portfolio": "kofi.dev" },
-    "location": "Accra, Ghana"
-  },
-  {
-    "firstName": "Elena",
-    "lastName": "Nguema",
-    "email": "elena.nguema@example.com",
-    "headline": "DevOps Engineer | CI/CD Specialist",
-    "bio": "Automating workflows and improving deployment pipelines.",
-    "skills": [
-      { "name": "Docker", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "GitHub Actions", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "Jenkins", "level": "Intermediate", "yearsOfExperience": 4 },
-      { "name": "Ansible", "level": "Expert", "yearsOfExperience": 4 }
-    ],
-    "languages": [
-      { "name": "Spanish", "proficiency": "Native" },
-      { "name": "English", "proficiency": "Fluent" },
-      { "name": "French", "proficiency": "Intermediate" }
-    ],
-    "certifications": [
-      {
-        "name": "HashiCorp Certified: Terraform Associate",
-        "issuer": "HashiCorp",
-        "issueDate": "2022-11"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Deployment Pipeline",
-        "description": "Optimized CI/CD pipeline for a multi-service architecture.",
-        "technologies": ["GitHub Actions", "Docker", "S3"],
-        "role": "DevOps Engineer",
-        "link": "https://github.com/elena/cicd",
-        "startDate": "2023-01",
-        "endDate": "2023-09"
-      }
-    ],
-    "availability": { "status": "Open to work", "type": "Full-time", "startDate": "2024-06" },
-    "socialLinks": { "linkedin": "linkedin.com/in/elenanguema" },
-    "location": "Malabo, Equatorial Guinea"
-  },
-  {
-    "firstName": "Isaac",
-    "lastName": "Tetteh",
-    "email": "isaac.tetteh@example.com",
-    "headline": "Backend Engineer | Rust & Distributed Systems",
-    "bio": "Performance-obsessed developer building low-latency systems.",
-    "skills": [
-      { "name": "Rust", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "C++", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": "Kafka", "level": "Intermediate", "yearsOfExperience": 2 },
-      { "name": "Redis", "level": "Expert", "yearsOfExperience": 4 }
-    ],
-    "languages": [{ "name": "English", "proficiency": "Fluent" }],
-    "certifications": [],
-    "projects": [
-      {
-        "name": "Logging Service",
-        "description": "High-throughput logging service built in Rust.",
-        "technologies": ["Rust", "Tokio", "gRPC"],
-        "role": "Solo Architect",
-        "link": "https://github.com/isaac/logger",
-        "startDate": "2023-05",
-        "endDate": "2024-02"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Remote", "startDate": "2024-05" },
-    "socialLinks": { "github": "github.com/itetteh" },
-    "location": "Kumasi, Ghana"
-  },
-  {
-    "firstName": "Mariam",
-    "lastName": "Sow",
-    "email": "mariam.sow@example.com",
-    "headline": "QA Engineer | Automation & Testing",
-    "bio": "Ensuring software quality through rigorous testing and automation.",
-    "skills": [
-      { "name": "Cypress", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Playwright", "level": "Expert", "yearsOfExperience": 2 },
-      { "name": "Jest", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "Selenium", "level": "Intermediate", "yearsOfExperience": 4 }
-    ],
-    "languages": [
-      { "name": "French", "proficiency": "Native" },
-      { "name": "English", "proficiency": "Fluent" }
-    ],
-    "certifications": [
-      { "name": "ISTQB Certified Tester", "issuer": "ISTQB", "issueDate": "2021-04" }
-    ],
-    "projects": [
-      {
-        "name": "E2E Test Suite",
-        "description": "Comprehensive automation suite for a complex e-learning platform.",
-        "technologies": ["Cypress", "TypeScript", "CircleCI"],
-        "role": "Lead QA Engineer",
-        "link": "https://github.com/mariam/tests",
-        "startDate": "2022-09",
-        "endDate": "2023-08"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Hybrid", "startDate": "2024-04" },
-    "socialLinks": { "linkedin": "linkedin.com/in/mariamsow" },
-    "location": "Dakar, Senegal"
-  },
-  {
-    "firstName": "Peter",
-    "lastName": "Osei",
-    "email": "peter.osei@example.com",
-    "headline": "Cloud Architect | Azure & .NET",
-    "bio": "Designing enterprise-grade cloud solutions on Microsoft Azure.",
-    "skills": [
-      { "name": "Azure", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": ".NET Core", "level": "Expert", "yearsOfExperience": 7 },
-      { "name": "C#", "level": "Expert", "yearsOfExperience": 8 },
-      { "name": "Microservices", "level": "Expert", "yearsOfExperience": 5 }
-    ],
-    "languages": [{ "name": "English", "proficiency": "Native" }],
-    "certifications": [
-      { "name": "Azure Solutions Architect Expert", "issuer": "Microsoft", "issueDate": "2022-06" }
-    ],
-    "projects": [
-      {
-        "name": "Banking Cloud Migration",
-        "description": "Migration of legacy on-prem systems to Azure cloud.",
-        "technologies": ["Azure", ".NET Core", "SQL Server"],
-        "role": "Lead Architect",
-        "link": "https://example.com/project",
-        "startDate": "2022-01",
-        "endDate": "2023-03"
-      }
-    ],
-    "availability": { "status": "Busy", "type": "Full-time", "startDate": "2025-01" },
-    "socialLinks": { "linkedin": "linkedin.com/in/peterosei" },
-    "location": "Accra, Ghana"
-  },
-  {
-    "firstName": "Bisi",
-    "lastName": "Adebayo",
-    "email": "bisi.adebayo@example.com",
-    "headline": "Product Manager | Tech-Focused PM",
-    "bio": "Bridging the gap between engineering and business goals.",
-    "skills": [
-      { "name": "Agile", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": "Jira", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "Product Strategy", "level": "Expert", "yearsOfExperience": 4 }
-    ],
-    "languages": [
-      { "name": "English", "proficiency": "Fluent" },
-      { "name": "Yoruba", "proficiency": "Native" }
-    ],
-    "certifications": [
-      {
-        "name": "Certified Scrum Product Owner",
-        "issuer": "Scrum Alliance",
-        "issueDate": "2021-09"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Marketplace Launch",
-        "description": "End-to-end product management for a local services marketplace.",
-        "technologies": ["Agile", "Roadmapping"],
-        "role": "Senior Product Manager",
-        "link": "https://bisi.pm",
-        "startDate": "2022-03",
-        "endDate": "2023-10"
-      }
-    ],
-    "availability": { "status": "Open to work", "type": "Full-time", "startDate": "2024-07" },
-    "socialLinks": { "linkedin": "linkedin.com/in/bisiadebayo" },
-    "location": "Lagos, Nigeria"
-  },
-  {
-    "firstName": "Chidi",
-    "lastName": "Okeke",
-    "email": "chidi.okeke@example.com",
-    "headline": "Blockchain Developer | Solidity & Ethereum",
-    "bio": "Building decentralized applications and smart contracts.",
-    "skills": [
-      { "name": "Solidity", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "Ethereum", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "Web3.js", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "Hardhat", "level": "Expert", "yearsOfExperience": 2 }
-    ],
-    "languages": [
-      { "name": "English", "proficiency": "Fluent" },
-      { "name": "Igbo", "proficiency": "Native" }
-    ],
-    "certifications": [],
-    "projects": [
-      {
-        "name": "DeFi Protocol",
-        "description": "Lending and borrowing protocol on Ethereum.",
-        "technologies": ["Solidity", "Hardhat", "React"],
-        "role": "Smart Contract Developer",
-        "link": "https://github.com/chidi/defi",
-        "startDate": "2023-04",
-        "endDate": "2024-01"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Contract", "startDate": "2024-05" },
-    "socialLinks": { "github": "github.com/cokeke", "linkedin": "linkedin.com/in/chidiokeke" },
-    "location": "Enugu, Nigeria"
-  },
-  {
-    "firstName": "Linda",
-    "lastName": "Mbeki",
-    "email": "linda.mbeki@example.com",
-    "headline": "Cybersecurity Analyst | Penetration Testing",
-    "bio": "Securing applications and infrastructure against threats.",
-    "skills": [
-      { "name": "Ethical Hacking", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Network Security", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "Python", "level": "Intermediate", "yearsOfExperience": 3 }
-    ],
-    "languages": [
-      { "name": "English", "proficiency": "Native" },
-      { "name": "Zulu", "proficiency": "Native" }
-    ],
-    "certifications": [
-      { "name": "Certified Ethical Hacker (CEH)", "issuer": "EC-Council", "issueDate": "2022-02" }
-    ],
-    "projects": [
-      {
-        "name": "Vulnerability Assessment",
-        "description": "Deep security audit for a regional financial institution.",
-        "technologies": ["Metasploit", "Nmap", "Wireshark"],
-        "role": "Lead Security Analyst",
-        "link": "https://linda.sec",
-        "startDate": "2023-06",
-        "endDate": "2023-12"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Full-time", "startDate": "2024-04" },
-    "socialLinks": { "linkedin": "linkedin.com/in/lindambeki" },
-    "location": "Johannesburg, South Africa"
-  },
-  {
-    "firstName": "Omar",
-    "lastName": "Said",
-    "email": "omar.said@example.com",
-    "headline": "Fullstack Developer | Vue.js & Laravel",
-    "bio": "Building elegant web applications with the TALL stack.",
-    "skills": [
-      { "name": "Vue.js", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "Laravel", "level": "Expert", "yearsOfExperience": 6 },
-      { "name": "PHP", "level": "Expert", "yearsOfExperience": 8 },
-      { "name": "MySQL", "level": "Expert", "yearsOfExperience": 7 }
-    ],
-    "languages": [
-      { "name": "Arabic", "proficiency": "Native" },
-      { "name": "English", "proficiency": "Fluent" }
-    ],
-    "certifications": [
-      { "name": "Certified Laravel Developer", "issuer": "Laravel", "issueDate": "2021-08" }
-    ],
-    "projects": [
-      {
-        "name": "Inventory System",
-        "description": "Custom ERP system for a large retail chain.",
-        "technologies": ["Laravel", "Vue.js", "MySQL"],
-        "role": "Fullstack Developer",
-        "link": "https://github.com/omar/erp",
-        "startDate": "2022-04",
-        "endDate": "2023-05"
-      }
-    ],
-    "availability": { "status": "Open to work", "type": "Full-time", "startDate": "2024-06" },
-    "socialLinks": { "github": "github.com/osaid", "linkedin": "linkedin.com/in/omarsaid" },
-    "location": "Cairo, Egypt"
-  },
-  {
-    "firstName": "Zainab",
-    "lastName": "Hassan",
-    "email": "zainab.hassan@example.com",
-    "headline": "AI Researcher | Generative AI",
-    "bio": "Exploring the frontiers of generative models and creative AI.",
-    "skills": [
-      { "name": "PyTorch", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "GANs", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "Stable Diffusion", "level": "Intermediate", "yearsOfExperience": 1 }
-    ],
-    "languages": [
-      { "name": "English", "proficiency": "Fluent" },
-      { "name": "Hausa", "proficiency": "Native" }
-    ],
-    "certifications": [],
-    "projects": [
-      {
-        "name": "Art Generation AI",
-        "description": "Model trained on African art styles for generative creation.",
-        "technologies": ["PyTorch", "Diffusers"],
-        "role": "Lead Researcher",
-        "link": "https://github.com/zainab/african-art-ai",
-        "startDate": "2023-07",
-        "endDate": "2024-03"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Remote", "startDate": "2024-05" },
-    "socialLinks": { "github": "github.com/zhassan", "portfolio": "zainabai.com" },
-    "location": "Kano, Nigeria"
-  },
-  {
-    "firstName": "Tinashe",
-    "lastName": "Moyo",
-    "email": "tinashe.moyo@example.com",
-    "headline": "Frontend Engineer | React Native expert",
-    "bio": "Building high-performance mobile experiences with React Native.",
-    "skills": [
-      { "name": "React Native", "level": "Expert", "yearsOfExperience": 5 },
-      { "name": "TypeScript", "level": "Expert", "yearsOfExperience": 4 },
-      { "name": "Redux", "level": "Expert", "yearsOfExperience": 5 }
-    ],
-    "languages": [
-      { "name": "English", "proficiency": "Native" },
-      { "name": "Shona", "proficiency": "Native" }
-    ],
-    "certifications": [],
-    "projects": [
-      {
-        "name": "Ride Sharing App",
-        "description": "Mobile app for a local ride-sharing startup.",
-        "technologies": ["React Native", "Google Maps API"],
-        "role": "Senior Mobile Developer",
-        "link": "https://github.com/tinashe/ride",
-        "startDate": "2022-10",
-        "endDate": "2023-09"
-      }
-    ],
-    "availability": { "status": "Available", "type": "Full-time", "startDate": "2024-04" },
-    "socialLinks": { "linkedin": "linkedin.com/in/tinashemoyo" },
-    "location": "Harare, Zimbabwe"
-  },
-  {
-    "firstName": "Moussa",
-    "lastName": "Diallo",
-    "email": "moussa.diallo@example.com",
-    "headline": "Junior Data Engineer | Spark & Hadoop",
-    "bio": "Eager to build scalable data pipelines and learn from the best.",
-    "skills": [
-      { "name": "SQL", "level": "Expert", "yearsOfExperience": 3 },
-      { "name": "Python", "level": "Intermediate", "yearsOfExperience": 2 },
-      { "name": "Spark", "level": "Beginner", "yearsOfExperience": 1 }
-    ],
-    "languages": [
-      { "name": "French", "proficiency": "Fluent" },
-      { "name": "English", "proficiency": "Intermediate" }
-    ],
-    "certifications": [],
-    "projects": [
-      {
-        "name": "ETL Pipeline",
-        "description": "Simple ETL pipeline for processing log data.",
-        "technologies": ["Python", "Pandas", "Airflow"],
-        "role": "Solo Developer",
-        "link": "https://github.com/moussa/etl",
-        "startDate": "2023-11",
-        "endDate": "2023-12"
-      }
-    ],
-    "availability": { "status": "Open to work", "type": "Full-time", "startDate": "2024-06" },
-    "socialLinks": { "github": "github.com/mdiallo" },
-    "location": "Bamako, Mali"
+    ]
   }
 ]
