@@ -1,5 +1,6 @@
 import { auth } from "@repo/auth";
 import { headers } from "next/headers";
+import { Suspense } from "react";
 import { CommandCenter } from "@/features/dashboard";
 import { api } from "@/lib/api";
 
@@ -42,5 +43,9 @@ export default async function DashboardPage() {
     user: session?.user ?? { name: "Guest" },
   };
 
-  return <CommandCenter data={data} />;
+  return (
+    <Suspense>
+      <CommandCenter data={data} />
+    </Suspense>
+  );
 }
