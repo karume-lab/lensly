@@ -6,8 +6,10 @@ import applicantsData from "@repo/db/seed-data/applicants.json";
 import jobsData from "@repo/db/seed-data/jobs.json";
 import profilesData from "@repo/db/seed-data/profiles.json";
 import screeningResultsData from "@repo/db/seed-data/screening-results.json";
+import umuravaTalentsData from "@repo/db/seed-data/umurava-talents.json";
 import usersData from "@repo/db/seed-data/users.json";
 import { hashPassword } from "better-auth/crypto";
+import mongoose from "mongoose";
 import PDFDocument from "pdfkit";
 
 const seed = async () => {
@@ -105,10 +107,40 @@ const seed = async () => {
 
     await schema.applicant.create({
       ...a,
+      jobId: new mongoose.Types.ObjectId(a.jobId as string),
+      structuredData: {
+        ...a.structuredData,
+        skills: a.structuredData?.skills?.map(
+          (s: string | { name: string; level: string; yearsOfExperience: number }) =>
+            typeof s === "string" ? { name: s, level: "Intermediate", yearsOfExperience: 3 } : s,
+        ),
+      },
       resumeUrl: `/resumes/${fileName}`,
       createdAt: new Date(a.createdAt),
       updatedAt: new Date(a.updatedAt),
     });
+  }
+
+  console.log("Seeding Umurava Talent Pool candidates for each job...");
+  for (const job of jobsData) {
+    // Assign 3-5 talents from the Umurava pool to each job
+    const numTalents = Math.floor(Math.random() * 3) + 3;
+    const shuffled = [...umuravaTalentsData].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, numTalents);
+
+    for (const talent of selected) {
+      const { email: _talentEmail, ...rest } = talent;
+      await schema.applicant.create({
+        jobId: new mongoose.Types.ObjectId(job._id as string),
+        name: `${talent.firstName} ${talent.lastName}`,
+        email: `${job._id.toString().slice(-4)}_${talent.email}`,
+        source: "Umurava Talent Pool",
+        structuredData: rest,
+        status: "Pending_Screening",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      });
+    }
   }
 
   console.log(`Inserting ${screeningResultsData.length} realistic screening results...`);

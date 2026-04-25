@@ -9,6 +9,10 @@ export interface IApplicant {
   resumeUrl?: string;
   rawText?: string;
   structuredData?: {
+    firstName?: string;
+    lastName?: string;
+    headline?: string;
+    bio?: string;
     education?: {
       institution?: string;
       degree?: string;
@@ -21,7 +25,39 @@ export interface IApplicant {
       duration?: string;
       description?: string;
     }[];
-    skills?: string[];
+    skills?: {
+      name: string;
+      level: string;
+      yearsOfExperience: number;
+    }[];
+    languages?: {
+      name: string;
+      proficiency: string;
+    }[];
+    certifications?: {
+      name: string;
+      issuer: string;
+      issueDate: string;
+    }[];
+    projects?: {
+      name: string;
+      description: string;
+      technologies: string[];
+      role: string;
+      link: string;
+      startDate: string;
+      endDate: string;
+    }[];
+    availability?: {
+      status: string;
+      type: string;
+      startDate: string;
+    };
+    socialLinks?: {
+      linkedin?: string;
+      github?: string;
+      portfolio?: string;
+    };
     location?: string;
   };
   status: string;
@@ -38,6 +74,10 @@ export const ApplicantSchema = new Schema<IApplicant>(
     resumeUrl: { type: String },
     rawText: { type: String },
     structuredData: {
+      firstName: String,
+      lastName: String,
+      headline: String,
+      bio: String,
       education: [
         {
           institution: String,
@@ -54,7 +94,47 @@ export const ApplicantSchema = new Schema<IApplicant>(
           description: String,
         },
       ],
-      skills: [String],
+      skills: [
+        {
+          name: String,
+          level: String,
+          yearsOfExperience: Number,
+        },
+      ],
+      languages: [
+        {
+          name: String,
+          proficiency: String,
+        },
+      ],
+      certifications: [
+        {
+          name: String,
+          issuer: String,
+          issueDate: String,
+        },
+      ],
+      projects: [
+        {
+          name: String,
+          description: String,
+          technologies: [String],
+          role: String,
+          link: String,
+          startDate: String,
+          endDate: String,
+        },
+      ],
+      availability: {
+        status: { type: String },
+        type: { type: String },
+        startDate: { type: String },
+      },
+      socialLinks: {
+        linkedin: { type: String },
+        github: { type: String },
+        portfolio: { type: String },
+      },
       location: String,
     },
     status: { type: String, required: true, default: "Pending_Screening" },

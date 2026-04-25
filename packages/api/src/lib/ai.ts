@@ -3,6 +3,10 @@ import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { z } from "zod";
 
 const AIStructuredDataSchema = z.object({
+  firstName: z.string().optional(),
+  lastName: z.string().optional(),
+  headline: z.string().optional(),
+  bio: z.string().optional(),
   education: z
     .array(
       z.object({
@@ -23,7 +27,32 @@ const AIStructuredDataSchema = z.object({
       }),
     )
     .optional(),
-  skills: z.array(z.string()).optional(),
+  skills: z
+    .array(
+      z.object({
+        name: z.string(),
+        level: z.string(),
+        yearsOfExperience: z.number(),
+      }),
+    )
+    .optional(),
+  languages: z
+    .array(
+      z.object({
+        name: z.string(),
+        proficiency: z.string(),
+      }),
+    )
+    .optional(),
+  certifications: z
+    .array(
+      z.object({
+        name: z.string(),
+        issuer: z.string(),
+        issueDate: z.string(),
+      }),
+    )
+    .optional(),
   location: z.string().optional(),
 });
 
@@ -56,7 +85,7 @@ export class AIService {
   async parseResume(text: string): Promise<AIStructuredData> {
     const prompt = PromptTemplate.fromTemplate(`
       Extract structured information from the following resume text. 
-      Include education history, work experience, skills, and location.
+      Include candidate names, headline, bio, education history, work experience, skills (with level and years of experience), languages, certifications, and location.
       
       Resume Text:
       {text}

@@ -51,6 +51,45 @@ export const ExperienceSchema = t.Object({
   description: t.Optional(t.String()),
 });
 
+export const SkillSchema = t.Object({
+  name: t.String(),
+  level: t.String(),
+  yearsOfExperience: t.Number(),
+});
+
+export const LanguageSchema = t.Object({
+  name: t.String(),
+  proficiency: t.String(),
+});
+
+export const CertificationSchema = t.Object({
+  name: t.String(),
+  issuer: t.String(),
+  issueDate: t.String(),
+});
+
+export const ProjectSchema = t.Object({
+  name: t.String(),
+  description: t.String(),
+  technologies: t.Array(t.String()),
+  role: t.String(),
+  link: t.String(),
+  startDate: t.String(),
+  endDate: t.String(),
+});
+
+export const AvailabilitySchema = t.Object({
+  status: t.String(),
+  type: t.String(),
+  startDate: t.String(),
+});
+
+export const SocialLinksSchema = t.Object({
+  linkedin: t.Optional(t.String()),
+  github: t.Optional(t.String()),
+  portfolio: t.Optional(t.String()),
+});
+
 export const EducationSchema = t.Object({
   institution: t.Optional(t.String()),
   degree: t.Optional(t.String()),
@@ -59,9 +98,18 @@ export const EducationSchema = t.Object({
 });
 
 export const StructuredDataSchema = t.Object({
+  firstName: t.Optional(t.String()),
+  lastName: t.Optional(t.String()),
+  headline: t.Optional(t.String()),
+  bio: t.Optional(t.String()),
   education: t.Optional(t.Array(EducationSchema)),
   experience: t.Optional(t.Array(ExperienceSchema)),
-  skills: t.Optional(t.Array(t.String())),
+  skills: t.Optional(t.Array(SkillSchema)),
+  languages: t.Optional(t.Array(LanguageSchema)),
+  certifications: t.Optional(t.Array(CertificationSchema)),
+  projects: t.Optional(t.Array(ProjectSchema)),
+  availability: t.Optional(AvailabilitySchema),
+  socialLinks: t.Optional(SocialLinksSchema),
   location: t.Optional(t.String()),
 });
 

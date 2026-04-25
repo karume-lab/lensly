@@ -60,6 +60,17 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
     pageSize: 10,
   });
 
+  interface StructuredData {
+    firstName?: string;
+    lastName?: string;
+    headline?: string;
+    bio?: string;
+    skills?: { name: string; level: string; yearsOfExperience: number }[];
+    experience?: { role?: string; company?: string; duration?: string; description?: string }[];
+    education?: { institution?: string; degree?: string; field?: string; year?: number }[];
+    location?: string;
+  }
+
   const toggleCandidate = (id: string) => {
     setSelectedCandidates((prev) =>
       prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id],
@@ -101,11 +112,17 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
       header: "Candidate",
       cell: ({ row }) => {
         const applicant = row.original;
+        const structuredData = applicant.structuredData as unknown as StructuredData;
+        const fullName =
+          structuredData?.firstName && structuredData?.lastName
+            ? `${structuredData.firstName} ${structuredData.lastName}`
+            : applicant.name;
+
         return (
           <div className="flex flex-col">
-            <span className="font-medium text-sm">{applicant.name}</span>
+            <span className="font-medium text-sm">{fullName}</span>
             <span className="text-xs text-muted-foreground">
-              {applicant.structuredData?.experience?.[0]?.duration || "N/A"}
+              {structuredData?.headline || structuredData?.experience?.[0]?.role || "N/A"}
             </span>
           </div>
         );
@@ -116,7 +133,9 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
       header: "Role and skills",
       cell: ({ row }) => {
         const applicant = row.original;
-        const skills = applicant.structuredData?.skills || [];
+        const rawSkills = (applicant.structuredData as unknown as StructuredData)?.skills || [];
+        const skills = rawSkills.map((s) => (typeof s === "string" ? s : s.name));
+
         return (
           <div className="flex flex-wrap gap-1">
             {skills.slice(0, 3).map((skill) => (

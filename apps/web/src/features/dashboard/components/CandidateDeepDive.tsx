@@ -232,7 +232,10 @@ export const CandidateDeepDive = ({
                     <div className="space-y-1">
                       <h1 className="text-3xl font-bold text-foreground">{data.name}</h1>
                       <p className="text-base font-medium text-emerald-600">
-                        {structured?.skills?.slice(0, 3).join(" • ") || "N/A"}
+                        {structured?.skills
+                          ?.slice(0, 3)
+                          .map((s) => s.name)
+                          .join(" • ") || "N/A"}
                       </p>
                     </div>
                     <div className="text-right space-y-1">
@@ -250,9 +253,13 @@ export const CandidateDeepDive = ({
                       Technical skillset
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {structured?.skills?.map((skill: string) => (
-                        <Badge key={`skill-${skill}`} variant="outline" className="font-medium">
-                          {skill}
+                      {structured?.skills?.map((skill) => (
+                        <Badge
+                          key={`skill-${skill.name}`}
+                          variant="outline"
+                          className="font-medium"
+                        >
+                          {skill.name} • {skill.level}
                         </Badge>
                       ))}
                     </div>
