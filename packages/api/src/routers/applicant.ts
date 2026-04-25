@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync } from "node:fs";
 import { aiService } from "@repo/api/lib/ai";
 import { documentService } from "@repo/api/lib/document";
+import { sendNotification } from "@repo/api/lib/notifications";
 import {
   ApplicantSchema,
   ScreeningResultSchema,
@@ -328,6 +329,14 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
       // Update applicant status
       applicant.status = result.overallScore >= 70 ? "Shortlisted" : "Screened";
       await applicant.save();
+
+      // Send notification
+      await sendNotification({
+        userId: job.userId,
+        title: "Screening Complete",
+        message: `Candidate ${applicant.name} has been screened for ${job.title}. Match score: ${result.overallScore}%`,
+        type: result.overallScore >= 70 ? "success" : "info",
+      });
 
       return {
         success: true,

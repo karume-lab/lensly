@@ -112,6 +112,11 @@ export const ProfileSchema = t.Object({
   defaultWeightSkills: t.Number(),
   defaultWeightExperience: t.Number(),
   defaultWeightEducation: t.Number(),
+  emailAlerts: t.Boolean(),
+  browserAlerts: t.Boolean(),
+  aiInsights: t.Boolean(),
+  autoShortlist: t.Boolean(),
+  theme: t.Union([t.Literal("light"), t.Literal("dark"), t.Literal("system")]),
   createdAt: t.Date(),
   updatedAt: t.Date(),
 });

@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { authClient } from "@repo/auth/client";
 import { Button } from "@repo/ui/web/components/ui/button";
 import {
   Card,
@@ -19,31 +20,29 @@ import {
   FormMessage,
 } from "@repo/ui/web/components/ui/form";
 import { Input } from "@repo/ui/web/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@repo/ui/web/components/ui/select";
 import { Separator } from "@repo/ui/web/components/ui/separator";
+import { Skeleton } from "@repo/ui/web/components/ui/skeleton";
 import { Switch } from "@repo/ui/web/components/ui/switch";
 import { UserSettingsSchema, type UserSettingsValues } from "@repo/validators";
-import { Bell, Cpu, ShieldCheck, User } from "lucide-react";
-import { useState } from "react";
+import { Bell, Settings2, ShieldCheck, User } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { useProfile, useUpdateProfileMutation } from "@/lib/queries/profile";
 
 export default function SettingsClient() {
+  const { data: profile, isLoading: isProfileLoading } = useProfile();
+  const { data: session, isPending: isSessionLoading } = authClient.useSession();
+  const updateProfile = useUpdateProfileMutation();
   const [isSaving, setIsSaving] = useState(false);
 
   const form = useForm<UserSettingsValues>({
     resolver: zodResolver(UserSettingsSchema),
     defaultValues: {
-      name: "Alex Johnson",
-      email: "alex@lensly.ai",
-      role: "Head of Talent Acquisition",
-      companyName: "Lensly AI",
+      name: "",
+      email: "",
+      role: "",
+      companyName: "",
       notifications: {
         emailAlerts: true,
         browserAlerts: true,
@@ -51,17 +50,54 @@ export default function SettingsClient() {
       },
       preferences: {
         theme: "system",
-        defaultAiModel: "claude-3-5-sonnet",
         autoShortlist: false,
       },
     },
   });
 
+  useEffect(() => {
+    if (profile && session?.user) {
+      form.reset({
+        name: session.user.name,
+        email: session.user.email,
+        role: profile.role || "",
+        companyName: profile.companyName || "",
+        notifications: {
+          emailAlerts: profile.emailAlerts ?? true,
+          browserAlerts: profile.browserAlerts ?? true,
+          aiInsights: profile.aiInsights ?? true,
+        },
+        preferences: {
+          theme: (profile.theme as "light" | "dark" | "system") || "system",
+          autoShortlist: profile.autoShortlist ?? false,
+        },
+      });
+    }
+  }, [profile, session, form]);
+
   const onSubmit = async (values: UserSettingsValues) => {
     setIsSaving(true);
     try {
-      console.log("Saving settings:", values);
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await updateProfile.mutateAsync({
+        name: values.name,
+        email: values.email,
+        role: values.role,
+        companyName: values.companyName,
+        emailAlerts: values.notifications.emailAlerts,
+        browserAlerts: values.notifications.browserAlerts,
+        aiInsights: values.notifications.aiInsights,
+        autoShortlist: values.preferences.autoShortlist,
+        theme: values.preferences.theme,
+      });
+
+      if (
+        values.notifications.browserAlerts &&
+        "Notification" in window &&
+        Notification.permission === "default"
+      ) {
+        await Notification.requestPermission();
+      }
+
       toast.success("Settings saved", {
         description: "Your profile and preferences have been updated.",
       });
@@ -73,6 +109,16 @@ export default function SettingsClient() {
       setIsSaving(false);
     }
   };
+
+  if (isProfileLoading || isSessionLoading) {
+    return (
+      <div className="space-y-6">
+        <Skeleton className="h-[200px] w-full" />
+        <Skeleton className="h-[200px] w-full" />
+        <Skeleton className="h-[200px] w-full" />
+      </div>
+    );
+  }
 
   return (
     <div className="grid lg:grid-cols-12 gap-8">
@@ -150,37 +196,11 @@ export default function SettingsClient() {
             <Card className="border-border">
               <CardHeader className="border-b border-border">
                 <CardTitle className="text-base font-semibold flex items-center gap-2">
-                  <Cpu className="size-4 text-muted-foreground" /> Platform configuration
+                  <Settings2 className="size-4 text-muted-foreground" /> Platform configuration
                 </CardTitle>
-                <CardDescription>Manage automation settings and model preferences.</CardDescription>
+                <CardDescription>Manage automation settings and preferences.</CardDescription>
               </CardHeader>
               <CardContent className="p-6 space-y-6">
-                <FormField
-                  control={form.control}
-                  name="preferences.defaultAiModel"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="font-medium">Default screening model</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a model" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="claude-3-5-sonnet">Claude 3.5 Sonnet</SelectItem>
-                          <SelectItem value="gpt-4o">GPT-4o</SelectItem>
-                          <SelectItem value="gemini-1.5-pro">Gemini 1.5 Pro</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormDescription>
-                        The primary model used for initial candidate assessment.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
                 <FormField
                   control={form.control}
                   name="preferences.autoShortlist"
@@ -240,6 +260,23 @@ export default function SettingsClient() {
                         <FormLabel className="text-sm font-medium">Email summaries</FormLabel>
                         <FormDescription className="text-xs">
                           Receive daily email reports of top-performing candidates.
+                        </FormDescription>
+                      </div>
+                      <FormControl>
+                        <Switch checked={field.value} onCheckedChange={field.onChange} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="notifications.browserAlerts"
+                  render={({ field }) => (
+                    <FormItem className="flex items-center justify-between border p-4">
+                      <div className="space-y-0.5">
+                        <FormLabel className="text-sm font-medium">Browser notifications</FormLabel>
+                        <FormDescription className="text-xs">
+                          Get real-time alerts in your browser for important updates.
                         </FormDescription>
                       </div>
                       <FormControl>

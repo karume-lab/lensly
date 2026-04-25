@@ -12,7 +12,6 @@ export const UserSettingsSchema = z.object({
   }),
   preferences: z.object({
     theme: z.enum(["light", "dark", "system"]),
-    defaultAiModel: z.enum(["gpt-4o", "claude-3-5-sonnet", "gemini-1.5-pro"]),
     autoShortlist: z.boolean(),
   }),
 });

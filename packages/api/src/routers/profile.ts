@@ -21,6 +21,11 @@ export const profileRouter = new Elysia({ prefix: "/profile" })
           defaultWeightSkills: 50,
           defaultWeightExperience: 30,
           defaultWeightEducation: 20,
+          emailAlerts: true,
+          browserAlerts: true,
+          aiInsights: true,
+          autoShortlist: false,
+          theme: "system",
         });
         await profile.save();
       }
@@ -33,9 +38,16 @@ export const profileRouter = new Elysia({ prefix: "/profile" })
   .put(
     "/",
     async ({ body, user }) => {
+      const { name, email, ...profileData } = body;
+
+      // Update user info if name or email is provided
+      if (name || email) {
+        await schema.User.updateOne({ id: user.id }, { $set: { name, email } });
+      }
+
       const profile = await schema.Profile.findOneAndUpdate(
         { userId: user.id },
-        { $set: body },
+        { $set: profileData },
         { new: true, upsert: true },
       );
       return profile;
@@ -43,11 +55,18 @@ export const profileRouter = new Elysia({ prefix: "/profile" })
     {
       body: t.Partial(
         t.Object({
+          name: t.String(),
+          email: t.String(),
           companyName: t.String(),
           role: t.String(),
           defaultWeightSkills: t.Number(),
           defaultWeightExperience: t.Number(),
           defaultWeightEducation: t.Number(),
+          emailAlerts: t.Boolean(),
+          browserAlerts: t.Boolean(),
+          aiInsights: t.Boolean(),
+          autoShortlist: t.Boolean(),
+          theme: t.String(),
         }),
       ),
       response: ProfileSchema,

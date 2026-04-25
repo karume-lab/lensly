@@ -5,6 +5,7 @@ import { DynamicBreadcrumbs } from "@/components/shared/DynamicBreadcrumbs";
 import { ThemeSwitch } from "@/components/shared/ThemeSwitch";
 import { EmailVerificationBanner } from "@/features/auth/components/EmailVerificationBanner";
 import { DashboardSidebar } from "@/features/dashboard/components/DashboardSidebar";
+import { NotificationBell } from "@/features/dashboard/components/NotificationBell";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -19,6 +20,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               <DynamicBreadcrumbs />
             </div>
             <div className="flex items-center gap-2">
+              <NotificationBell />
               <ThemeSwitch />
             </div>
           </header>
