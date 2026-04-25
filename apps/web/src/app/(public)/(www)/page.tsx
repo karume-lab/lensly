@@ -7,7 +7,6 @@ import Link from "next/link";
 import SiteLogo from "@/components/shared/SiteLogo";
 import { ThemeSwitch } from "@/components/shared/ThemeSwitch";
 import NavigationPill from "@/features/www/components/NavigationPill";
-import TestimonialsCarousel from "@/features/www/components/TestimonialsCarousel";
 
 const features = [
   {
@@ -125,17 +124,6 @@ const WWWPage = () => {
               ))}
             </div>
           </div>
-        </section>
-
-        <section
-          id="testimonials"
-          className="py-20 px-6 sm:py-32 text-center relative max-w-7xl mx-auto overflow-hidden"
-        >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-5xl mb-16">
-            Trusted by hiring teams
-          </h2>
-
-          <TestimonialsCarousel />
         </section>
       </main>
 
