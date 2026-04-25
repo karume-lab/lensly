@@ -1,6 +1,8 @@
+import { aiService, type UmuravaTalent } from "@repo/api/lib/ai";
 import { JobSchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
+import umuravaTalentsData from "@repo/db/seed-data/umurava-talents.json";
 import { Elysia, t } from "elysia";
 
 export const jobRouter = new Elysia({ prefix: "/jobs" })
@@ -207,6 +209,37 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
     async ({ body, user }) => {
       const job = new schema.Job({ ...body, userId: user.id });
       await job.save();
+
+      // Seed candidates from Umurava Talent pool using AI matching
+      const allTalents = umuravaTalentsData as UmuravaTalent[];
+      let selectedTalents: UmuravaTalent[] = [];
+      try {
+        const selectedEmails = await aiService.matchTalents(
+          {
+            title: job.title,
+            description: job.description,
+            requiredSkills: job.requiredSkills,
+          },
+          allTalents,
+        );
+        selectedTalents = allTalents.filter((t) => selectedEmails.includes(t.email));
+      } catch (error) {
+        console.error("AI matching failed, falling back to random selection", error);
+        const shuffled = [...allTalents].sort(() => 0.5 - Math.random());
+        selectedTalents = shuffled.slice(0, Math.floor(Math.random() * 3) + 3);
+      }
+
+      for (const talent of selectedTalents) {
+        await schema.Applicant.create({
+          jobId: job._id,
+          name: `${talent.firstName} ${talent.lastName}`,
+          email: talent.email,
+          source: "Umurava Talent Pool",
+          status: "Pending_Screening",
+          structuredData: talent,
+        });
+      }
+
       return {
         id: job._id.toString(),
         userId: job.userId,

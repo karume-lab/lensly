@@ -71,6 +71,48 @@ const AIScreeningResultSchema = z.object({
 export type AIStructuredData = z.infer<typeof AIStructuredDataSchema>;
 export type AIScreeningResult = z.infer<typeof AIScreeningResultSchema>;
 
+export interface UmuravaTalent {
+  firstName: string;
+  lastName: string;
+  email: string;
+  headline: string;
+  bio: string;
+  skills: {
+    name: string;
+    level: string;
+    yearsOfExperience: number;
+  }[];
+  languages?: {
+    name: string;
+    proficiency: string;
+  }[];
+  certifications?: {
+    name: string;
+    issuer: string;
+    issueDate: string;
+  }[];
+  projects?: {
+    name: string;
+    description: string;
+    technologies: string[];
+    role: string;
+    link: string;
+    startDate: string;
+    endDate: string;
+  }[];
+  availability?: {
+    status: string;
+    type: string;
+    startDate: string;
+  };
+  socialLinks?: {
+    linkedin?: string;
+    github?: string;
+    portfolio?: string;
+  };
+  location: string;
+}
+
 export class AIService {
   private model: ChatGoogleGenerativeAI;
 
@@ -140,6 +182,51 @@ export class AIService {
       applicantText: applicant.rawText || "N/A",
       applicantStructuredData: JSON.stringify(applicant.structuredData || {}),
     });
+  }
+
+  async matchTalents(
+    job: {
+      title: string;
+      description: string;
+      requiredSkills: string[];
+    },
+    talents: UmuravaTalent[],
+  ): Promise<string[]> {
+    const prompt = PromptTemplate.fromTemplate(`
+      You are an expert technical recruiter. Review the following job details and the provided list of candidates.
+      Select the 3 to 5 most qualified candidates for this job from the list based on their skills, experience, and headline.
+      Return an array of the selected candidates' email addresses.
+
+      Job Title: {jobTitle}
+      Job Description: {jobDescription}
+      Required Skills: {requiredSkills}
+
+      Candidates:
+      {talents}
+    `);
+
+    const MatchingSchema = z.object({
+      selectedEmails: z.array(z.string()),
+    });
+
+    const chain = prompt.pipe(this.model.withStructuredOutput(MatchingSchema));
+
+    const simplifiedTalents = talents.map((t) => ({
+      email: t.email,
+      name: `${t.firstName} ${t.lastName}`,
+      headline: t.headline,
+      skills: t.skills?.map((s) => s.name).join(", "),
+      experience_years: t.skills?.reduce((max, s) => Math.max(max, s.yearsOfExperience || 0), 0),
+    }));
+
+    const result = await chain.invoke({
+      jobTitle: job.title,
+      jobDescription: job.description,
+      requiredSkills: job.requiredSkills.join(", "),
+      talents: JSON.stringify(simplifiedTalents, null, 2),
+    });
+
+    return result.selectedEmails || [];
   }
 }
 
