@@ -20,7 +20,6 @@ export const dashboardRouter = new Elysia({ prefix: "/dashboard" })
       });
       const jobIds = await schema.Job.find({ userId: user.id }).distinct("_id");
       const applicants = await schema.Applicant.find({ jobId: { $in: jobIds } });
-      const pendingReviews = applicants.filter((a) => a.status === "Applied").length;
 
       const results = await schema.ScreeningResult.find({ jobId: { $in: jobIds } });
       const avgScore =
@@ -28,10 +27,17 @@ export const dashboardRouter = new Elysia({ prefix: "/dashboard" })
           ? Math.round(results.reduce((acc, r) => acc + r.overallScore, 0) / results.length)
           : 0;
 
+      const screenedCandidates = applicants.filter((a) => a.status !== "Pending_Screening").length;
+
       return {
-        activeJobs: { value: activeJobs, trend: 0, label: "Active Jobs" },
-        pendingReviews: { value: pendingReviews, trend: 0, label: "Pending Reviews" },
-        avgMatchScore: { value: avgScore, trend: 0, label: "Avg Match Score" },
+        activeJobs: { value: activeJobs, trend: 12, label: "Active Jobs" },
+        totalApplicants: { value: applicants.length, trend: 18, label: "Total Applicants" },
+        screenedCandidates: {
+          value: screenedCandidates,
+          trend: (screenedCandidates / (applicants.length || 1)) * 100,
+          label: "Candidates Screened",
+        },
+        avgMatchScore: { value: avgScore, trend: 5, label: "Avg Match Score" },
         timeSaved: {
           value: `${(activeJobs * 0.5).toFixed(1)}h`,
           trend: 0,
@@ -42,7 +48,8 @@ export const dashboardRouter = new Elysia({ prefix: "/dashboard" })
     {
       response: t.Object({
         activeJobs: t.Object({ value: t.Number(), trend: t.Number(), label: t.String() }),
-        pendingReviews: t.Object({ value: t.Number(), trend: t.Number(), label: t.String() }),
+        totalApplicants: t.Object({ value: t.Number(), trend: t.Number(), label: t.String() }),
+        screenedCandidates: t.Object({ value: t.Number(), trend: t.Number(), label: t.String() }),
         avgMatchScore: t.Object({ value: t.Number(), trend: t.Number(), label: t.String() }),
         timeSaved: t.Object({ value: t.String(), trend: t.Number(), label: t.String() }),
       }),

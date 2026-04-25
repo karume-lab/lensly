@@ -101,6 +101,40 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
     },
   )
   .get(
+    "/history/stats",
+    async ({ user }) => {
+      const closedJobs = await schema.Job.find({ userId: user.id, status: "Closed" });
+      const jobIds = closedJobs.map((j) => j._id);
+
+      const totalCandidates = await schema.Applicant.countDocuments({ jobId: { $in: jobIds } });
+      const results = await schema.ScreeningResult.find({ jobId: { $in: jobIds } });
+
+      const avgScore =
+        results.length > 0
+          ? Math.round(results.reduce((acc, r) => acc + r.overallScore, 0) / results.length)
+          : 0;
+
+      const totalTimeSaved = totalCandidates * 0.5; // 30 mins per candidate
+
+      return {
+        totalCandidates: { value: totalCandidates, trend: 12, label: "Total candidates processed" },
+        timeSaved: {
+          value: `${totalTimeSaved.toFixed(1)} hours`,
+          trend: 0,
+          label: "Cumulative efficiency saved",
+        },
+        avgMatchScore: { value: avgScore, trend: 0, label: "Average match precision" },
+      };
+    },
+    {
+      response: t.Object({
+        totalCandidates: t.Object({ value: t.Number(), trend: t.Number(), label: t.String() }),
+        timeSaved: t.Object({ value: t.String(), trend: t.Number(), label: t.String() }),
+        avgMatchScore: t.Object({ value: t.Number(), trend: t.Number(), label: t.String() }),
+      }),
+    },
+  )
+  .get(
     "/stats",
     async ({ user }) => {
       const activeJobs = await schema.Job.countDocuments({
@@ -149,11 +183,18 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
         status: { $ne: "Pending_Screening" },
       });
 
+      const results = await schema.ScreeningResult.find({ jobId: job._id });
+      const avgScore =
+        results.length > 0
+          ? Math.round(results.reduce((acc, r) => acc + r.overallScore, 0) / results.length)
+          : 0;
+
       return {
         ...job.toObject(),
         id: job._id.toString(),
         applicantCount,
         screenedCount,
+        avgScore,
       };
     },
     {

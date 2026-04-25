@@ -103,7 +103,16 @@ export function JobOverviewClient({ initialData }: { initialData: JobData }) {
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">AI Match Confidence</span>
-              <span className="font-semibold text-emerald-500">High (82%)</span>
+              <span
+                className={`font-semibold ${job.avgScore && job.avgScore >= 80 ? "text-emerald-500" : job.avgScore && job.avgScore >= 60 ? "text-amber-500" : "text-destructive"}`}
+              >
+                {job.avgScore && job.avgScore >= 80
+                  ? "High"
+                  : job.avgScore && job.avgScore >= 60
+                    ? "Medium"
+                    : "Low"}{" "}
+                ({job.avgScore || 0}%)
+              </span>
             </div>
           </CardContent>
         </Card>

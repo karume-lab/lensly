@@ -2,12 +2,15 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/web/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/ui/web/components/ui/tabs";
-import { TrendingUp } from "lucide-react";
+import { Loader2, TrendingUp } from "lucide-react";
 import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
 import { ActivityTable } from "@/features/history/components/activity-table";
 import { HistoryTable } from "@/features/history/components/history-table";
+import { useHistoryStats } from "@/lib/queries/job";
 
 export const HistoryClient = () => {
+  const { data: stats, isLoading } = useHistoryStats();
+
   return (
     <div className="flex flex-col gap-8">
       <DashboardHeader
@@ -23,10 +26,24 @@ export const HistoryClient = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-semibold">1,482</div>
-            <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
-              <TrendingUp className="size-3 text-emerald-600" /> 12% increase from previous month
-            </p>
+            {isLoading ? (
+              <Loader2 className="size-4 animate-spin text-muted-foreground" />
+            ) : (
+              <>
+                <div className="text-2xl font-semibold">
+                  {stats?.totalCandidates.value.toLocaleString()}
+                </div>
+                <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+                  {stats?.totalCandidates.trend !== undefined &&
+                    stats.totalCandidates.trend !== 0 && (
+                      <>
+                        <TrendingUp className="size-3 text-emerald-600" />{" "}
+                        {stats.totalCandidates.trend}% increase from previous month
+                      </>
+                    )}
+                </p>
+              </>
+            )}
           </CardContent>
         </Card>
         <Card className="border-border">
@@ -36,10 +53,16 @@ export const HistoryClient = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-semibold">53.6 hours</div>
-            <p className="text-xs text-muted-foreground mt-1">
-              Review hours reclaimed for human talent
-            </p>
+            {isLoading ? (
+              <Loader2 className="size-4 animate-spin text-muted-foreground" />
+            ) : (
+              <>
+                <div className="text-2xl font-semibold">{stats?.timeSaved.value}</div>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Review hours reclaimed for human talent
+                </p>
+              </>
+            )}
           </CardContent>
         </Card>
         <Card className="border-border">
@@ -49,10 +72,16 @@ export const HistoryClient = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-semibold">84%</div>
-            <p className="text-xs text-muted-foreground mt-1">
-              Consistency maintained across assessment batches
-            </p>
+            {isLoading ? (
+              <Loader2 className="size-4 animate-spin text-muted-foreground" />
+            ) : (
+              <>
+                <div className="text-2xl font-semibold">{stats?.avgMatchScore.value}%</div>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Consistency maintained across assessment batches
+                </p>
+              </>
+            )}
           </CardContent>
         </Card>
       </div>

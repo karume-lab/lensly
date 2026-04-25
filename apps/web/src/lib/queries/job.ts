@@ -34,6 +34,28 @@ export const useJobStats = () => {
   });
 };
 
+export const useHistoryStats = () => {
+  return useQuery({
+    queryKey: ["history-stats"],
+    queryFn: async () => {
+      const { data, error } = await api.jobs.history.stats.get();
+      if (error) throw error;
+      return data;
+    },
+  });
+};
+
+export const useHistory = () => {
+  return useQuery({
+    queryKey: ["history"],
+    queryFn: async () => {
+      const { data, error } = await api.jobs.history.get();
+      if (error) throw error;
+      return data;
+    },
+  });
+};
+
 export const useCreateJobMutation = () => {
   const queryClient = useQueryClient();
   return useMutation({

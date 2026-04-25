@@ -34,7 +34,8 @@ export default async function DashboardPage() {
   const data = {
     metrics: metrics ?? {
       activeJobs: { value: 0, trend: 0, label: "Active Jobs" },
-      pendingReviews: { value: 0, trend: 0, label: "Pending Reviews" },
+      totalApplicants: { value: 0, trend: 0, label: "Total Applicants" },
+      screenedCandidates: { value: 0, trend: 0, label: "Candidates Screened" },
       avgMatchScore: { value: 0, trend: 0, label: "Avg Match Score" },
       timeSaved: { value: "0h", trend: 0, label: "AI Time Saved Today" },
     },

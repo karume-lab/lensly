@@ -1,4 +1,4 @@
-import { client, dbInstance } from "@repo/db";
+import { dbInstance } from "@repo/db";
 import { getLocalIPs } from "@repo/utils/get-ip";
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
@@ -13,9 +13,7 @@ if (!isGoogleConfigured) {
 }
 
 export const auth = betterAuth({
-  database: mongodbAdapter(dbInstance as NonNullable<typeof dbInstance>, {
-    client: client,
-  }),
+  database: mongodbAdapter(dbInstance as NonNullable<typeof dbInstance>),
   baseURL:
     process.env.BETTER_AUTH_URL ??
     process.env.NEXT_PUBLIC_APP_URL ??

@@ -54,7 +54,8 @@ export const CommandCenter = ({
                   {metric.label}
                 </CardTitle>
                 {key === "activeJobs" && <Briefcase className="size-4 text-muted-foreground" />}
-                {key === "pendingReviews" && <Users className="size-4 text-muted-foreground" />}
+                {key === "totalApplicants" && <Users className="size-4 text-muted-foreground" />}
+                {key === "screenedCandidates" && <div className="size-2 bg-primary rounded-full" />}
                 {key === "avgMatchScore" && <Zap className="size-4 text-muted-foreground" />}
                 {key === "timeSaved" && <Clock className="size-4 text-muted-foreground" />}
               </CardHeader>
