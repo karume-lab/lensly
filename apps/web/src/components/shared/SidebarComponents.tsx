@@ -163,8 +163,8 @@ export const NavMain = ({
 
   const isItemActive = (path: string) => {
     if (pathname === path) return true;
-    if (path === "/dashboard") return pathname === "/dashboard";
-    return pathname.startsWith(`${path}/`);
+    // Don't mark parent paths as active unless they're the current exact path
+    return false;
   };
 
   return (
