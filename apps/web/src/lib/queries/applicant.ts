@@ -31,8 +31,14 @@ export const useScreeningMutation = () => {
       if (error) throw error;
       return data;
     },
-    onSuccess: (_, _id) => {
+    onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ["applicants"] });
+      if (data?.result?.jobId) {
+        queryClient.invalidateQueries({ queryKey: ["shortlist", data.result.jobId] });
+        queryClient.invalidateQueries({ queryKey: ["job", data.result.jobId] });
+      }
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job-stats"] });
     },
   });
 };
@@ -47,6 +53,9 @@ export const useUploadMetadataMutation = () => {
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ["applicants", variables.jobId] });
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job", variables.jobId] });
+      queryClient.invalidateQueries({ queryKey: ["job-stats"] });
     },
   });
 };
@@ -64,6 +73,7 @@ export const useUploadApplicantMutation = () => {
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ["applicants", variables.jobId] });
       queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job", variables.jobId] });
       queryClient.invalidateQueries({ queryKey: ["job-stats"] });
     },
   });
@@ -79,6 +89,10 @@ export const useUpdateApplicantStatusMutation = (id: string) => {
     },
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ["applicants", data.jobId] });
+      queryClient.invalidateQueries({ queryKey: ["shortlist", data.jobId] });
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["job", data.jobId] });
+      queryClient.invalidateQueries({ queryKey: ["job-stats"] });
     },
   });
 };

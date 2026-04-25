@@ -229,16 +229,56 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
         selectedTalents = shuffled.slice(0, Math.floor(Math.random() * 3) + 3);
       }
 
-      for (const talent of selectedTalents) {
-        await schema.Applicant.create({
-          jobId: job._id,
-          name: `${talent.firstName} ${talent.lastName}`,
-          email: talent.email,
-          source: "Umurava Talent Pool",
-          status: "Pending_Screening",
-          structuredData: talent,
-        });
-      }
+      await Promise.all(
+        selectedTalents.map(async (talent) => {
+          try {
+            const result = await aiService.screenApplicant(
+              {
+                title: job.title,
+                description: job.description,
+                requiredSkills: job.requiredSkills,
+                weightSkills: job.weightSkills || 40,
+                weightExperience: job.weightExperience || 40,
+                weightEducation: job.weightEducation || 20,
+              },
+              {
+                name: `${talent.firstName} ${talent.lastName}`,
+                structuredData: talent,
+              },
+            );
+
+            // Only show profiles that qualify
+            if (result.overallScore < 50 || result.aiRecommendation.toLowerCase() === "no") {
+              return;
+            }
+
+            const applicant = await schema.Applicant.create({
+              jobId: job._id,
+              name: `${talent.firstName} ${talent.lastName}`,
+              email: talent.email,
+              source: "Umurava Talent Pool",
+              status: result.overallScore >= 70 ? "Shortlisted" : "Screened",
+              structuredData: talent,
+            });
+
+            await schema.ScreeningResult.create({
+              applicantId: applicant._id,
+              jobId: applicant.jobId,
+              overallScore: result.overallScore,
+              skillScore: result.skillScore,
+              experienceScore: result.experienceScore,
+              educationScore: result.educationScore,
+              relevanceScore: result.relevanceScore,
+              strengths: result.strengths,
+              gaps: result.gaps,
+              aiRecommendation: result.aiRecommendation,
+              aiReasoning: result.aiReasoning,
+            });
+          } catch (error) {
+            console.error("AI screening failed for talent during job creation", error);
+          }
+        }),
+      );
 
       return {
         id: job._id.toString(),

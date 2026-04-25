@@ -2,7 +2,6 @@
 
 import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/web/components/ui/card";
 import { Checkbox } from "@repo/ui/web/components/ui/checkbox";
 import { DataTable } from "@repo/ui/web/components/ui/data-table";
 import {
@@ -16,16 +15,7 @@ import {
 import Dropzone from "@repo/ui/web/components/ui/dropzone";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/ui/web/components/ui/tabs";
 import type { ColumnDef, PaginationState } from "@tanstack/react-table";
-import {
-  CheckCircle2,
-  Clock,
-  FileUp,
-  Globe,
-  Loader2,
-  Search as SearchIcon,
-  Trash2,
-  Zap,
-} from "lucide-react";
+import { Clock, FileUp, Globe, Loader2, Search as SearchIcon, Zap } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { parseAsString, useQueryState } from "nuqs";
 import { useState } from "react";
@@ -58,6 +48,23 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10,
+  });
+
+  const filteredApplicants = applicants?.filter((app) => {
+    if (search) {
+      const searchTerm = search.toLowerCase();
+      const structuredData = app.structuredData as unknown as StructuredData;
+      const fullName =
+        structuredData?.firstName && structuredData?.lastName
+          ? `${structuredData.firstName} ${structuredData.lastName}`
+          : app.name;
+
+      if (!fullName.toLowerCase().includes(searchTerm)) {
+        return false;
+      }
+    }
+
+    return true;
   });
 
   interface StructuredData {
@@ -255,7 +262,7 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
           ) : (
             <DataTable
               columns={columns}
-              data={applicants}
+              data={filteredApplicants || []}
               pageCount={1}
               pagination={pagination}
               onPaginationChange={setPagination}
@@ -298,48 +305,6 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
                 </div>
               )}
             </Dropzone>
-
-            <div className="grid gap-6 md:grid-cols-3">
-              <Card className="border-border bg-card">
-                <CardHeader className="p-5 pb-2">
-                  <CardTitle className="text-sm font-semibold flex items-center gap-2">
-                    <CheckCircle2 className="size-4 text-emerald-600" />
-                    Automatic extraction
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-5 pt-0">
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Resumes are parsed instantly using localized extraction protocols.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-border bg-card">
-                <CardHeader className="p-5 pb-2">
-                  <CardTitle className="text-sm font-semibold flex items-center gap-2">
-                    <Zap className="size-4 text-primary" />
-                    Batch processing
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-5 pt-0">
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Evaluate multiple applications simultaneously for efficient screening.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-border bg-card">
-                <CardHeader className="p-5 pb-2">
-                  <CardTitle className="text-sm font-semibold flex items-center gap-2">
-                    <Trash2 className="size-4 text-muted-foreground" />
-                    Data privacy
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-5 pt-0">
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Process is secured via private endpoints. No data is stored or shared.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </TabsContent>
       </Tabs>

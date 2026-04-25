@@ -67,6 +67,8 @@ export const useCreateJobMutation = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["jobs"] });
       queryClient.invalidateQueries({ queryKey: ["job-stats"] });
+      queryClient.invalidateQueries({ queryKey: ["history"] });
+      queryClient.invalidateQueries({ queryKey: ["history-stats"] });
     },
   });
 };
@@ -83,6 +85,8 @@ export const useUpdateJobMutation = (id: string) => {
       queryClient.invalidateQueries({ queryKey: ["jobs"] });
       queryClient.invalidateQueries({ queryKey: ["job", id] });
       queryClient.invalidateQueries({ queryKey: ["job-stats"] });
+      queryClient.invalidateQueries({ queryKey: ["history"] });
+      queryClient.invalidateQueries({ queryKey: ["history-stats"] });
     },
   });
 };
@@ -98,6 +102,8 @@ export const useDeleteJobMutation = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["jobs"] });
       queryClient.invalidateQueries({ queryKey: ["job-stats"] });
+      queryClient.invalidateQueries({ queryKey: ["history"] });
+      queryClient.invalidateQueries({ queryKey: ["history-stats"] });
     },
   });
 };
