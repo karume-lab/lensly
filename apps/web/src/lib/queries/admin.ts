@@ -51,3 +51,27 @@ export const deleteUserMutation = () => ({
     return data;
   },
 });
+
+export const adminJobsQuery = (page: number, limit: number) =>
+  queryOptions({
+    queryKey: QUERY_KEYS.admin.jobs.list(page, limit),
+    queryFn: async () => {
+      const { data, error } = await api.admin.jobs.get({
+        query: { page, limit },
+      });
+      if (error) throw error.value;
+      return data;
+    },
+  });
+
+export const adminActivitiesQuery = (page: number, limit: number) =>
+  queryOptions({
+    queryKey: QUERY_KEYS.admin.activities.list(page, limit),
+    queryFn: async () => {
+      const { data, error } = await api.admin.activities.get({
+        query: { page, limit },
+      });
+      if (error) throw error.value;
+      return data;
+    },
+  });

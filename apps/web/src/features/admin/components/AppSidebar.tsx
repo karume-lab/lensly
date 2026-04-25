@@ -37,6 +37,14 @@ const data = {
           title: "Users",
           url: "/admin/users",
         },
+        {
+          title: "Jobs",
+          url: "/admin/jobs",
+        },
+        {
+          title: "System Activities",
+          url: "/admin/activities",
+        },
       ],
     },
     {

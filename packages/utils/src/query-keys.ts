@@ -16,7 +16,16 @@ export const QUERY_KEYS = {
         [...adminBase, "users", "list", { page, limit, search }] as const,
       details: () => [...adminBase, "users", "detail"] as const,
       detail: (id: string) => [...adminBase, "users", "detail", id] as const,
-      stats: () => [...adminBase, "users", "stats"] as const,
+    },
+    jobs: {
+      all: () => [...adminBase, "jobs"] as const,
+      list: (page: number, limit: number) =>
+        [...adminBase, "jobs", "list", { page, limit }] as const,
+    },
+    activities: {
+      all: () => [...adminBase, "activities"] as const,
+      list: (page: number, limit: number) =>
+        [...adminBase, "activities", "list", { page, limit }] as const,
     },
     stats: () => [...adminBase, "stats"] as const,
   },
