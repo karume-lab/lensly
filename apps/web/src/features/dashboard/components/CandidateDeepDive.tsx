@@ -81,7 +81,7 @@ export const CandidateDeepDive = ({
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 top-[64px] flex flex-col bg-background overflow-hidden"
+      className="w-full h-[calc(100vh-64px)] flex flex-col bg-background overflow-hidden"
       data-candidate-id={candidateId}
       data-job-id={jobId}
     >
