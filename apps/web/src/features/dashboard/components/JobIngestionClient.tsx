@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@repo/ui/web/components/ui/badge";
 import { Button } from "@repo/ui/web/components/ui/button";
 import { ChevronLeft, Loader2, Share2 } from "lucide-react";
 import type { Route } from "next";
@@ -53,9 +52,6 @@ export function JobIngestionClient({ jobId }: { jobId: string }) {
           </Link>
           <div className="flex items-center gap-3">
             <h1 className="text-3xl font-bold tracking-tight">{job.title}</h1>
-            <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">
-              Ingestion Phase
-            </Badge>
           </div>
           <p className="text-muted-foreground line-clamp-1">
             {job.department} • {job.seniority} • {job.applicantCount} Total Applicants
