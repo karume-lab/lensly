@@ -27,6 +27,7 @@ const seed = async () => {
     const { password, ...user } = userData;
 
     await schema.user.create({
+      _id: user.id,
       ...user,
       createdAt: new Date(user.createdAt),
       updatedAt: new Date(user.updatedAt),
@@ -34,6 +35,7 @@ const seed = async () => {
 
     const hashedPassword = await hashPassword(password);
     await schema.account.create({
+      _id: user.id,
       id: user.id,
       userId: user.id,
       accountId: user.id,
@@ -95,6 +97,7 @@ const seed = async () => {
 };
 
 seed().catch((error) => {
-  console.error("Seeding failed:", error);
+  console.error("Seeding failed:");
+  console.dir(error, { depth: null });
   process.exit(1);
 });
