@@ -68,10 +68,8 @@ export const DashboardSidebar = ({ ...props }: React.ComponentProps<typeof Sideb
             className={`w-auto object-contain shrink-0 transition-all duration-200 ${isCollapsed ? "h-10" : "h-12"}`}
           />
           <div className="flex flex-col group-data-[collapsible=icon]:hidden">
-            <span className="font-semibold text-lg tracking-tight leading-none text-white">
-              Lensly
-            </span>
-            <span className="text-xs text-white/70 mt-0.5">AI Hiring Platform</span>
+            <span className="font-semibold text-lg tracking-tight leading-none">Lensly</span>
+            <span className="text-xs opacity-70 mt-0.5">AI Hiring Platform</span>
           </div>
         </div>
       </SidebarHeader>
@@ -89,7 +87,7 @@ export const DashboardSidebar = ({ ...props }: React.ComponentProps<typeof Sideb
             </div>
           </div>
         ) : (
-          user && <NavUser user={user} showReturnToTasks />
+          user && <NavUser user={user} />
         )}
       </SidebarFooter>
       <SidebarRail />

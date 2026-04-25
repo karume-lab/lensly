@@ -27,7 +27,7 @@ import {
   useSidebar,
 } from "@repo/ui/web/components/ui/sidebar";
 import { cn } from "@repo/ui/web/lib/utils";
-import { ChevronRight, ChevronsUpDown, LayoutDashboard, LogOut, User } from "lucide-react";
+import { ChevronRight, ChevronsUpDown, LogOut, User } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -62,14 +62,12 @@ export const NavProjects = ({
 
 export const NavUser = ({
   user,
-  showReturnToTasks = false,
 }: {
   user: {
     name: string;
     email: string;
     avatar: string;
   };
-  showReturnToTasks?: boolean;
 }) => {
   const { isMobile } = useSidebar();
   const router = useRouter();
@@ -77,10 +75,10 @@ export const NavUser = ({
   const handleSignOut = async () => {
     try {
       await authClient.signOut();
-      router.push("/sign-in");
-    } catch {
-      router.push("/sign-in");
+    } catch (e) {
+      console.error(e);
     }
+    router.push("/sign-in");
   };
 
   return (
@@ -99,10 +97,10 @@ export const NavUser = ({
                 </AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight ml-2">
-                <span className="truncate font-medium text-white">{user.name}</span>
-                <span className="truncate text-xs text-white/60">{user.email}</span>
+                <span className="truncate font-medium">{user.name}</span>
+                <span className="truncate text-xs opacity-60">{user.email}</span>
               </div>
-              <ChevronsUpDown className="ml-auto size-4 text-white/60" />
+              <ChevronsUpDown className="ml-auto size-4 opacity-60" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -130,14 +128,6 @@ export const NavUser = ({
                 Profile
               </Link>
             </DropdownMenuItem>
-            {showReturnToTasks && (
-              <DropdownMenuItem asChild>
-                <Link href="/dashboard" className="cursor-pointer">
-                  <LayoutDashboard className="mr-2 h-4 w-4" />
-                  Return to tasks
-                </Link>
-              </DropdownMenuItem>
-            )}
             <DropdownMenuSeparator />
             <DropdownMenuItem
               onClick={handleSignOut}
@@ -188,7 +178,7 @@ export const NavMain = ({
                     "h-10 px-3 transition-colors",
                     pathname === item.url
                       ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold shadow-sm"
-                      : "text-white/80 hover:text-white hover:bg-white/10",
+                      : "hover:text-sidebar-accent-foreground hover:bg-sidebar-accent",
                   )}
                 >
                   <Link href={item.url as Route} className="flex items-center gap-3">
@@ -196,13 +186,13 @@ export const NavMain = ({
                       <item.icon
                         className={cn(
                           "size-4",
-                          pathname === item.url
-                            ? "text-sidebar-accent-foreground"
-                            : "text-white/80",
+                          pathname === item.url ? "text-sidebar-accent-foreground" : "opacity-80",
                         )}
                       />
                     )}
-                    <span className="text-sm">{item.title}</span>
+                    <span className={cn("text-sm", pathname !== item.url && "opacity-80")}>
+                      {item.title}
+                    </span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
