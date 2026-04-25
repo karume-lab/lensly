@@ -12,6 +12,262 @@ import { hashPassword } from "better-auth/crypto";
 import mongoose from "mongoose";
 import PDFDocument from "pdfkit";
 
+interface Experience {
+  company: string;
+  role: string;
+  duration: string;
+  description?: string;
+}
+
+interface Education {
+  institution: string;
+  degree: string;
+  field: string;
+  year: number;
+}
+
+interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+  role: string;
+  link?: string;
+  startDate: string;
+  endDate: string;
+}
+
+interface Certification {
+  name: string;
+  issuer: string;
+  issueDate?: string;
+}
+
+interface Skill {
+  name: string;
+  level?: string;
+  yearsOfExperience?: number;
+}
+
+interface Language {
+  name: string;
+  proficiency: string;
+}
+
+interface StructuredData {
+  education?: Education[];
+  experience?: Experience[];
+  skills?: (string | Skill)[];
+  location?: string;
+  headline?: string;
+  bio?: string;
+  projects?: Project[];
+  certifications?: Certification[];
+  languages?: Language[];
+}
+
+interface Applicant {
+  name: string;
+  email: string;
+  structuredData?: StructuredData;
+}
+
+// Helper function to generate a professional resume PDF
+const generateResumePDF = async (
+  applicant: Applicant,
+  pdfPath: string,
+  isUmuravaTalent: boolean = false,
+): Promise<void> => {
+  const doc = new PDFDocument({ margin: 50 });
+  const stream = fs.createWriteStream(pdfPath);
+  doc.pipe(stream);
+
+  // Header with contact information
+  doc.fontSize(20).font("Helvetica-Bold").text(applicant.name, { underline: true });
+  doc.fontSize(10).font("Helvetica").moveDown(0.5);
+
+  const contactInfo = [
+    applicant.email,
+    applicant.structuredData?.location || "Location not specified",
+    "+1 (555) 123-4567", // Placeholder phone
+  ].filter(Boolean);
+  doc.text(contactInfo.join(" | "));
+
+  doc.moveDown(0.8);
+  doc.moveTo(50, doc.y).lineTo(550, doc.y).stroke();
+  doc.moveDown(0.6);
+
+  // Professional Summary / Headline
+  if (isUmuravaTalent && applicant.structuredData?.headline) {
+    doc.fontSize(12).font("Helvetica-Bold").text("HEADLINE", { underline: false });
+    doc.fontSize(10).font("Helvetica").moveDown(0.3).text(applicant.structuredData.headline);
+    doc.moveDown(0.3);
+  }
+
+  // Bio / Summary
+  if (applicant.structuredData?.bio) {
+    doc.fontSize(12).font("Helvetica-Bold").text("PROFESSIONAL SUMMARY", { underline: false });
+    doc.fontSize(10).font("Helvetica").moveDown(0.3);
+    doc.text(applicant.structuredData.bio, { align: "left", width: 450 });
+    doc.moveDown(0.6);
+  } else {
+    doc.fontSize(12).font("Helvetica-Bold").text("PROFESSIONAL SUMMARY", { underline: false });
+    doc.fontSize(10).font("Helvetica").moveDown(0.3);
+    const summary = `Results-driven professional with ${
+      applicant.structuredData?.experience?.length || 3
+    }+ years of experience. Proven expertise in ${
+      applicant.structuredData?.skills?.slice(0, 3).join(", ") || "technology"
+    }. Known for delivering high-quality solutions and collaborating effectively with cross-functional teams.`;
+    doc.text(summary, { align: "left", width: 450 });
+    doc.moveDown(0.6);
+  }
+
+  // Experience Section
+  if (applicant.structuredData?.experience && applicant.structuredData.experience.length > 0) {
+    doc.fontSize(12).font("Helvetica-Bold").text("PROFESSIONAL EXPERIENCE", { underline: false });
+    doc.moveDown(0.3);
+
+    const experiences = applicant.structuredData.experience;
+    experiences.forEach((exp: Experience, index: number) => {
+      doc.fontSize(11).font("Helvetica-Bold").text(exp.role, { continued: true });
+      doc.font("Helvetica").text(` at ${exp.company}`);
+      doc
+        .fontSize(9)
+        .font("Helvetica")
+        .fillColor("#666666")
+        .text(exp.duration)
+        .fillColor("#000000");
+      doc.fontSize(10).font("Helvetica").moveDown(0.2);
+
+      const description =
+        exp.description ||
+        `Performed duties as ${exp.role} with focus on technical excellence and innovation.`;
+      doc.text(`• ${description}`, { width: 450 });
+
+      if (index < experiences.length - 1) {
+        doc.moveDown(0.4);
+      }
+    });
+
+    doc.moveDown(0.6);
+  }
+
+  // Projects Section (for Umurava talents)
+  if (
+    isUmuravaTalent &&
+    applicant.structuredData?.projects &&
+    applicant.structuredData.projects.length > 0
+  ) {
+    doc.fontSize(12).font("Helvetica-Bold").text("PROJECTS", { underline: false });
+    doc.moveDown(0.3);
+
+    const projects = applicant.structuredData.projects;
+    projects.forEach((project: Project, index: number) => {
+      doc.fontSize(11).font("Helvetica-Bold").text(project.name);
+      doc
+        .fontSize(9)
+        .font("Helvetica")
+        .text(`${project.role} | ${project.startDate} - ${project.endDate}`);
+      doc.fontSize(10).font("Helvetica").moveDown(0.2);
+      doc.text(`• ${project.description}`, { width: 450 });
+
+      if (project.technologies && project.technologies.length > 0) {
+        doc
+          .fontSize(9)
+          .font("Helvetica")
+          .fillColor("#666666")
+          .text(`Technologies: ${project.technologies.join(", ")}`)
+          .fillColor("#000000");
+      }
+
+      if (index < projects.length - 1) {
+        doc.moveDown(0.4);
+      }
+    });
+
+    doc.moveDown(0.6);
+  }
+
+  // Education Section
+  if (applicant.structuredData?.education && applicant.structuredData.education.length > 0) {
+    doc.fontSize(12).font("Helvetica-Bold").text("EDUCATION", { underline: false });
+    doc.moveDown(0.3);
+
+    applicant.structuredData.education.forEach((edu: Education) => {
+      doc.fontSize(11).font("Helvetica-Bold").text(`${edu.degree} in ${edu.field}`);
+      doc.fontSize(10).font("Helvetica").text(`${edu.institution}, ${edu.year}`);
+      doc.moveDown(0.4);
+    });
+
+    doc.moveDown(0.4);
+  }
+
+  // Certifications Section (for Umurava talents)
+  if (
+    isUmuravaTalent &&
+    applicant.structuredData?.certifications &&
+    applicant.structuredData.certifications.length > 0
+  ) {
+    doc.fontSize(12).font("Helvetica-Bold").text("CERTIFICATIONS", { underline: false });
+    doc.moveDown(0.3);
+
+    applicant.structuredData.certifications.forEach((cert: Certification) => {
+      doc.fontSize(10).font("Helvetica").text(`• ${cert.name} - ${cert.issuer}`);
+      if (cert.issueDate) {
+        doc
+          .fontSize(9)
+          .font("Helvetica")
+          .fillColor("#666666")
+          .text(`Issued: ${cert.issueDate}`)
+          .fillColor("#000000");
+      }
+      doc.moveDown(0.3);
+    });
+
+    doc.moveDown(0.4);
+  }
+
+  // Technical Skills Section
+  if (applicant.structuredData?.skills && applicant.structuredData.skills.length > 0) {
+    doc.fontSize(12).font("Helvetica-Bold").text("TECHNICAL SKILLS", { underline: false });
+    doc.fontSize(10).font("Helvetica").moveDown(0.3);
+
+    const skillsList = Array.isArray(applicant.structuredData.skills)
+      ? applicant.structuredData.skills
+          .map((s: string | Skill) => {
+            if (typeof s === "string") {
+              return s;
+            }
+            const level = s?.level ? ` (${s.level})` : "";
+            return `${s?.name || ""}${level}`;
+          })
+          .filter(Boolean)
+      : [];
+
+    const skillsText = skillsList.join(" • ");
+    doc.text(skillsText, { width: 450 });
+    doc.moveDown(0.6);
+  }
+
+  // Languages Section (for Umurava talents)
+  if (
+    isUmuravaTalent &&
+    applicant.structuredData?.languages &&
+    applicant.structuredData.languages.length > 0
+  ) {
+    doc.fontSize(12).font("Helvetica-Bold").text("LANGUAGES", { underline: false });
+    doc.fontSize(10).font("Helvetica").moveDown(0.3);
+
+    applicant.structuredData.languages.forEach((lang: Language) => {
+      doc.text(`• ${lang.name} (${lang.proficiency})`);
+    });
+  }
+
+  doc.end();
+
+  // Wait for the stream to finish writing
+  await new Promise((resolve) => stream.on("finish", () => resolve(undefined)));
+};
+
 const seed = async () => {
   console.log("Starting comprehensive database seeding process...");
 
@@ -86,24 +342,7 @@ const seed = async () => {
     const fileName = `${safeName}-${id}.pdf`;
     const pdfPath = path.join(resumesDir, fileName);
 
-    const doc = new PDFDocument();
-    const stream = fs.createWriteStream(pdfPath);
-    doc.pipe(stream);
-    doc.fontSize(25).text(a.name, 100, 80);
-    doc.fontSize(12).text(a.email, 100, 115);
-    doc.moveDown();
-    doc.fontSize(14).text("Summary of Skills", { underline: true });
-    doc.fontSize(10).text(a.structuredData?.skills?.join(", ") || "N/A");
-    doc.moveDown();
-    doc.fontSize(14).text("Experience", { underline: true });
-    a.structuredData?.experience?.forEach((exp) => {
-      doc.fontSize(11).text(`${exp.role} at ${exp.company} (${exp.duration})`);
-    });
-    doc.end();
-
-    // We don't necessarily need to wait for each stream to finish in the loop
-    // but it's safer for a seeder to avoid EMFILE
-    await new Promise((resolve) => stream.on("finish", () => resolve(undefined)));
+    await generateResumePDF(a, pdfPath, false);
 
     await schema.applicant.create({
       ...a,
@@ -130,13 +369,28 @@ const seed = async () => {
 
     for (const talent of selected) {
       const { email: _talentEmail, ...rest } = talent;
+      const talentName = `${talent.firstName} ${talent.lastName}`;
+      const talentId = new mongoose.Types.ObjectId().toString();
+      const safeName = talentName.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+      const fileName = `${safeName}-${talentId}.pdf`;
+      const pdfPath = path.join(resumesDir, fileName);
+
+      // Generate resume for Umurava talent
+      const talentApplicant = {
+        name: talentName,
+        email: `${job._id.toString().slice(-4)}_${talent.email}`,
+        structuredData: rest,
+      };
+      await generateResumePDF(talentApplicant, pdfPath, true);
+
       await schema.applicant.create({
         jobId: new mongoose.Types.ObjectId(job._id as string),
-        name: `${talent.firstName} ${talent.lastName}`,
+        name: talentName,
         email: `${job._id.toString().slice(-4)}_${talent.email}`,
         source: "Umurava Talent Pool",
         structuredData: rest,
         status: "Pending_Screening",
+        resumeUrl: `/resumes/${fileName}`,
         createdAt: new Date(),
         updatedAt: new Date(),
       });
