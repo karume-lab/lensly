@@ -74,11 +74,20 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
   const weightEducation = form.watch("weightEducation");
 
   const handleAddSkill = (skill: string) => {
-    const trimmed = skill.trim();
-    if (trimmed && !skills.includes(trimmed)) {
-      form.setValue("requiredSkills", [...skills, trimmed], { shouldValidate: true });
-      setSkillInput("");
+    const candidates = skill
+      .split(",")
+      .map((s) => s.trim())
+      .filter((s) => s !== "");
+
+    const newSkills = candidates.filter((s) => !skills.includes(s));
+
+    if (newSkills.length > 0) {
+      const uniqueNew = Array.from(new Set(newSkills));
+      form.setValue("requiredSkills", [...skills, ...uniqueNew], {
+        shouldValidate: true,
+      });
     }
+    setSkillInput("");
   };
 
   const removeSkill = (skill: string) => {
@@ -286,9 +295,10 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
                         <div className="flex gap-2">
                           <Input
                             className="flex-1"
-                            placeholder="Add a skill (e.g. React, Python)"
+                            placeholder="Enter skills (e.g. React, Python)"
                             value={skillInput}
                             onChange={(e) => setSkillInput(e.target.value)}
+                            onBlur={() => handleAddSkill(skillInput)}
                             onKeyDown={(e) => {
                               if (e.key === "Enter") {
                                 e.preventDefault();
@@ -300,6 +310,9 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
                             Add
                           </Button>
                         </div>
+                        <p className="text-[11px] text-muted-foreground -mt-2">
+                          Separate multiple skills with commas. Press Enter or click away to add.
+                        </p>
                         <div className="flex flex-wrap gap-2 min-h-[44px] p-4 border border-input bg-muted/20">
                           {skills.map((skill) => (
                             <Badge
