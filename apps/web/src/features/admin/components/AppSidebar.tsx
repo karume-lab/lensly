@@ -66,11 +66,6 @@ const data = {
       icon: BookOpen,
     },
     {
-      name: "Documentation",
-      url: "/docs/getting-started",
-      icon: BookOpen,
-    },
-    {
       name: "GitHub",
       url: "https://github.com/karume-lab/lensly",
       icon: SiGithub,

@@ -296,7 +296,7 @@ export const AIShortlist = ({ jobId }: { jobId: string }) => {
           description="Candidates will appear here once they have been screened and processed through the pipeline."
           action={{
             label: "Go to Ingestion",
-            href: `/dashboard/jobs/${jobId}/ingestion` as Route,
+            href: `/dashboard/jobs/${jobId}/applicants/ingestion` as Route,
           }}
         />
       ) : (

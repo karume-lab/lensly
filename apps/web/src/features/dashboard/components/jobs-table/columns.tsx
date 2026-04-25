@@ -62,7 +62,9 @@ const ActionsCell = ({ job }: { job: JobData }) => {
         </Button>
       ) : (
         <Button variant="ghost" size="sm" asChild className="h-8">
-          <Link href={`/dashboard/jobs/${job.id}/ingestion` as Route}>View applicants</Link>
+          <Link href={`/dashboard/jobs/${job.id}/applicants/ingestion` as Route}>
+            View applicants
+          </Link>
         </Button>
       )}
 

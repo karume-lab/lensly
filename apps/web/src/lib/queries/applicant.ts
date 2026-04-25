@@ -12,6 +12,17 @@ export const useApplicants = (jobId: string) => {
   });
 };
 
+export const useShortlist = (jobId: string) => {
+  return useQuery({
+    queryKey: ["shortlist", jobId],
+    queryFn: async () => {
+      const { data, error } = await api.applicants.job({ jobId }).shortlist.get();
+      if (error) throw error;
+      return data;
+    },
+  });
+};
+
 export const useScreeningMutation = () => {
   const queryClient = useQueryClient();
   return useMutation({

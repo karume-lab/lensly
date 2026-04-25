@@ -19,7 +19,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { api, type ExtractData } from "@/lib/api";
-import { useApplicants, useUpdateApplicantStatusMutation } from "@/lib/queries/applicant";
+import { useShortlist, useUpdateApplicantStatusMutation } from "@/lib/queries/applicant";
 
 type DeepDiveData = NonNullable<ExtractData<ReturnType<typeof api.applicants>["deep-dive"]["get"]>>;
 
@@ -41,7 +41,7 @@ export const CandidateDeepDive = ({
   });
 
   const statusMutation = useUpdateApplicantStatusMutation(candidateId);
-  const { data: applicants } = useApplicants(jobId);
+  const { data: shortlist } = useShortlist(jobId);
 
   const handleDecision = async (decision: "approve" | "reject") => {
     const status = decision === "approve" ? "Interviewing" : "Rejected";
@@ -50,11 +50,11 @@ export const CandidateDeepDive = ({
       await statusMutation.mutateAsync({ status });
       toast.success(`Candidate ${decision === "approve" ? "shortlisted" : "rejected"}`);
 
-      const currentIndex = applicants?.findIndex((a) => a.id === candidateId) ?? -1;
-      const nextCandidate = applicants && currentIndex !== -1 ? applicants[currentIndex + 1] : null;
+      const currentIndex = shortlist?.findIndex((a) => a.applicantId === candidateId) ?? -1;
+      const nextCandidate = shortlist && currentIndex !== -1 ? shortlist[currentIndex + 1] : null;
 
       if (nextCandidate) {
-        router.push(`/dashboard/jobs/${jobId}/candidates/${nextCandidate.id}`);
+        router.push(`/dashboard/jobs/${jobId}/candidates/${nextCandidate.applicantId}`);
       } else {
         router.push(`/dashboard/jobs/${jobId}/shortlist`);
       }

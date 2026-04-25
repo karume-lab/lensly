@@ -24,13 +24,15 @@ export function DynamicBreadcrumbs() {
           const isLast = index === segments.length - 1;
           const title = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " ");
 
-          if (segment === "(protected)") return null;
+          const isNonLinkable = segment === "candidates" || segment === "(protected)";
 
           return (
             <React.Fragment key={href}>
               <BreadcrumbItem>
-                {isLast ? (
-                  <BreadcrumbPage className="font-bold text-foreground capitalize">
+                {isLast || isNonLinkable ? (
+                  <BreadcrumbPage
+                    className={`font-bold text-foreground capitalize ${isNonLinkable ? "font-normal text-muted-foreground" : ""}`}
+                  >
                     {title}
                   </BreadcrumbPage>
                 ) : (

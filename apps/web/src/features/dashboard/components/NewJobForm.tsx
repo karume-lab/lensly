@@ -136,9 +136,9 @@ export const NewJobForm = ({ initialData }: NewJobFormProps) => {
       });
     } else {
       createMutation.mutate(data, {
-        onSuccess: () => {
+        onSuccess: (data) => {
           toast.success("Job created successfully");
-          router.push("/dashboard/jobs");
+          router.push(`/dashboard/jobs/${data.id}/applicants/ingestion`);
         },
         onError: () => {
           toast.error("Failed to create job. Please try again.");
