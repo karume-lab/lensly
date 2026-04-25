@@ -64,14 +64,14 @@ const WWWPage = () => {
           id="hero"
           className="relative overflow-hidden pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pb-32 px-6"
         >
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
           <div className="mx-auto max-w-5xl flex flex-col items-center text-center">
             <SiteLogo className="size-24" />
 
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight leading-tight sm:text-7xl lg:text-8xl sm:leading-[1.1] lg:leading-[1.1] bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/60">
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tight leading-tight sm:text-7xl lg:text-8xl sm:leading-[1.1] lg:leading-[1.1] bg-clip-text text-transparent bg-linear-to-br from-foreground to-foreground/60">
               Hire smarter with
               <br className="hidden sm:block" />
-              <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-primary/60">
                 Lensly
               </span>
             </h1>
