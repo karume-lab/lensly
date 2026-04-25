@@ -63,7 +63,7 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
   )
   .post(
     "/users",
-    async ({ body }) => {
+    async ({ body, user }) => {
       const { email, password, name, role } = body;
 
       const result = await auth.api.signUpEmail({
@@ -71,26 +71,34 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
         asResponse: false,
       });
 
-      const user = await schema.User.findByIdAndUpdate(
+      const newUser = await schema.User.findByIdAndUpdate(
         result.user.id,
         { $set: { role: role ?? "user" } },
         { new: true },
       );
 
-      if (!user) throw new Response("Failed to retrieve created user", { status: 500 });
+      if (!newUser) throw new Response("Failed to retrieve created user", { status: 500 });
+
+      await schema.Activity.create({
+        userId: user.id,
+        action: "USER_CREATED_BY_ADMIN",
+        entityId: newUser._id.toString(),
+        entityType: "user",
+        metadata: { adminId: user.id },
+      });
 
       return {
-        id: user._id.toString(),
-        name: user.name,
-        email: user.email,
-        emailVerified: user.emailVerified,
-        image: user.image || null,
-        role: user.role || null,
-        banned: user.banned || false,
-        banReason: user.banReason || null,
-        banExpires: user.banExpires || null,
-        createdAt: user.createdAt,
-        updatedAt: user.updatedAt,
+        id: newUser._id.toString(),
+        name: newUser.name,
+        email: newUser.email,
+        emailVerified: newUser.emailVerified,
+        image: newUser.image || null,
+        role: newUser.role || null,
+        banned: newUser.banned || false,
+        banReason: newUser.banReason || null,
+        banExpires: newUser.banExpires || null,
+        createdAt: newUser.createdAt,
+        updatedAt: newUser.updatedAt,
       };
     },
     {
@@ -131,9 +139,17 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
   )
   .put(
     "/users/:id/role",
-    async ({ params: { id }, body: { role } }) => {
+    async ({ params: { id }, body: { role }, user }) => {
       const updated = await schema.User.findByIdAndUpdate(id, { $set: { role } }, { new: true });
       if (!updated) throw new Response("User not found", { status: 404 });
+
+      await schema.Activity.create({
+        userId: user.id,
+        action: "USER_ROLE_UPDATED",
+        entityId: id,
+        entityType: "user",
+        metadata: { newRole: role },
+      });
       return {
         id: updated._id.toString(),
         name: updated.name,
@@ -157,11 +173,18 @@ export const adminRouter = new Elysia({ prefix: "/admin" })
   )
   .delete(
     "/users/:id",
-    async ({ params: { id } }) => {
+    async ({ params: { id }, user }) => {
       const existing = await schema.User.findById(id);
       if (!existing) throw new Response("User not found", { status: 404 });
 
       await auth.api.removeUser({ body: { userId: id } });
+
+      await schema.Activity.create({
+        userId: user.id,
+        action: "USER_DELETED",
+        entityId: id,
+        entityType: "user",
+      });
       return { success: true };
     },
     {

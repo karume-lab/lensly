@@ -14,7 +14,10 @@ export const notificationRouter = new Elysia({ prefix: "/notifications" })
     const notifications = await schema.Notification.find({ userId: user.id })
       .sort({ createdAt: -1 })
       .limit(50);
-    return notifications;
+    return notifications.map((n) => ({
+      ...n.toObject(),
+      id: n._id.toString(),
+    }));
   })
   .put("/:id/read", async ({ params }) => {
     const notification = await schema.Notification.findByIdAndUpdate(
@@ -22,7 +25,11 @@ export const notificationRouter = new Elysia({ prefix: "/notifications" })
       { $set: { read: true } },
       { new: true },
     );
-    return notification;
+    if (!notification) throw new Response("Notification not found", { status: 404 });
+    return {
+      ...notification.toObject(),
+      id: notification._id.toString(),
+    };
   })
   .put("/read-all", async ({ user }) => {
     await schema.Notification.updateMany(

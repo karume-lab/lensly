@@ -279,6 +279,13 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
           }
         }),
       );
+      await schema.Activity.create({
+        userId: user.id,
+        action: "JOB_CREATED",
+        entityId: job._id.toString(),
+        entityType: "job",
+        metadata: { title: job.title },
+      });
 
       return {
         id: job._id.toString(),
@@ -320,6 +327,14 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
         { new: true },
       );
       if (!job) throw new Response("Job not found", { status: 404 });
+      await schema.Activity.create({
+        userId: user.id,
+        action: "JOB_UPDATED",
+        entityId: job._id.toString(),
+        entityType: "job",
+        metadata: { title: job.title, changes: body },
+      });
+
       return {
         id: job._id.toString(),
         userId: job.userId,
@@ -359,6 +374,13 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
     async ({ params: { id }, user }) => {
       const result = await schema.Job.deleteOne({ _id: id, userId: user.id });
       if (result.deletedCount === 0) throw new Response("Job not found", { status: 404 });
+      await schema.Activity.create({
+        userId: user.id,
+        action: "JOB_DELETED",
+        entityId: id,
+        entityType: "job",
+      });
+
       return { success: true };
     },
     {

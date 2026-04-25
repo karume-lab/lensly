@@ -50,6 +50,14 @@ export const profileRouter = new Elysia({ prefix: "/profile" })
         { $set: profileData },
         { new: true, upsert: true },
       );
+
+      await schema.Activity.create({
+        userId: user.id,
+        action: "PROFILE_UPDATED",
+        entityId: user.id,
+        entityType: "user",
+      });
+
       return profile;
     },
     {

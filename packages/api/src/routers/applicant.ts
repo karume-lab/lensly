@@ -166,13 +166,22 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   )
   .patch(
     "/:id/status",
-    async ({ params: { id }, body: { status } }) => {
+    async ({ params: { id }, body: { status }, user }) => {
       const applicant = await schema.Applicant.findByIdAndUpdate(
         id,
         { $set: { status } },
         { new: true },
       );
       if (!applicant) throw new Response("Applicant not found", { status: 404 });
+
+      await schema.Activity.create({
+        userId: user.id,
+        action: "APPLICANT_STATUS_UPDATED",
+        entityId: applicant._id.toString(),
+        entityType: "applicant",
+        metadata: { name: applicant.name, status: applicant.status },
+      });
+
       return {
         id: applicant._id.toString(),
         jobId: applicant.jobId.toString(),
@@ -195,7 +204,7 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   )
   .post(
     "/upload",
-    async ({ body: { jobId, file } }) => {
+    async ({ body: { jobId, file }, user }) => {
       const path = require("node:path");
       const fs = require("node:fs");
 
@@ -315,6 +324,14 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
       });
       await applicant.save();
 
+      await schema.Activity.create({
+        userId: user.id,
+        action: "CANDIDATE_UPLOADED",
+        entityId: applicant._id.toString(),
+        entityType: "applicant",
+        metadata: { name: applicant.name, jobId },
+      });
+
       return {
         applicant: {
           id: applicant._id.toString(),
@@ -377,7 +394,7 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
   )
   .post(
     "/:id/screen",
-    async ({ params: { id } }) => {
+    async ({ params: { id }, user }) => {
       const applicant = await schema.Applicant.findById(id);
       if (!applicant) throw new Response("Applicant not found", { status: 404 });
 
@@ -427,6 +444,14 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
         title: "Screening Complete",
         message: `Candidate ${applicant.name} has been screened for ${job.title}. Match score: ${result.overallScore}%`,
         type: result.overallScore >= 70 ? "success" : "info",
+      });
+
+      await schema.Activity.create({
+        userId: user.id,
+        action: "CANDIDATE_SCREENED",
+        entityId: applicant._id.toString(),
+        entityType: "applicant",
+        metadata: { name: applicant.name, score: result.overallScore },
       });
 
       return {
