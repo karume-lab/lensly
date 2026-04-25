@@ -161,12 +161,18 @@ export const NavMain = ({
   const { state } = useSidebar();
   const isCollapsed = state === "collapsed";
 
+  const isItemActive = (path: string) => {
+    if (pathname === path) return true;
+    if (path === "/dashboard") return pathname === "/dashboard";
+    return pathname.startsWith(`${path}/`);
+  };
+
   return (
     <SidebarGroup>
       <SidebarMenu className="gap-1">
         {items.map((item) => {
-          const isAnyChildActive = item.items?.some((subItem) => pathname === subItem.url);
-          const isActive = pathname === item.url || isAnyChildActive;
+          const isAnyChildActive = item.items?.some((subItem) => isItemActive(subItem.url));
+          const isActive = isItemActive(item.url) || isAnyChildActive;
 
           if (!item.items) {
             return (
@@ -176,7 +182,7 @@ export const NavMain = ({
                   tooltip={item.title}
                   className={cn(
                     "h-10 px-3 transition-colors",
-                    pathname === item.url
+                    isActive
                       ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold shadow-sm"
                       : "hover:text-sidebar-accent-foreground hover:bg-sidebar-accent",
                   )}
@@ -186,13 +192,11 @@ export const NavMain = ({
                       <item.icon
                         className={cn(
                           "size-4",
-                          pathname === item.url ? "text-sidebar-accent-foreground" : "opacity-80",
+                          isActive ? "text-sidebar-accent-foreground" : "opacity-80",
                         )}
                       />
                     )}
-                    <span className={cn("text-sm", pathname !== item.url && "opacity-80")}>
-                      {item.title}
-                    </span>
+                    <span className={cn("text-sm", !isActive && "opacity-80")}>{item.title}</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -228,7 +232,7 @@ export const NavMain = ({
                       <SidebarMenuSubItem key={subItem.title}>
                         <SidebarMenuSubButton
                           asChild
-                          isActive={pathname === subItem.url}
+                          isActive={isItemActive(subItem.url)}
                           className="h-8"
                         >
                           <Link href={subItem.url as Route}>
