@@ -1,6 +1,7 @@
 import { type Model, model, models, Schema } from "mongoose";
 
 export interface IUser {
+  id: string;
   name: string;
   email: string;
   emailVerified: boolean;
@@ -14,6 +15,7 @@ export interface IUser {
 }
 
 export interface ISession {
+  id: string;
   expiresAt: Date;
   token: string;
   ipAddress?: string;
@@ -25,6 +27,7 @@ export interface ISession {
 }
 
 export interface IAccount {
+  id: string;
   accountId: string;
   providerId: string;
   userId: string;
@@ -40,6 +43,7 @@ export interface IAccount {
 }
 
 export interface IVerification {
+  id: string;
   identifier: string;
   value: string;
   expiresAt: Date;
@@ -49,6 +53,7 @@ export interface IVerification {
 
 export const UserSchema = new Schema<IUser>(
   {
+    id: { type: String, required: true, unique: true },
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     emailVerified: { type: Boolean, default: false },
@@ -63,6 +68,7 @@ export const UserSchema = new Schema<IUser>(
 
 export const SessionSchema = new Schema<ISession>(
   {
+    id: { type: String, required: true, unique: true },
     expiresAt: { type: Date, required: true },
     token: { type: String, required: true, unique: true },
     ipAddress: { type: String },
@@ -75,6 +81,7 @@ export const SessionSchema = new Schema<ISession>(
 
 export const AccountSchema = new Schema<IAccount>(
   {
+    id: { type: String, required: true, unique: true },
     accountId: { type: String, required: true },
     providerId: { type: String, required: true },
     userId: { type: String, required: true },
@@ -91,6 +98,7 @@ export const AccountSchema = new Schema<IAccount>(
 
 export const VerificationSchema = new Schema<IVerification>(
   {
+    id: { type: String, required: true, unique: true },
     identifier: { type: String, required: true },
     value: { type: String, required: true },
     expiresAt: { type: Date, required: true },

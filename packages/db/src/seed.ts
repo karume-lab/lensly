@@ -34,6 +34,7 @@ const seed = async () => {
 
     const hashedPassword = await hashPassword(password);
     await schema.account.create({
+      id: user.id,
       userId: user.id,
       accountId: user.id,
       providerId: "credential",

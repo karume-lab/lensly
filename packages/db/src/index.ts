@@ -16,8 +16,8 @@ export const connectDB = async () => {
   }
 };
 
-// Ensure connection is established
-connectDB();
+// Ensure connection is established before exporting
+await connectDB();
 
 export const client = mongoose.connection.getClient();
 export const dbInstance = mongoose.connection.db;
