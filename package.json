@@ -25,7 +25,6 @@
     "db:studio": "bun --filter @repo/db db:studio",
     "db:migrate": "bun --filter @repo/db db:migrate",
     "db:seed": "bun --filter @repo/db db:seed",
-    "db:generate-auth": "bun --filter @repo/auth db:generate-auth",
     "ui:web": "bunx shadcn@latest add --cwd packages/ui/src/web",
     "postinstall": "lefthook install",
     "reinstall-packages": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + || true; rm -f bun.lock; bun install"

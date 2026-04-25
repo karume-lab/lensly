@@ -79,12 +79,9 @@ Ensure your `MONGODB_URI` in the `.env` file is set to point to your local Docke
 
 Because Lensly uses MongoDB via Mongoose (a NoSQL document database), strict SQL-style migrations (like generating and applying SQL schema files) are not required. The collections are created automatically when documents are inserted. 
 
-However, you still need to generate the auth schema for Better Auth and seed your initial data:
+The auth schema for Better Auth is manually maintained in `packages/db/src/schema/auth.ts`. You can seed your initial data using:
 
 ```bash
-# Generate auth-related types and initial setup for Better Auth
-bun db:generate-auth
-
 # Seed the database with 50+ realistic users, jobs, and applicants
 bun db:seed
 ```
@@ -174,7 +171,6 @@ bun typecheck
 | `bun lint:web` | Lint web app |
 | **Database & Auth** | |
 | `bun db:seed` | Seed the database |
-| `bun db:generate-auth` | Generate Better Auth schema |
 
 ## Contributing
 
