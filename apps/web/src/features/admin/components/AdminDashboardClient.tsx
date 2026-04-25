@@ -167,7 +167,7 @@ export const AdminDashboardClient = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-8">
-              <div className="h-[200px] w-full">
+              <div className="h-50 w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={chartData}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e2e2" />

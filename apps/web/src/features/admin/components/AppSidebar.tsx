@@ -1,6 +1,5 @@
 "use client";
 
-import { SiGithub } from "@icons-pack/react-simple-icons";
 import { authClient } from "@repo/auth/client";
 import {
   Sidebar,
@@ -10,8 +9,8 @@ import {
   SidebarRail,
   useSidebar,
 } from "@repo/ui/web/components/ui/sidebar";
-import { BookOpen, Code2, LayoutDashboard, Settings2 } from "lucide-react";
-import { NavMain, NavProjects, NavUser } from "@/components/shared/SidebarComponents";
+import { Activity, Briefcase, LayoutDashboard, Users } from "lucide-react";
+import { NavMain, NavUser } from "@/components/shared/SidebarComponents";
 import SiteLogo from "@/components/shared/SiteLogo";
 
 const data = {
@@ -21,54 +20,21 @@ const data = {
       url: "/admin",
       icon: LayoutDashboard,
       isActive: true,
-      items: [
-        {
-          title: "Overview",
-          url: "/admin",
-        },
-      ],
     },
     {
-      title: "Admin",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "Users",
-          url: "/admin/users",
-        },
-        {
-          title: "Jobs",
-          url: "/admin/jobs",
-        },
-        {
-          title: "System Activities",
-          url: "/admin/activities",
-        },
-      ],
+      title: "Users",
+      url: "/admin/users",
+      icon: Users,
     },
     {
-      title: "Developer",
-      url: "#",
-      icon: Code2,
-      items: [
-        {
-          title: "API Reference",
-          url: "/docs/api/reference",
-        },
-      ],
-    },
-  ],
-  projects: [
-    {
-      name: "Quick Start Tutorial",
-      url: "https://code2tutorial.com/tutorial/926b939b-24c9-487a-a3f9-359877d46087/index.md",
-      icon: BookOpen,
+      title: "Jobs",
+      url: "/admin/jobs",
+      icon: Briefcase,
     },
     {
-      name: "GitHub",
-      url: "https://github.com/karume-lab/lensly",
-      icon: SiGithub,
+      title: "System Activities",
+      url: "/admin/activities",
+      icon: Activity,
     },
   ],
 };
@@ -101,7 +67,6 @@ export const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) =
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         {isPending ? (
