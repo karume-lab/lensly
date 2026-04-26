@@ -4,7 +4,13 @@
   <img src="packages/assets/logo.png" alt="Lensly Logo" width="200" />
 </p>
 
-https://github.com/karume-lab/lensly/raw/main/packages/assets/lensly-demo.mp4
+<p align="center">
+  <img src="packages/assets/lensly-demo.gif" alt="Lensly Demo" width="100%" />
+</p>
+
+## Demo
+
+Experience the full walkthrough with audio here: [Watch the Full Demo Video](packages/assets/lensly-demo.mp4)
 
 ## Core Stack
 
