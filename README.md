@@ -4,9 +4,7 @@
   <img src="packages/assets/logo.png" alt="Lensly Logo" width="200" />
 </p>
 
-<p align="center">
-  <video src="https://github.com/karume-lab/lensly/raw/main/packages/assets/lensly-demo.mp4" autoplay muted loop playsinline controls width="100%"></video>
-</p>
+https://github.com/karume-lab/lensly/raw/main/packages/assets/lensly-demo.mp4
 
 ## Core Stack
 
