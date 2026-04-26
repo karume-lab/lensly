@@ -401,6 +401,31 @@ export const applicantRouter = new Elysia({ prefix: "/applicants" })
       const job = await schema.Job.findById(applicant.jobId);
       if (!job) throw new Response("Job not found", { status: 404 });
 
+      // Check if a screening result already exists
+      const existingResult = await schema.ScreeningResult.findOne({ applicantId: applicant._id });
+      if (existingResult) {
+        return {
+          success: true,
+          result: {
+            id: existingResult._id.toString(),
+            applicantId: existingResult.applicantId.toString(),
+            jobId: existingResult.jobId.toString(),
+            overallScore: existingResult.overallScore,
+            skillScore: existingResult.skillScore,
+            experienceScore: existingResult.experienceScore,
+            educationScore: existingResult.educationScore,
+            relevanceScore: existingResult.relevanceScore,
+            strengths: existingResult.strengths,
+            gaps: existingResult.gaps,
+            aiRecommendation: existingResult.aiRecommendation,
+            aiReasoning: existingResult.aiReasoning,
+            processedAt: existingResult.processedAt,
+            createdAt: existingResult.createdAt,
+            updatedAt: existingResult.updatedAt,
+          },
+        };
+      }
+
       // Use AI service to screen the applicant
       const result = await aiService.screenApplicant(
         {

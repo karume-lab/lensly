@@ -1,4 +1,5 @@
 import { schema } from "@repo/db";
+import { Resend } from "resend";
 
 export interface NotificationPayload {
   userId: string;
@@ -25,21 +26,18 @@ export const sendNotification = async (payload: NotificationPayload) => {
   if (profile.emailAlerts) {
     const user = await schema.User.findOne({ id: payload.userId });
     if (user?.email) {
-      console.log(
-        `[EMAIL SIMULATION] Sending notification to ${user.email}: ${payload.title} - ${payload.message}`,
-      );
-      // In a real implementation, you would use Resend here:
-      /*
       if (process.env.RESEND_API_KEY) {
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
-          from: 'Lensly <notifications@lensly.ai>',
+          from: "Lensly <notifications@lensly.ai>",
           to: user.email,
           subject: payload.title,
           text: payload.message,
         });
+        console.log(`Sent email notification to ${user.email}`);
+      } else {
+        console.warn("RESEND_API_KEY is not set. Could not send email notification.");
       }
-      */
     }
   }
 

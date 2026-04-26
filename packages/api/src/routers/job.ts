@@ -1,4 +1,4 @@
-import { aiService, type UmuravaTalent } from "@repo/api/lib/ai";
+import type { UmuravaTalent } from "@repo/api/lib/ai";
 import { JobSchema } from "@repo/api/routers/types";
 import { auth } from "@repo/auth";
 import { schema } from "@repo/db";
@@ -210,72 +210,38 @@ export const jobRouter = new Elysia({ prefix: "/jobs" })
       const job = new schema.Job({ ...body, userId: user.id });
       await job.save();
 
-      // Seed candidates from Umurava Talent pool using AI matching
+      // Seed candidates from Umurava Talent pool without using AI
       const allTalents = umuravaTalentsData as UmuravaTalent[];
-      let selectedTalents: UmuravaTalent[] = [];
-      try {
-        const selectedEmails = await aiService.matchTalents(
-          {
-            title: job.title,
-            description: job.description,
-            requiredSkills: job.requiredSkills,
-          },
-          allTalents,
-        );
-        selectedTalents = allTalents.filter((t) => selectedEmails.includes(t.email));
-      } catch (error) {
-        console.error("AI matching failed, falling back to random selection", error);
-        const shuffled = [...allTalents].sort(() => 0.5 - Math.random());
-        selectedTalents = shuffled.slice(0, Math.floor(Math.random() * 3) + 3);
-      }
+      const jobSkills = job.requiredSkills.map((s) => s.toLowerCase());
+
+      const scoredTalents = allTalents.map((t) => {
+        let score = 0;
+        t.skills?.forEach((s) => {
+          if (jobSkills.includes(s.name.toLowerCase())) {
+            score++;
+          }
+        });
+        return { talent: t, score };
+      });
+
+      scoredTalents.sort((a, b) => b.score - a.score);
+      const selectedTalents = scoredTalents
+        .slice(0, Math.floor(Math.random() * 3) + 3)
+        .map((st) => st.talent);
 
       await Promise.all(
         selectedTalents.map(async (talent) => {
           try {
-            const result = await aiService.screenApplicant(
-              {
-                title: job.title,
-                description: job.description,
-                requiredSkills: job.requiredSkills,
-                weightSkills: job.weightSkills || 40,
-                weightExperience: job.weightExperience || 40,
-                weightEducation: job.weightEducation || 20,
-              },
-              {
-                name: `${talent.firstName} ${talent.lastName}`,
-                structuredData: talent,
-              },
-            );
-
-            // Only show profiles that qualify
-            if (result.overallScore < 50 || result.aiRecommendation.toLowerCase() === "no") {
-              return;
-            }
-
-            const applicant = await schema.Applicant.create({
+            await schema.Applicant.create({
               jobId: job._id,
               name: `${talent.firstName} ${talent.lastName}`,
               email: talent.email,
               source: "Umurava Talent Pool",
-              status: result.overallScore >= 70 ? "Shortlisted" : "Screened",
+              status: "Pending_Screening", // User must manually screen from profile detail
               structuredData: talent,
             });
-
-            await schema.ScreeningResult.create({
-              applicantId: applicant._id,
-              jobId: applicant.jobId,
-              overallScore: result.overallScore,
-              skillScore: result.skillScore,
-              experienceScore: result.experienceScore,
-              educationScore: result.educationScore,
-              relevanceScore: result.relevanceScore,
-              strengths: result.strengths,
-              gaps: result.gaps,
-              aiRecommendation: result.aiRecommendation,
-              aiReasoning: result.aiReasoning,
-            });
           } catch (error) {
-            console.error("AI screening failed for talent during job creation", error);
+            console.error("Failed to add talent during job creation", error);
           }
         }),
       );
