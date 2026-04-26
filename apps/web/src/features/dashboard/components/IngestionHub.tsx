@@ -185,10 +185,16 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
       toast.info(`Uploading ${acceptedFiles.length} resume(s)…`);
 
       let successCount = 0;
+      let duplicateCount = 0;
       for (const file of acceptedFiles) {
         try {
           const result = await uploadMutation.mutateAsync({ jobId, file });
-          if (!result.data?.isDuplicate) successCount++;
+          if (result.data?.isDuplicate) {
+            duplicateCount++;
+            toast.warning(`Duplicate skipped: ${file.name}`);
+          } else {
+            successCount++;
+          }
         } catch {
           toast.error(`Failed to upload ${file.name}`);
         }
@@ -196,6 +202,9 @@ export const IngestionHub = ({ jobId }: { jobId: string }) => {
 
       if (successCount > 0) {
         toast.success(`${successCount} resume(s) uploaded successfully`);
+      }
+      if (duplicateCount > 0 && acceptedFiles.length > 1) {
+        toast.info(`${duplicateCount} resume(s) were skipped because they already exist.`);
       }
     }
   };

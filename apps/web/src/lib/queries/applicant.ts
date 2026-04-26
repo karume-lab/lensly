@@ -1,5 +1,4 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
 import { api } from "@/lib/api";
 
 export const useApplicants = (jobId: string) => {
@@ -71,12 +70,7 @@ export const useUploadApplicantMutation = () => {
       if (error) throw error;
       return { data, fileName: file.name, jobId };
     },
-    onSuccess: ({ data, fileName, jobId }) => {
-      if (data?.isDuplicate) {
-        toast.error(`Duplicate skipped: ${fileName}`, {
-          description: "This candidate is already registered for this job.",
-        });
-      }
+    onSuccess: ({ jobId }) => {
       queryClient.invalidateQueries({ queryKey: ["applicants", jobId] });
       queryClient.invalidateQueries({ queryKey: ["jobs"] });
       queryClient.invalidateQueries({ queryKey: ["job", jobId] });
