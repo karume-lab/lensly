@@ -4,6 +4,10 @@
   <img src="packages/assets/logo.png" alt="Lensly Logo" width="200" />
 </p>
 
+<p align="center">
+  <video src="packages/assets/lensly-demo.mp4" autoplay muted loop playsinline controls width="100%"></video>
+</p>
+
 ## Core Stack
 
 - **Monorepo:** Turborepo & Bun Workspaces — Efficient management of shared packages and apps with high-performance dependency resolution.
